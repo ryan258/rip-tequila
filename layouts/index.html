@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ $homepage := .Site.GetPage "/homepage" }}
+  {{ with $homepage.GetPage "hero" }}
+    {{ partial "sections/hero.html" . }}
+  {{ end }}
+  {{ with $homepage.GetPage "brand-intro" }}
+    {{ partial "sections/brand-intro.html" . }}
+  {{ end }}
+  {{ partial "sections/product-preview.html" . }}
+  {{ partial "sections/character-strip.html" . }}
+  {{ partial "sections/slogan-band.html" . }}
+  {{ partial "sections/merch-preview.html" . }}
+  {{ partial "sections/social-club.html" . }}
+  {{ partial "sections/disclaimer.html" . }}
+{{ end }}

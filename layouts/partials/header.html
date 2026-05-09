@@ -1,0 +1,40 @@
+{{ $current := .RelPermalink }}
+<header class="site-header" data-theme="dark">
+  <a class="site-header__logo" href="/" aria-label="RIP Tequila home">
+    <span class="logo-mark">RIP</span>
+    <span class="logo-category">TEQUILA</span>
+    <span class="logo-tagline">Rest In Proof</span>
+  </a>
+
+  <nav class="site-header__nav" aria-label="Primary navigation">
+    {{ $currentPage := . }}
+    {{ range site.Menus.main }}
+      {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+      <a class="nav__link{{ if $active }} is-active{{ end }}" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{ end }}
+  </nav>
+
+  <div class="site-header__actions">
+    <a class="button button--primary site-header__cta" href="{{ site.Params.cta_href }}">{{ site.Params.cta_label }}</a>
+    <button class="site-header__menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden data-mobile-menu>
+  <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+    {{ $currentPage := . }}
+    {{ range site.Menus.main }}
+      {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+      <a class="mobile-menu__link{{ if $active }} is-active{{ end }}" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>
+        <span>{{ .Name }}</span>
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    {{ end }}
+    <a class="button button--primary mobile-menu__cta" href="{{ site.Params.cta_href }}">{{ site.Params.cta_label }}</a>
+  </nav>
+  <p class="mobile-menu__footer">Rest In Proof</p>
+</div>

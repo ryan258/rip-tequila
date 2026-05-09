@@ -1,0 +1,80 @@
+.detail-page,
+.product-detail,
+.character-detail {
+  background: $color-cream;
+  color: $color-black;
+}
+
+.detail-hero,
+.product-detail__hero {
+  @include container;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+  gap: $space-2xl;
+  align-items: center;
+  padding-block: clamp($space-3xl, 9vw, 140px);
+}
+
+.detail-hero__copy,
+.product-detail__copy {
+  display: grid;
+  gap: $space-lg;
+}
+
+.detail-hero h1,
+.product-detail h1 {
+  @include poster-title(3.2rem, 9vw, 8rem);
+}
+
+.detail-hero p,
+.product-detail__copy p {
+  @include body-copy(clamp(1.05rem, 1.35vw, 1.25rem));
+  max-width: 42rem;
+}
+
+.detail-hero__icon {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  color: var(--card-accent);
+  background: $color-black;
+  font-size: clamp(6rem, 13vw, 12rem);
+}
+
+.detail-hero--character .detail-hero__icon {
+  background: transparent;
+  border: 3px solid var(--card-accent);
+}
+
+.product-detail__bottle .product-card {
+  max-width: 360px;
+  margin-left: auto;
+}
+
+.detail-page__body {
+  @include container($content-max);
+  display: grid;
+  gap: $space-lg;
+  padding-bottom: clamp($space-3xl, 9vw, 140px);
+}
+
+.detail-page__body p {
+  @include body-copy;
+  max-width: 74ch;
+}
+
+.detail-note {
+  @include eyebrow;
+  color: $color-red;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .detail-hero,
+  .product-detail__hero {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail__bottle .product-card {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,26 @@
+<section class="social-club" id="social-club" aria-labelledby="social-club-title">
+  <div class="social-club__panel">
+    <div class="social-club__visual" aria-hidden="true">
+      <div class="member-card">
+        <span class="member-card__logo">RIP</span>
+        <span class="member-card__club">Don Muerte Social Club</span>
+        <span class="member-card__icon"><i class="fa-solid fa-skull"></i></span>
+        <span class="member-card__number">Member 013</span>
+        <span class="member-card__expiry">Membership Expires Never</span>
+      </div>
+    </div>
+    <div class="social-club__copy">
+      <p class="section-heading__eyebrow">Don Muerte Social Club</p>
+      <h2 class="section-heading__title" id="social-club-title">Membership Expires Never.</h2>
+      <p class="section-heading__body">Get poster drops, merch alerts, character reveals, fictional product launches, and the occasional warning from La Cantina del Ultimo Trago.</p>
+      {{/* Button stays focusable so placeholder validation can explain that signup is not wired yet. */}}
+      <form class="signup-form" method="post" data-signup-form novalidate>
+        <label class="sr-only" for="social-club-email">Your email</label>
+        <input id="social-club-email" name="email" type="email" placeholder="Your email" autocomplete="email" data-signup-email>
+        <button class="button button--primary" type="submit" aria-disabled="true">Join the Club</button>
+        <p class="signup-form__message" data-signup-message role="status">Signup is styled for launch. The club ledger is not connected yet.</p>
+      </form>
+      <p class="social-club__privacy">No spam. No actual spirits. Just legends. By joining, you agree to receive RIP Tequila updates. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>

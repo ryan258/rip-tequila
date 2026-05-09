@@ -1,0 +1,117 @@
+.page-hero {
+  @include paper-texture($texture-opacity-light);
+  background: $color-black;
+  color: $color-cream;
+}
+
+.page-hero--cream {
+  background: $color-cream;
+  color: $color-black;
+}
+
+.page-hero__inner {
+  @include container;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.36fr);
+  gap: $space-2xl;
+  align-items: center;
+  min-height: 440px;
+  padding-block: clamp($space-3xl, 9vw, 140px);
+}
+
+.page-hero__copy {
+  display: grid;
+  gap: $space-lg;
+}
+
+.page-hero__title {
+  @include poster-title(3.2rem, 9vw, 8rem);
+  max-width: 8em;
+}
+
+.page-hero__body {
+  @include body-copy(clamp(1.05rem, 1.35vw, 1.25rem));
+  max-width: 46rem;
+}
+
+.page-hero__icon {
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+  color: $color-red;
+  border: 3px solid currentColor;
+  font-size: clamp(5rem, 11vw, 10rem);
+}
+
+.catalog-section {
+  @include section-padding;
+  background: $color-cream;
+  color: $color-black;
+}
+
+.catalog-section--dark {
+  background: $color-black;
+  color: $color-cream;
+}
+
+.catalog-section__inner {
+  @include container;
+}
+
+.editorial-section {
+  @include section-padding(clamp(48px, 7vw, 96px));
+  background: $color-cream;
+}
+
+.editorial-section__inner {
+  @include container($content-max);
+  display: grid;
+  gap: $space-lg;
+  max-width: 78ch;
+}
+
+.editorial-section__inner p {
+  @include body-copy;
+}
+
+.not-found {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - #{$header-height-desktop});
+  background: $color-black;
+  color: $color-cream;
+  text-align: center;
+}
+
+.not-found__inner {
+  @include container($content-max);
+  display: grid;
+  gap: $space-lg;
+  justify-items: center;
+}
+
+.not-found h1 {
+  @include poster-title(3.5rem, 10vw, 8rem);
+}
+
+.not-found p {
+  @include body-copy;
+  max-width: 42rem;
+}
+
+.not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-md;
+  justify-content: center;
+}
+
+@media (max-width: $breakpoint-md) {
+  .page-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero__icon {
+    min-height: 180px;
+  }
+}

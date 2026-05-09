@@ -1,0 +1,32 @@
+<section class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-section__inner">
+    <div class="hero-section__copy">
+      <p class="hero-section__eyebrow">{{ .Params.eyebrow }}</p>
+      <h1 class="hero-section__title" id="hero-title">{{ .Title }}</h1>
+      <p class="hero-section__body">{{ .Params.body }}</p>
+      <div class="hero-section__standins" aria-hidden="true">
+        <span><i class="fa-solid fa-bell"></i></span>
+        <span><i class="fa-solid fa-seedling"></i></span>
+        <span><i class="fa-solid fa-skull"></i></span>
+        <span><i class="fa-solid fa-martini-glass-citrus"></i></span>
+      </div>
+      <div class="hero-section__actions">
+        <a class="button button--primary" href="{{ .Params.primary_cta.href }}">{{ .Params.primary_cta.label }}</a>
+        <a class="button button--light" href="{{ .Params.secondary_cta.href }}">{{ .Params.secondary_cta.label }}</a>
+      </div>
+    </div>
+    <div class="hero-poster" aria-hidden="true">
+      <span class="hero-poster__sun"></span>
+      <span class="hero-poster__agave hero-poster__agave--left"><i class="fa-solid fa-seedling"></i></span>
+      <span class="hero-poster__agave hero-poster__agave--right"><i class="fa-solid fa-seedling"></i></span>
+      <span class="hero-poster__bottle">
+        <span class="hero-poster__bottle-neck"></span>
+        <span class="hero-poster__bottle-body">
+          <strong>RIP</strong>
+          <i class="fa-solid fa-bell"></i>
+        </span>
+      </span>
+      <span class="hero-poster__caption">REST IN PROOF</span>
+    </div>
+  </div>
+</section>

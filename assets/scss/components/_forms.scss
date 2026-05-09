@@ -1,0 +1,56 @@
+.signup-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: $space-sm;
+  align-items: stretch;
+}
+
+.signup-form input {
+  min-height: 52px;
+  width: 100%;
+  border: 2px solid currentColor;
+  border-radius: 0;
+  background: $color-cream;
+  color: $color-black;
+  padding: 0 $space-md;
+  font-family: $font-body;
+  font-weight: 700;
+}
+
+.signup-form input::placeholder {
+  color: rgba($color-black, 0.58);
+}
+
+.signup-form input:focus-visible {
+  @include focus-ring($color-gold);
+}
+
+.signup-form__message {
+  grid-column: 1 / -1;
+  min-height: 1.4em;
+  color: rgba($color-cream, 0.78);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.signup-form[data-state="error"] .signup-form__message {
+  color: $color-gold;
+}
+
+.signup-form[data-state="success"] .signup-form__message {
+  color: $color-green;
+}
+
+.footer-signup {
+  grid-template-columns: 1fr;
+}
+
+.footer-signup .signup-form__message {
+  color: rgba($color-cream, 0.72);
+}
+
+@media (max-width: $breakpoint-sm) {
+  .signup-form {
+    grid-template-columns: 1fr;
+  }
+}

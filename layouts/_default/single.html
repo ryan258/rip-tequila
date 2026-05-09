@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article class="detail-page">
+  <header class="detail-hero">
+    <div class="detail-hero__copy">
+      <p class="section-heading__eyebrow">{{ .Params.eyebrow | default .Section }}</p>
+      <h1>{{ .Params.headline | default .Params.detail_headline | default .Title }}</h1>
+      <p>{{ .Description | default .Params.line }}</p>
+    </div>
+    <div class="detail-hero__icon" aria-hidden="true">
+      <i class="{{ .Params.icon | default "fa-solid fa-skull" }}"></i>
+    </div>
+  </header>
+  <div class="detail-page__body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

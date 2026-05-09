@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="detail-page merch-detail" data-accent="{{ .Params.accent }}">
+  <header class="detail-hero">
+    <div class="detail-hero__copy">
+      <p class="section-heading__eyebrow">{{ .Params.category }}</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.line }}</p>
+      <a class="button button--primary" href="/merch/">Back to Merch</a>
+    </div>
+    <div class="detail-hero__icon" aria-hidden="true">
+      <i class="{{ .Params.icon }}"></i>
+    </div>
+  </header>
+  <div class="detail-page__body">
+    {{ .Content }}
+    <p><strong>Prototype price:</strong> {{ .Params.price }}</p>
+    <p class="detail-note">Commerce-ready content structure. Checkout is not connected in this prototype.</p>
+  </div>
+</article>
+{{ end }}

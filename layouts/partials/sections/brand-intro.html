@@ -1,0 +1,17 @@
+<section class="brand-intro" aria-labelledby="brand-intro-title">
+  <div class="brand-intro__inner">
+    <div class="brand-intro__copy">
+      <p class="section-heading__eyebrow">{{ .Params.eyebrow }}</p>
+      <h2 class="section-heading__title" id="brand-intro-title">{{ .Title }}</h2>
+      <p class="section-heading__body">{{ .Params.body }}</p>
+      <p class="brand-intro__support">{{ .Params.support }}</p>
+      <a class="button button--dark" href="{{ .Params.cta.href }}">{{ .Params.cta.label }}</a>
+    </div>
+    <div class="brand-intro__visual" aria-hidden="true">
+      <span class="brand-intro__sun"></span>
+      <span class="brand-intro__doorway"><span>RIP</span></span>
+      <span class="brand-intro__agave"><i class="fa-solid fa-seedling"></i></span>
+      <span class="brand-intro__note">La Cantina del Ultimo Trago</span>
+    </div>
+  </div>
+</section>

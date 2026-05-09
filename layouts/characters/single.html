@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="character-detail" data-accent="{{ .Params.accent }}">
+  <header class="detail-hero detail-hero--character">
+    <div class="detail-hero__copy">
+      <p class="section-heading__eyebrow">{{ .Params.role }}</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.line }}</p>
+      <a class="button button--primary" href="/characters/">Back to the Cast</a>
+    </div>
+    <div class="detail-hero__icon" aria-hidden="true">
+      <i class="{{ .Params.icon }}"></i>
+    </div>
+  </header>
+  <div class="detail-page__body">
+    <p><strong>Prop:</strong> {{ .Params.prop }}</p>
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

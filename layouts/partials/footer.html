@@ -1,0 +1,52 @@
+<footer class="site-footer">
+  <div class="site-footer__campaign" aria-label="Footer campaign lines">
+    <span>Save Water, Drink Tequila!</span>
+    <span>Rest In Proof</span>
+    <span>Born in Agave. Buried in Legend.</span>
+  </div>
+
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__logo" href="/">
+        <span>RIP</span>
+        <small>TEQUILA</small>
+      </a>
+      <p>Rest In Proof</p>
+      <p>Born in Agave. Buried in Legend.</p>
+      <p class="site-footer__disclaimer">RIP Tequila is a fictional parody brand. No actual spirits are sold here. Drink responsibly. Haunt responsibly.</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      {{ range hugo.Data.navigation.footer }}
+        <div class="site-footer__column">
+          <h2>{{ .title }}</h2>
+          <ul>
+            {{ range .links }}
+              <li><a href="{{ .href }}">{{ .label }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </nav>
+
+    <div class="site-footer__signup">
+      <p class="site-footer__social-label">{{ hugo.Data.navigation.social.label }}</p>
+      <div class="site-footer__social">
+        {{ range hugo.Data.navigation.social.links }}
+          <a href="{{ .href }}" aria-label="{{ .label }}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
+        {{ end }}
+      </div>
+      {{/* Button stays focusable so placeholder validation can explain that signup is not wired yet. */}}
+      <form class="footer-signup signup-form" method="post" data-signup-form novalidate>
+        <label class="sr-only" for="footer-email">Your email</label>
+        <input id="footer-email" name="email" type="email" placeholder="Your email" autocomplete="email" data-signup-email>
+        <button class="button button--primary" type="submit" aria-disabled="true">Join</button>
+        <p class="signup-form__message" data-signup-message role="status">Drops, posters, merch, and afterlife dispatches.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p>{{ now.Year }} {{ site.Params.copyright }}</p>
+  </div>
+</footer>

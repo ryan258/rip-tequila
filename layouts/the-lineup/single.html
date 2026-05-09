@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="product-detail" data-accent="{{ .Params.accent }}">
+  <header class="product-detail__hero">
+    <div class="product-detail__copy">
+      <p class="section-heading__eyebrow">{{ with .CurrentSection }}{{ .Title }}{{ else }}The Lineup{{ end }} / {{ .Params.variant }}</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.detail_headline }}</p>
+      <a class="button button--primary" href="/the-lineup/">Back to the Lineup</a>
+    </div>
+    <div class="product-detail__bottle">
+      {{ partial "product-card.html" . }}
+    </div>
+  </header>
+  <div class="detail-page__body">
+    {{ .Content }}
+    <p><strong>{{ .Params.line }}</strong> {{ .Params.descriptor }}</p>
+    <p class="detail-note">Fictional parody brand. No actual spirits.</p>
+  </div>
+</article>
+{{ end }}

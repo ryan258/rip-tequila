@@ -1,0 +1,15 @@
+{{ $products := where site.RegularPages "Section" "the-lineup" }}
+<section class="product-preview" aria-labelledby="product-preview-title">
+  <div class="product-preview__inner">
+    <div class="section-header-row">
+      {{ partial "section-heading.html" (dict "eyebrow" "The Lineup" "title" "The Lineup for Legends" "body" "One bottle family. One label system. One good reason to say just one more responsibly." "id" "product-preview-title") }}
+      <a class="button button--light" href="/the-lineup/">View the Lineup</a>
+    </div>
+    <div class="product-preview__grid scroll-strip" role="list" aria-label="RIP Tequila product lineup">
+      {{ range $products.ByWeight }}
+        <div role="listitem">{{ partial "product-card.html" . }}</div>
+      {{ end }}
+    </div>
+    <p class="section-microcopy">No actual spirits. All the spirit.</p>
+  </div>
+</section>

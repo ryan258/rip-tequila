@@ -1,0 +1,56 @@
+@mixin container($max: $container-max) {
+  width: calc(100% - (var(--page-gutter) * 2));
+  max-width: $max;
+  margin-inline: auto;
+}
+
+@mixin eyebrow {
+  font-family: $font-accent;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@mixin poster-title($min: 3rem, $preferred: 7vw, $max: 7.5rem) {
+  font-family: $font-display;
+  font-size: clamp(#{$min}, #{$preferred}, #{$max});
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+@mixin body-copy($size: clamp(1rem, 1.2vw, 1.18rem)) {
+  font-family: $font-body;
+  font-size: $size;
+  line-height: 1.55;
+}
+
+@mixin section-padding($y: clamp(72px, 9vw, 132px)) {
+  padding-block: $y;
+  padding-inline: 0;
+}
+
+@mixin paper-texture($opacity: $texture-opacity-light) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: $opacity;
+    background-image:
+      linear-gradient(90deg, rgba($color-black, 0.18) 1px, transparent 1px),
+      linear-gradient(rgba($color-black, 0.14) 1px, transparent 1px);
+    background-size: 26px 26px;
+    mix-blend-mode: multiply;
+  }
+}
+
+@mixin focus-ring($color: $color-red) {
+  outline: 3px solid $color;
+  outline-offset: 4px;
+}

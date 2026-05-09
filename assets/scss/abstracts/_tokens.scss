@@ -1,0 +1,78 @@
+// -------------------------------------
+// RIP Tequila Visual System v2 Tokens
+// -------------------------------------
+
+$color-black: #0d0d0d;
+$color-cream: #f2ede0;
+$color-red: #b22222;
+$color-green: #2e7d4f;
+$color-gold: #c6a24a;
+$color-gray: #6b6b6b;
+$color-deep-green: #0f3d3e;
+
+$color-bg-primary: $color-cream;
+$color-bg-inverse: $color-black;
+$color-text-primary: $color-black;
+$color-text-inverse: $color-cream;
+$color-accent-primary: $color-red;
+$color-accent-secondary: $color-green;
+$color-accent-premium: $color-gold;
+
+$font-display: "Anton", Impact, sans-serif;
+$font-accent: "Oswald", "Arial Narrow", sans-serif;
+$font-body: "Montserrat", Arial, sans-serif;
+
+$header-height-desktop: 80px;
+$header-height-mobile: 64px;
+$header-z-index: 1000;
+
+$space-2xs: 4px;
+$space-xs: 8px;
+$space-sm: 12px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 48px;
+$space-3xl: 72px;
+$space-4xl: 96px;
+
+$page-gutter: clamp(20px, 4vw, 72px);
+$container-max: 1440px;
+$content-max: 1180px;
+
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+
+$ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+$transition-fast: 160ms $ease-standard;
+$transition-base: 240ms $ease-standard;
+
+$texture-opacity-light: 0.05;
+
+:root {
+  --page-gutter: #{$page-gutter};
+  --card-accent: #{$color-red};
+  color-scheme: light;
+}
+
+[data-accent="red"] {
+  --card-accent: #{$color-red};
+}
+
+[data-accent="green"] {
+  --card-accent: #{$color-green};
+}
+
+[data-accent="gold"] {
+  --card-accent: #{$color-gold};
+}
+
+[data-accent="black"] {
+  --card-accent: #{$color-black};
+}
+
+[data-accent="deep-green"] {
+  --card-accent: #{$color-deep-green};
+}

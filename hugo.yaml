@@ -1,0 +1,46 @@
+locale: "en-US"
+title: "RIP Tequila"
+disableKinds:
+  - taxonomy
+  - term
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      # Owned site content only. Revisit before accepting external Markdown.
+      unsafe: true
+
+build:
+  buildStats:
+    enable: true
+
+menus:
+  main:
+    - name: "Our Story"
+      pageRef: "/our-story/"
+      weight: 10
+    - name: "The Lineup"
+      pageRef: "/the-lineup/"
+      weight: 20
+    - name: "Characters"
+      pageRef: "/characters/"
+      weight: 30
+    - name: "Merch"
+      pageRef: "/merch/"
+      weight: 40
+    - name: "The Cantina"
+      pageRef: "/the-cantina/"
+      weight: 50
+    - name: "Find Us"
+      pageRef: "/find-us/"
+      weight: 60
+
+params:
+  description: "A fictional premium parody tequila brand from La Cantina del Ultimo Trago."
+  tagline: "Rest In Proof"
+  copyright: "RIP Tequila. Fictional parody brand concept."
+  googleFonts: "https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap"
+  fontAwesomeCdn: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  cta_label: "Enter the Cantina"
+  cta_href: "/the-cantina/"

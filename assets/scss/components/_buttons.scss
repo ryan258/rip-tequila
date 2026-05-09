@@ -1,0 +1,71 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  width: fit-content;
+  padding: 0 $space-lg;
+  background: transparent;
+  color: inherit;
+  border: 2px solid currentColor;
+  border-radius: 0;
+  font-family: $font-accent;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color $transition-fast,
+    color $transition-fast,
+    border-color $transition-fast,
+    transform $transition-fast;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  @include focus-ring;
+}
+
+.button--primary {
+  background: $color-red;
+  color: $color-cream;
+  border-color: $color-red;
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  background: #8f1919;
+  border-color: #8f1919;
+}
+
+.button--dark {
+  background: $color-black;
+  color: $color-cream;
+  border-color: $color-black;
+}
+
+.button--dark:hover,
+.button--dark:focus-visible {
+  background: $color-red;
+  border-color: $color-red;
+}
+
+.button--light {
+  background: $color-cream;
+  color: $color-black;
+  border-color: $color-cream;
+}
+
+.button--light:hover,
+.button--light:focus-visible {
+  background: $color-gold;
+  border-color: $color-gold;
+}

@@ -1,0 +1,10 @@
+node_modules/
+public/
+.hugo_cache/
+resources/_gen/
+.DS_Store
+.hugo_build.lock
+hugo_stats.json
+/mockups/
+dev-notes.txt
+brand-notes.txt

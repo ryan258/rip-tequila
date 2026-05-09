@@ -1,0 +1,13 @@
+items:
+  - text: "Save Water, Drink Tequila!"
+    icon: "fa-solid fa-seedling"
+  - text: "Rest In Proof"
+    icon: "fa-solid fa-skull"
+  - text: "Proof You Lived"
+    icon: "fa-solid fa-martini-glass-citrus"
+  - text: "The Bell Rang. You're In."
+    icon: "fa-solid fa-bell"
+  - text: "Here Lies Your Judgment"
+    icon: "fa-solid fa-monument"
+  - text: "The Dead Have Better Music"
+    icon: "fa-solid fa-music"
