@@ -6,6 +6,8 @@ accent: "red"
 icon: "fa-solid fa-clone"
 line: "The bell rang. Protect the table."
 price: "$16"
+seo_title: "Bell Coaster Set — Parody Tequila Barware | RIP Tequila"
+seo_description: "Four-piece coaster set from RIP Tequila with the cantina's hero phrases — Rest In Proof, Proof You Lived, Here Lies Your Judgment, The Bell Rang. You're In."
 ---
 
 Four coasters. Four phrases the cantina keeps repeating. *Rest In Proof. Proof You Lived. Here Lies Your Judgment. The Bell Rang. You're In.* Stack them, fan them across a table, lose one immediately and find it under the couch in March.
@@ -21,7 +23,3 @@ On the back of every coaster: *La Cantina del Último Trago — Member of the ro
 - Toasts worth commemorating, but not in poster form.
 
 > *"The bell rang. Protect the table."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

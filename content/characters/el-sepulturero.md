@@ -6,6 +6,8 @@ accent: "green"
 prop: "Shovel"
 icon: "fa-solid fa-person-digging"
 line: "Here lies your judgment."
+seo_title: "El Sepulturero — The Caretaker of the Cantina | RIP Tequila"
+seo_description: "El Sepulturero handles the night after the night. Here lies your judgment. Meet the gravedigger behind RIP Tequila's Extra Añejo and Gravedigger's Reserve."
 ---
 
 El Sepulturero handles the night after the night. When the toasts are done and the bell has rung itself out and most of the cantina is on its way to becoming somebody else's story, he's the one walking the back lot with a long shovel and a small notebook he calls *"the manifest."*
@@ -23,7 +25,3 @@ He doesn't say much. The notebook says it for him.
 > *"Here lies your judgment."*
 >
 > *"Some nights deserve a shovel."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

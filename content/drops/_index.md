@@ -3,6 +3,8 @@ title: "Drops"
 eyebrow: "Limited Evidence"
 headline: "Artifacts From the Afterparty"
 description: "A placeholder archive for future merch, poster, and campaign drops."
+seo_title: "Drops — Limited Parody Tequila Posters & Merch | RIP Tequila"
+seo_description: "Limited drops from RIP Tequila — campaign posters, capsule merch, sticker sheets, and member-only artifacts from La Cantina del Último Trago."
 cta_label: "Shop the Afterparty"
 cta_href: "/merch/"
 icon: "fa-solid fa-box-open"
@@ -15,7 +17,3 @@ Every campaign the cantina runs leaves something behind. A poster. A sticker she
 Drops are limited by design. Once a run is gone, it's gone. The cantina doesn't restock — it remembers. The Don Muerte Social Club gets first access. The public archive shows up here once the round is closed.
 
 > *"Every legend leaves evidence."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

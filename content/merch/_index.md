@@ -2,7 +2,9 @@
 title: "Merch"
 eyebrow: "Merch From the Afterparty"
 headline: "Evidence From the Afterparty"
-description: "Wear the bad idea. Keep the proof. Collect the artifacts from La Cantina del Ultimo Trago."
+description: "Wear the bad idea. Keep the proof. Collect the artifacts from La Cantina del Último Trago."
+seo_title: "Parody Tequila Merch — Dark Humor Apparel & Barware | RIP Tequila"
+seo_description: "Dark humor apparel, parody tequila posters, coasters, hats, glyph stickers, and the Don Muerte Social Club membership card. Limited drops from the afterlife cantina."
 cta_label: "Join the Club"
 cta_href: "/don-muerte-social-club/"
 ---
@@ -13,8 +15,4 @@ Drops are limited. Editions rotate with the campaigns. The Don Muerte Social Clu
 
 Wear the bad idea. Keep the proof.
 
-> *"Limited drops. Questionable evidence. No actual spirits."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*
+> *"Limited drops. Questionable evidence."*

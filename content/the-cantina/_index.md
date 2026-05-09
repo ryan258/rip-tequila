@@ -1,8 +1,10 @@
 ---
 title: "The Cantina"
-eyebrow: "La Cantina del Ultimo Trago"
+eyebrow: "La Cantina del Último Trago"
 headline: "The Bell Rang. You're In."
 description: "A fictional afterlife cantina where the labels are sharp, the stories get louder, and the last round is always designed well."
+seo_title: "La Cantina del Último Trago — The Afterlife Cantina | RIP Tequila"
+seo_description: "Inside La Cantina del Último Trago: the afterlife cantina behind RIP Tequila, host to Don Muerte, the bell, and the eight characters who run the room."
 cta_label: "Meet the Cast"
 cta_href: "/characters/"
 icon: "fa-solid fa-door-open"
@@ -17,7 +19,3 @@ Outside, the desert. El Vigía watches it. Nothing comes through the cantina tha
 Make it a night worth haunting.
 
 > *"The bell rang. You're in."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

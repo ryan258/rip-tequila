@@ -1,11 +1,13 @@
 ---
-title: "El Vigia"
+title: "El Vigía"
 weight: 80
 role: "The Watcher"
 accent: "deep-green"
 prop: "Lantern or staff"
 icon: "fa-solid fa-eye"
 line: "Follow the agave after midnight."
+seo_title: "El Vigía — Watcher of the Desert Road | RIP Tequila"
+seo_description: "El Vigía watches the road into La Cantina del Último Trago. Follow the agave after midnight. Meet the watcher behind RIP Tequila's Midnight Agave Reserve."
 ---
 
 El Vigía watches the road. He's posted somewhere between the cantina and the rest of the world, in the long stretch of desert that everybody crosses on the way in and almost nobody crosses on the way out. He doesn't introduce himself. He just tilts his hat and lets you keep walking.
@@ -19,7 +21,3 @@ He doesn't drink while he's working. Working is most of the time.
 ### What he pours
 
 **Midnight Agave Reserve.** The late-arrival bottle. If a Reserve is on your table, it's because he sent you.
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

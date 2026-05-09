@@ -3,6 +3,8 @@ title: "FAQ"
 eyebrow: "Info"
 headline: "Frequently Asked Questions"
 description: "Fast answers for a fictional parody spirits brand."
+seo_title: "FAQ — Frequently Asked Questions | RIP Tequila"
+seo_description: "Fast answers about RIP Tequila — the fictional parody tequila brand, the cast, the cantina, the merch, and how to join the Don Muerte Social Club."
 icon: "fa-solid fa-circle-question"
 ---
 
@@ -37,7 +39,3 @@ Sign up on the **Don Muerte Social Club** page. It's free, doesn't expire, and g
 ### Where do I send press questions?
 
 Through the Social Club signup, with a short note. We route them from there.
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

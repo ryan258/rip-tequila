@@ -1,0 +1,15 @@
+{{- /* Sitewide Organization schema. Product schema deferred until merch is purchasable. */ -}}
+{{- if .IsHome -}}
+{{- $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" site.Title
+  "alternateName" (site.Params.tagline | default "Rest In Proof")
+  "url" site.Home.Permalink
+  "description" site.Params.description
+  "slogan" (site.Params.tagline | default "Rest In Proof")
+-}}
+<script type="application/ld+json">
+{{ $org | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}

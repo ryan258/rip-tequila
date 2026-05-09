@@ -3,6 +3,8 @@ title: "Member Benefits"
 eyebrow: "Club"
 headline: "Questionable Benefits. Clean Design."
 description: "A placeholder page for Social Club benefits."
+seo_title: "Member Benefits — Don Muerte Social Club | RIP Tequila"
+seo_description: "What members of the Don Muerte Social Club get from RIP Tequila — drop access, member editions, numbered prints, and dispatches from the cantina."
 cta_label: "Join the Club"
 cta_href: "/don-muerte-social-club/"
 icon: "fa-solid fa-id-badge"
@@ -41,7 +43,3 @@ The Don Muerte Social Club's benefits are small in number, large in personality,
 - Renewal reminders. Membership doesn't expire.
 
 > *"Membership expires never."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

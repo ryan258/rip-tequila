@@ -6,6 +6,8 @@ accent: "gold"
 icon: "fa-solid fa-id-card"
 line: "Membership expires never."
 price: "Join"
+seo_title: "Don Muerte Social Club Card — Membership Collectible | RIP Tequila"
+seo_description: "The Don Muerte Social Club card. Membership Expires Never. A collectible black-and-gold membership card from the cantina behind RIP Tequila."
 ---
 
 The card is black. The lettering is gold. The line on the front is the only rule the club has: *Membership Expires Never.*
@@ -27,7 +29,3 @@ Cards aren't sold individually. They're issued. Sign up to the **Don Muerte Soci
 - Anyone who already knows what *member of the round* means.
 
 > *"Membership expires never."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

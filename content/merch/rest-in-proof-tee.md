@@ -7,6 +7,8 @@ icon: "fa-solid fa-shirt"
 line: "Built for legendary exits."
 price: "$28"
 feature: true
+seo_title: "Rest In Proof Tee — Parody Tequila Apparel | RIP Tequila"
+seo_description: "The hero tee of RIP Tequila — black, heavyweight, RIP monogram on the front and Rest In Proof across the back. Dark humor apparel built for legendary exits."
 ---
 
 The hero shirt of the cantina. Black tee. Heavy weight. The RIP Tequila monogram on the front and *Rest In Proof* across the back like a campaign poster you're allowed to wear. Quiet from the front. Loud from the back walk.
@@ -22,7 +24,3 @@ This is the shirt that shows up at brunches it has no business being at. Looks d
 - The exact midpoint between funeral and afterparty.
 
 > *"Built for legendary exits."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

@@ -6,6 +6,8 @@ accent: "green"
 prop: "Maracas"
 icon: "fa-solid fa-music"
 line: "Shake now. Explain later."
+seo_title: "Los Maracas — The Rhythm of the Cantina | RIP Tequila"
+seo_description: "Los Maracas are the skeleton musicians keeping La Cantina del Último Trago alive. The dead have better music. Meet the rhythm section of RIP Tequila."
 ---
 
 Los Maracas keep the room moving. Two skeleton musicians, one job: don't let the cantina take itself too seriously. Where Don Muerte handles ceremony and La Rosa Negra handles heartbreak, Los Maracas handle joy — the slightly unhinged version, with a trumpet that nobody can confirm has ever stopped playing and a guitar with two strings that work and four that nobody asks about.
@@ -21,7 +23,3 @@ If the cantina is dancing, they're the reason. If the cantina is laughing, they'
 **Los Maracas Blanco Infusion**, the party-pack edition. Best at room temperature, in volume, with the music already on.
 
 > *"Shake now. Explain later."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

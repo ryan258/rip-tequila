@@ -3,6 +3,8 @@ title: "Terms"
 eyebrow: "Info"
 headline: "Terms Placeholder"
 description: "A placeholder terms page for the fictional parody brand concept."
+seo_title: "Terms — Site Use Notice | RIP Tequila"
+seo_description: "Terms placeholder for RIP Tequila — a fictional parody brand and design project. Not a retailer, distillery, or regulated commerce platform."
 icon: "fa-solid fa-file-signature"
 ---
 
@@ -28,7 +30,3 @@ Until a production terms document is in place, the working rules are short.
 - **No actual spirits are sold here.** See the **Responsible Language** page for the full safety guidance.
 
 When merch transactions, accounts, or any commerce surface go live, this placeholder gets replaced with the production terms. The replacement will be dated and visible at the top of the page.
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

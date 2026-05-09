@@ -1,4 +1,7 @@
 ---
 title: "Homepage Sections"
-headless: true
+cascade:
+  build:
+    render: never
+    list: never
 ---

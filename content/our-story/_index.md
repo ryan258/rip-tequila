@@ -2,7 +2,9 @@
 title: "Our Story"
 eyebrow: "Born in Agave"
 headline: "Buried in Legend"
-description: "RIP Tequila is a fake premium tequila brand from La Cantina del Ultimo Trago, designed seriously and written deadpan."
+description: "RIP Tequila is a fictional premium parody tequila brand from La Cantina del Último Trago, designed seriously and written deadpan."
+seo_title: "Our Story — The Afterlife Cantina Behind RIP Tequila"
+seo_description: "Meet the cantina, the cast, and the bottles behind RIP Tequila — a parody tequila brand built like a luxury label and written like the last good toast of the night."
 cta_label: "Enter the Cantina"
 cta_href: "/the-cantina/"
 icon: "fa-solid fa-book-open"
@@ -16,10 +18,6 @@ The cantina runs on eight characters and five bottles. Don Muerte hosts. Cantina
 
 The bottles — Blanco, Reposado, Añejo, Extra Añejo, Midnight Agave Reserve — each belong to one of them. Each one has its own toast. Each one shows up at its own hour of the night.
 
-We don't sell spirits. RIP Tequila is fiction: a story, a poster series, a cantina with a homepage. What we sell is the room. What you take home is the bottle on the table after everyone has left.
+What you take home is the bottle on the table after everyone else has gone. What stays behind is the cantina.
 
 > *"No actual spirits. All the spirit."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

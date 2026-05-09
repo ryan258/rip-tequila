@@ -2,7 +2,9 @@
 title: "The Lineup"
 eyebrow: "The Lineup"
 headline: "The Lineup for Legends"
-description: "One bottle family. One label system. One good reason to say just one more responsibly."
+description: "One bottle family. One label system. A fictional lineup built for the cantina."
+seo_title: "The Lineup — Parody Tequila Bottles & Fictional Spirits | RIP Tequila"
+seo_description: "Five fictional parody tequila bottles from RIP Tequila — Blanco, Reposado, Añejo, Extra Añejo, and Midnight Agave Reserve. Each pour belongs to a character of the cantina."
 cta_label: "Meet the Cast"
 cta_href: "/characters/"
 ---
@@ -20,7 +22,3 @@ Five bottles. One family. The whole lineup lives in the cantina, but each pour b
 **Midnight Agave Reserve** is for the late arrivals. El Vigía watches the road. If a Reserve is on your table, you took the long way in.
 
 > *"Born in Agave. Buried in Legend."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

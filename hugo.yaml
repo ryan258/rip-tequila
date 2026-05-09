@@ -1,3 +1,4 @@
+baseURL: "https://riptequila.com"
 locale: "en-US"
 title: "RIP Tequila"
 disableKinds:
@@ -37,7 +38,7 @@ menus:
       weight: 60
 
 params:
-  description: "A fictional premium parody tequila brand from La Cantina del Ultimo Trago."
+  description: "A fictional premium parody tequila brand from La Cantina del Último Trago."
   tagline: "Rest In Proof"
   copyright: "RIP Tequila. Fictional parody brand concept."
   googleFonts: "https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap"

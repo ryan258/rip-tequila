@@ -6,6 +6,8 @@ accent: "green"
 icon: "fa-solid fa-icons"
 line: "One symbol. One bad idea."
 price: "$8"
+seo_title: "Glyph Sticker Sheet — Dark Humor Stickers | RIP Tequila"
+seo_description: "Twelve dark humor sticker glyphs from RIP Tequila — agave, skull, bell, lime, bottle, tombstone, rose, maracas, moon, cross, shot glass, and the RIP monogram."
 ---
 
 One sheet. Twelve symbols. Endless small mistakes you can attach to surfaces you don't own. Agave. Skull. Bell. Lime. Bottle. Tombstone. Rose. Maracas. Moon. Cross. Shot glass. The RIP monogram seal. Pick one. Pick three. Pick the one that fits the night you had.
@@ -19,7 +21,3 @@ For laptops, water bottles, instrument cases, the inside lid of a flask you defi
 - Tombstone on a "do not disturb" door hanger. Status: under review.
 
 > *"One symbol. One bad idea."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

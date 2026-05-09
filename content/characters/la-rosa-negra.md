@@ -6,6 +6,8 @@ accent: "red"
 prop: "Rose or microphone"
 icon: "fa-solid fa-microphone-lines"
 line: "The dead still dance."
+seo_title: "La Rosa Negra — The Voice of the Cantina | RIP Tequila"
+seo_description: "La Rosa Negra is the singer of La Cantina del Último Trago. The dead still dance. Meet the headline performer of RIP Tequila's afterlife cast."
 ---
 
 When La Rosa Negra steps to the microphone, the cantina goes quiet — not because she demands it, but because the bottles do. She is the voice of the room. The headliner. The act everybody at the bar will quote for weeks and never quite remember the song.
@@ -21,7 +23,3 @@ Her set list is a mystery. Some nights it's a slow ballad. Some nights it's a bo
 **Rosa Reposado**, a special edition that arrives on the table before her second set. Pour it slowly. Bring a flower for the candle. Don't ask for requests.
 
 > *"Every heartbreak deserves a chorus."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

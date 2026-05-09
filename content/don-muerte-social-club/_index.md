@@ -3,6 +3,8 @@ title: "Don Muerte Social Club"
 eyebrow: "Don Muerte Social Club"
 headline: "Membership Expires Never."
 description: "Poster drops, merch alerts, character reveals, fictional launches, and cantina dispatches."
+seo_title: "Don Muerte Social Club — Members-Only Drops | RIP Tequila"
+seo_description: "Join the Don Muerte Social Club for first look at RIP Tequila poster drops, merch alerts, character reveals, and fictional product launches. Membership Expires Never."
 cta_label: "Join the Club"
 cta_href: "#social-club"
 icon: "fa-solid fa-id-card"
@@ -29,7 +31,3 @@ Members get first look at every drop, character reveal, fictional product launch
 - Talk you into anything you wouldn't already say yes to at the cantina.
 
 > *"Membership expires never. Benefits are questionable. Hydration encouraged."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

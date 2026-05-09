@@ -6,6 +6,8 @@ accent: "gold"
 prop: "Small bottle or book"
 icon: "fa-solid fa-cross"
 line: "I bless this mess."
+seo_title: "Padre Proof — The Blesser of Bad Decisions | RIP Tequila"
+seo_description: "Padre Proof blesses bad ideas, witnesses minor vows, and presides over the toasts the rest of the cantina won't go on record for. I bless this mess."
 ---
 
 Padre Proof handles the rituals nobody else wants to officiate. He blesses bad ideas. He witnesses minor vows. He presides over toasts that probably should have been edited before they were delivered. His paperwork is impeccable. His judgment is, by design, generous.
@@ -23,7 +25,3 @@ If you're not sure whether the round you're about to pour is a good idea, find h
 > *"I bless this mess."*
 >
 > *"Your sins are between you, the lime, and the receipt."*
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*

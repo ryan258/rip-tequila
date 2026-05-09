@@ -3,6 +3,8 @@ title: "Privacy"
 eyebrow: "Info"
 headline: "Privacy Placeholder"
 description: "A placeholder privacy page for the future Social Club signup workflow."
+seo_title: "Privacy — Don Muerte Social Club Signup Notice | RIP Tequila"
+seo_description: "Privacy placeholder for the Don Muerte Social Club signup. RIP Tequila does not collect production user data; this page documents the working rules."
 icon: "fa-solid fa-lock"
 ---
 
@@ -29,7 +31,3 @@ When the Social Club signup goes live, this page will document the actual practi
 - Read the **Parody Disclaimer** to confirm what this brand is and isn't selling.
 
 When the signup is connected and a real privacy practice is in place, this placeholder gets replaced with a production policy. The replacement will be dated and visible at the top of the page.
-
----
-
-*Fictional parody brand. Drink responsibly. Haunt responsibly.*
