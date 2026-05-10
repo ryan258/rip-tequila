@@ -2,7 +2,7 @@
 title: "The Cantina"
 eyebrow: "La Cantina del Último Trago"
 headline: "The Bell Rang. You're In."
-description: "A fictional afterlife cantina where the labels are sharp, the stories get louder, and the last round is always designed well."
+description: "An afterlife cantina where the bell rings once a night, the stories get louder, and the last round always belongs to a legend."
 seo_title: "La Cantina del Último Trago — The Afterlife Cantina | RIP Tequila"
 seo_description: "Inside La Cantina del Último Trago: the afterlife cantina behind RIP Tequila, host to Don Muerte, the bell, and the eight characters who run the room."
 cta_label: "Meet the Cast"

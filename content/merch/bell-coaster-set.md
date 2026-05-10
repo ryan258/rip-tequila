@@ -6,7 +6,7 @@ accent: "red"
 icon: "fa-solid fa-clone"
 line: "The bell rang. Protect the table."
 price: "$16"
-seo_title: "Bell Coaster Set — Parody Tequila Barware | RIP Tequila"
+seo_title: "Bell Coaster Set — Dark Humor Tequila Barware | RIP Tequila"
 seo_description: "Four-piece coaster set from RIP Tequila with the cantina's hero phrases — Rest In Proof, Proof You Lived, Here Lies Your Judgment, The Bell Rang. You're In."
 ---
 

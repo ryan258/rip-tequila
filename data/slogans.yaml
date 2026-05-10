@@ -11,3 +11,5 @@ items:
     icon: "fa-solid fa-monument"
   - text: "The Dead Have Better Music"
     icon: "fa-solid fa-music"
+  - text: "Bury Me in Lime"
+    icon: "fa-solid fa-lemon"

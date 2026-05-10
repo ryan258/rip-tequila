@@ -2,7 +2,7 @@
 title: "Member Benefits"
 eyebrow: "Club"
 headline: "Questionable Benefits. Clean Design."
-description: "A placeholder page for Social Club benefits."
+description: "What you get when your member number lands in El Sepulturero's manifest."
 seo_title: "Member Benefits — Don Muerte Social Club | RIP Tequila"
 seo_description: "What members of the Don Muerte Social Club get from RIP Tequila — drop access, member editions, numbered prints, and dispatches from the cantina."
 cta_label: "Join the Club"

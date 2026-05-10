@@ -2,7 +2,7 @@
 title: "Our Story"
 eyebrow: "Born in Agave"
 headline: "Buried in Legend"
-description: "RIP Tequila is a fictional premium parody tequila brand from La Cantina del Último Trago, designed seriously and written deadpan."
+description: "The cantina, the cast, and the bottles behind RIP Tequila — La Cantina del Último Trago, where the last round always belongs to a legend."
 seo_title: "Our Story — The Afterlife Cantina Behind RIP Tequila"
 seo_description: "Meet the cantina, the cast, and the bottles behind RIP Tequila — a parody tequila brand built like a luxury label and written like the last good toast of the night."
 cta_label: "Enter the Cantina"

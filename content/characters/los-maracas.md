@@ -20,6 +20,6 @@ If the cantina is dancing, they're the reason. If the cantina is laughing, they'
 
 ### What they pour
 
-**Los Maracas Blanco Infusion**, the party-pack edition. Best at room temperature, in volume, with the music already on.
+**Los Maracas Blanco Infusion**, the party-pack edition. Best at room temperature, with the music already on, when the cantina won't sit still.
 
 > *"Shake now. Explain later."*

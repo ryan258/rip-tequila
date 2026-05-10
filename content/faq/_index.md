@@ -2,19 +2,19 @@
 title: "FAQ"
 eyebrow: "Info"
 headline: "Frequently Asked Questions"
-description: "Fast answers for a fictional parody spirits brand."
+description: "Fast answers about the cantina, the cast, the bottles, and the Social Club."
 seo_title: "FAQ — Frequently Asked Questions | RIP Tequila"
-seo_description: "Fast answers about RIP Tequila — the fictional parody tequila brand, the cast, the cantina, the merch, and how to join the Don Muerte Social Club."
+seo_description: "Fast answers about RIP Tequila — the parody tequila brand, the cast, the cantina, the merch, and how to join the Don Muerte Social Club."
 icon: "fa-solid fa-circle-question"
 ---
 
 ### Is RIP Tequila real?
 
-No. RIP Tequila is a **fictional parody brand**. The cantina, the cast, the bottles — all fiction. No actual spirits are produced or sold here.
+No. La Cantina del Último Trago opens past last call, the cast is dead, and every bottle on the lineup is empty. **No actual spirits are produced or sold here.** What ships is the design — posters, merch, and the lore around a cantina that doesn't take reservations.
 
 ### Then what is this?
 
-A storytelling and design project built around an afterlife cantina, eight characters, and five bottles. A poster series with a homepage. A brand world you can sit in for a few minutes, then go on with your day.
+A full brand world from La Cantina del Último Trago: eight characters, five bottles, a campaign poster series, a merch shelf, the Don Muerte Social Club, and a manifest with your name in it. Sit in it for a few minutes, take an artifact home, go on with your day.
 
 ### Can the merch be real?
 

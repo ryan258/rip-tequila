@@ -1,8 +1,8 @@
 ---
-title: "Parody Disclaimer"
+title: "Disclaimer"
 eyebrow: "No Actual Spirits"
 headline: "All the Spirit."
-description: "RIP Tequila is a fictional parody brand. No actual spirits are sold here."
+description: "No actual spirits are sold here. The bottles are concepts. The merch can ship."
 seo_title: "Parody Disclaimer — Fictional Brand Notice | RIP Tequila"
 seo_description: "RIP Tequila is a fictional parody brand created for storytelling, design, and merch. No actual spirits are sold here. Drink responsibly. Haunt responsibly."
 cta_label: "Responsible Language"

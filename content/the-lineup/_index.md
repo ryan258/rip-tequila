@@ -2,9 +2,9 @@
 title: "The Lineup"
 eyebrow: "The Lineup"
 headline: "The Lineup for Legends"
-description: "One bottle family. One label system. A fictional lineup built for the cantina."
-seo_title: "The Lineup — Parody Tequila Bottles & Fictional Spirits | RIP Tequila"
-seo_description: "Five fictional parody tequila bottles from RIP Tequila — Blanco, Reposado, Añejo, Extra Añejo, and Midnight Agave Reserve. Each pour belongs to a character of the cantina."
+description: "Five bottles. One family. Each pour belongs to a different character and a different hour of the night."
+seo_title: "The Lineup — Parody Tequila Bottles from the Afterlife Cantina | RIP Tequila"
+seo_description: "Five parody tequila bottles from RIP Tequila — Blanco, Reposado, Añejo, Extra Añejo, and Midnight Agave Reserve. Each pour belongs to a character of the afterlife cantina."
 cta_label: "Meet the Cast"
 cta_href: "/characters/"
 ---

@@ -19,7 +19,7 @@ Cards aren't sold individually. They're issued. Sign up to the **Don Muerte Soci
 - Poster drops, dispatched directly.
 - Merch alerts ahead of the public list.
 - Character reveals before the cantina announces them.
-- Fictional product launches on the night they happen.
+- New bottle reveals on the night the cantina names them.
 - Occasional warnings from the road.
 
 ### Built for

@@ -2,7 +2,7 @@
 title: "RIP Tequila"
 weight: 10
 eyebrow: "The Bell Rang. You're In."
-body: "A fictional premium parody tequila brand from La Cantina del Último Trago. No actual spirits. All the spirit."
+body: "A premium tequila label from La Cantina del Último Trago — the afterlife cantina where the bell rings once and the bottles do the rest. No actual spirits. All the spirit."
 primary_cta:
   label: "View the Lineup"
   href: "/the-lineup/"

@@ -7,7 +7,7 @@ icon: "fa-solid fa-shirt"
 line: "Built for legendary exits."
 price: "$28"
 feature: true
-seo_title: "Rest In Proof Tee — Parody Tequila Apparel | RIP Tequila"
+seo_title: "Rest In Proof Tee — Dark Humor Tequila Apparel | RIP Tequila"
 seo_description: "The hero tee of RIP Tequila — black, heavyweight, RIP monogram on the front and Rest In Proof across the back. Dark humor apparel built for legendary exits."
 ---
 

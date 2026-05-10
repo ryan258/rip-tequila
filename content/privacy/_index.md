@@ -1,21 +1,18 @@
 ---
 title: "Privacy"
 eyebrow: "Info"
-headline: "Privacy Placeholder"
-description: "A placeholder privacy page for the future Social Club signup workflow."
+headline: "Privacy"
+description: "How RIP Tequila handles your email when you join the Don Muerte Social Club."
 seo_title: "Privacy — Don Muerte Social Club Signup Notice | RIP Tequila"
-seo_description: "Privacy placeholder for the Don Muerte Social Club signup. RIP Tequila does not collect production user data; this page documents the working rules."
+seo_description: "How RIP Tequila handles email and signup data for the Don Muerte Social Club. Plain-language privacy practices from La Cantina del Último Trago."
 icon: "fa-solid fa-lock"
 ---
 
-This is a placeholder privacy page for the **Don Muerte Social Club** signup, which is not yet connected to a real backend. No live email collection, analytics, or user data processing is wired up on this site at the moment.
+When you sign up for the **Don Muerte Social Club**, RIP Tequila collects only what's needed to send you drops and dispatches — your email address.
 
-When the Social Club signup goes live, this page will document the actual practices in plain language. Until then, the placeholder rules are the working rules.
-
-### What we plan to collect
+### What we collect
 
 - Your email address, when you sign up.
-- Optional notes you include about press, collaborations, or merch interests.
 - That's it.
 
 ### What we will not do
@@ -28,6 +25,6 @@ When the Social Club signup goes live, this page will document the actual practi
 
 - Unsubscribe from any dispatch with one click. Membership doesn't require an open inbox.
 - Ask for your record to be removed.
-- Read the **Parody Disclaimer** to confirm what this brand is and isn't selling.
+- Read the **Disclaimer** to confirm what this brand is and isn't selling.
 
-When the signup is connected and a real privacy practice is in place, this placeholder gets replaced with a production policy. The replacement will be dated and visible at the top of the page.
+This policy may be updated as the cantina adds new ways to dispatch. Updates will be dated and visible at the top of the page.

@@ -115,20 +115,20 @@ function initSignupForms(): void {
       const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
       if (!value) {
-        message.textContent = 'Email is required when the Social Club opens.';
+        message.textContent = 'Email is required to join the manifest.';
         form.dataset.state = 'error';
         input.focus();
         return;
       }
 
       if (!valid) {
-        message.textContent = 'Use a valid email format for the future signup.';
+        message.textContent = 'Use a valid email format.';
         form.dataset.state = 'error';
         input.focus();
         return;
       }
 
-      message.textContent = 'Signup is not connected yet. The launch styling is ready.';
+      message.textContent = 'The manifest opens on the next round. Watch the road for the bell.';
       form.dataset.state = 'success';
     });
   });

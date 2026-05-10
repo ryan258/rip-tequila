@@ -6,7 +6,7 @@ accent: "black"
 icon: "fa-solid fa-hat-cowboy"
 line: "Low profile. High proof."
 price: "$30"
-seo_title: "RIP Tequila Hat — Parody Tequila Headwear | RIP Tequila"
+seo_title: "RIP Tequila Hat — Dark Humor Tequila Headwear | RIP Tequila"
 seo_description: "Low-profile cap with the RIP monogram. Low profile. High proof. Dark humor headwear from the afterlife cantina behind RIP Tequila."
 ---
 
