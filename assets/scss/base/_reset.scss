@@ -6,7 +6,12 @@
 
 html {
   min-width: 320px;
-  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -44,6 +49,14 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+}
+
+.editorial-section__inner,
+.detail-page__body {
+  ul,
+  ol {
+    padding-inline-start: 1.2em;
+  }
 }
 
 p,

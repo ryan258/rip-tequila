@@ -17,13 +17,13 @@ Crisp, clean, and unapologetic about it. There's no wood in this bottle. There h
 
 > *"Born in Agave. Buried in Legend."*
 
-### A note from the bartender
+## A note from the bartender
 
 > *"I pour. You explain tomorrow."* — Cantina Jack
 
 He won't talk you into a Blanco. He'll just slide one across the bar without looking up. It is the beginning of the ritual, the first chapter of a story that ends when the bell finally rings.
 
-### Concept tasting notes: What's in the glass
+## Concept tasting notes: What's in the glass
 
 Citrus. Fresh-cracked agave. A clean white pepper bite, a flash of green, and the faint background noise of a crowded room. Short, neat finish. Ready for the night to begin.
 

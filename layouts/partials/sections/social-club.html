@@ -13,11 +13,10 @@
       <p class="section-heading__eyebrow">Don Muerte Social Club</p>
       <h2 class="section-heading__title" id="social-club-title">Membership Expires Never.</h2>
       <p class="section-heading__body">Get poster drops, merch alerts, character reveals, new bottle reveals, and the occasional warning from La Cantina del Último Trago.</p>
-      {{/* Button stays focusable so placeholder validation can explain that signup is not wired yet. */}}
-      <form class="signup-form" method="post" data-signup-form novalidate>
+      <form class="signup-form" data-signup-form>
         <label class="sr-only" for="social-club-email">Your email</label>
-        <input id="social-club-email" name="email" type="email" placeholder="Your email" autocomplete="email" data-signup-email>
-        <button class="button button--primary" type="submit" aria-disabled="true">Join the Club</button>
+        <input id="social-club-email" name="email" type="email" placeholder="Your email" autocomplete="email" required data-signup-email>
+        <button class="button button--primary" type="submit">Join the Club</button>
         <p class="signup-form__message" data-signup-message role="status">Drops, posters, merch, and afterlife dispatches.</p>
       </form>
       <p class="social-club__privacy">No spam. No actual spirits. Just legends. By joining, you agree to receive RIP Tequila updates. Unsubscribe anytime.</p>

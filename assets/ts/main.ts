@@ -1,23 +1,7 @@
-const focusableSelector = [
-  'a[href]',
-  'button:not([disabled])',
-  'input:not([disabled])',
-  'select:not([disabled])',
-  'textarea:not([disabled])',
-  '[tabindex]:not([tabindex="-1"])',
-].join(',');
-
-function isVisible(element: HTMLElement): boolean {
-  if (element.closest('[hidden], [inert], [aria-hidden="true"]')) {
-    return false;
-  }
-
-  return element.getClientRects().length > 0;
-}
-
 function getFocusable(container: HTMLElement): HTMLElement[] {
+  const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
   return Array.from(container.querySelectorAll<HTMLElement>(focusableSelector)).filter(
-    (element) => isVisible(element),
+    (el) => el.getClientRects().length > 0 && !el.closest('[inert], [aria-hidden="true"]'),
   );
 }
 
@@ -33,7 +17,6 @@ function initMobileMenu(): void {
 
   const closeMenu = (): void => {
     menu.classList.remove('is-open');
-    menu.hidden = true;
     toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Open menu');
@@ -43,13 +26,15 @@ function initMobileMenu(): void {
 
   const openMenu = (): void => {
     lastFocused = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
-    menu.hidden = false;
-    menu.classList.add('is-open');
     toggle.classList.add('is-open');
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('aria-label', 'Close menu');
     document.body.classList.add('has-open-menu');
-    getFocusable(menu)[0]?.focus();
+
+    requestAnimationFrame(() => {
+      menu.classList.add('is-open');
+      getFocusable(menu)[0]?.focus();
+    });
   };
 
   toggle.addEventListener('click', () => {
@@ -101,88 +86,14 @@ function initMobileMenu(): void {
 
 function initSignupForms(): void {
   document.querySelectorAll<HTMLFormElement>('[data-signup-form]').forEach((form) => {
-    const input = form.querySelector<HTMLInputElement>('[data-signup-email]');
     const message = form.querySelector<HTMLElement>('[data-signup-message]');
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-
-      if (!input || !message) {
-        return;
+      if (message) {
+        message.textContent = 'The manifest opens on the next round. Watch the road for the bell.';
+        form.dataset.state = 'success';
       }
-
-      const value = input.value.trim();
-      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-
-      if (!value) {
-        message.textContent = 'Email is required to join the manifest.';
-        form.dataset.state = 'error';
-        input.focus();
-        return;
-      }
-
-      if (!valid) {
-        message.textContent = 'Use a valid email format.';
-        form.dataset.state = 'error';
-        input.focus();
-        return;
-      }
-
-      message.textContent = 'The manifest opens on the next round. Watch the road for the bell.';
-      form.dataset.state = 'success';
-    });
-  });
-}
-
-function initInteractiveCards(): void {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
-  const cards = Array.from(document.querySelectorAll<HTMLElement>('.interactive-card'));
-  const cardRects = new Map<HTMLElement, DOMRect>();
-  const resetRects = (): void => cardRects.clear();
-
-  if (!cards.length) {
-    return;
-  }
-
-  window.addEventListener('resize', resetRects);
-  window.addEventListener('scroll', resetRects, { capture: true, passive: true });
-
-  cards.forEach((card) => {
-    card.dataset.interaction = 'ready';
-
-    card.addEventListener('pointerenter', () => {
-      cardRects.set(card, card.getBoundingClientRect());
-    });
-
-    card.addEventListener('pointermove', (event) => {
-      const rect = cardRects.get(card) ?? card.getBoundingClientRect();
-      cardRects.set(card, rect);
-
-      if (!rect.width || !rect.height) {
-        return;
-      }
-
-      const x = ((event.clientX - rect.left) / rect.width) * 100;
-      const y = ((event.clientY - rect.top) / rect.height) * 100;
-      card.style.setProperty('--pointer-x', `${x.toFixed(2)}%`);
-      card.style.setProperty('--pointer-y', `${y.toFixed(2)}%`);
-    }, { passive: true });
-
-    card.addEventListener('pointerleave', () => {
-      cardRects.delete(card);
-      card.style.removeProperty('--pointer-x');
-      card.style.removeProperty('--pointer-y');
-    });
-
-    card.addEventListener('focusin', () => {
-      card.classList.add('is-keyboard-active');
-    });
-
-    card.addEventListener('focusout', () => {
-      card.classList.remove('is-keyboard-active');
     });
   });
 }
@@ -190,5 +101,4 @@ function initInteractiveCards(): void {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSignupForms();
-  initInteractiveCards();
 });

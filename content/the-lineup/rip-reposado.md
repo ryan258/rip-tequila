@@ -17,13 +17,13 @@ Rested long enough to lose the sharp edge, not long enough to forget what it use
 
 > *"Last Call Is Just the Beginning."*
 
-### A note from the bell
+## A note from the bell
 
 > *"I do not announce last call. I announce fate."* — Campana Roja
 
 She doesn't pour. She rings. The Reposado is what's already on the table by the time the sound stops.
 
-### Concept tasting notes: What's in the glass
+## Concept tasting notes: What's in the glass
 
 Caramel up front, then warm vanilla, agave, and a soft clove warmth. A whisper of oak, some quiet reassurance, and a finish that lingers exactly as long as the conversation does. Pairs with a story you've told before, a friend you haven't seen in a year, and a chair you can't quite remember sitting down in.
 

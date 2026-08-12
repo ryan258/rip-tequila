@@ -12,31 +12,31 @@ icon: "fa-solid fa-id-badge"
 
 The Don Muerte Social Club's benefits are small in number, large in personality, and consistent across every drop. Here's the full list, in case you needed one to keep on the fridge.
 
-### Drops
+## Drops
 
 - First look at every poster release before the public archive lists it.
 - Capsule merch alerts with member-only access for the first 24 hours.
 - Character series prints as they roll out, with a member edition stamp.
 
-### Editions
+## Editions
 
 - Member-only editions of select coasters, sticker sheets, and matchbooks.
 - Numbered prints for major campaigns — your member number, on the print.
 - Bottle-mock editions when special-edition bottles ship as collector pieces.
 
-### Cantina dispatches
+## Cantina dispatches
 
 - Campaign briefs before the campaigns go public.
 - Character reveals with the full bio before it lands on the site.
 - Occasional warnings from El Vigía when the road has something to say.
 
-### House rules
+## House rules
 
 - Hydration encouraged. Padre Proof made it official.
 - No expiration. Once you're in the manifest, you're in the manifest.
 - Questionable benefits, clean design. Both halves are taken seriously.
 
-### Not included
+## Not included
 
 - A real bottle. There is no real bottle.
 - A discount on real spirits. We don't sell spirits.

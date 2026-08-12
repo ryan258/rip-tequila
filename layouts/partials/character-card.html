@@ -1,5 +1,5 @@
 {{ $accent := .Params.accent | default "red" }}
-<a class="character-card interactive-card" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
+<a class="character-card" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
   <span class="character-card__figure" aria-hidden="true">
     <i class="{{ .Params.icon }}"></i>
   </span>

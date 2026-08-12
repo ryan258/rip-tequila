@@ -18,7 +18,7 @@ If the cantina is dancing, they're the reason. If the cantina is laughing, they'
 
 > *"The dead have better music."*
 
-### What they pour
+## What they pour
 
 **Los Maracas Blanco Infusion**, the party-pack edition. Best at room temperature, with the music already on, when the cantina won't sit still.
 

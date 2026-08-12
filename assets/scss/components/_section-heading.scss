@@ -9,6 +9,15 @@
   color: $color-red;
 }
 
+// Lighter red only on dark surfaces; $color-red fails 4.5:1 on black, and
+// $color-red-light fails it right back on cream.
+.social-club__panel .section-heading__eyebrow,
+.slogan-band .section-heading__eyebrow,
+.product-preview .section-heading__eyebrow,
+.page-hero:not(.page-hero--cream) .section-heading__eyebrow {
+  color: $color-red-light;
+}
+
 .section-heading__title {
   @include poster-title(clamp(2.7rem, 9vw, 5.5rem), 6vw, 5.8rem);
 }

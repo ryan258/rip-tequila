@@ -18,7 +18,7 @@ He doesn't talk much. The bar is loud enough on its own.
 
 > *"Last round, first legend."*
 
-### What he pours
+## What he pours
 
 **RIP Blanco** — the daily pour. Clean, fast, no wood. For longer nights, he reaches for **Last Round Añejo**, his special edition.
 

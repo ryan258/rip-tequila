@@ -52,7 +52,7 @@
 }
 
 .site-footer__brand p:not(.site-footer__disclaimer) {
-  color: $color-red;
+  color: $color-red-light;
 }
 
 .site-footer__disclaimer {
@@ -87,7 +87,7 @@
 
 .site-footer__column a:hover,
 .site-footer__column a:focus-visible {
-  color: $color-red;
+  color: $color-red-light;
 }
 
 .site-footer__column a:focus-visible,

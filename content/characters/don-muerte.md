@@ -18,7 +18,7 @@ When he speaks, it's usually to make a toast. Listen for it. He only gives it on
 
 > *"Life's short. Toast accordingly."*
 
-### What he pours
+## What he pours
 
 **RIP Añejo.** Dark, considered, gold at the edges. The bottle he reaches for when the night actually deserves it.
 

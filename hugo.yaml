@@ -12,10 +12,6 @@ markup:
       # Owned site content only. Revisit before accepting external Markdown.
       unsafe: true
 
-build:
-  buildStats:
-    enable: true
-
 menus:
   main:
     - name: "Our Story"

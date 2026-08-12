@@ -14,7 +14,7 @@ One sheet. Twelve symbols. Endless small mistakes you can attach to surfaces you
 
 For laptops, water bottles, instrument cases, the inside lid of a flask you definitely shouldn't be carrying, and the back of a notebook you take more seriously than it takes itself. Pick a sticker, you've picked a campaign. Pick three, you've picked a night.
 
-### Best uses on record
+## Best uses on record
 
 - Agave on the inside of a guitar case. Status: missing.
 - Bell on the espresso machine. Status: heavily endorsed.

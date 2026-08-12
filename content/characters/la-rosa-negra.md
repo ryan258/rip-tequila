@@ -18,7 +18,7 @@ Her set list is a mystery. Some nights it's a slow ballad. Some nights it's a bo
 
 > *"The dead still dance."*
 
-### What she pours
+## What she pours
 
 **Rosa Reposado**, a special edition that arrives on the table before her second set. Pour it slowly. Bring a flower for the candle. Don't ask for requests.
 

@@ -16,7 +16,7 @@ The Don Muerte Social Club is the only members-only thing the cantina runs. Ther
 
 Members get first look at every drop, character reveal, bottle reveal, and campaign poster. They get the warnings before the public does. They get the membership card, eventually, when the cards ship. Their member number lands in the ledger and stays there.
 
-### What you get
+## What you get
 
 - **Poster drops**, dispatched the night they go live.
 - **Merch alerts** ahead of the public catalog.
@@ -24,7 +24,7 @@ Members get first look at every drop, character reveal, bottle reveal, and campa
 - **New bottle reveals** on the day the cantina names them.
 - **Occasional warnings from the road**, when El Vigía sees something coming.
 
-### What we won't do
+## What we won't do
 
 - Sell your information.
 - Spam the inbox between drops.

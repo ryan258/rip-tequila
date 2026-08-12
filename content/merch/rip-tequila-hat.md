@@ -14,7 +14,7 @@ A simple cap with a small mark. On the front, the RIP monogram. On the back, an 
 
 This is the piece you wear when you don't usually wear merch. It reads as a small mark, a private signal. If you know, you know. If you don't, it's a nice cap.
 
-### Built for
+## Built for
 
 - Sun. Long drives. Dive bars where the music is older than you.
 - Opting into the brand quietly.

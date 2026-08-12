@@ -17,13 +17,13 @@ Dark, dressed up, and fully aware of itself. The kind of bottle that walks into 
 
 > *"Life's Short. Toast Accordingly."*
 
-### A note from the host
+## A note from the host
 
 > *"Proof you lived."* — Don Muerte
 
 He pours one. If you want a second, you have to earn it — usually by saying something true on accident.
 
-### Concept tasting notes: What's in the glass
+## Concept tasting notes: What's in the glass
 
 Roasted oak, vanilla, dark chocolate. Slow agave, dried cherry, a thread of cinnamon. A long, considered finish that's already aware of an audience. Best with a quiet table, a real story, and a toast you didn't plan but will remember anyway.
 

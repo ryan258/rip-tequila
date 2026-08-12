@@ -1,18 +1,32 @@
-{{ $accent := .Params.accent | default "red" }}
-<a class="product-card interactive-card" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
+{{ $isLink := true }}
+{{ $page := . }}
+{{ if reflect.IsMap . }}
+  {{ $isLink = .is_link | default false }}
+  {{ $page = .page }}
+{{ end }}
+{{ $accent := $page.Params.accent | default "red" }}
+{{ if $isLink }}
+<a class="product-card" href="{{ $page.RelPermalink }}" data-accent="{{ $accent }}">
+{{ else }}
+<div class="product-card" data-accent="{{ $accent }}">
+{{ end }}
   <span class="product-card__stripe"></span>
   <span class="product-card__bottle" aria-hidden="true">
     <span class="product-card__neck"></span>
     <span class="product-card__body">
       <span class="product-card__label">
         <strong>RIP</strong>
-        <i class="{{ .Params.icon }}" aria-hidden="true"></i>
+        <i class="{{ $page.Params.icon }}" aria-hidden="true"></i>
       </span>
     </span>
   </span>
-  <span class="product-card__kicker">{{ .Params.variant }}</span>
-  <span class="product-card__name">{{ .Title }}</span>
-  <span class="product-card__glyph" aria-hidden="true"><i class="{{ .Params.icon }}"></i></span>
-  <span class="product-card__line">{{ .Params.line }}</span>
-  <span class="product-card__descriptor">{{ .Params.descriptor }}</span>
+  <span class="product-card__kicker">{{ $page.Params.variant }}</span>
+  <span class="product-card__name">{{ $page.Title }}</span>
+  <span class="product-card__glyph" aria-hidden="true"><i class="{{ $page.Params.icon }}"></i></span>
+  <span class="product-card__line">{{ $page.Params.line }}</span>
+  <span class="product-card__descriptor">{{ $page.Params.descriptor }}</span>
+{{ if $isLink }}
 </a>
+{{ else }}
+</div>
+{{ end }}

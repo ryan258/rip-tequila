@@ -17,7 +17,7 @@ Inside the collar, a small line that doubles as a confession: *Member of the rou
 
 This is the shirt that shows up at brunches it has no business being at. Looks dressed up enough to be intentional. Strange enough to ask about. The trick is in the mark on the back — at a glance, premium; at a second glance, an obituary that hasn't happened yet.
 
-### Built for
+## Built for
 
 - Quiet entrances. Loud back walks.
 - Wearing the brand without spelling it across the room.

@@ -14,14 +14,14 @@ The cantina's voice is allowed to be funny. It is not allowed to be misleading. 
 
 **RIP Tequila is a fictional parody brand created for storytelling, design, merch, and entertainment. No actual spirits are sold here. If you drink, drink responsibly. Hydrate. Get a safe ride. Do not operate a vehicle, forklift, horse, hearse, or emotional conversation after drinking.**
 
-### What we always do
+## What we always do
 
 - Repeat the parody status on product pages, merch pages, and the footer.
 - Use *"fictional parody brand"* and *"no actual spirits"* in plain language, not buried in fine print.
 - Pair every alcohol reference with the short responsible-drinking line: *Drink responsibly. Haunt responsibly.*
 - Treat cultural and religious imagery with care. Día de los Muertos, ceremonial figures, sacred symbols — celebration first, never the punchline.
 
-### What we never do
+## What we never do
 
 - Imply real production, aging, distillation, or sourcing.
 - Use real certification marks, government seals, or distillery names.

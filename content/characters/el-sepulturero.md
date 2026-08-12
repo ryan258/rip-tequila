@@ -18,7 +18,7 @@ He doesn't say much. The notebook says it for him.
 
 > *"Leave the judgment. Take the story."*
 
-### What he pours
+## What he pours
 
 **RIP Extra Añejo**, the heaviest bottle in the family. For deeper editions, **Gravedigger's Reserve.**
 

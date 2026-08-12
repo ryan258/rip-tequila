@@ -7,6 +7,8 @@ seo_title: "The Lineup — Parody Tequila Bottles from the Afterlife Cantina | R
 seo_description: "Five parody tequila bottles from RIP Tequila — Blanco, Reposado, Añejo, Extra Añejo, and Midnight Agave Reserve. Each pour belongs to a character of the afterlife cantina."
 cta_label: "Meet the Cast"
 cta_href: "/characters/"
+icon: "fa-solid fa-wine-bottle"
+hero_theme: "dark"
 ---
 
 Five bottles. One family. The whole lineup lives in the cantina, but each pour belongs to a different character and a different hour of the night.

@@ -1,17 +1,5 @@
 {{ define "main" }}
-<section class="page-hero page-hero--cream">
-  <div class="page-hero__inner">
-    <div class="page-hero__copy">
-      <p class="section-heading__eyebrow">{{ .Params.eyebrow }}</p>
-      <h1 class="page-hero__title">{{ .Params.headline }}</h1>
-      <p class="page-hero__body">{{ .Description }}</p>
-      {{ with .Params.cta_label }}
-        <a class="button button--primary" href="{{ $.Params.cta_href | default "/" }}">{{ . }}</a>
-      {{ end }}
-    </div>
-    <div class="page-hero__icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
-  </div>
-</section>
+{{ partial "page-hero.html" . }}
 {{ if .Content }}
 <section class="editorial-section">
   <div class="editorial-section__inner">
@@ -20,9 +8,9 @@
 </section>
 {{ end }}
 <section class="catalog-section" aria-label="Full RIP Tequila character cast">
-  <div class="catalog-section__inner character-strip__grid">
+  <div class="catalog-section__inner character-strip__grid" role="list">
     {{ range .Pages.ByWeight }}
-      {{ partial "character-card.html" . }}
+      <div role="listitem">{{ partial "character-card.html" . }}</div>
     {{ end }}
   </div>
 </section>

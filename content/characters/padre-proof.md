@@ -18,7 +18,7 @@ If you're not sure whether the round you're about to pour is a good idea, find h
 
 > *"Blessed are the almost responsible."*
 
-### What he pours
+## What he pours
 
 **Padre Proof Ceremonial Añejo**, a special edition for vows that probably shouldn't be vows. He recommends one shot, which he reframes as a sacrament.
 

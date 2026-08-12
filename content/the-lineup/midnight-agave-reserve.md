@@ -17,13 +17,13 @@ Smoother than the rest. Quieter. Finished somewhere past the point most pours wo
 
 > *"The Desert Remembers Every Toast."*
 
-### A note from the road
+## A note from the road
 
 > *"Follow the agave after midnight."* — El Vigía
 
 He watches the road. He doesn't recommend. If a Reserve is on your table, it's because he sent you.
 
-### Concept tasting notes: What's in the glass
+## Concept tasting notes: What's in the glass
 
 Slow-roasted agave, dark coffee, and charred oak. A clean cool note that reads like desert air after a hot day. A long finish, faintly poetic, and unmistakably the kind of pour that ends with somebody quoting something they saw on a road sign. Best served at room temperature, late, and with the cap off in case anybody else wanders in.
 

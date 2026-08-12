@@ -1,5 +1,5 @@
 {{ $accent := .Params.accent | default "red" }}
-<a class="merch-card interactive-card{{ if .Params.feature }} merch-card--feature{{ end }}" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
+<a class="merch-card{{ if .Params.feature }} merch-card--feature{{ end }}" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
   <span class="merch-card__visual" aria-hidden="true">
     <i class="{{ .Params.icon }}"></i>
   </span>

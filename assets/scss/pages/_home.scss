@@ -484,6 +484,12 @@
     right: -24px;
   }
 
+  .product-preview__grid:not(.scroll-strip),
+  .character-strip__grid:not(.scroll-strip),
+  .merch-preview__grid:not(.scroll-strip) {
+    grid-template-columns: 1fr;
+  }
+
   .scroll-strip {
     display: grid;
     grid-auto-columns: clamp(250px, 78vw, 340px);

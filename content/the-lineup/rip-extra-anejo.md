@@ -17,13 +17,13 @@ This is the bottle that handles those rounds. Long-aged, deep, and unflinching â
 
 > *"Some Nights Deserve a Shovel."*
 
-### A note from the caretaker
+## A note from the caretaker
 
 > *"Here lies your judgment."* â€” El Sepulturero
 
 He pours, he steps back, and he lets the round find its own gravity. Don't ask him to join you. He's already keeping the records.
 
-### Concept tasting notes: What's in the glass
+## Concept tasting notes: What's in the glass
 
 Dark oak, dried fruit, cocoa, and a slow column of smoke. Roasted agave deep in the back. Leather. A finish that lingers like a name you weren't supposed to remember but did anyway. Best at a small table, late, with one or two people who already know the story.
 

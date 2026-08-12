@@ -14,7 +14,7 @@ The card is black. The lettering is gold. The line on the front is the only rule
 
 Cards aren't sold individually. They're issued. Sign up to the **Don Muerte Social Club** and you go on the roster. Once you're in, your member number doesn't change, your benefits don't expire, and your name lands somewhere in El Sepulturero's manifest — a coincidence, he insists.
 
-### What's on the back
+## What's on the back
 
 - Poster drops, dispatched directly.
 - Merch alerts ahead of the public list.
@@ -22,7 +22,7 @@ Cards aren't sold individually. They're issued. Sign up to the **Don Muerte Soci
 - New bottle reveals on the night the cantina names them.
 - Occasional warnings from the road.
 
-### Built for
+## Built for
 
 - Wallets that need one more piece of evidence.
 - Collectors who like their loyalty programs to have a story.

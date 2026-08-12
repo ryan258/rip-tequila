@@ -36,11 +36,10 @@
           <a href="{{ .href }}" aria-label="{{ .label }}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
         {{ end }}
       </div>
-      {{/* Button stays focusable so placeholder validation can explain that signup is not wired yet. */}}
-      <form class="footer-signup signup-form" method="post" data-signup-form novalidate>
+      <form class="footer-signup signup-form" data-signup-form>
         <label class="sr-only" for="footer-email">Your email</label>
-        <input id="footer-email" name="email" type="email" placeholder="Your email" autocomplete="email" data-signup-email>
-        <button class="button button--primary" type="submit" aria-disabled="true">Join</button>
+        <input id="footer-email" name="email" type="email" placeholder="Your email" autocomplete="email" required data-signup-email>
+        <button class="button button--primary" type="submit">Join</button>
         <p class="signup-form__message" data-signup-message role="status">Drops, posters, merch, and afterlife dispatches.</p>
       </form>
     </div>

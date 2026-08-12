@@ -1,3 +1,9 @@
+// ponytail: @import, not @use. Hugo's css.Sass defaults to libsass, which never
+// implemented @use and silently passes it through as literal CSS — the build
+// still exits 0 and ships a ~285 byte stylesheet. Upgrade path, all or nothing:
+// npm install, add "transpiler" "dartsass" to $sassOptions in head.html, put
+// dart-sass on PATH in CI, and add explicit @use of tokens/mixins to every
+// partial (@use is not transitive). Until then @import is correct here.
 @import "abstracts/tokens";
 @import "abstracts/mixins";
 @import "base/reset";

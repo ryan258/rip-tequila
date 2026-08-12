@@ -8,7 +8,7 @@
       <a class="button button--primary" href="/the-lineup/">Back to the Lineup</a>
     </div>
     <div class="product-detail__bottle">
-      {{ partial "product-card.html" . }}
+      {{ partial "product-card.html" (dict "page" . "is_link" false) }}
     </div>
   </header>
   <div class="detail-page__body">

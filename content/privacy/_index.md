@@ -10,18 +10,18 @@ icon: "fa-solid fa-lock"
 
 When you sign up for the **Don Muerte Social Club**, RIP Tequila collects only what's needed to send you drops and dispatches — your email address.
 
-### What we collect
+## What we collect
 
 - Your email address, when you sign up.
 - That's it.
 
-### What we will not do
+## What we will not do
 
 - Sell your email address.
 - Share your information with third-party advertisers.
 - Send anything outside the cantina's normal drop and dispatch cadence.
 
-### What you can always do
+## What you can always do
 
 - Unsubscribe from any dispatch with one click. Membership doesn't require an open inbox.
 - Ask for your record to be removed.

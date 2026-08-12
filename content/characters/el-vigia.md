@@ -18,6 +18,6 @@ He doesn't drink while he's working. Working is most of the time.
 
 > *"Follow the agave after midnight."*
 
-### What he pours
+## What he pours
 
 **Midnight Agave Reserve.** The late-arrival bottle. If a Reserve is on your table, it's because he sent you.
