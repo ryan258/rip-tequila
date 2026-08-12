@@ -32,4 +32,8 @@ hugo --gc --minify --baseURL "https://example.com/"
 - `data/navigation.yaml` global navigation and footer links
 - `data/slogans.yaml` campaign slogan strip
 
-Font Awesome is loaded by CDN as temporary stand-in artwork for product, character, merch, and glyph visuals.
+## Visual system
+
+All artwork on this site is **Font Awesome** loaded via CDN. This is intentional, not a placeholder. Bottles are CSS shapes with a small FA glyph on the label; characters, merch, and product visuals are single FA icons inside a card; the slogan strip uses FA icons per line. The full philosophy and rules live in `docs/visual-system.md`.
+
+In short: typography and copy carry the brand, icons set the tone, no high-fidelity imagery is used. The flat, poster-like aesthetic breaks the moment photography or detailed illustration enters the picture, so we don't add any.
