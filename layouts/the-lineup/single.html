@@ -5,7 +5,7 @@
       <p class="section-heading__eyebrow">{{ with .CurrentSection }}{{ .Title }}{{ else }}The Lineup{{ end }} / {{ .Params.variant }}</p>
       <h1>{{ .Title }}</h1>
       <p>{{ .Params.detail_headline }}</p>
-      <a class="button button--primary" href="/the-lineup/">Back to the Lineup</a>
+      <a class="button button--primary" href="{{ "the-lineup/" | relURL }}">Back to the Lineup</a>
     </div>
     <div class="product-detail__bottle">
       {{ partial "product-card.html" (dict "page" . "is_link" false) }}

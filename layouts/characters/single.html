@@ -5,7 +5,7 @@
       <p class="section-heading__eyebrow">{{ .Params.role }}</p>
       <h1>{{ .Title }}</h1>
       <p>{{ .Params.line }}</p>
-      <a class="button button--primary" href="/characters/">Back to the Cast</a>
+      <a class="button button--primary" href="{{ "characters/" | relURL }}">Back to the Cast</a>
     </div>
     <div class="detail-hero__icon" aria-hidden="true">
       {{ partial "glyph.html" (dict "name" .Params.icon "class" "detail-hero__glyph-mark rip-glyph--hero rip-glyph--animated") }}
