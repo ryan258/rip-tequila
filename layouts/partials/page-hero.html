@@ -23,7 +23,7 @@
       <h1 class="page-hero__title">{{ .Params.headline | default .Title }}</h1>
       <p class="page-hero__body">{{ .Description }}</p>
       {{ with .Params.cta_label }}
-        <a class="button button--primary" href="{{ $.Params.cta_href | default "/" }}">{{ . }}</a>
+        <a class="button button--primary" href="{{ strings.TrimPrefix "/" ($.Params.cta_href | default "") | relURL }}">{{ . }}</a>
       {{ end }}
     </div>
     <div class="page-hero__icon" aria-hidden="true">

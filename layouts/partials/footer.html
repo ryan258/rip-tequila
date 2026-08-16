@@ -7,7 +7,7 @@
 
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <a class="site-footer__logo" href="/">
+      <a class="site-footer__logo" href="{{ "" | relURL }}">
         <span>RIP</span>
         <small>TEQUILA</small>
       </a>
@@ -22,7 +22,7 @@
           <h2>{{ .title }}</h2>
           <ul>
             {{ range .links }}
-              <li><a href="{{ .href }}">{{ .label }}</a></li>
+              <li><a href="{{ strings.TrimPrefix "/" .href | relURL }}">{{ .label }}</a></li>
             {{ end }}
           </ul>
         </div>

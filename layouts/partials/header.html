@@ -1,6 +1,6 @@
 {{ $current := .RelPermalink }}
 <header class="site-header" data-theme="dark">
-  <a class="site-header__logo" href="/" aria-label="RIP Tequila home">
+  <a class="site-header__logo" href="{{ "" | relURL }}" aria-label="RIP Tequila home">
     <span class="logo-mark">RIP</span>
     <span class="logo-category">TEQUILA</span>
     <span class="logo-tagline">Rest In Proof</span>
@@ -15,7 +15,7 @@
   </nav>
 
   <div class="site-header__actions">
-    <a class="button button--primary site-header__cta" href="{{ site.Params.cta_href }}">{{ site.Params.cta_label }}</a>
+    <a class="button button--primary site-header__cta" href="{{ strings.TrimPrefix "/" site.Params.cta_href | relURL }}">{{ site.Params.cta_label }}</a>
     <button class="site-header__menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" data-menu-toggle>
       <span></span>
       <span></span>
@@ -34,7 +34,7 @@
         {{ partial "glyph.html" (dict "name" "arrow-right" "class" "rip-glyph--sm") }}
       </a>
     {{ end }}
-    <a class="button button--primary mobile-menu__cta" href="{{ site.Params.cta_href }}">{{ site.Params.cta_label }}</a>
+    <a class="button button--primary mobile-menu__cta" href="{{ strings.TrimPrefix "/" site.Params.cta_href | relURL }}">{{ site.Params.cta_label }}</a>
   </nav>
   <p class="mobile-menu__footer">Rest In Proof</p>
 </div>
