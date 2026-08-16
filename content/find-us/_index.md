@@ -16,7 +16,7 @@ If you are trying to reach the creative team behind **RIP Tequila** — for pres
 
 ## Press & Media
 
-Writing a feature on satirical branding, dark humor design, or the art of the parody spirit? Sign up to the Social Club and reply directly to any dispatch. Embargoed assets, high-res poster mocks, and creator commentary are routed from there.
+Writing a feature on dark humor branding, afterlife design, or the strange business of a spirit that's never left the cantina? Sign up to the Social Club and reply directly to any dispatch. Embargoed assets, high-res poster mocks, and creator commentary are routed from there.
 
 ## Collaborations & Art
 

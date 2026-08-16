@@ -14,7 +14,7 @@ seo_description: "The signature heavyweight black tee of RIP Tequila — minimal
 
 The flagship uniform of La Cantina del Último Trago.
 
-Cut from substantial 6.5 oz combed ring-spun cotton in obsidian black. The front chest features a minimalist, razor-sharp **RIP** monogram lockup that looks indistinguishable from a four-figure Parisian fashion house. 
+Cut from a heavyweight, substantial-feeling cotton in obsidian black — the kind of weight you notice the second you put it on. The front chest features a minimalist, razor-sharp **RIP** monogram lockup that looks indistinguishable from a four-figure Parisian fashion house. 
 
 The back reveals the full, unmistakable manifesto: **REST IN PROOF** arched across the shoulder blades in vintage display type. It makes quiet, dignified entrances possible — and loud, triumphant exits inevitable.
 

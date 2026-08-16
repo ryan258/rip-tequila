@@ -10,7 +10,7 @@ cta_href: "/don-muerte-social-club/"
 icon: "card"
 ---
 
-The charter of the **Don Muerte Social Club** is short, sharp, and designed for discerning individuals who appreciate high-concept satire and beautiful artifacts. 
+The charter of the **Don Muerte Social Club** is short, sharp, and designed for discerning individuals who appreciate a sharp dark joke and beautiful artifacts. 
 
 Here is the complete accounting of your benefits, suitable for framing or casually leaving on the kitchen counter to intimidate dinner guests:
 
@@ -29,7 +29,7 @@ Here is the complete accounting of your benefits, suitable for framing or casual
 ## 3. Dispatches from the Floor
 
 - **Character Dossiers**: Complete unedited biographical files on all eight cantina characters.
-- **Cocktail & Mocktail Recipes**: Parody and actual mixology guides formulated by Cantina Jack.
+- **Cocktail & Mocktail Recipes**: Full-strength and zero-proof mixology guides formulated by Cantina Jack.
 - **Desert Weather Reports**: Cryptic dispatches sent by El Vigía whenever atmospheric conditions get interesting.
 
 ## What is strictly NOT included

@@ -10,17 +10,17 @@ icon: "question"
 
 ## Is RIP Tequila an actual alcohol company?
 
-**No.** RIP Tequila is a satirical brand and storytelling art project. La Cantina del Último Trago opens only after last call, the staff is deceased, and our five bottles exist purely in the metaphysical realm. **No actual spirits are distilled, bottled, or sold here.** 
+**No.** RIP Tequila is the house label of La Cantina del Último Trago — the afterlife cantina that opens only after last call, where the staff is deceased and the five bottles exist purely in the metaphysical realm. **No actual spirits are distilled, bottled, or sold here.** 
 
 What is real: the poster art, the high-end apparel, the barware, the sticker sheets, and the lore.
 
 ## What is the point of a tequila brand that doesn't sell tequila?
 
-Most ultra-premium spirits brands spend millions inventing fictional 200-year-old family legends, mystical water filtration rituals, and solemn tasting notes about *notes of wet river stone and unexpressed longing*. We decided to take that exact level of high-end branding, turn it up to eleven, and apply it to a fictional afterlife cantina. It’s luxury design meets deadpan comedy.
+Most ultra-premium spirits brands spend millions inventing 200-year-old family legends, mystical water filtration rituals, and solemn tasting notes about *notes of wet river stone and unexpressed longing*. We decided to take that exact level of high-end branding, turn it up to eleven, and hand it to an afterlife cantina instead. It’s luxury design meets deadpan comedy.
 
 ## Can I actually buy the merchandise?
 
-**Yes.** While the bottles are fictional props, our physical merchandise is very real and built to the highest production standards. Heavyweight cotton tees, barware coaster sets, low-profile strapback hats, and die-cut vinyl sticker sheets ship worldwide. Drops are announced via the **Don Muerte Social Club**.
+**Yes.** The bottles never leave the cantina, but our physical merchandise is very real and built to the highest production standards. Heavyweight cotton tees, barware coaster sets, low-profile strapback hats, and die-cut vinyl sticker sheets ship worldwide. Drops are announced via the **Don Muerte Social Club**.
 
 ## Where can I find a physical bottle to display on my bar?
 

@@ -13,7 +13,7 @@ seo_description: "The official Don Muerte Social Club membership card. Heavy mat
 
 The physical credential of the afterlife inner circle.
 
-Crafted from triple-ply 38pt matte black silk stock with hot-stamped metallic gold foil detailing. The front features your individual roster identification and the single foundational charter rule: **MEMBERSHIP EXPIRES NEVER.**
+Heavy enough to double as a coaster, matte black straight through, with a gold foil press that catches the light like a struck match. The front features your individual roster identification and the single foundational charter rule: **MEMBERSHIP EXPIRES NEVER.**
 
 This card is not sold on a rack. It is issued. When you join the **Don Muerte Social Club**, your name is permanently recorded in El Sepulturero’s manifest (a purely administrative coincidence, he assures us). 
 
@@ -26,7 +26,7 @@ This card is not sold on a rack. It is issued. When you join the **Don Muerte So
 ## Built for
 
 - Wallets that need an undeniably intriguing conversation piece.
-- Collectors who appreciate the fine art of satirical high-concept branding.
+- Collectors who appreciate a dark joke told with a straight face and a real production budget.
 - Anyone who knows that true loyalty programs shouldn't require monthly subscription fees.
 
 > *"Membership expires never. Benefits are questionable. Hydration encouraged."*
