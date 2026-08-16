@@ -3,7 +3,7 @@
   <div class="character-strip__inner">
     <div class="section-header-row">
       {{ partial "section-heading.html" (dict "eyebrow" "The Cast" "title" "Meet the Afterlife Cast" "body" "Eight afterlife legends. One questionably licensed cantina. Every pour comes with an alibi and a witness." "id" "character-strip-title") }}
-      <a class="button button--dark" href="/characters/">Meet the Cast</a>
+      <a class="button button--dark" href="{{ "characters/" | relURL }}">Meet the Cast</a>
     </div>
     <div class="character-strip__grid scroll-strip" role="list" aria-label="RIP Tequila characters">
       {{ range $characters.ByWeight }}

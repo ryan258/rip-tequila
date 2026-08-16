@@ -5,7 +5,7 @@
       <h2 class="section-heading__title" id="brand-intro-title">{{ .Title }}</h2>
       <p class="section-heading__body">{{ .Params.body }}</p>
       <p class="brand-intro__support">{{ .Params.support }}</p>
-      <a class="button button--dark" href="{{ .Params.cta.href }}">{{ .Params.cta.label }}</a>
+      <a class="button button--dark" href="{{ strings.TrimPrefix "/" .Params.cta.href | relURL }}">{{ .Params.cta.label }}</a>
     </div>
     <div class="brand-intro__visual" aria-hidden="true">
       <img class="brand-intro__visual-img" src="{{ "images/cantina-archway-bg.webp" | relURL }}" alt="" loading="lazy" decoding="async">

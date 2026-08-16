@@ -11,8 +11,8 @@
         <span>{{ partial "glyph.html" (dict "name" "glass" "class" "rip-glyph--gold") }}</span>
       </div>
       <div class="hero-section__actions">
-        <a class="button button--primary" href="{{ .Params.primary_cta.href }}">{{ .Params.primary_cta.label }}</a>
-        <a class="button button--light" href="{{ .Params.secondary_cta.href }}">{{ .Params.secondary_cta.label }}</a>
+        <a class="button button--primary" href="{{ strings.TrimPrefix "/" .Params.primary_cta.href | relURL }}">{{ .Params.primary_cta.label }}</a>
+        <a class="button button--light" href="{{ strings.TrimPrefix "/" .Params.secondary_cta.href | relURL }}">{{ .Params.secondary_cta.label }}</a>
       </div>
     </div>
     <div class="hero-poster" aria-hidden="true">
