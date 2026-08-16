@@ -43,9 +43,10 @@
     pointer-events: none;
     opacity: $opacity;
     background-image:
-      linear-gradient(90deg, rgba($color-black, 0.18) 1px, transparent 1px),
-      linear-gradient(rgba($color-black, 0.14) 1px, transparent 1px);
-    background-size: 26px 26px;
+      url("/images/paper-grain-bg.webp"),
+      linear-gradient(90deg, rgba($color-black, 0.12) 1px, transparent 1px),
+      linear-gradient(rgba($color-black, 0.08) 1px, transparent 1px);
+    background-size: 500px 500px, 26px 26px, 26px 26px;
     mix-blend-mode: multiply;
   }
 }

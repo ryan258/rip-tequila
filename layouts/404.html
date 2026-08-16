@@ -1,13 +1,17 @@
 {{ define "main" }}
 <section class="not-found">
+  <div class="not-found__backdrop" aria-hidden="true">
+    <img src="{{ "images/404-bg.webp" | relURL }}" alt="" loading="eager" decoding="async">
+  </div>
   <div class="not-found__inner">
-    <p class="section-heading__eyebrow">404</p>
+    <p class="section-heading__eyebrow">404 — Lost in the Dunes</p>
     <h1>The Bell Rang Somewhere Else.</h1>
-    <p>This page is not in the cantina. Head back to the lineup, meet the cast, or return home.</p>
+    <p>You took a detour even El Vigía didn't see coming. This page has been respectfully interred in the desert sands. Let's get you back to the bar before Cantina Jack gives away your seat.</p>
     <div class="not-found__actions">
-      <a class="button button--primary" href="/">Home</a>
+      <a class="button button--primary" href="/">Return to the Cantina</a>
       <a class="button button--light" href="/the-lineup/">View the Lineup</a>
     </div>
   </div>
 </section>
 {{ end }}
+

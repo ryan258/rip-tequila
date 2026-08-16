@@ -1,5 +1,22 @@
 {{ $heroTheme := .Params.hero_theme | default "cream" }}
-<section class="page-hero{{ if eq $heroTheme "cream" }} page-hero--cream{{ end }}">
+{{ $defaultHeroImage := "" }}
+{{ if eq .Section "the-lineup" }}
+  {{ $defaultHeroImage = "images/lineup-hero-bg.webp" }}
+{{ else if eq .Section "characters" }}
+  {{ $defaultHeroImage = "images/characters-hero-bg.webp" }}
+{{ else if eq .Section "merch" }}
+  {{ $defaultHeroImage = "images/merch-hero-bg.webp" }}
+{{ else if or (eq .File.TranslationBaseName "our-story") (eq .File.TranslationBaseName "the-cantina") (eq .File.TranslationBaseName "find-us") (eq .File.TranslationBaseName "don-muerte-social-club") }}
+  {{ $defaultHeroImage = "images/cantina-story-bg.webp" }}
+{{ end }}
+{{ $heroImage := .Params.hero_image | default $defaultHeroImage }}
+
+<section class="page-hero{{ if eq $heroTheme "cream" }} page-hero--cream{{ end }}{{ if $heroImage }} page-hero--has-image{{ end }}">
+  {{ if $heroImage }}
+    <div class="page-hero__backdrop" aria-hidden="true">
+      <img src="{{ $heroImage | relURL }}" alt="" loading="eager" decoding="async">
+    </div>
+  {{ end }}
   <div class="page-hero__inner">
     <div class="page-hero__copy">
       <p class="section-heading__eyebrow">{{ .Params.eyebrow | default "RIP Tequila" }}</p>
@@ -10,7 +27,7 @@
       {{ end }}
     </div>
     <div class="page-hero__icon" aria-hidden="true">
-      <i class="{{ .Params.icon | default "fa-solid fa-skull" }}"></i>
+      {{ partial "glyph.html" (dict "name" (.Params.icon | default "skull") "class" "page-hero__glyph-mark rip-glyph--hero rip-glyph--animated") }}
     </div>
   </div>
 </section>
