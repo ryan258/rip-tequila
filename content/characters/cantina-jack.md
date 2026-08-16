@@ -4,22 +4,23 @@ weight: 50
 role: "The Bartender"
 accent: "red"
 prop: "Bottle or bar towel"
-icon: "fa-solid fa-champagne-glasses"
+icon: "glass"
 line: "Last round, first legend."
 seo_title: "Cantina Jack — The Bartender of the Cantina | RIP Tequila"
-seo_description: "Cantina Jack pours every bottle in the RIP Tequila lineup. He knows your drink, your alibi, and what you said you'd never do again. I pour. You explain tomorrow."
+seo_description: "Cantina Jack pours every bottle in the RIP Tequila lineup. He knows your drink, your alibi, and what you swore you'd never do again. I pour. You explain tomorrow."
 ---
 
-Cantina Jack is the one actually pouring. While Don Muerte hosts and Campana Roja rings the bell and La Rosa Negra holds the room, Jack is behind the bar with a towel over one shoulder and a clean shot glass he never seems to put down. He knows everybody's drink. He knows everybody's alibi. He's poured every bottle in the lineup at least once before any of them were named.
+**Cantina Jack** is the operational engine of the cantina. While the poets compose toasts and the philosophers debate the meaning of the bell, Jack is behind the wood, slinging bottles with lightning speed and flawless technique.
 
-His memory is unreasonable. He remembers what you ordered last fall, who you came in with, and what you said you'd never do again — usually all three at once. He doesn't use any of it against you. He just files it and pours.
+His bar rag has absorbed enough secrets to bring down three municipal governments. His memory is terrifyingly photographic: he remembers what you drank last October, the name of the person you arrived with, and the exact speech you gave about why you were switching to green tea forever. He will never use this information against you; he simply nods, files it away, and slides a fresh glass in your direction.
 
-He doesn't talk much. The bar is loud enough on its own.
+He communicates primarily in gestures, eyebrow raises, and clean tequila pours.
 
 > *"Last round, first legend."*
 
 ## What he pours
 
-**RIP Blanco** — the daily pour. Clean, fast, no wood. For longer nights, he reaches for **Last Round Añejo**, his special edition.
+**RIP Blanco** — crisp, unaged, and fast across the counter. For marathon evenings, he pulls down **Last Round Añejo**, his personal special reserve.
 
 > *"I pour. You explain tomorrow."*
+

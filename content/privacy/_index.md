@@ -5,7 +5,7 @@ headline: "Privacy"
 description: "How RIP Tequila handles your email when you join the Don Muerte Social Club."
 seo_title: "Privacy — Don Muerte Social Club Signup Notice | RIP Tequila"
 seo_description: "How RIP Tequila handles email and signup data for the Don Muerte Social Club. Plain-language privacy practices from La Cantina del Último Trago."
-icon: "fa-solid fa-lock"
+icon: "lock"
 ---
 
 When you sign up for the **Don Muerte Social Club**, RIP Tequila collects only what's needed to send you drops and dispatches — your email address.

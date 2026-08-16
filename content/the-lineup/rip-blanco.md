@@ -3,17 +3,19 @@ title: "RIP Blanco"
 weight: 10
 variant: "Blanco"
 accent: "green"
-icon: "fa-solid fa-seedling"
+icon: "agave"
 line: "Last Round, First Legend."
 descriptor: "Crisp. Clean. The first pour of the night."
 detail_headline: "The clean start for legendary exits."
 seo_title: "RIP Blanco — The First Pour of the Lineup | RIP Tequila"
-seo_description: "RIP Blanco is the clean opening pour of the RIP Tequila lineup — bright agave, no wood, the bottle Cantina Jack reaches for when the night begins. Last Round, First Legend."
+seo_description: "RIP Blanco is the pristine opening expression of RIP Tequila — crisp highland agave, zero wood, and the bottle Cantina Jack reaches for when the night begins."
 ---
 
-The bell hasn't rung yet. The night is still pretending to be polite. Cantina Jack pulls a clean shot glass from the rack and reaches for the bottle that always seems to be within arm's length — RIP Blanco, the first bottle of the evening, the one you came in for if you came in for anything at all.
+The brass bell hasn't rung yet. The room is still pretending to be polite. You told your friends you were only stopping by for a quick mineral water. 
 
-Crisp, clean, and unapologetic about it. There's no wood in this bottle. There hasn't been time. *Last Round, First Legend.*
+Then **Cantina Jack** pulls a heavy shot glass from the rack, wipes the mahogany with a clean cloth, and reaches for **RIP Blanco** — unaged, unapologetic, and completely unburdened by barrel maturation. There is no wood in this bottle; there simply wasn't time.
+
+This is the opening salvo of the evening. The spark that turns a reasonable schedule into an impromptu vacation. *Last Round, First Legend.*
 
 > *"Born in Agave. Buried in Legend."*
 
@@ -21,10 +23,12 @@ Crisp, clean, and unapologetic about it. There's no wood in this bottle. There h
 
 > *"I pour. You explain tomorrow."* — Cantina Jack
 
-He won't talk you into a Blanco. He'll just slide one across the bar without looking up. It is the beginning of the ritual, the first chapter of a story that ends when the bell finally rings.
+Jack will never try to upsell you on a Blanco. He doesn't need to. He simply slides the glass across the bar with the quiet confidence of a man who has watched five thousand consecutive people make the exact same choice.
 
 ## Concept tasting notes: What's in the glass
 
-Citrus. Fresh-cracked agave. A clean white pepper bite, a flash of green, and the faint background noise of a crowded room. Short, neat finish. Ready for the night to begin.
+- **Aroma**: Fresh-cracked blue agave, zesty lime oil, morning desert dew, and the faint scent of canceled morning commitments.
+- **Palate**: Crisp citrus bite, bright green pepper, white pepper snap, and an unmistakable electric hum across the palate.
+- **Finish**: Clean, snappy, and dangerously prompt. Ready for the next chapter.
+- **Pairing**: Fresh-cut lime, a pinch of sea salt, and a companion who knows how to keep a secret.
 
-Pair with a lime, a clean toast, and a chair you're not planning to leave.

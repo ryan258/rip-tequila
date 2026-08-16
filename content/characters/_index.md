@@ -2,18 +2,26 @@
 title: "Characters"
 eyebrow: "The Cast"
 headline: "Meet the Afterlife Cast"
-description: "Eight legends. One questionable cantina. Every bottle has a witness."
+description: "Eight legends. One questionably licensed cantina. Every bottle has a custodian, every pour has an alibi, and every night has a witness."
 seo_title: "Meet the Cast — Eight Afterlife Cantina Characters | RIP Tequila"
-seo_description: "Don Muerte, La Rosa Negra, Padre Proof, El Sepulturero, Cantina Jack, Campana Roja, Los Maracas, El Vigía — the eight characters who run La Cantina del Último Trago."
+seo_description: "Don Muerte, La Rosa Negra, Padre Proof, El Sepulturero, Cantina Jack, Campana Roja, Los Maracas, El Vigía — the eight unforgettable characters behind RIP Tequila."
 cta_label: "Enter the Cantina"
 cta_href: "/the-cantina/"
-icon: "fa-solid fa-people-group"
+icon: "people"
 ---
 
-Eight people run La Cantina del Último Trago. They aren't mascots. They're the room.
+The eight souls who run **La Cantina del Último Trago** are not brand ambassadors, focus-group mascots, or paid influencers. They are the room itself.
 
-**Don Muerte** hosts the cantina and gives the toast. **Cantina Jack** pours behind the bar and remembers what you said last fall. **Campana Roja** rings the bell, and the night turns. **La Rosa Negra** closes the room with a song you'll never hear the same way twice. **Padre Proof** blesses bad decisions and takes the paperwork seriously. **El Sepulturero** handles the morning after. **Los Maracas** keep the music from getting respectful. **El Vigía** watches the road in.
+- **Don Muerte** presides over the floor, delivering the one toast that can quiet a room of fifty unruly legends.
+- **Cantina Jack** serves clean pours and keeps a vault-tight memory of what you promised you’d never drink again.
+- **Campana Roja** rings the heavy brass bell that turns ordinary evenings into permanent folklore.
+- **La Rosa Negra** stops the room cold with midnight boleros dedicated to unresolved heartbreaks.
+- **Padre Proof** grants generous absolution for questionable choices while keeping a ledger titled *Still Owed*.
+- **El Sepulturero** walks the back lot with a shovel, ensuring bad arguments and wounded pride are buried with full honors.
+- **Los Maracas** bring the unhinged skeletal swing that prevents anyone from leaving before sunrise.
+- **El Vigía** keeps watch from the desert edge, guiding late-night wanderers toward the glowing neon door.
 
-Each one carries a signature line and a bottle. Together, they're how the cantina works — already at their posts when you arrive and still there when you leave.
+Each character commands their own signature bottle, their own ritual, and their own unforgettable phrase.
 
-> *"The dead have better music."* — Los Maracas
+> *"The dead have better music — and significantly better tequila."*
+

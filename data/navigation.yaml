@@ -71,10 +71,10 @@ social:
   links:
     - label: "Instagram"
       href: "https://instagram.com/riptequila"
-      icon: "fa-brands fa-instagram"
+      icon: "social-instagram"
     - label: "TikTok"
       href: "https://tiktok.com/@riptequila"
-      icon: "fa-brands fa-tiktok"
+      icon: "social-tiktok"
     - label: "YouTube"
       href: "https://youtube.com/@riptequila"
-      icon: "fa-brands fa-youtube"
+      icon: "social-youtube"

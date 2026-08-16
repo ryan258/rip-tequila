@@ -3,17 +3,19 @@ title: "Midnight Agave Reserve"
 weight: 50
 variant: "Reserve"
 accent: "deep-green"
-icon: "fa-solid fa-moon"
+icon: "moon"
 line: "Follow the Agave After Midnight."
 descriptor: "Dark. Quiet. For late arrivals."
-detail_headline: "The late-arrival bottle for the edge of the poster."
+detail_headline: "The late-arrival bottle for the edge of the desert."
 seo_title: "Midnight Agave Reserve — The Late-Arrival Bottle | RIP Tequila"
-seo_description: "Midnight Agave Reserve is the late-arrival bottle of the RIP Tequila lineup. El Vigía watches the desert road. If a Reserve is on your table, he sent you."
+seo_description: "Midnight Agave Reserve is the rare late-arrival expression of RIP Tequila. Guarded by El Vigía on the desert frontier. Follow the Agave After Midnight."
 ---
 
-The Reserve is for the late arrivals. The travelers. The people who got on the road sometime after the rest of the world stopped paying attention and somehow ended up at the cantina's door anyway. There's always a glass waiting. There's always a bottle on the table by the time you sit down.
+The **Midnight Agave Reserve** is reserved strictly for those who arrived via the longest possible detour. 
 
-Smoother than the rest. Quieter. Finished somewhere past the point most pours would stop trying. *Follow the Agave After Midnight.*
+The travelers. The dreamers. The ones who looked at a fork in the road at 2:00 AM, deliberately chose the unpaved option, and somehow emerged at the glowing threshold of La Cantina del Último Trago with dust on their boots and a story in their throat.
+
+Distilled from rare wild desert agave, aged under an indifferent moon, and finished well past the point where conventional distillers pack up their tools. If there is a bottle of Reserve waiting at your table when you pull out your chair, it’s because **El Vigía** saw you coming five miles back. *Follow the Agave After Midnight.*
 
 > *"The Desert Remembers Every Toast."*
 
@@ -21,10 +23,12 @@ Smoother than the rest. Quieter. Finished somewhere past the point most pours wo
 
 > *"Follow the agave after midnight."* — El Vigía
 
-He watches the road. He doesn't recommend. If a Reserve is on your table, it's because he sent you.
+El Vigía never enters the cantina; he stays posted on the desert perimeter with his boots in the dust and a watchful eye on the highway lights. If this bottle is on your table, consider it his personal stamp of entry.
 
 ## Concept tasting notes: What's in the glass
 
-Slow-roasted agave, dark coffee, and charred oak. A clean cool note that reads like desert air after a hot day. A long finish, faintly poetic, and unmistakably the kind of pour that ends with somebody quoting something they saw on a road sign. Best served at room temperature, late, and with the cap off in case anybody else wanders in.
+- **Aroma**: Slow-charred wild agave, cold desert sagebrush, dark roast espresso, and crisp midnight air after a scorching day.
+- **Palate**: Smoked mineral slate, wild blackberry reduction, toasted mesquite, and a quiet, brooding sweetness that unfolds slowly.
+- **Finish**: Infinite, contemplative, and dry as the Sonoran wind.
+- **Pairing**: Room temperature pour, the cap left off for the ghosts, and a long gaze toward the dark horizon.
 
-If you're drinking this, you've been somewhere. The cantina noticed.

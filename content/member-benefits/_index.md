@@ -1,45 +1,42 @@
 ---
 title: "Member Benefits"
-eyebrow: "Club"
-headline: "Questionable Benefits. Clean Design."
-description: "What you get when your member number lands in El Sepulturero's manifest."
+eyebrow: "Club Charter"
+headline: "Questionable Benefits. Impeccable Design."
+description: "What happens when your name is officially inscribed in El Sepulturero’s manifest."
 seo_title: "Member Benefits — Don Muerte Social Club | RIP Tequila"
-seo_description: "What members of the Don Muerte Social Club get from RIP Tequila — drop access, member editions, numbered prints, and dispatches from the cantina."
+seo_description: "Explore the perks of the Don Muerte Social Club: priority drop access, limited capsule editions, numbered art prints, and dispatches from the afterlife."
 cta_label: "Join the Club"
 cta_href: "/don-muerte-social-club/"
-icon: "fa-solid fa-id-badge"
+icon: "card"
 ---
 
-The Don Muerte Social Club's benefits are small in number, large in personality, and consistent across every drop. Here's the full list, in case you needed one to keep on the fridge.
+The charter of the **Don Muerte Social Club** is short, sharp, and designed for discerning individuals who appreciate high-concept satire and beautiful artifacts. 
 
-## Drops
+Here is the complete accounting of your benefits, suitable for framing or casually leaving on the kitchen counter to intimidate dinner guests:
 
-- First look at every poster release before the public archive lists it.
-- Capsule merch alerts with member-only access for the first 24 hours.
-- Character series prints as they roll out, with a member edition stamp.
+## 1. Archival & Poster Drops
 
-## Editions
+- **Early Dispatch Access**: Receive private checkout links 24 hours before limited poster editions are made available to the general public.
+- **Run-Number Guarantee**: Priority allocation for low-run numbered screen prints.
+- **Capsule Alerts**: Immediate notification when short-run apparel and barware items go live.
 
-- Member-only editions of select coasters, sticker sheets, and matchbooks.
-- Numbered prints for major campaigns — your member number, on the print.
-- Bottle-mock editions when special-edition bottles ship as collector pieces.
+## 2. Exclusive Editions
 
-## Cantina dispatches
+- **Member-Only Variants**: Access to limited colorway variants of the Glyph Sticker Sheet and embroidered patches.
+- **Numbered Artifacts**: Special foil-stamped editions bearing official club insignia.
+- **The Physical Card**: When physical card issuances open, active members receive the 38pt black-and-gold credential.
 
-- Campaign briefs before the campaigns go public.
-- Character reveals with the full bio before it lands on the site.
-- Occasional warnings from El Vigía when the road has something to say.
+## 3. Dispatches from the Floor
 
-## House rules
+- **Character Dossiers**: Complete unedited biographical files on all eight cantina characters.
+- **Cocktail & Mocktail Recipes**: Parody and actual mixology guides formulated by Cantina Jack.
+- **Desert Weather Reports**: Cryptic dispatches sent by El Vigía whenever atmospheric conditions get interesting.
 
-- Hydration encouraged. Padre Proof made it official.
-- No expiration. Once you're in the manifest, you're in the manifest.
-- Questionable benefits, clean design. Both halves are taken seriously.
+## What is strictly NOT included
 
-## Not included
+- **A Real Bottle of Spirits**: We do not distill, bottle, or sell physical alcohol. (The spiritual kind is entirely up to you.)
+- **Renewal Fees**: Membership never expires, so we will never ask you for an annual subscription.
+- **Corporate Surveys**: We will never ask you "how likely you are to recommend us on a scale of 1 to 10."
 
-- A real bottle. There is no real bottle.
-- A discount on real spirits. We don't sell spirits.
-- Renewal reminders. Membership doesn't expire.
+> *"Membership expires never. Toast accordingly."*
 
-> *"Membership expires never."*

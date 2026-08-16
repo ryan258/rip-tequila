@@ -1,19 +1,20 @@
 ---
 title: "Drops"
-eyebrow: "Limited Evidence"
-headline: "Artifacts From the Afterparty"
-description: "The cantina's archive of poster releases, capsule merch, and campaign artifacts."
+eyebrow: "Evidence Archive"
+headline: "Limited Editions from the Other Side"
+description: "The official archive of limited poster releases, capsule collections, and physical evidence from La Cantina del Último Trago."
 seo_title: "Drops — Parody Tequila Posters & Dark Humor Merch | RIP Tequila"
-seo_description: "Limited tequila poster drops from RIP Tequila — campaign posters, capsule merch, sticker sheets, and member-only artifacts from the afterlife cantina."
+seo_description: "Explore limited edition poster drops and capsule merchandise from RIP Tequila. Screen-printed campaign art, barware, and afterlife artifacts."
 cta_label: "Shop the Afterparty"
 cta_href: "/merch/"
-icon: "fa-solid fa-box-open"
+icon: "crate"
 ---
 
-Every campaign the cantina runs leaves something behind. A poster. A sticker sheet. A coaster from a one-weekend special. A shirt that exists for one print run and then doesn't. A glyph that retires after the night it ran.
+Every campaign staged at La Cantina del Último Trago leaves behind tangible evidence.
 
-**Drops** is where those artifacts live after the night they came from. When the campaign calendar starts firing, every drop will land here in order — the launch posters, the character series, the seasonal sets, the one-off prints El Sepulturero approves for release.
+A hand-pulled silkscreen poster. A heavyweight cotton tee from a single 100-piece run. A barware coaster set salvaged from a raucous Saturday night. A holographic glyph sticker that retires the moment the last one ships.
 
-Drops are limited by design. Once a run is gone, it's gone. The cantina doesn't restock — it remembers. The Don Muerte Social Club gets first access. The public archive shows up here once the round is closed.
+This is the **Drops Archive** — the chronological record of artifacts created to celebrate our five bottles and eight characters. When a new capsule release is announced, **Don Muerte Social Club** members receive the private dispatch first. Once a run sells out, it enters the permanent archive. We do not restock. We simply pour the next round.
 
-> *"Every legend leaves evidence."*
+> *"Every legend leaves evidence. Wear the proof."*
+

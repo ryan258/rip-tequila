@@ -1,34 +1,30 @@
 ---
 title: "Responsible Language"
-eyebrow: "Clear First"
-headline: "Clever Second."
-description: "Responsible parody copy rules for keeping the fictional brand clear."
+eyebrow: "Editorial Standards"
+headline: "Clear First. Clever Second."
+description: "How we balance deadpan satire, dark humor, and unequivocal responsible drinking messaging across the RIP Tequila universe."
 seo_title: "Responsible Language — Parody Brand Copy Guidelines | RIP Tequila"
-seo_description: "How RIP Tequila handles responsible parody copy. Clear first. Clever second. The fictional parody status stays obvious; the safety language stays present."
+seo_description: "Editorial guidelines for RIP Tequila: maintaining crystal-clear parody status, prominent safety disclaimers, and responsible drinking language."
 cta_label: "Read the Disclaimer"
 cta_href: "/parody-disclaimer/"
-icon: "fa-solid fa-scale-balanced"
+icon: "scale"
 ---
 
-The cantina's voice is allowed to be funny. It is not allowed to be misleading. *Clear first. Clever second.* Every page that mentions spirits, partying, or drinking carries the same responsibility: the parody status stays obvious, the safety language stays present, and the joke is never at the expense of either.
+The voice of RIP Tequila is designed to be sharp, theatrical, and hilariously deadpan. However, our commitment to transparency is absolute: **Clear first. Clever second.**
+
+Every page that references spirits, toasts, or night-out culture operates under a strict standard: the parody status remains unmistakable, the safety warnings remain front and center, and humor is never used to encourage irresponsible behavior.
 
 **RIP Tequila is a fictional parody brand created for storytelling, design, merch, and entertainment. No actual spirits are sold here. If you drink, drink responsibly. Hydrate. Get a safe ride. Do not operate a vehicle, forklift, horse, hearse, or emotional conversation after drinking.**
 
-## What we always do
+## The Cardinal Rules of the Cantina
 
-- Repeat the parody status on product pages, merch pages, and the footer.
-- Use *"fictional parody brand"* and *"no actual spirits"* in plain language, not buried in fine print.
-- Pair every alcohol reference with the short responsible-drinking line: *Drink responsibly. Haunt responsibly.*
-- Treat cultural and religious imagery with care. Día de los Muertos, ceremonial figures, sacred symbols — celebration first, never the punchline.
+1. **Unmistakable Fiction**: We prominently state our fictional parody status across all product descriptions, merchandise pages, and footers.
+2. **Prominent Safety Anchors**: Every alcohol reference is paired with our core directive: *Drink responsibly. Haunt responsibly.*
+3. **Cultural Reverence**: We honor the rich traditions of Mexican folklore, Día de los Muertos, and regional iconography with artistic admiration — never as cheap punchlines.
+4. **Zero Tolerance for Unsafe Tropes**: We never glorify binge drinking, drunk driving, underage drinking, or reckless behavior.
+5. **No Fake Sourcing Claims**: We never use real distillery names, real geographic appellations, or fraudulent regulatory stamps.
 
-## What we never do
-
-- Imply real production, aging, distillation, or sourcing.
-- Use real certification marks, government seals, or distillery names.
-- Encourage drunk driving, binge drinking, or unsafe drinking patterns.
-- Make health, performance, or wellness claims about the parody product.
-- Stack every joke on a death joke. The cantina has more registers than that.
-
-A parody about drinking only works when the safety part isn't optional. The cantina is fictional. The disclaimers aren't.
+Satire works best when the wit is razor-sharp and the moral foundation is rock solid. The cantina is a work of fiction; safety is not.
 
 > *"Drink responsibly. Haunt responsibly."*
+

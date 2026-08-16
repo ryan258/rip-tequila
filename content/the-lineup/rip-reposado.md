@@ -3,17 +3,19 @@ title: "RIP Reposado"
 weight: 20
 variant: "Reposado"
 accent: "red"
-icon: "fa-solid fa-bell"
+icon: "bell"
 line: "The Bell Rang. You're In."
 descriptor: "Smooth. Warm. Always welcome."
 detail_headline: "The house bottle for the afterlife cantina."
 seo_title: "RIP Reposado — The House Bottle of the Cantina | RIP Tequila"
-seo_description: "RIP Reposado is the house pour of La Cantina del Último Trago — smooth, warm, and on the table the moment Campana Roja rings the bell. The Bell Rang. You're In."
+seo_description: "RIP Reposado is the warm amber centerpiece of La Cantina del Último Trago — rested in charred oak, announced by Campana Roja, and poured when the evening gets interesting."
 ---
 
-Somewhere between the first round and the long one, the Reposado shows up. It's the bottle the cantina knows by heart — the one Don Muerte gestures at when somebody asks what the room is drinking, the one Campana Roja reaches for when she's about to ring the bell. It doesn't announce itself. It doesn't have to.
+Somewhere between the optimistic opening toast and the long, wandering discussion about whether anyone actually understands quantum physics, the **Reposado** arrives on the table.
 
-Rested long enough to lose the sharp edge, not long enough to forget what it used to be. Smooth, warm, and a little too friendly — the kind of pour that makes the next round feel like it was always part of the plan. *The Bell Rang. You're In.*
+Rested for eight months in charred American white oak casks — just long enough to lose the reckless sharp edges of youth, but not long enough to start worrying about a mortgage. It has a warm, honeyed amber glow that flatters everyone sitting within four feet of it.
+
+When **Campana Roja** pulls the crimson cord on the brass bell above the door, this is the bottle that's already on your table. You didn't order it. The cantina knew. *The Bell Rang. You're In.*
 
 > *"Last Call Is Just the Beginning."*
 
@@ -21,10 +23,12 @@ Rested long enough to lose the sharp edge, not long enough to forget what it use
 
 > *"I do not announce last call. I announce fate."* — Campana Roja
 
-She doesn't pour. She rings. The Reposado is what's already on the table by the time the sound stops.
+She doesn't pour the drink. She strikes the chime. The Reposado is what fills the glasses before the reverberation even fades from the rafters.
 
 ## Concept tasting notes: What's in the glass
 
-Caramel up front, then warm vanilla, agave, and a soft clove warmth. A whisper of oak, some quiet reassurance, and a finish that lingers exactly as long as the conversation does. Pairs with a story you've told before, a friend you haven't seen in a year, and a chair you can't quite remember sitting down in.
+- **Aroma**: Wild clover honey, toasted oak, cooked vanilla bean, and the comforting sensation of someone else offering to split the bill.
+- **Palate**: Velvety butterscotch, gentle baking spice, caramelized agave, and a warm cinnamon embrace that makes bad ideas sound like strategic breakthroughs.
+- **Finish**: Smooth, lingering, and softly persuasive.
+- **Pairing**: A story you've definitely exaggerated twice, a warm booth, and zero intention of looking at a clock.
 
-This is the bottle the night gets named after. Drink it slowly. Keep the round going.

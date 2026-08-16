@@ -34,6 +34,6 @@ hugo --gc --minify --baseURL "https://example.com/"
 
 ## Visual system
 
-All artwork on this site is **Font Awesome** loaded via CDN. This is intentional, not a placeholder. Bottles are CSS shapes with a small FA glyph on the label; characters, merch, and product visuals are single FA icons inside a card; the slogan strip uses FA icons per line. The full philosophy and rules live in `docs/visual-system.md`.
+All brand iconography on this site is a **bespoke SVG glyph language** rendered inline via `layouts/partials/glyph.html`. Bottles are CSS shapes with a custom glyph mark on the label; characters, merch, and product visuals are signature woodcut-style glyphs; the slogan strip uses animated glyph marks; and pages are backed by optimized WebP linocut screenprint artwork. The full philosophy and rules live in `docs/visual-system.md`.
 
-In short: typography and copy carry the brand, icons set the tone, no high-fidelity imagery is used. The flat, poster-like aesthetic breaks the moment photography or detailed illustration enters the picture, so we don't add any.
+In short: typography and copy carry the brand, handcrafted vector glyphs set the tone, and rich linocut textures establish the afterlife cantina atmosphere with zero external icon CDN dependencies.

@@ -5,7 +5,7 @@ headline: "Terms"
 description: "Site use, brand world, and merch terms for RIP Tequila."
 seo_title: "Terms — Site Use Notice | RIP Tequila"
 seo_description: "Site use and brand-world terms for RIP Tequila — a fictional parody brand and design project from La Cantina del Último Trago."
-icon: "fa-solid fa-file-signature"
+icon: "lock"
 ---
 
 These terms cover use of the RIP Tequila site, the brand world, and the merch that ships from it.

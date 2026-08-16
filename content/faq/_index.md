@@ -1,41 +1,44 @@
 ---
 title: "FAQ"
-eyebrow: "Info"
-headline: "Frequently Asked Questions"
-description: "Fast answers about the cantina, the cast, the bottles, and the Social Club."
+eyebrow: "Clarifications"
+headline: "Frequently Interrogated Truths"
+description: "Fast, honest, deadpan answers about the cantina, the cast, the bottles, the merch, and our legal reality."
 seo_title: "FAQ — Frequently Asked Questions | RIP Tequila"
-seo_description: "Fast answers about RIP Tequila — the parody tequila brand, the cast, the cantina, the merch, and how to join the Don Muerte Social Club."
-icon: "fa-solid fa-circle-question"
+seo_description: "Clear, hilarious answers about RIP Tequila — the parody tequila brand, the eight characters, the cantina world, limited merch drops, and the Social Club."
+icon: "question"
 ---
 
-## Is RIP Tequila real?
+## Is RIP Tequila an actual alcohol company?
 
-No. La Cantina del Último Trago opens past last call, the cast is dead, and every bottle on the lineup is empty. **No actual spirits are produced or sold here.** What ships is the design — posters, merch, and the lore around a cantina that doesn't take reservations.
+**No.** RIP Tequila is a satirical brand and storytelling art project. La Cantina del Último Trago opens only after last call, the staff is deceased, and our five bottles exist purely in the metaphysical realm. **No actual spirits are distilled, bottled, or sold here.** 
 
-## Then what is this?
+What is real: the poster art, the high-end apparel, the barware, the sticker sheets, and the lore.
 
-A full brand world from La Cantina del Último Trago: eight characters, five bottles, a campaign poster series, a merch shelf, the Don Muerte Social Club, and a manifest with your name in it. Sit in it for a few minutes, take an artifact home, go on with your day.
+## What is the point of a tequila brand that doesn't sell tequila?
 
-## Can the merch be real?
+Most ultra-premium spirits brands spend millions inventing fictional 200-year-old family legends, mystical water filtration rituals, and solemn tasting notes about *notes of wet river stone and unexpressed longing*. We decided to take that exact level of high-end branding, turn it up to eleven, and apply it to a fictional afterlife cantina. It’s luxury design meets deadpan comedy.
 
-Yes. The bottles are fiction; the artifacts can ship. Coasters, tees, hats, sticker sheets, and the membership card are all designed to be made. Drops are announced through the **Don Muerte Social Club**.
+## Can I actually buy the merchandise?
 
-## Where can I buy a bottle?
+**Yes.** While the bottles are fictional props, our physical merchandise is very real and built to the highest production standards. Heavyweight cotton tees, barware coaster sets, low-profile strapback hats, and die-cut vinyl sticker sheets ship worldwide. Drops are announced via the **Don Muerte Social Club**.
 
-You can't. There aren't any. If you encounter one, it's a concept piece, a render, or a prop.
+## Where can I find a physical bottle to display on my bar?
 
-## Who are the characters?
+You can't purchase physical bottles at retail. If you see a bottle of RIP Tequila in the wild, it is either a 3D mock, a handcrafted creative prop, or you have wandered into La Cantina del Último Trago by mistake.
 
-Eight residents of La Cantina del Último Trago: Don Muerte, La Rosa Negra, Padre Proof, El Sepulturero, Cantina Jack, Campana Roja, Los Maracas, and El Vigía. Each one has a signature line and a bottle they vouch for. Their bios live on the **Characters** page.
+## Who are the eight characters?
 
-## What is *"Rest In Proof"*?
+The permanent crew of La Cantina del Último Trago: **Don Muerte** (The Host), **Cantina Jack** (The Bartender), **Campana Roja** (The Signal), **La Rosa Negra** (The Chanteuse), **Padre Proof** (The Blesser), **El Sepulturero** (The Caretaker), **Los Maracas** (The Rhythm), and **El Vigía** (The Sentinel). Full bios and dossiers are on the **Characters** page.
 
-The cantina's signature line. The companion lines are *"Proof You Lived"*, *"The Bell Rang. You're In."*, and *"No Actual Spirits. All the Spirit."*
+## What does *"Rest In Proof"* mean?
 
-## How do I get into the Social Club?
+It’s our signature mantra. Companion lines include *"Proof You Lived"*, *"The Bell Rang. You're In."*, *"Here Lies Your Judgment"*, and *"No Actual Spirits. All the Spirit."*
 
-Sign up on the **Don Muerte Social Club** page. It's free, doesn't expire, and gets you first look at everything the cantina releases.
+## How much does it cost to join the Don Muerte Social Club?
 
-## Where do I send press questions?
+**Zero dollars.** There are no fees, no subscription models, and no tiers. Sign up on the Social Club page, receive your permanent roster number, and get early access to every drop.
 
-Through the Social Club signup, with a short note. We route them from there.
+## What if I drink actual tequila in the real world?
+
+Drink responsibly. Hydrate aggressively. Order a cab or rideshare. Do not operate cars, forklifts, horses, hearses, or emotional relationships under the influence. Make it a night worth haunting, not regretting.
+

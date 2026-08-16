@@ -4,22 +4,23 @@ weight: 20
 role: "The Singer"
 accent: "red"
 prop: "Rose or microphone"
-icon: "fa-solid fa-microphone-lines"
+icon: "microphone"
 line: "The dead still dance."
 seo_title: "La Rosa Negra — The Voice of the Cantina | RIP Tequila"
-seo_description: "La Rosa Negra is the singer of La Cantina del Último Trago. The dead still dance. Meet the headline performer of RIP Tequila's afterlife cast."
+seo_description: "La Rosa Negra is the headline chanteuse of La Cantina del Último Trago. Her midnight boleros turn heartbreak into art. The dead still dance."
 ---
 
-When La Rosa Negra steps to the microphone, the cantina goes quiet — not because she demands it, but because the bottles do. She is the voice of the room. The headliner. The act everybody at the bar will quote for weeks and never quite remember the song.
+When **La Rosa Negra** steps to the vintage microphone, the cantina goes dead silent — not because anyone commanded it, but because even the ice cubes in the glasses seem to stop melting out of sheer respect.
 
-She sings heartbreak like she's reading from the cantina's own ledger, and she's never wrong. The black rose she carries arrived for somebody else and never made it to the table. The candle on the corner of the stage stays lit through her whole set; nobody knows who lights it.
+She is the undisputed voice of the afterlife. She sings boleros of doomed romance, glorious mistakes, and 3:00 AM epiphanies with the emotional precision of a master surgeon. She pins a single black rose to her lapel — a flower delivered decades ago for a suitor who never arrived — and keeps a lone candle burning on the edge of the stage. 
 
-Her set list is a mystery. Some nights it's a slow ballad. Some nights it's a bolero with the brakes off. Some nights she covers a song that hasn't been written yet. The cantina doesn't keep recordings. The point of the music is that it only exists once.
+Her setlist has never been written down. Some evenings she delivers a smoldering torch ballad that reduces tough guys to tears; other nights she unleashes a high-tempo ranchera that has the entire room stomping on the hardwood. There are no recordings, no live streams, and no encore negotiations.
 
 > *"The dead still dance."*
 
 ## What she pours
 
-**Rosa Reposado**, a special edition that arrives on the table before her second set. Pour it slowly. Bring a flower for the candle. Don't ask for requests.
+**Rosa Reposado**, an exclusive special edition poured just before her midnight set. Sip it slowly. Never ask for requests.
 
 > *"Every heartbreak deserves a chorus."*
+

@@ -4,20 +4,23 @@ weight: 60
 role: "The Signal"
 accent: "red"
 prop: "Bell"
-icon: "fa-solid fa-bell"
+icon: "bell"
 line: "The bell rang. You're in."
 seo_title: "Campana Roja — The Bell of the Cantina | RIP Tequila"
-seo_description: "Campana Roja rings the bell over the door of La Cantina del Último Trago. I do not announce last call. I announce fate. Meet the signal of RIP Tequila."
+seo_description: "Campana Roja rings the brass bell over the portal of La Cantina del Último Trago. I do not announce last call. I announce fate. Meet the signal of RIP Tequila."
 ---
 
-Campana Roja is the moment the cantina turns. She doesn't introduce the night — she causes it. When she rings the bell over the door, the bar tightens, the music drops half a beat, and the door behind you stops being a door. After that, you're in.
+**Campana Roja** is the turning point of every evening. She doesn't participate in small talk; she commands destiny.
 
-She and Don Muerte have an understanding. He's the host; she's the moment. Whatever toast he gives, it lands on her count. Whatever round Jack pours, the bell signs off on it. You will hear her exactly once on the way in, and you will not hear her again until you've forgotten you were waiting for her.
+Standing by the heavy timber entrance with one gloved hand resting near the crimson ribbon of the brass bell, she watches the room with cool discernment. When she decides a night has officially reached its critical mass of joy, audacity, and questionable decisions, she pulls the cord.
+
+The chime that rings out doesn't signal closing time. It signals transition: the moment you stop being an outsider visiting a bar and become part of the cantina's permanent folklore. After the bell rings, there is no turning back.
 
 > *"I do not announce last call. I announce fate."*
 
 ## What she pours
 
-**RIP Reposado.** The house bottle. The smooth one. The one that's already on the table by the time the bell stops ringing. For special editions, **Red Bell Reposado.**
+**RIP Reposado.** The house staple, smooth and amber, poured the split second the bell tolls. For exclusive runs, **Red Bell Reposado.**
 
 > *"The bell rang. You're in."*
+

@@ -1,29 +1,35 @@
 ---
 title: "Find Us"
-eyebrow: "Contact / Find Us"
-headline: "No Storefront. Strong Signal."
-description: "Press, collaborations, and afterlife dispatches — the road into the cantina is the Don Muerte Social Club."
-seo_title: "Contact RIP Tequila — Press, Collaborations & Merch Inquiries"
-seo_description: "Press, collaborations, merch concepts, and partner inquiries for RIP Tequila — the parody tequila brand from La Cantina del Último Trago."
+eyebrow: "Coordinates"
+headline: "No Storefront. Undeniable Signal."
+description: "Press inquiries, artistic collaborations, and afterlife dispatches — how to transmit a message into La Cantina del Último Trago."
+seo_title: "Contact RIP Tequila — Press, Collaborations & Inquiries"
+seo_description: "Contact the creators behind RIP Tequila: press inquiries, design collaborations, brand partnerships, and Don Muerte Social Club dispatches."
 cta_label: "Join the Club"
 cta_href: "/don-muerte-social-club/"
-icon: "fa-solid fa-location-dot"
+icon: "location"
 ---
 
-There is no storefront. The cantina has no street address. The road in is mostly desert, and the bell only rings once a night. If you're trying to reach La Cantina del Último Trago — for press, collaborations, or any reason worth answering — the road in is the **Don Muerte Social Club**.
+You won't find a street number, storefront, or Google Maps pin. La Cantina del Último Trago does not participate in commercial zoning. 
 
-## Press
+If you are trying to reach the creative team behind **RIP Tequila** — for press features, brand collaborations, creative direction inquiries, or licensing — the direct pipeline runs through the **Don Muerte Social Club**.
 
-The cantina doesn't keep regular press hours. Join the **Don Muerte Social Club** to land on the roster — credentials and embargoes go out from there before campaigns drop.
+## Press & Media
 
-## Collaborations
+Writing a feature on satirical branding, dark humor design, or the art of the parody spirit? Sign up to the Social Club and reply directly to any dispatch. Embargoed assets, high-res poster mocks, and creator commentary are routed from there.
 
-Designers, illustrators, musicians, merch makers, partners building inside the cantina universe — same road. Get on the roster. The cantina knows where to find you after that.
+## Collaborations & Art
 
-## Looking for a bottle
+Are you a designer, screen printer, musician, or illustrator interested in building within the cantina universe? We actively collaborate on limited capsule drops and poster releases. Connect with us through the club ledger.
 
-The cantina pours. It does not ship. The bottles you see on the lineup belong to the bar. If you find one outside the cantina's walls, it isn't ours.
+## Looking for Physical Bottles?
 
-## Where we are
+We repeat: the cantina pours exclusively on the astral plane. We do not manufacture, bottle, or ship actual tequila. If you encounter a physical bottle of RIP Tequila in a retail liquor store, congratulations on discovering a temporal anomaly, but please do not drink it.
 
-La Cantina del Último Trago. Open once a night. Address withheld by tradition.
+## Physical Location
+
+**La Cantina del Último Trago**  
+Desert Highway 00, Mile Marker Infinity  
+Open: Past Midnight  
+Address: Deliberately Withheld by Tradition
+

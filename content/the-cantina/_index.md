@@ -2,20 +2,29 @@
 title: "The Cantina"
 eyebrow: "La Cantina del Último Trago"
 headline: "The Bell Rang. You're In."
-description: "An afterlife cantina where the bell rings once a night, the stories get louder, and the last round always belongs to a legend."
+description: "Step inside La Cantina del Último Trago: the afterlife speakeasy where the bell rings once a night, clocks don't exist, and the last round belongs to folklore."
 seo_title: "La Cantina del Último Trago — The Afterlife Cantina | RIP Tequila"
-seo_description: "Inside La Cantina del Último Trago: the afterlife cantina behind RIP Tequila, host to Don Muerte, the bell, and the eight characters who run the room."
+seo_description: "Inside La Cantina del Último Trago: the legendary afterlife cantina behind RIP Tequila, featuring Don Muerte, the bell, and eight unforgettable characters."
 cta_label: "Meet the Cast"
 cta_href: "/characters/"
-icon: "fa-solid fa-door-open"
+icon: "door"
 ---
 
-**La Cantina del Último Trago** doesn't keep regular hours. It opens once the rest of the night has run out of things to say. The doorway is on a road most maps don't bother with, between the agave fields and the long horizon where every late toast eventually lands. By the time you can see the lights, you're already on your way in.
+**La Cantina del Último Trago** does not appear on GPS, Yelp, or tourism brochures. It exists on a forgotten desert road between the blue agave fields and the edge of tomorrow morning. You don’t make a reservation here — you simply run out of reasonable excuses to go home, look up, and realize you’ve arrived.
 
-Inside, the cantina is small and well-organized. A bar runs the length of one wall — Cantina Jack's territory. A small stage in the corner — La Rosa Negra's. A brass bell over the door, ribboned in red, watched by Campana Roja. A back room with a desk and a manifest where El Sepulturero works late. A booth where Padre Proof signs off on whatever needs signing off on. A back patio where Los Maracas play whether anybody is dancing or not. A chair at the head of the bar that's always been Don Muerte's, even when he isn't in it.
+Step past the heavy wooden archway and the world outside goes silent:
 
-Outside, the desert. El Vigía watches it. Nothing comes through the cantina that he hasn't already seen on the road.
+### The Geography of the Room
 
-Make it a night worth haunting.
+- **The Long Mahogany Bar**: Cantina Jack’s sacred domain. Polished until you can see your own startled reflection, lined with heavy bottomed glassware and bottles that glow like liquid topaz under the low amber lights.
+- **The Crimson Stage**: A modest platform draped in dusty black velvet where **La Rosa Negra** commands the room. When her voice rises, conversations freeze mid-sentence and glasses pause halfway to lips.
+- **The Red-Ribboned Bell**: Forged from solid brass and mounted directly above the heavy entrance. **Campana Roja** keeps one hand near the cord. It chimes only once per evening — the exact moment your casual stop-in becomes an indelible chapter of your personal mythology.
+- **The Absolution Booth**: A leather-lined corner booth where **Padre Proof** presides with a small black book, nodding sympathetically as patrons confess why they ordered that fourth round on a Tuesday.
+- **The Back Office**: Where **El Sepulturero** meticulously records every name, toast, and forgotten argument in a leather-bound manifest that never leaves the building.
+- **The Moonlit Patio**: Where **Los Maracas** keep a relentless, syncopated rhythm going on brass and bone, because nobody in the afterlife believes in closing time.
+- **The High Back Chair**: Carved from dark ironwood at the head of the bar. It belongs to **Don Muerte**. Even when it sits empty, you can feel the room organizing itself around it.
 
-> *"The bell rang. You're in."*
+Outside, stretching to the dark horizon, is the desert. **El Vigía** watches the highway lights. Nothing and nobody reaches the door without him knowing first.
+
+> *"The bell rang. You're in. Make it a night worth haunting."*
+

@@ -1,33 +1,35 @@
 ---
 title: "Don Muerte Social Club"
-eyebrow: "Don Muerte Social Club"
+eyebrow: "Inner Sanctum"
 headline: "Membership Expires Never."
-description: "Poster drops, merch alerts, character reveals, bottle reveals, and cantina dispatches."
+description: "No annual dues. No expiration dates. Just priority access to limited poster drops, capsule merch, and midnight dispatches from the afterlife."
 seo_title: "Don Muerte Social Club — Members-Only Drops | RIP Tequila"
-seo_description: "Join the Don Muerte Social Club for first look at RIP Tequila poster drops, merch alerts, character reveals, and bottle reveals. Membership Expires Never."
+seo_description: "Join the Don Muerte Social Club for exclusive first access to RIP Tequila poster drops, capsule merch alerts, and character reveals. Membership Expires Never."
 cta_label: "Join the Club"
 cta_href: "#social-club"
-icon: "fa-solid fa-id-card"
+icon: "card"
 ---
 
-The Don Muerte Social Club is the only members-only thing the cantina runs. There's no tier system. No annual fee. No fine print, although Padre Proof keeps offering to write some. There's one rule, printed on the front of the card:
+The **Don Muerte Social Club** is the only society in existence where lifetime membership costs exactly zero dollars, requires zero committee approvals, and guarantees that your name will be filed in an afterlife manifest.
+
+There are no platinum tiers, no expiring point balances, and no corporate quarterly newsletters. Just one foundational charter rule:
 
 > *Membership Expires Never.*
 
-Members get first look at every drop, character reveal, bottle reveal, and campaign poster. They get the warnings before the public does. They get the membership card, eventually, when the cards ship. Their member number lands in the ledger and stays there.
+When you join, you receive immediate priority access to every limited-edition poster run, capsule merch drop, and unreleased character archive 24 hours before the public catalogue even knows they exist.
 
-## What you get
+## The Member Ledger
 
-- **Poster drops**, dispatched the night they go live.
-- **Merch alerts** ahead of the public catalog.
-- **Character reveals** before they appear on the cantina's site.
-- **New bottle reveals** on the day the cantina names them.
-- **Occasional warnings from the road**, when El Vigía sees something coming.
+- **Priority Poster Drops**: Dispatched directly to your inbox the moment the ink dries.
+- **Capsule Merch Alerts**: First dibs on heavyweight tees, barware sets, and limited run-tags.
+- **Character & Bottle Debuts**: Unfiltered lore and tasting notes straight from the cantina staff.
+- **Road Dispatches**: Occasional cryptic observations sent by El Vigía when the desert wind kicks up.
 
-## What we won't do
+## The Ironclad Promise
 
-- Sell your information.
-- Spam the inbox between drops.
-- Talk you into anything you wouldn't already say yes to at the cantina.
+- **No Spam**: We only message when there is genuine news from the cantina.
+- **No Data Brokering**: We would never sell your info (El Sepulturero keeps the records locked in iron).
+- **No Marketing Fluff**: Just clean art, deadpan humor, and legendary storytelling.
 
 > *"Membership expires never. Benefits are questionable. Hydration encouraged."*
+
