@@ -1,7 +1,7 @@
 {{ $accent := .Params.accent | default "red" }}
 <a class="character-card" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
   <span class="character-card__figure" aria-hidden="true">
-    <i class="{{ .Params.icon }}"></i>
+    {{ partial "glyph.html" (dict "name" .Params.icon "class" "character-card__glyph-mark rip-glyph--animated") }}
   </span>
   <span class="character-card__name">{{ .Title }}</span>
   <span class="character-card__role">{{ .Params.role }}</span>

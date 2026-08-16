@@ -8,7 +8,7 @@
       <a class="button button--primary" href="/characters/">Back to the Cast</a>
     </div>
     <div class="detail-hero__icon" aria-hidden="true">
-      <i class="{{ .Params.icon }}"></i>
+      {{ partial "glyph.html" (dict "name" .Params.icon "class" "detail-hero__glyph-mark rip-glyph--hero rip-glyph--animated") }}
     </div>
   </header>
   <div class="detail-page__body">

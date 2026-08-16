@@ -16,13 +16,13 @@
     <span class="product-card__body">
       <span class="product-card__label">
         <strong>RIP</strong>
-        <i class="{{ $page.Params.icon }}" aria-hidden="true"></i>
+        {{ partial "glyph.html" (dict "name" $page.Params.icon "class" "product-card__label-glyph") }}
       </span>
     </span>
   </span>
   <span class="product-card__kicker">{{ $page.Params.variant }}</span>
   <span class="product-card__name">{{ $page.Title }}</span>
-  <span class="product-card__glyph" aria-hidden="true"><i class="{{ $page.Params.icon }}"></i></span>
+  <span class="product-card__glyph" aria-hidden="true">{{ partial "glyph.html" (dict "name" $page.Params.icon "class" "product-card__corner-glyph") }}</span>
   <span class="product-card__line">{{ $page.Params.line }}</span>
   <span class="product-card__descriptor">{{ $page.Params.descriptor }}</span>
 {{ if $isLink }}

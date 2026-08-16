@@ -88,9 +88,10 @@
   line-height: 0.9;
 }
 
+.product-card__label-glyph,
 .product-card__label i {
   color: var(--card-accent);
-  font-size: 2rem;
+  --glyph-size: 2.2rem;
 }
 
 .product-card__kicker,
@@ -113,8 +114,10 @@
 }
 
 .product-card__glyph {
+  display: grid;
+  place-items: center;
   color: var(--card-accent);
-  font-size: 2rem;
+  --glyph-size: 2.2rem;
 }
 
 .product-card__line,
@@ -143,8 +146,11 @@
   min-height: 150px;
   margin-bottom: auto;
   color: $color-black;
-  font-size: clamp(4rem, 7vw, 6.8rem);
   transition: color $transition-fast;
+}
+
+.character-card__glyph-mark {
+  --glyph-size: clamp(4rem, 7vw, 6.8rem);
 }
 
 .character-card:hover .character-card__figure,
@@ -172,12 +178,29 @@
 .merch-card__visual {
   display: grid;
   place-items: center;
-  min-height: 150px;
+  min-height: 180px;
   background:
     linear-gradient(135deg, transparent 0 48%, rgba(178, 34, 34, 0.16) 48% 52%, transparent 52%),
     rgba($color-black, 0.06);
   color: var(--card-accent);
-  font-size: clamp(4rem, 6vw, 6rem);
+  overflow: hidden;
+}
+
+.merch-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform $transition-base;
+}
+
+.merch-card:hover .merch-card__img,
+.merch-card:focus-visible .merch-card__img {
+  transform: scale(1.04);
+}
+
+.merch-card__glyph-mark {
+  --glyph-size: clamp(3.8rem, 6vw, 5.5rem);
 }
 
 .merch-card--feature .merch-card__visual {

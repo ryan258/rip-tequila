@@ -7,7 +7,7 @@
       <p>{{ .Description | default .Params.line }}</p>
     </div>
     <div class="detail-hero__icon" aria-hidden="true">
-      <i class="{{ .Params.icon | default "fa-solid fa-skull" }}"></i>
+      {{ partial "glyph.html" (dict "name" (.Params.icon | default "skull") "class" "detail-hero__glyph-mark rip-glyph--hero rip-glyph--animated") }}
     </div>
   </header>
   <div class="detail-page__body">

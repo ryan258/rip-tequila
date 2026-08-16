@@ -4,71 +4,65 @@ This document is the source of truth for how the RIP Tequila site looks. If some
 
 ## The short version
 
-- All artwork is **Font Awesome**, loaded via CDN (`https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css`).
-- Typography does the heavy lifting. Copy does the rest. Icons set tone, not detail.
-- We do not use photography, illustration, AI-generated imagery, or any high-fidelity visual. By design.
+- All brand iconography uses a **bespoke inline SVG glyph language** rendered via `layouts/partials/glyph.html` (zero external icon CDNs).
+- Typography does the heavy lifting. Copy does the rest.
+- Background imagery and textures follow a strict vintage screenprint / linocut woodblock aesthetic adhering to the 5 brand colors (Midnight Black, Bone Cream, Blood Red, Agave Green, Grave Gold).
+- We do not use photography, realistic 3D renders, or modern glossy visuals.
 
 ## Why
 
-RIP Tequila is a parody brand with a flat, poster-like aesthetic — think mid-century liquor poster that happens to be clickable. The brand voice is loud, dry, and absurd; the visual system has to be the same. The moment you drop a photograph of a tequila bottle or a detailed character portrait onto the page, two things happen at once:
+RIP Tequila is a parody brand with a flat, poster-like aesthetic — think mid-century liquor poster that happens to be clickable. The brand voice is loud, dry, and absurd; the visual system has to be the same. The moment you drop a photograph of a tequila bottle or a generic generic UI icon onto the page, two things happen at once:
 
 1. The parody collapses — real product photography implies a real product, and the joke stops landing.
-2. The visual hierarchy breaks — a high-fidelity image next to a flat icon reads as "the icon is the cheap one," and the whole composition slides toward generic.
+2. The visual hierarchy breaks — an off-the-shelf icon library clashes with the handcrafted woodcut aesthetic.
 
-The icon-only approach keeps everything at the same weight. Every visual is the same kind of mark, the same line weight, the same flatness. The brand reads as a **system of marks**, not a collection of assets.
+Every visual mark on the site is an authentic, chiseled vector glyph engineered on a 24x24 grid with heavy 2px strokes and geometric woodblock linework.
 
-This is the "salt bath" rule: the whole site sits in the same visual bath. Don't pull one element out into higher fidelity than the rest.
+## SVG Glyph Set
 
-## What the icons are used for
+- `skull`: Don Muerte chiseled cranium with square sockets and cheekbones.
+- `bell`: Heavy mission bell with tolling clapper and crown loop.
+- `agave`: Spiky geometric agave fronds with central heart.
+- `monument`: Arched tombstone monolith with engraved cross.
+- `moon`: Crescent afterlife moon flanked by radiant stars.
+- `cross`: Heavy Spanish ironwork mission cross.
+- `glass`: Copita / tasting goblet with perched lime wedge.
+- `lemon`: Faceted chiseled citrus slice.
+- `cactus`: Ribbed saguaro silhouette with ground line.
+- `barrel`: Charred oak aging cask with double iron hoops.
+- `eye`: Mystic watcher eye with radiant lashes (El Vigía).
+- `maracas`: Crossed festive woodblock maracas (Los Maracas).
+- `microphone`: Vintage 1940s ribbon microphone (La Rosa Negra).
+- `shovel`: Cemetery spade with T-handle (El Sepulturero).
+- `hat`: Wide-brim ranchero cowboy hat.
+- `shirt`: Heavyweight graphic tee with skull crest.
+- `card`: Don Muerte Social Club membership seal.
+- `stickers`: Geometric glyph sticker assortment.
+- `coasters`: Stacked diamond beverage coaster set.
+- `scale`: Scales of judgment & proof (Responsible Language).
+- `location`: Desert compass landmark marker (Find Us).
+- `warning`: Chiseled triangular caution mark (Parody Disclaimer).
+- `book`: The afterlife chronicles ledger (Our Story).
+- `door`: Heavy-timber cantina portal (The Cantina).
+- `crate`: Secret drop delivery box (Drops).
+- `lock`: Heavy brass padlock with chiseled shackle.
+- `people`: Afterlife cast duo silhouette.
+- `arrow-right`: Chiseled woodblock navigation pointer.
 
-- **Product bottles** (`layouts/partials/product-card.html`): a CSS-drawn bottle silhouette (neck + body + label) with one small FA glyph on the label. The glyph in `Params.icon` is also reused as a larger corner mark on the card. One icon does double duty.
-- **Character cards** (`layouts/partials/character-card.html`): a single large FA icon sits where a portrait would normally go. The icon is the character. The name, role, prop, and tagline below it carry the personality.
-- **Merch cards** (`layouts/partials/merch-card.html`): same pattern — one FA icon per item. A hat card has a hat icon, a shirt card has a shirt icon, a sticker sheet has an icons icon.
-- **Slogan strip** (`data/slogans.yaml`): each slogan pairs with a small FA icon. The icons rotate the joke (skull, bell, lemon, martini glass) so the strip has rhythm.
-- **Page icons** (frontmatter `icon:` on every section page): a single icon used as the page's visual anchor. A door for The Cantina, a location dot for Find Us, a scale for Responsible Language, etc.
+## Visual system assets
 
-## How icons get chosen
-
-Each page sets `icon:` in its frontmatter, pointing at a Font Awesome class (`fa-solid fa-skull`, `fa-solid fa-bell`, etc.). The partial that renders the card just outputs `<i class="..."></i>` — the icon is the image, no further styling required.
-
-When picking an icon, follow this order:
-
-1. **Literal object first.** Hat → `fa-hat-cowboy`. Bell → `fa-bell`. Sticker sheet → `fa-icons`. If the thing exists in the FA set, use it.
-2. **Semantic second.** Judgment → `fa-scale-balanced`. Disclaimer → `fa-circle-exclamation`. Use the abstract concept when no literal works.
-3. **Brand-trope third.** Skull, cross, bell, monument, moon, seedling, martini glass, lemon — the iconography of "afterlife cantina" lives here. These are the rotation set for things that don't have a literal or a clean semantic.
-4. **Never just decorative.** Every icon on the site is load-bearing — it stands in for an image and carries meaning. Don't add an icon "for vibe."
-
-## The "no" list
-
-These break the salt bath. Don't add them without rewriting this doc:
-
-- Photographs of bottles, people, places, food, or product mockups.
-- AI-generated hero images, even stylized ones.
-- Detailed or character-driven illustration (Don Muerte as a fully-drawn figure, etc.).
-- Realistic 3D renders, even of abstract shapes.
-- Stock photography of any kind.
-- Logos or marks downloaded from other brands, including for "parody" — the parody is in the *words*, not in stolen marks.
-- Background images, textures, gradients that simulate depth, or anything that reads as "photo" or "painting" rather than "flat mark."
-
-## The "yes" list
-
-- CSS-drawn bottle silhouettes in the product card (already in place).
-- FA icons as standalone visuals.
-- Type-only compositions: large display type, stacked slogans, monospace numerics.
-- Solid color blocks, hard rules, and the existing palette (Midnight Black, Bone White, Agave Green, Blood Orange, Grave Gold).
-- Animated FA icons where the animation is in the icon itself (e.g. `fa-bell` ringing on hover) — the icon stays an icon, it just moves.
-
-## When this might need to change
-
-If a future page genuinely needs an image to communicate (a real recipe, a printable coaster, a mockup of a bottle label for download), the move is to:
-
-1. Make the image itself flat — same line weight, same color palette, same salt bath as the rest of the site.
-2. Treat it as a *deliverable*, not a *decoration* — it has a download button or a print function, and it earns its presence by being useful.
-3. Update this doc to describe the exception so the rule doesn't get quietly relaxed.
+- **Hero poster** (`/static/images/hero-poster-bg.webp`): woodblock desert backdrop under a stylized blood-red sun with silhouette agaves.
+- **Cantina archway** (`/static/images/cantina-archway-bg.webp`): linocut illustration of the afterlife cantina entrance with warm lantern glow for the Brand Intro.
+- **Social Club texture** (`/static/images/social-club-bg.webp`): dark engraved woodcut relief pattern of bells, skulls, and agaves in antique gold and midnight black.
+- **Paper grain** (`/static/images/paper-grain-bg.webp`): subtle letterpress paper texture layered across section backgrounds via `@mixin paper-texture`.
+- **The Lineup hero backdrop** (`/static/images/lineup-hero-bg.webp`): linocut tequila distillery and desert agave fields under a blazing sun.
+- **Characters hero backdrop** (`/static/images/characters-hero-bg.webp`): linocut cantina porch under lanterns and stars.
+- **Merch hero backdrop** (`/static/images/merch-hero-bg.webp`): afterlife trading post linocut artwork.
+- **Cantina Story hero backdrop** (`/static/images/cantina-story-bg.webp`): canyon ridge afterlife cantina landscape.
+- **404 Desert Crossroads backdrop** (`/static/images/404-bg.webp`): midnight desert signpost under a red crescent moon.
 
 ## Related
 
-- `layouts/partials/icon.html` — the wrapper that renders a single FA icon with the `icon-mark` class.
-- `layouts/partials/product-card.html`, `character-card.html`, `merch-card.html` — the three card partials that all use the same one-icon-per-card rule.
-- `hugo.yaml` — `params.fontAwesomeCdn` and `params.googleFonts` are the only external visual dependencies.
-- `data/slogans.yaml` — the icon-bearing slogan strip.
+- `layouts/partials/glyph.html` — the SVG glyph engine supporting all brand marks with automatic aliasing and accessible metadata.
+- `assets/scss/components/_glyphs.scss` — SCSS sizing, color modifiers, and hover micro-animations.
+- `data/slogans.yaml` — the glyph-bearing slogan strip.

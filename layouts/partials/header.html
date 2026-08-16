@@ -31,7 +31,7 @@
       {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
       <a class="mobile-menu__link{{ if $active }} is-active{{ end }}" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>
         <span>{{ .Name }}</span>
-        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        {{ partial "glyph.html" (dict "name" "arrow-right" "class" "rip-glyph--sm") }}
       </a>
     {{ end }}
     <a class="button button--primary mobile-menu__cta" href="{{ site.Params.cta_href }}">{{ site.Params.cta_label }}</a>

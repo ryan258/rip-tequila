@@ -2,7 +2,7 @@
   <div class="slogan-band__inner scroll-strip">
     {{ range hugo.Data.slogans.items }}
       <div class="slogan-card">
-        <span class="slogan-card__icon" aria-hidden="true"><i class="{{ .icon }}"></i></span>
+        <span class="slogan-card__icon" aria-hidden="true">{{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--lg rip-glyph--red rip-glyph--animated") }}</span>
         <span class="slogan-card__text">{{ .text }}</span>
       </div>
     {{ end }}

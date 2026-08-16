@@ -33,7 +33,7 @@
       <p class="site-footer__social-label">{{ hugo.Data.navigation.social.label }}</p>
       <div class="site-footer__social">
         {{ range hugo.Data.navigation.social.links }}
-          <a href="{{ .href }}" aria-label="{{ .label }}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
+          <a href="{{ .href }}" aria-label="{{ .label }}">{{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm") }}</a>
         {{ end }}
       </div>
       <form class="footer-signup signup-form" data-signup-form>

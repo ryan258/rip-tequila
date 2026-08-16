@@ -1,0 +1,70 @@
+.rip-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--glyph-size, 1em);
+  height: var(--glyph-size, 1em);
+  line-height: 1;
+  color: currentColor;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+  transition: transform $transition-fast, color $transition-fast;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+/* Sizing Utilities */
+.rip-glyph--xs   { --glyph-size: 0.85rem; }
+.rip-glyph--sm   { --glyph-size: 1.15rem; }
+.rip-glyph--md   { --glyph-size: 1.5rem; }
+.rip-glyph--lg   { --glyph-size: 2.25rem; }
+.rip-glyph--xl   { --glyph-size: 3.5rem; }
+.rip-glyph--2xl  { --glyph-size: 5rem; }
+.rip-glyph--hero { --glyph-size: clamp(5.5rem, 12vw, 10rem); }
+
+/* Color Modifiers */
+.rip-glyph--red   { color: $color-red; }
+.rip-glyph--green { color: $color-green; }
+.rip-glyph--gold  { color: $color-gold; }
+.rip-glyph--cream { color: $color-cream; }
+.rip-glyph--black { color: $color-black; }
+
+/* Micro-Animations & Interactivity */
+.rip-glyph--animated {
+  transform-origin: center center;
+
+  &.rip-glyph--bell:hover,
+  &:hover .rip-glyph--bell {
+    animation: glyph-toll 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite alternate;
+  }
+
+  &.rip-glyph--skull:hover,
+  &:hover .rip-glyph--skull {
+    animation: glyph-rattle 0.4s ease-in-out 2;
+  }
+
+  &.rip-glyph--eye:hover,
+  &:hover .rip-glyph--eye {
+    animation: glyph-stare 0.8s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes glyph-toll {
+  0%   { transform: rotate(-14deg); }
+  100% { transform: rotate(14deg); }
+}
+
+@keyframes glyph-rattle {
+  0%, 100% { transform: translateY(0); }
+  25%      { transform: translateY(-3px) rotate(-4deg); }
+  75%      { transform: translateY(2px) rotate(4deg); }
+}
+
+@keyframes glyph-stare {
+  0%   { transform: scale(1); filter: drop-shadow(0 0 0 rgba($color-gold, 0)); }
+  100% { transform: scale(1.1); filter: drop-shadow(0 0 8px rgba($color-gold, 0.6)); }
+}
