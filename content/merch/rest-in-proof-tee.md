@@ -3,24 +3,28 @@ title: "Rest In Proof Tee"
 weight: 10
 category: "Apparel"
 accent: "red"
-icon: "fa-solid fa-shirt"
+icon: "shirt"
+image: "images/merch/rest-in-proof-tee.webp"
 line: "Built for legendary exits."
 price: "$28"
 feature: true
 seo_title: "Rest In Proof Tee — Dark Humor Tequila Apparel | RIP Tequila"
-seo_description: "The hero tee of RIP Tequila — black, heavyweight, RIP monogram on the front and Rest In Proof across the back. Dark humor apparel built for legendary exits."
+seo_description: "The signature heavyweight black tee of RIP Tequila — minimalist luxury monogram on the chest, Rest In Proof statement across the back. Built for legendary exits."
 ---
 
-The hero shirt of the cantina. Black tee. Heavy weight. The RIP Tequila monogram on the front and *Rest In Proof* across the back like a campaign poster you're allowed to wear. Quiet from the front. Loud from the back walk.
+The flagship uniform of La Cantina del Último Trago.
 
-Inside the collar, a small line that doubles as a confession: *Member of the round.* On the lower hem, a single glyph that changes with the run — agave, skull, bell, or tombstone — so each batch is a slightly different artifact.
+Cut from substantial 6.5 oz combed ring-spun cotton in obsidian black. The front chest features a minimalist, razor-sharp **RIP** monogram lockup that looks indistinguishable from a four-figure Parisian fashion house. 
 
-This is the shirt that shows up at brunches it has no business being at. Looks dressed up enough to be intentional. Strange enough to ask about. The trick is in the mark on the back — at a glance, premium; at a second glance, an obituary that hasn't happened yet.
+The back reveals the full, unmistakable manifesto: **REST IN PROOF** arched across the shoulder blades in vintage display type. It makes quiet, dignified entrances possible — and loud, triumphant exits inevitable.
+
+Inside the neck collar sits a discreet printed confession: *Member of the Round.* The lower left hem bears a collectible woven run-tag.
 
 ## Built for
 
-- Quiet entrances. Loud back walks.
-- Wearing the brand without spelling it across the room.
-- The exact midpoint between funeral and afterparty.
+- Looking impeccably dressed at occasions you barely remember RSVPing to.
+- Walking into a room like you own the place and leaving like you own the night.
+- The precise stylistic intersection between an upscale gala and an unscheduled afterparty.
 
 > *"Built for legendary exits."*
+

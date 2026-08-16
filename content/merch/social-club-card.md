@@ -3,29 +3,31 @@ title: "Social Club Card"
 weight: 50
 category: "Collectible"
 accent: "gold"
-icon: "fa-solid fa-id-card"
+icon: "card"
+image: "images/merch/social-club-card.webp"
 line: "Membership expires never."
-price: "Join"
+price: "Join Free"
 seo_title: "Don Muerte Social Club Card — Membership Collectible | RIP Tequila"
-seo_description: "The Don Muerte Social Club card. Membership Expires Never. A collectible black-and-gold membership card from the cantina behind RIP Tequila."
+seo_description: "The official Don Muerte Social Club membership card. Heavy matte black cardstock with metallic gold foil. Membership Expires Never."
 ---
 
-The card is black. The lettering is gold. The line on the front is the only rule the club has: *Membership Expires Never.*
+The physical credential of the afterlife inner circle.
 
-Cards aren't sold individually. They're issued. Sign up to the **Don Muerte Social Club** and you go on the roster. Once you're in, your member number doesn't change, your benefits don't expire, and your name lands somewhere in El Sepulturero's manifest — a coincidence, he insists.
+Crafted from triple-ply 38pt matte black silk stock with hot-stamped metallic gold foil detailing. The front features your individual roster identification and the single foundational charter rule: **MEMBERSHIP EXPIRES NEVER.**
 
-## What's on the back
+This card is not sold on a rack. It is issued. When you join the **Don Muerte Social Club**, your name is permanently recorded in El Sepulturero’s manifest (a purely administrative coincidence, he assures us). 
 
-- Poster drops, dispatched directly.
-- Merch alerts ahead of the public list.
-- Character reveals before the cantina announces them.
-- New bottle reveals on the night the cantina names them.
-- Occasional warnings from the road.
+## What the card unlocks
+
+- **Direct Dispatches**: First look at limited poster drops and capsule merchandise runs 24 hours before the public archive opens.
+- **Character Lore**: Early access to unreleased character backstories and secret cocktail recipes.
+- **Desert Road Reports**: Occasional cryptic observations from El Vigía when strange weather sweeps across the dunes.
 
 ## Built for
 
-- Wallets that need one more piece of evidence.
-- Collectors who like their loyalty programs to have a story.
-- Anyone who already knows what *member of the round* means.
+- Wallets that need an undeniably intriguing conversation piece.
+- Collectors who appreciate the fine art of satirical high-concept branding.
+- Anyone who knows that true loyalty programs shouldn't require monthly subscription fees.
 
-> *"Membership expires never."*
+> *"Membership expires never. Benefits are questionable. Hydration encouraged."*
+

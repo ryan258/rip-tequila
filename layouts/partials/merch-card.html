@@ -1,7 +1,11 @@
 {{ $accent := .Params.accent | default "red" }}
 <a class="merch-card{{ if .Params.feature }} merch-card--feature{{ end }}" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
   <span class="merch-card__visual" aria-hidden="true">
-    <i class="{{ .Params.icon }}"></i>
+    {{ if .Params.image }}
+      <img class="merch-card__img" src="{{ .Params.image | relURL }}" alt="" loading="lazy" decoding="async">
+    {{ else }}
+      {{ partial "glyph.html" (dict "name" .Params.icon "class" "merch-card__glyph-mark rip-glyph--animated") }}
+    {{ end }}
   </span>
   <span class="merch-card__meta">
     <span class="merch-card__category">{{ .Params.category }}</span>
@@ -10,3 +14,4 @@
   <span class="merch-card__name">{{ .Title }}</span>
   <span class="merch-card__line">{{ .Params.line }}</span>
 </a>
+

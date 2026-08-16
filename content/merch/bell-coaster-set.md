@@ -3,23 +3,29 @@ title: "Bell Coaster Set"
 weight: 30
 category: "Barware"
 accent: "red"
-icon: "fa-solid fa-clone"
+icon: "coasters"
+image: "images/merch/bell-coaster-set.webp"
 line: "The bell rang. Protect the table."
 price: "$16"
 seo_title: "Bell Coaster Set — Dark Humor Tequila Barware | RIP Tequila"
-seo_description: "Four-piece coaster set from RIP Tequila with the cantina's hero phrases — Rest In Proof, Proof You Lived, Here Lies Your Judgment, The Bell Rang. You're In."
+seo_description: "Four-piece heavy barware coaster set featuring the iconic phrases of RIP Tequila — Rest In Proof, Proof You Lived, Here Lies Your Judgment, The Bell Rang. You're In."
 ---
 
-Four coasters. Four phrases the cantina keeps repeating. *Rest In Proof. Proof You Lived. Here Lies Your Judgment. The Bell Rang. You're In.* Stack them, fan them across a table, lose one immediately and find it under the couch in March.
+Four heavyweight barware coasters engineered to protect fine hardwood from condensation, heavy pours, and the kinetic impact of someone enthusiastically slamming their glass down to emphasize a toast.
 
-These are designed to leave evidence. Small enough to disappear into a kitchen drawer, dense enough to come back out at the next party. The bell coaster is the one that ends up on a desk by Tuesday. The tombstone coaster is the one you give to a friend with a note attached.
+Printed on dense 60pt pulpboard with edge-gilded foil accents. Each coaster immortalizes one of the four cardinal phrases of the cantina:
+1. **Rest In Proof**
+2. **Proof You Lived**
+3. **Here Lies Your Judgment**
+4. **The Bell Rang. You're In.**
 
-On the back of every coaster: *La Cantina del Último Trago — Member of the round.*
+The back of every piece is debossed with the official insignia: *La Cantina del Último Trago — Member of the Round.*
 
 ## Built for
 
-- Long pours that need a soft landing.
-- Tables that have heard the story before.
-- Toasts worth commemorating, but not in poster form.
+- Providing a dignified landing pad for oversized pours of Añejo.
+- Sparking spontaneous storytelling across the coffee table.
+- Gifting to the host of a house party when a bottle of wine feels too ordinary.
 
 > *"The bell rang. Protect the table."*
+

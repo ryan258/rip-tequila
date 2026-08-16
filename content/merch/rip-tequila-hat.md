@@ -3,21 +3,27 @@ title: "RIP Tequila Hat"
 weight: 20
 category: "Headwear"
 accent: "black"
-icon: "fa-solid fa-hat-cowboy"
+icon: "hat"
+image: "images/merch/rip-tequila-hat.webp"
 line: "Low profile. High proof."
 price: "$30"
 seo_title: "RIP Tequila Hat — Dark Humor Tequila Headwear | RIP Tequila"
-seo_description: "Low-profile cap with the RIP monogram. Low profile. High proof. Dark humor headwear from the afterlife cantina behind RIP Tequila."
+seo_description: "Unstructured low-profile strapback cap with the embroidered RIP monogram. Low profile. High proof. Subtle luxury headwear from the afterlife cantina."
 ---
 
-A simple cap with a small mark. On the front, the RIP monogram. On the back, an agave leaf or a crescent moon, depending on the run. Inside the sweatband, one quiet line: *Member of the round.*
+The piece you wear when you want to signal your impeccable taste without having to shout across a loud room.
 
-This is the piece you wear when you don't usually wear merch. It reads as a small mark, a private signal. If you know, you know. If you don't, it's a nice cap.
+Structured with an unstructured low-profile 6-panel crown in washed obsidian twill. Tone-on-tone embroidery features the sharp **RIP** monogram on the front crown, while the brass strapback enclosure is stamped with a miniature agave leaf. 
+
+Underneath the brim, tucked inside the cotton sweatband, sits the cantina’s quiet invocation: *Member of the Round.*
+
+If someone recognizes the mark, you’ve instantly found a kindred spirit. If they don’t, it’s just the best-fitting black cap they’ve ever seen.
 
 ## Built for
 
-- Sun. Long drives. Dive bars where the music is older than you.
-- Opting into the brand quietly.
-- The first ten minutes of a night when you haven't decided yet how committed you are.
+- Shielding your eyes from the harsh sunlight after an evening that lasted too long.
+- Long highway drives with the windows rolled completely down.
+- Subtle luxury flexes in dive bars where everyone else is wearing corporate swag.
 
 > *"Low profile. High proof."*
+

@@ -1,19 +1,20 @@
 ---
 title: "Merch"
-eyebrow: "Merch From the Afterparty"
-headline: "Evidence From the Afterparty"
-description: "Wear the bad idea. Keep the proof. Collect the artifacts from La Cantina del Último Trago."
+eyebrow: "Evidence Locker"
+headline: "Artifacts From the Afterparty"
+description: "Wear the bad idea. Keep the proof. Collect authentic memorabilia engineered to survive the morning after."
 seo_title: "Dark Humor Tequila Merch, Shirts & Barware | RIP Tequila"
-seo_description: "Dark humor tequila merch from RIP Tequila — apparel, posters, coasters, hats, glyph stickers, and the Don Muerte Social Club membership card. Limited drops from the afterlife cantina."
+seo_description: "Dark humor tequila merch from RIP Tequila — heavyweight tees, hats, barware coasters, glyph sticker sheets, and the Don Muerte Social Club card."
 cta_label: "Join the Club"
 cta_href: "/don-muerte-social-club/"
-icon: "fa-solid fa-shirt"
+icon: "shirt"
 ---
 
-Merch is how the cantina leaves the cantina. Coasters that survive the morning after. Stickers for surfaces you don't technically own. A black tee that passes for funeral wear at a distance. A cap that says *Rest In Proof* without saying anything at all. A membership card you don't pay for and never have to renew.
+The bottles in the lineup belong to the cantina's private reserve, but the artifacts leave with you.
 
-Drops are limited. Editions rotate with the campaigns. The Don Muerte Social Club gets first look at everything before it lands here. By the time a piece shows up on the public catalog, it's already been on a few tables.
+Every piece of **RIP Tequila** merchandise is designed to look like a high-end luxury fashion artifact from the front, and a hilariously self-aware confession from the back. Heavyweight cotton tees that pass for couture at an art gallery, barware coasters that protect mahogany from 2:00 AM enthusiasm, low-profile hats that signal your membership in the inner circle, and weather-resistant glyph stickers for personal items that need character.
 
-Wear the bad idea. Keep the proof.
+Drops are limited and runs do not restock — because legendary nights only happen once.
 
-> *"Limited drops. Questionable evidence."*
+> *"Wear the bad idea. Keep the proof."*
+
