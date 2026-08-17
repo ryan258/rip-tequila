@@ -1,7 +1,7 @@
 ---
 title: "Social Club Card"
 weight: 50
-category: "Collectible"
+category: "Club Goods"
 accent: "gold"
 icon: "card"
 image: "images/merch/social-club-card.webp"

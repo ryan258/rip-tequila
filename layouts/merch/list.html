@@ -1,18 +1,295 @@
 {{ define "main" }}
-{{ partial "page-hero.html" . }}
-{{ if .Content }}
-<section class="editorial-section">
-  <div class="editorial-section__inner">
-    {{ .Content }}
-  </div>
-</section>
-{{ end }}
-<section class="catalog-section" aria-label="RIP Tequila merch concepts">
-  <div class="catalog-section__inner merch-preview__grid" role="list">
-    {{ range .Pages.ByWeight }}
-      <div role="listitem">{{ partial "merch-card.html" . }}</div>
-    {{ end }}
-  </div>
-</section>
-{{ partial "sections/disclaimer.html" . }}
+<article class="merch-page">
+
+  {{/* 1. HERO SECTION */}}
+  <section class="merch-hero" aria-labelledby="merch-hero-title">
+    <div class="merch-container merch-hero__inner">
+
+      {{/* Left Column: Copy & CTAs */}}
+      <div class="merch-hero__copy">
+        <p class="merch-hero__eyebrow">{{ .Params.eyebrow | default "Wear the bad idea." }}</p>
+
+        <h1 class="merch-hero__title" id="merch-hero-title">
+          {{ .Params.headline | default "Artifacts From the Afterparty" }}
+        </h1>
+
+        {{/* Skull Divider */}}
+        <div class="merch-divider" aria-hidden="true">
+          <span class="merch-divider__line"></span>
+          <span class="merch-divider__skull">
+            {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}
+          </span>
+          <span class="merch-divider__line"></span>
+        </div>
+
+        <p class="merch-hero__desc">
+          {{ .Params.description | default "Collect authentic memorabilia engineered to survive the morning after. Legendary nights only happen once—but the proof stays with you." }}
+        </p>
+
+        <div class="merch-hero__cta-row">
+          <a class="button button--primary merch-hero__btn" href="#featured-artifacts">
+            Shop the Drop
+          </a>
+          <a class="button button--outline merch-hero__btn" href="{{ strings.TrimPrefix "/" (.Params.cta_href | default "/don-muerte-social-club/") | relURL }}">
+            {{ .Params.cta_label | default "Join the Club" }}
+          </a>
+        </div>
+
+        {{/* Hero Feature Badges */}}
+        <div class="merch-hero__badges" role="list" aria-label="Merch standards">
+          {{ range (slice
+            (dict "icon" "box-open" "title" "LIMITED DROPS" "sub" "Never restocked.")
+            (dict "icon" "scale" "title" "PREMIUM MATERIALS" "sub" "Built to last.")
+            (dict "icon" "skull" "title" "SYMBOLIC DESIGN" "sub" "Every detail has meaning.")
+          ) }}
+          <div class="merch-badge" role="listitem">
+            <span class="merch-badge__icon">
+              {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm") }}
+            </span>
+            <div class="merch-badge__text">
+              <strong class="merch-badge__title">{{ .title }}</strong>
+              <span class="merch-badge__sub">{{ .sub }}</span>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* Right Column: Montage Artwork */}}
+      <div class="merch-hero__visual">
+        <div class="merch-hero__frame">
+          <img src="{{ "images/merch/merch-hero-montage.webp" | relURL }}" alt="RIP Tequila Afterparty Merchandise Collection" class="merch-hero__img" loading="eager" decoding="async">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 2. VALUE PILLARS BAR (DARK STRIP) */}}
+  <section class="merch-pillars" aria-label="Merchandise standards and benefits">
+    <div class="merch-container merch-pillars__grid">
+      {{ range (slice
+        (dict "icon" "bell" "title" "LEGENDARY ONLY" "desc" "Drops are rare for a reason. Miss it once, it's gone for good.")
+        (dict "icon" "shirt" "title" "PREMIUM QUALITY" "desc" "High-grade materials and detail. Made to survive the afterparty.")
+        (dict "icon" "sunburst" "title" "SYMBOLIC BY DESIGN" "desc" "Every glyph, every line—meant to protect, provoke, and remind.")
+        (dict "icon" "door" "title" "CLUB EXCLUSIVES" "desc" "Members get first access to drops, limited runs, and the best seat in La Cantina.")
+      ) }}
+      <div class="merch-pillar">
+        <div class="merch-pillar__icon">
+          {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md") }}
+        </div>
+        <div class="merch-pillar__content">
+          <h3 class="merch-pillar__title">{{ .title }}</h3>
+          <p class="merch-pillar__desc">{{ .desc }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{/* 3. FEATURED ARTIFACTS / PRODUCT CATALOG */}}
+  <section class="merch-catalog" id="featured-artifacts" aria-labelledby="catalog-heading">
+    <div class="merch-container">
+
+      <div class="merch-catalog__header">
+        <div class="merch-catalog__copy">
+          <p class="merch-catalog__eyebrow">Featured Artifacts</p>
+          <h2 class="merch-catalog__title" id="catalog-heading">Curated for the Morning After</h2>
+        </div>
+
+        {{/* Category Filter Tabs */}}
+        <nav class="merch-filters" aria-label="Merch category filter">
+          <button type="button" class="merch-filter-btn is-active" data-filter="all">ALL</button>
+          <button type="button" class="merch-filter-btn" data-filter="apparel">APPAREL</button>
+          <button type="button" class="merch-filter-btn" data-filter="headwear">HEADWEAR</button>
+          <button type="button" class="merch-filter-btn" data-filter="barware">BARWARE</button>
+          <button type="button" class="merch-filter-btn" data-filter="stickers">STICKERS</button>
+          <button type="button" class="merch-filter-btn" data-filter="club goods">CLUB GOODS</button>
+        </nav>
+      </div>
+
+      {{/* Product Cards Grid */}}
+      <div class="merch-grid" role="list" aria-label="RIP Tequila merchandise items">
+        {{ range .Pages.ByWeight }}
+          {{ $categoryKey := .Params.category | lower }}
+          <article class="merch-product-card" role="listitem" data-category="{{ $categoryKey }}">
+            <a class="merch-product-card__link-wrap" href="{{ .RelPermalink }}">
+              <div class="merch-product-card__media">
+                {{ if .Params.image }}
+                  <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="merch-product-card__img" loading="lazy" decoding="async">
+                {{ else }}
+                  {{ partial "glyph.html" (dict "name" .Params.icon "class" "merch-product-card__glyph") }}
+                {{ end }}
+              </div>
+              <div class="merch-product-card__body">
+                <span class="merch-product-card__category">{{ .Params.category | upper }}</span>
+                <h3 class="merch-product-card__title">{{ .Title }}</h3>
+                <p class="merch-product-card__line">{{ .Params.line }}</p>
+                <div class="merch-product-card__footer">
+                  <span class="merch-product-card__price">{{ .Params.price | upper }}</span>
+                  <span class="merch-product-card__action">VIEW DETAILS &rarr;</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        {{ end }}
+      </div>
+
+      <div class="merch-catalog__all-row">
+        <button type="button" class="button button--outline merch-catalog__all-btn" id="merch-view-all-btn">
+          View All Artifacts
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 4. THE EVIDENCE LOCKER SECTION */}}
+  <section class="merch-locker" aria-labelledby="locker-heading">
+    <div class="merch-container merch-locker__inner">
+
+      {{/* Left: Woodcut Chest Art */}}
+      <div class="merch-locker__visual">
+        <div class="merch-locker__frame">
+          <img src="{{ "images/merch/evidence-locker-chest.webp" | relURL }}" alt="RIP Tequila Evidence Locker Crate" class="merch-locker__img" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      {{/* Right: Narrative & 4 Value Icons */}}
+      <div class="merch-locker__copy">
+        <p class="merch-locker__eyebrow">The Evidence Locker</p>
+        <h2 class="merch-locker__title" id="locker-heading">Proof of a Night Well Spent.</h2>
+        <p class="merch-locker__desc">
+          Every piece in this collection is pulled from the afterlife—designed with intent and built to last. They’re not just products. <strong>They’re artifacts of the stories you’ll tell and the ones you won’t remember.</strong>
+        </p>
+
+        <div class="merch-locker__features">
+          {{ range (slice
+            (dict "icon" "agave" "title" "BORN IN AGAVE" "sub" "Rooted in heritage. Forged in fire.")
+            (dict "icon" "skull" "title" "MEANT TO LAST" "sub" "Tough on nights. Timeless by design.")
+            (dict "icon" "cross" "title" "MADE TO MEAN" "sub" "Every item carries a deeper symbol.")
+            (dict "icon" "bell" "title" "ONLY AT LA CANTINA" "sub" "Nowhere else. Never ordinary.")
+          ) }}
+          <div class="merch-locker-feat">
+            <span class="merch-locker-feat__icon">
+              {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm") }}
+            </span>
+            <div class="merch-locker-feat__text">
+              <strong class="merch-locker-feat__title">{{ .title }}</strong>
+              <span class="merch-locker-feat__sub">{{ .sub }}</span>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 5. RIP SOCIAL CLUB CALLOUT SECTION (DARK) */}}
+  <section class="merch-club" aria-labelledby="club-heading">
+    <div class="merch-container merch-club__inner">
+
+      {{/* Left: Archway artwork */}}
+      <div class="merch-club__portal">
+        <img src="{{ "images/cantina/cantina-portal-hero.webp" | relURL }}" alt="La Cantina Archway" class="merch-club__portal-img" loading="lazy" decoding="async">
+      </div>
+
+      {{/* Middle: Pitch and Perks */}}
+      <div class="merch-club__copy">
+        <p class="merch-club__eyebrow">RIP Social Club</p>
+        <h2 class="merch-club__title" id="club-heading">First Access. Last Call.</h2>
+        <p class="merch-club__desc">
+          Join the RIP Social Club for early access to drops, member-only releases, and afterlife dispatches straight from La Cantina.
+        </p>
+
+        <div class="merch-club__perks">
+          {{ range (slice
+            (dict "icon" "door" "title" "EARLY ACCESS" "sub" "Shop drops before they hit the world.")
+            (dict "icon" "star-diamond" "title" "MEMBER ONLY DROPS" "sub" "Exclusive items you can't get anywhere else.")
+            (dict "icon" "book" "title" "AFTERLIFE DISPATCHES" "sub" "Stories, invites, and secrets from the cantina.")
+          ) }}
+          <div class="merch-club-perk">
+            <span class="merch-club-perk__icon">
+              {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm") }}
+            </span>
+            <div class="merch-club-perk__text">
+              <strong>{{ .title }}</strong>
+              <span>{{ .sub }}</span>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* Right: Big CTA Button & Free subtext */}}
+      <div class="merch-club__action">
+        <a class="button button--primary merch-club__btn" href="{{ "don-muerte-social-club/" | relURL }}">
+          Join the Club
+        </a>
+        <p class="merch-club__subtext">IT'S FREE. FOREVER.</p>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 6. SLOGAN MARQUEE RIBBON */}}
+  <section class="merch-marquee-band" aria-label="Brand Campaign Slogan Strip">
+    <div class="merch-marquee-band__inner">
+      <span class="merch-marquee-item">SAVE WATER, DRINK TEQUILA!</span>
+      <span class="merch-marquee-icon" aria-hidden="true">{{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}</span>
+      <span class="merch-marquee-item">REST IN PROOF</span>
+      <span class="merch-marquee-icon" aria-hidden="true">{{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}</span>
+      <span class="merch-marquee-item">BORN IN AGAVE. BURIED IN LEGEND.</span>
+    </div>
+  </section>
+
+</article>
+
+{{/* Client-side category tab filter script */}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var filterBtns = document.querySelectorAll('.merch-filter-btn');
+    var productCards = document.querySelectorAll('.merch-product-card');
+    var viewAllBtn = document.getElementById('merch-view-all-btn');
+
+    function applyFilter(filter) {
+      filterBtns.forEach(function(btn) {
+        if (btn.getAttribute('data-filter') === filter) {
+          btn.classList.add('is-active');
+        } else {
+          btn.classList.remove('is-active');
+        }
+      });
+
+      productCards.forEach(function(card) {
+        var cardCat = card.getAttribute('data-category');
+        if (filter === 'all' || cardCat === filter) {
+          card.style.display = '';
+          card.classList.remove('is-hidden');
+        } else {
+          card.style.display = 'none';
+          card.classList.add('is-hidden');
+        }
+      });
+    }
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var filter = this.getAttribute('data-filter');
+        applyFilter(filter);
+      });
+    });
+
+    if (viewAllBtn) {
+      viewAllBtn.addEventListener('click', function() {
+        applyFilter('all');
+        var catalogEl = document.getElementById('featured-artifacts');
+        if (catalogEl) {
+          catalogEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+  });
+</script>
 {{ end }}
