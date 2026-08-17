@@ -1,0 +1,179 @@
+{{ define "main" }}
+<article class="cantina-page">
+
+  {{/* 1. HERO SECTION */}}
+  <section class="cantina-hero" aria-labelledby="cantina-hero-title">
+    <div class="cantina-container cantina-hero__inner">
+
+      {{/* Left Column: Copy, Stamp & CTA */}}
+      <div class="cantina-hero__copy">
+        <p class="cantina-hero__eyebrow">{{ .Params.eyebrow | default "La Cantina del Último Trago" }}</p>
+        
+        <div class="cantina-hero__title-row">
+          <h1 class="cantina-hero__title" id="cantina-hero-title">
+            The Bell Rang.<br>You’re In.
+          </h1>
+
+          {{/* Rubber Stamp Seal */}}
+          <div class="cantina-stamp" aria-hidden="true">
+            <svg viewBox="0 0 140 140" class="cantina-stamp__svg">
+              <defs>
+                <path id="cantina-stamp-top" d="M 20,70 A 50,50 0 0,1 120,70" />
+                <path id="cantina-stamp-bottom" d="M 120,70 A 50,50 0 0,1 20,70" />
+              </defs>
+              <circle cx="70" cy="70" r="64" class="cantina-stamp__outer" />
+              <circle cx="70" cy="70" r="58" class="cantina-stamp__inner" />
+              <text class="cantina-stamp__text">
+                <textPath href="#cantina-stamp-top" startOffset="50%" text-anchor="middle">
+                  ★ LA CANTINA ★
+                </textPath>
+              </text>
+              <text class="cantina-stamp__text">
+                <textPath href="#cantina-stamp-bottom" startOffset="50%" text-anchor="middle">
+                  DEL ÚLTIMO TRAGO
+                </textPath>
+              </text>
+              <path d="M70 48L72 56L80 57L74 62L76 70L70 65L64 70L66 62L60 57L68 56L70 48Z" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+
+        {{/* Divider */}}
+        <div class="cantina-divider" aria-hidden="true">
+          <span class="cantina-divider__line"></span>
+          <span class="cantina-divider__skull">
+            {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}
+          </span>
+          <span class="cantina-divider__line"></span>
+        </div>
+
+        <p class="cantina-hero__desc">
+          {{ .Params.description | default "Step inside La Cantina del Último Trago: the afterlife speakeasy where the bell rings once a night, clocks don't exist, and the last round belongs to folklore." }}
+        </p>
+
+        <div class="cantina-hero__cta-row">
+          <a class="button button--primary cantina-hero__btn" href="{{ strings.TrimPrefix "/" (.Params.cta_href | default "/characters/") | relURL }}">
+            {{ .Params.cta_label | default "Meet the Cast" }}
+          </a>
+        </div>
+      </div>
+
+      {{/* Right Column: Portal Hero Artwork */}}
+      <div class="cantina-hero__visual">
+        <div class="cantina-hero__frame">
+          <img src="{{ "images/cantina/cantina-portal-hero.webp" | relURL }}" alt="La Cantina del Último Trago Entrance" class="cantina-hero__img" loading="eager" decoding="async">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 2. THE LORE & DISPLAY QUOTE (2-COLUMN GRID) */}}
+  <section class="cantina-lore">
+    <div class="cantina-container cantina-lore__grid">
+
+      {{/* Left Column: Narrative Copy */}}
+      <div class="cantina-lore__narrative">
+        <p class="cantina-lore__lead">
+          <strong>La Cantina del Último Trago</strong> does not appear on GPS, Yelp, or tourism brochures. It exists on a forgotten desert road between the blue agave fields and the edge of tomorrow morning. You don’t make a reservation here — you simply run out of reasonable excuses to go home, look up, and realize you’ve arrived.
+        </p>
+        <p class="cantina-lore__sub">
+          Step past the heavy wooden archway and the world outside goes silent.
+        </p>
+      </div>
+
+      {{/* Right Column: Big Display Quote */}}
+      <div class="cantina-lore__quote-col">
+        <div class="cantina-lore__quote-box">
+          <span class="cantina-lore__quote-mark" aria-hidden="true">“</span>
+          <blockquote class="cantina-lore__quote-text">
+            THE BELL RANG.<br>YOU’RE IN.
+          </blockquote>
+          <cite class="cantina-lore__quote-author">— LA CANTINA DEL ÚLTIMO TRAGO</cite>
+
+          <div class="cantina-divider cantina-divider--center" aria-hidden="true">
+            <span class="cantina-divider__line"></span>
+            <span class="cantina-divider__skull">
+              {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}
+            </span>
+            <span class="cantina-divider__line"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 3. THE GEOGRAPHY OF THE ROOM (7-CARD GRID) */}}
+  <section class="cantina-geography" aria-labelledby="geography-heading">
+    <div class="cantina-container">
+
+      <div class="cantina-section-header">
+        <span class="cantina-section-line" aria-hidden="true"></span>
+        <h2 class="cantina-section-title" id="geography-heading">The Geography of the Room</h2>
+        <span class="cantina-section-line" aria-hidden="true"></span>
+      </div>
+
+      <div class="cantina-geography__grid">
+        {{ range hugo.Data.cantina.geography }}
+          <article class="geo-card" id="{{ .id }}">
+            <div class="geo-card__arch">
+              <div class="geo-card__inner-border">
+                <h3 class="geo-card__title">{{ .title }}</h3>
+                <div class="geo-card__media">
+                  <img src="{{ .image | relURL }}" alt="{{ .title }}" class="geo-card__img" loading="lazy" decoding="async">
+                </div>
+                <p class="geo-card__desc">{{ .desc | safeHTML }}</p>
+              </div>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 4. THE DESERT SENTINEL / EL VIGÍA BANNER */}}
+  <section class="cantina-sentinel">
+    <div class="cantina-container">
+      <div class="cantina-sentinel__box">
+        <div class="cantina-sentinel__inner-border">
+          
+          <div class="cantina-sentinel__grid">
+            <div class="cantina-sentinel__media">
+              <img src="{{ "images/cantina/el-vigia-desert.webp" | relURL }}" alt="El Vigía Desert Highway" class="cantina-sentinel__img" loading="lazy" decoding="async">
+            </div>
+
+            <div class="cantina-sentinel__copy">
+              <p class="cantina-sentinel__lead">Outside, stretching to the dark horizon, is the desert.</p>
+              <p class="cantina-sentinel__highlight"><strong>El Vigía</strong> watches the highway lights.</p>
+              <p class="cantina-sentinel__sub">Nothing and nobody reaches the door without him knowing first.</p>
+
+              <div class="cantina-divider cantina-divider--center cantina-sentinel__divider" aria-hidden="true">
+                <span class="cantina-divider__line"></span>
+                <span class="cantina-divider__skull">
+                  {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}
+                </span>
+                <span class="cantina-divider__line"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{/* 5. SLOGAN MARQUEE RIBBON */}}
+  <section class="cantina-marquee-band" aria-label="Brand Campaign Slogan Strip">
+    <div class="cantina-marquee-band__inner">
+      <span class="cantina-marquee-item">SAVE WATER, DRINK TEQUILA!</span>
+      <span class="cantina-marquee-icon" aria-hidden="true">{{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}</span>
+      <span class="cantina-marquee-item">REST IN PROOF</span>
+      <span class="cantina-marquee-icon" aria-hidden="true">{{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}</span>
+      <span class="cantina-marquee-item">BORN IN AGAVE. BURIED IN LEGEND.</span>
+    </div>
+  </section>
+
+</article>
+{{ end }}

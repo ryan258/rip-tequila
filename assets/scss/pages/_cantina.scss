@@ -1,0 +1,580 @@
+// -------------------------------------------------------------
+// THE CANTINA PAGE (La Cantina del Último Trago Layout)
+// -------------------------------------------------------------
+
+.cantina-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  position: relative;
+  overflow: hidden;
+}
+
+.cantina-container {
+  @include container($container-max);
+  padding-inline: var(--page-gutter);
+}
+
+// -------------------------------------------------------------
+// 1. HERO SECTION
+// -------------------------------------------------------------
+.cantina-hero {
+  padding-top: clamp(2rem, 4.5vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+  position: relative;
+}
+
+.cantina-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.cantina-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cantina-hero__eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 $space-xs 0;
+}
+
+.cantina-hero__title-row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: $space-md;
+}
+
+.cantina-hero__title {
+  @include poster-title(3.6rem, 6.8vw, 6.2rem);
+  line-height: 0.88;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.015em;
+  flex: 1;
+}
+
+// Circular Rubber Stamp Seal
+.cantina-stamp {
+  width: clamp(85px, 11vw, 125px);
+  height: clamp(85px, 11vw, 125px);
+  color: $color-red;
+  opacity: 0.9;
+  transform: rotate(8deg);
+  pointer-events: none;
+  flex-shrink: 0;
+  margin-left: $space-sm;
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: rotate(0deg) scale(1.06);
+  }
+}
+
+.cantina-stamp__svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  .cantina-stamp__outer {
+    stroke: currentColor;
+    stroke-width: 3;
+    fill: none;
+  }
+
+  .cantina-stamp__inner {
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-dasharray: 4 2;
+    fill: none;
+  }
+
+  .cantina-stamp__text {
+    font-family: $font-accent;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    fill: currentColor;
+    text-transform: uppercase;
+  }
+}
+
+// Skull Divider Ornament
+.cantina-divider {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  width: 100%;
+  max-width: 260px;
+  margin: $space-sm 0 $space-lg 0;
+
+  &--center {
+    margin-inline: auto;
+    justify-content: center;
+  }
+
+  .cantina-divider__line {
+    flex: 1;
+    height: 1.5px;
+    background: rgba($color-red, 0.6);
+  }
+
+  .cantina-divider__skull {
+    color: $color-red;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.cantina-hero__desc {
+  font-family: $font-body;
+  font-size: clamp(1rem, 1.15vw, 1.125rem);
+  line-height: 1.55;
+  color: #222222;
+  margin: 0 0 $space-xl 0;
+  max-width: 44ch;
+}
+
+.cantina-hero__cta-row {
+  margin-top: $space-xs;
+}
+
+.cantina-hero__btn {
+  background: $color-red;
+  color: #ffffff;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.65rem;
+  border-radius: 0;
+  border: 1px solid $color-red;
+  box-shadow: 4px 4px 0 rgba($color-black, 0.25);
+  transition: transform $transition-fast, box-shadow $transition-fast, background-color $transition-fast;
+
+  &:hover {
+    background: $color-red-light;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba($color-black, 0.3);
+    color: #ffffff;
+  }
+}
+
+.cantina-hero__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cantina-hero__frame {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  border: 2px solid $color-black;
+  background: $color-cream;
+  box-shadow: 6px 6px 0 rgba($color-black, 0.25);
+  overflow: hidden;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0 rgba($color-black, 0.3);
+  }
+}
+
+.cantina-hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+// -------------------------------------------------------------
+// 2. THE LORE & DISPLAY QUOTE
+// -------------------------------------------------------------
+.cantina-lore {
+  border-top: 1.5px solid rgba($color-black, 0.25);
+  padding-block: clamp(2.5rem, 5vw, 4.25rem);
+}
+
+.cantina-lore__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.cantina-lore__narrative {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  p {
+    font-family: $font-body;
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.7;
+    color: #222222;
+    margin: 0;
+
+    strong {
+      font-weight: 700;
+      color: $color-black;
+    }
+  }
+}
+
+.cantina-lore__quote-col {
+  border-left: 1.5px solid rgba($color-black, 0.22);
+  padding-left: clamp(2rem, 4vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-lg) {
+    border-left: none;
+    border-top: 1.5px solid rgba($color-black, 0.22);
+    padding-left: 0;
+    padding-top: $space-xl;
+  }
+}
+
+.cantina-lore__quote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-xs;
+}
+
+.cantina-lore__quote-mark {
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 0.8;
+  color: $color-red;
+  font-weight: 900;
+}
+
+.cantina-lore__quote-text {
+  font-family: $font-display;
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  line-height: 0.94;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.02em;
+  padding: 0;
+  border: none;
+}
+
+.cantina-lore__quote-author {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  color: $color-red;
+  text-transform: uppercase;
+  font-style: normal;
+  margin-top: $space-xs;
+}
+
+// -------------------------------------------------------------
+// 3. THE GEOGRAPHY OF THE ROOM (7-CARD GRID)
+// -------------------------------------------------------------
+.cantina-geography {
+  border-top: 1.5px solid rgba($color-black, 0.25);
+  padding-block: clamp(3rem, 5vw, 4.5rem);
+}
+
+.cantina-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-md;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.cantina-section-line {
+  flex: 1;
+  max-width: 120px;
+  height: 2px;
+  background: $color-red;
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: 40px;
+  }
+}
+
+.cantina-section-title {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $color-red;
+  margin: 0;
+  white-space: nowrap;
+
+  @media (max-width: $breakpoint-sm) {
+    white-space: normal;
+    letter-spacing: 0.15em;
+  }
+}
+
+.cantina-geography__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1vw, 1rem);
+  align-items: stretch;
+
+  @media (max-width: $breakpoint-xl) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: $space-md;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Individual Geography Card with Arched Frame
+.geo-card {
+  display: flex;
+  flex-direction: column;
+  background: $color-cream;
+  height: 100%;
+}
+
+.geo-card__arch {
+  border: 1px solid rgba($color-black, 0.6);
+  border-radius: 4px;
+  padding: 3px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba($color-black, 0.12);
+  }
+}
+
+.geo-card__inner-border {
+  border: 1px solid rgba($color-black, 0.35);
+  border-radius: 3px;
+  padding: clamp(0.75rem, 1vw, 1rem) clamp(0.5rem, 0.8vw, 0.85rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.geo-card__title {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0 0 $space-sm 0;
+  min-height: 2.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.geo-card__media {
+  width: 100%;
+  max-width: 130px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto $space-sm auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.geo-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.geo-card__desc {
+  font-family: $font-body;
+  font-size: clamp(0.78rem, 0.85vw, 0.84rem);
+  line-height: 1.5;
+  color: #2b2b2b;
+  margin: 0;
+  text-align: center;
+
+  strong {
+    font-weight: 700;
+    color: $color-black;
+  }
+}
+
+// -------------------------------------------------------------
+// 4. THE DESERT SENTINEL / EL VIGÍA BANNER
+// -------------------------------------------------------------
+.cantina-sentinel {
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.cantina-sentinel__box {
+  border: 1px solid rgba($color-black, 0.65);
+  border-radius: 4px;
+  padding: 3px;
+  background: $color-cream;
+}
+
+.cantina-sentinel__inner-border {
+  border: 1px solid rgba($color-black, 0.35);
+  border-radius: 3px;
+  padding: clamp(1.25rem, 2vw, 2rem);
+}
+
+.cantina-sentinel__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+}
+
+.cantina-sentinel__media {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba($color-black, 0.4);
+  box-shadow: 3px 3px 0 rgba($color-black, 0.15);
+}
+
+.cantina-sentinel__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.cantina-sentinel__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-inline: clamp(0.5rem, 1.5vw, 2rem);
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+.cantina-sentinel__lead {
+  font-family: $font-body;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  color: #2b2b2b;
+}
+
+.cantina-sentinel__highlight {
+  font-family: $font-body;
+  font-size: clamp(1rem, 1.15vw, 1.12rem);
+  color: $color-black;
+  margin-top: $space-2xs !important;
+
+  strong {
+    font-weight: 700;
+    color: $color-black;
+  }
+}
+
+.cantina-sentinel__sub {
+  font-family: $font-body;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  color: #2b2b2b;
+  margin-top: $space-2xs !important;
+}
+
+.cantina-sentinel__divider {
+  margin-top: $space-md;
+  margin-bottom: 0;
+  max-width: 160px;
+}
+
+// -------------------------------------------------------------
+// 5. SLOGAN MARQUEE RIBBON
+// -------------------------------------------------------------
+.cantina-marquee-band {
+  background: $color-red;
+  color: #ffffff;
+  padding: 0.9rem var(--page-gutter);
+  overflow: hidden;
+  border-top: 1px solid rgba($color-black, 0.3);
+  border-bottom: 1px solid rgba($color-black, 0.3);
+}
+
+.cantina-marquee-band__inner {
+  @include container($container-max);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.cantina-marquee-item {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.9rem, 1.25vw, 1.2rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cantina-marquee-icon {
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
