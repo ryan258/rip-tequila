@@ -1,19 +1,164 @@
 {{ define "main" }}
-<article class="character-detail" data-accent="{{ .Params.accent }}">
-  <header class="detail-hero detail-hero--character">
-    <div class="detail-hero__copy">
-      <p class="section-heading__eyebrow">{{ .Params.role }}</p>
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Params.line }}</p>
-      <a class="button button--primary" href="{{ "characters/" | relURL }}">Back to the Cast</a>
-    </div>
-    <div class="detail-hero__icon" aria-hidden="true">
-      {{ partial "glyph.html" (dict "name" .Params.icon "class" "detail-hero__glyph-mark rip-glyph--hero rip-glyph--animated") }}
+{{ $accent := .Params.accent | default "red" }}
+{{ $slug := .File.TranslationBaseName }}
+{{ $portraitPath := printf "images/cast/%s.webp" $slug }}
+
+<article class="character-detail" data-accent="{{ $accent }}">
+  <!-- Dossier Hero Section -->
+  <header class="char-detail-hero">
+    <div class="char-detail-hero__inner">
+      <!-- Left Column: Copy & Highlights -->
+      <div class="char-detail-hero__copy">
+        <p class="char-detail-hero__eyebrow">⤛ {{ .Params.role }} ⤜</p>
+        <h1 class="char-detail-hero__title">{{ .Title }}</h1>
+        <p class="char-detail-hero__tagline">{{ .Params.line }}</p>
+        
+        <div class="char-detail-hero__body">
+          {{ .Summary }}
+        </div>
+
+        <div class="char-detail-hero__actions">
+          <a class="button button--primary" href="{{ "characters/" | relURL }}">Back to the Cast</a>
+          <a class="button button--outline" href="{{ "the-lineup/" | relURL }}">Explore the Lineup</a>
+        </div>
+
+        <!-- 4-Column Highlights Strip -->
+        <div class="char-detail-highlights" aria-label="Character highlights">
+          {{ range .Params.highlights }}
+            <div class="char-detail-highlight">
+              <span class="char-detail-highlight__icon" aria-hidden="true">
+                {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm rip-glyph--red") }}
+              </span>
+              <div class="char-detail-highlight__details">
+                <h4 class="char-detail-highlight__title">{{ .title }}</h4>
+                <p class="char-detail-highlight__text">{{ .text }}</p>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Collage -->
+      <div class="char-detail-hero__visual">
+        <div class="char-detail-hero__collage">
+          <!-- Backdrop Location Image -->
+          <div class="char-detail-hero__location-bg" aria-hidden="true">
+            <img src="{{ .Params.location_image | relURL }}" alt="" class="char-detail-hero__loc-img">
+          </div>
+          <!-- Portrait Image -->
+          <div class="char-detail-hero__portrait-container">
+            <img src="{{ $portraitPath | relURL }}" alt="{{ .Title }}" class="char-detail-hero__portrait">
+          </div>
+          <!-- Bottle Image Overlay -->
+          <div class="char-detail-hero__bottle-overlay">
+            <img src="{{ .Params.pour_image | relURL }}" alt="{{ .Params.pour_title }}" class="char-detail-hero__bottle">
+          </div>
+          <!-- Circular Seal Stamp -->
+          <div class="char-detail-hero__seal" aria-hidden="true">
+            <div class="char-detail-hero__seal-inner">
+              {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--xs") }}
+              <span>EL ÚLTIMO TRAGO</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
-  <div class="detail-page__body">
-    <p><strong>Prop:</strong> {{ .Params.prop }}</p>
-    {{ .Content }}
-  </div>
+
+  <!-- Middle Section: Story & Prop -->
+  <section class="char-detail-body-section">
+    <div class="char-detail-body-row">
+      <!-- Left Column: Story -->
+      <div class="char-detail-story-col">
+        <h3 class="char-detail-section-title">⤛ The Story ⤜</h3>
+        <div class="char-detail-story-content">
+          {{ .Content }}
+        </div>
+        <!-- Catchphrase Callout Box -->
+        <div class="char-detail-quote-box">
+          <div class="char-detail-quote-box__skull" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--xs rip-glyph--red") }}
+          </div>
+          <p class="char-detail-quote-box__text">“ {{ .Params.line }} ”</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Prop Card -->
+      <div class="char-detail-prop-col">
+        <div class="char-detail-prop-box">
+          <p class="char-detail-prop-box__eyebrow">✦ PROP ✦</p>
+          <h2 class="char-detail-prop-box__title">{{ .Params.prop }}</h2>
+          <p class="char-detail-prop-box__desc">{{ .Params.prop_desc }}</p>
+          
+          <div class="char-detail-prop-box__badge-container">
+            <div class="char-detail-prop-box__badge" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" .Params.prop_icon "class" "char-detail-prop-box__glyph") }}
+            </div>
+          </div>
+          
+          <p class="char-detail-prop-box__footer">
+            From this {{ lower .Params.prop }}, he pours with perfect measure. He doesn't drink. He delivers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Section: Pour & Speaks -->
+  <section class="char-detail-bottom-section">
+    <div class="char-detail-bottom-row">
+      <!-- Left Column: What He Pours -->
+      <div class="char-detail-pour-col">
+        <h3 class="char-detail-section-title">⤛ What He Pours ⤜</h3>
+        <div class="char-detail-pour-card">
+          <div class="char-detail-pour-info">
+            <h4 class="char-detail-pour-title">{{ .Params.pour_title }}</h4>
+            <p class="char-detail-pour-desc">{{ .Params.pour_desc }}</p>
+            <p class="char-detail-pour-slogan">“{{ .Params.pour_line }}”</p>
+            <a class="button button--primary" href="{{ .Params.pour_href | relURL }}">Explore {{ .Params.pour_title }}</a>
+          </div>
+          <div class="char-detail-pour-visual">
+            <img src="{{ .Params.pour_image | relURL }}" alt="{{ .Params.pour_title }}" class="char-detail-pour-bottle-img">
+            <div class="char-detail-pour-seal" aria-hidden="true">
+              <span class="char-detail-pour-seal__text">SIGNATURE POUR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: When Speaks -->
+      <div class="char-detail-speaks-col">
+        <h3 class="char-detail-section-title">⤛ When {{ .Title }} Speaks ⤜</h3>
+        <div class="char-detail-speaks-card">
+          <!-- Location Background Watermark -->
+          <div class="char-detail-speaks-watermark" aria-hidden="true">
+            <img src="{{ .Params.location_image | relURL }}" alt="" class="char-detail-speaks-wm-img">
+          </div>
+          <!-- Rules List -->
+          <ul class="char-detail-speaks-list">
+            {{ range .Params.speaks }}
+              <li class="char-detail-speaks-item">
+                <span class="char-detail-speaks-item__icon" aria-hidden="true">
+                  {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm rip-glyph--red") }}
+                </span>
+                <div class="char-detail-speaks-item__details">
+                  <h5 class="char-detail-speaks-item__title">{{ .title }}</h5>
+                  <p class="char-detail-speaks-item__text">{{ .text }}</p>
+                </div>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Ribbon Quote Banner -->
+  <section class="char-detail-ribbon-section">
+    <div class="char-detail-ribbon">
+      <div class="char-detail-ribbon__bg-pattern" aria-hidden="true"></div>
+      <h2 class="char-detail-ribbon__text">“ {{ .Params.pour_line }} ”</h2>
+    </div>
+  </section>
 </article>
 {{ end }}
