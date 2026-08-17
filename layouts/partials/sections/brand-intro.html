@@ -1,18 +1,19 @@
 <section class="brand-intro" aria-labelledby="brand-intro-title">
   <div class="brand-intro__inner">
-    <div class="brand-intro__copy">
-      <p class="section-heading__eyebrow">{{ .Params.eyebrow }}</p>
-      <h2 class="section-heading__title" id="brand-intro-title">{{ .Title }}</h2>
-      <p class="section-heading__body">{{ .Params.body }}</p>
-      <p class="brand-intro__support">{{ .Params.support }}</p>
-      <a class="button button--dark" href="{{ strings.TrimPrefix "/" .Params.cta.href | relURL }}">{{ .Params.cta.label }}</a>
-    </div>
     <div class="brand-intro__visual" aria-hidden="true">
-      <img class="brand-intro__visual-img" src="{{ "images/cantina-archway-bg.webp" | relURL }}" alt="" loading="lazy" decoding="async">
-      <span class="brand-intro__doorway-tag">
-        <span class="brand-intro__doorway-title">LA CANTINA</span>
-        <span class="brand-intro__doorway-sub">DEL ÚLTIMO TRAGO</span>
-      </span>
+      <div class="brand-intro__frame">
+        <img class="brand-intro__visual-img" src="{{ "images/cantina/cantina-portal-hero.webp" | relURL }}" alt="La Cantina del Último Trago Entrance" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <div class="brand-intro__copy">
+      <p class="brand-intro__eyebrow">Welcome to the Afterlife Cantina</p>
+      <h2 class="brand-intro__title" id="brand-intro-title">The Legend Behind the Label</h2>
+      <p class="brand-intro__body">
+        Long ago, six relentless souls carved out a cantina beyond the edge of maps — a sanctuary for the unapologetic and the unforgettable. Each still. Each story. Etched in myth.
+      </p>
+      <div class="brand-intro__action">
+        <a class="button button--light" href="{{ "our-story/" | relURL }}">Read the Legend</a>
+      </div>
     </div>
   </div>
 </section>

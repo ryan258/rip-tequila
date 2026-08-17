@@ -1,16 +1,40 @@
-{{ $merch := where site.RegularPages "Section" "merch" }}
-<section class="merch-preview" aria-labelledby="merch-preview-title">
-  <div class="merch-preview__inner">
-    <div class="section-header-row">
-      {{ partial "section-heading.html" (dict "eyebrow" "Merch From the Afterparty" "title" "Evidence From the Afterparty" "body" "Wear the bad idea. Keep the proof. Premium artifacts engineered to survive the morning after." "id" "merch-preview-title") }}
-      <a class="button button--dark" href="{{ "merch/" | relURL }}">Shop the Afterparty</a>
+<section class="merch-social-split" aria-label="Merchandise and Social Club">
+  <div class="merch-social-split__inner">
+
+    {{/* Left: Merch Preview */}}
+    <div class="merch-split-box">
+      <div class="merch-split-box__copy">
+        <p class="merch-split-box__eyebrow">Gear for the Legendary</p>
+        <h2 class="merch-split-box__title">Merch & More</h2>
+        <p class="merch-split-box__desc">Wear the myth. Rep the cantina. Because real legends leave a mark.</p>
+        <div class="merch-split-box__action">
+          <a class="button button--primary" href="{{ "merch/" | relURL }}">Shop Merch</a>
+        </div>
+      </div>
+      <div class="merch-split-box__visual" aria-hidden="true">
+        <div class="merch-collage">
+          <img class="merch-collage__tee" src="{{ "images/merch/rest-in-proof-tee.webp" | relURL }}" alt="Rest In Proof Tee" loading="lazy" decoding="async">
+          <img class="merch-collage__hat" src="{{ "images/merch/rip-tequila-hat.webp" | relURL }}" alt="RIP Tequila Hat" loading="lazy" decoding="async">
+        </div>
+      </div>
     </div>
-    <div class="merch-preview__grid scroll-strip" role="list" aria-label="Featured RIP Tequila merch">
-      {{ range $merch.ByWeight }}
-        <div role="listitem">{{ partial "merch-card.html" . }}</div>
-      {{ end }}
+
+    {{/* Right: Don Muerte Social Club */}}
+    <div class="merch-split-box">
+      <div class="merch-split-box__copy">
+        <p class="merch-split-box__eyebrow">Join the Underground</p>
+        <h2 class="merch-split-box__title">Don Muerte Social Club</h2>
+        <p class="merch-split-box__desc">Members get first drops, secret invites, and afterlife dispatches.</p>
+        <div class="merch-split-box__action">
+          <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Join the Club</a>
+        </div>
+      </div>
+      <div class="merch-split-box__visual" aria-hidden="true">
+        <div class="social-card-wrap">
+          <img class="social-card-img" src="{{ "images/merch/social-club-card.webp" | relURL }}" alt="Don Muerte Social Club Member Card" loading="lazy" decoding="async">
+        </div>
+      </div>
     </div>
-    <p class="section-microcopy section-microcopy--dark">Limited drops. Questionable evidence. No actual spirits.</p>
+
   </div>
 </section>
-

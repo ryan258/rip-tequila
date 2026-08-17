@@ -1,30 +1,54 @@
 <section class="hero-section" aria-labelledby="hero-title">
   <div class="hero-section__inner">
     <div class="hero-section__copy">
-      <p class="hero-section__eyebrow">{{ .Params.eyebrow }}</p>
-      <h1 class="hero-section__title" id="hero-title">{{ .Title }}</h1>
-      <p class="hero-section__body">{{ .Params.body }}</p>
-      <div class="hero-section__standins" aria-hidden="true">
-        <span>{{ partial "glyph.html" (dict "name" "bell" "class" "rip-glyph--red rip-glyph--animated") }}</span>
-        <span>{{ partial "glyph.html" (dict "name" "agave" "class" "rip-glyph--green") }}</span>
-        <span>{{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--red rip-glyph--animated") }}</span>
-        <span>{{ partial "glyph.html" (dict "name" "glass" "class" "rip-glyph--gold") }}</span>
-      </div>
+      <p class="hero-section__eyebrow">Rest In Proof</p>
+      <h1 class="hero-section__title" id="hero-title">
+        Born in Agave.<br>Buried in Legend.
+      </h1>
+      <p class="hero-section__body">
+        Estate-grown in otherworldly agave fields, double-distilled for maximum plausible deniability, and served exclusively at La Cantina del Último Trago — the afterlife lounge where the bell rings once and your judgment stays outside.
+      </p>
+      
       <div class="hero-section__actions">
-        <a class="button button--primary" href="{{ strings.TrimPrefix "/" .Params.primary_cta.href | relURL }}">{{ .Params.primary_cta.label }}</a>
-        <a class="button button--light" href="{{ strings.TrimPrefix "/" .Params.secondary_cta.href | relURL }}">{{ .Params.secondary_cta.label }}</a>
+        <a class="button button--primary" href="{{ "the-cantina/" | relURL }}">Enter the Cantina</a>
+        <a class="button button--light" href="{{ "our-story/" | relURL }}">Our Story</a>
+      </div>
+
+      <div class="hero-section__features" aria-label="Brand Highlights">
+        <div class="hero-feature">
+          <div class="hero-feature__icon" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "agave" "class" "rip-glyph--sm rip-glyph--red") }}
+          </div>
+          <p class="hero-feature__text">Estate-grown in metaphysical agave fields</p>
+        </div>
+
+        <div class="hero-feature">
+          <div class="hero-feature__icon" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "still" "class" "rip-glyph--sm rip-glyph--red") }}
+          </div>
+          <p class="hero-feature__text">Double-distilled for plausible deniability</p>
+        </div>
+
+        <div class="hero-feature">
+          <div class="hero-feature__icon" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "bell" "class" "rip-glyph--sm rip-glyph--red") }}
+          </div>
+          <p class="hero-feature__text">Served exclusively at La Cantina del Último Trago</p>
+        </div>
+
+        <div class="hero-feature">
+          <div class="hero-feature__icon" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "rose" "class" "rip-glyph--sm rip-glyph--red") }}
+          </div>
+          <p class="hero-feature__text">No actual spirits. All the spirit.</p>
+        </div>
       </div>
     </div>
+
     <div class="hero-poster" aria-hidden="true">
-      <img class="hero-poster__bg" src="{{ "images/hero-poster-bg.webp" | relURL }}" alt="" loading="eager" decoding="async">
-      <span class="hero-poster__bottle">
-        <span class="hero-poster__bottle-neck"></span>
-        <span class="hero-poster__bottle-body">
-          <strong>RIP</strong>
-          {{ partial "glyph.html" (dict "name" "bell" "class" "hero-poster__bottle-glyph rip-glyph--red rip-glyph--animated") }}
-        </span>
-      </span>
-      <span class="hero-poster__caption">REST IN PROOF</span>
+      <div class="hero-poster__frame">
+        <img class="hero-poster__img" src="{{ "images/home-hero-poster.webp" | relURL }}" alt="RIP Tequila - Born in Agave, Buried in Legend" loading="eager" decoding="async">
+      </div>
     </div>
   </div>
 </section>

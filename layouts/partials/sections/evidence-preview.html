@@ -1,0 +1,72 @@
+<section class="evidence-preview" aria-labelledby="evidence-preview-title">
+  <div class="evidence-preview__inner">
+    
+    <div class="evidence-preview__header">
+      <div class="evidence-preview__copy">
+        <p class="evidence-preview__eyebrow">Find the Cantina</p>
+        <h2 class="evidence-preview__title" id="evidence-preview-title">Evidence From the Afterparty</h2>
+        <p class="evidence-preview__desc">From drop locations to dispatches, follow the trail.</p>
+      </div>
+      <div class="evidence-preview__action">
+        <a class="button button--primary" href="{{ "find-us/" | relURL }}">Find Out Where</a>
+      </div>
+    </div>
+
+    <div class="evidence-preview__grid" role="list" aria-label="Evidence and dispatches">
+      
+      {{/* Card 1: Where to Find Us */}}
+      <article class="evidence-card" role="listitem">
+        <div class="evidence-card__media">
+          <img src="{{ "images/find-us-map-pin.webp" | relURL }}" alt="Coordinates Map Pin" loading="lazy" decoding="async">
+        </div>
+        <div class="evidence-card__body">
+          <p class="evidence-card__eyebrow">Where to Find Us</p>
+          <h3 class="evidence-card__title">Not on Maps. On Purpose.</h3>
+          <p class="evidence-card__desc">Find the cantina. It finds you.</p>
+          <a class="evidence-card__link" href="{{ "find-us/" | relURL }}">View Locations &rarr;</a>
+        </div>
+      </article>
+
+      {{/* Card 2: Dispatch */}}
+      <article class="evidence-card" role="listitem">
+        <div class="evidence-card__media">
+          <img src="{{ "images/our-story-book-hero.webp" | relURL }}" alt="Cantina Ledger Dispatch" loading="lazy" decoding="async">
+        </div>
+        <div class="evidence-card__body">
+          <p class="evidence-card__eyebrow">Dispatch</p>
+          <h3 class="evidence-card__title">The Bell Rang. You Weren't.</h3>
+          <p class="evidence-card__desc">Read the latest afterlife dispatch.</p>
+          <a class="evidence-card__link" href="{{ "our-story/" | relURL }}">Read Now &rarr;</a>
+        </div>
+      </article>
+
+      {{/* Card 3: The Fields */}}
+      <article class="evidence-card" role="listitem">
+        <div class="evidence-card__media">
+          <img src="{{ "images/cantina/el-vigia-desert.webp" | relURL }}" alt="Agave Fields Beyond the Veil" loading="lazy" decoding="async">
+        </div>
+        <div class="evidence-card__body">
+          <p class="evidence-card__eyebrow">The Fields</p>
+          <h3 class="evidence-card__title">Grown Beyond the Veil.</h3>
+          <p class="evidence-card__desc">Estate-grown. Otherworldly.</p>
+          <a class="evidence-card__link" href="{{ "our-story/" | relURL }}">Explore &rarr;</a>
+        </div>
+      </article>
+
+      {{/* Card 4: The Process */}}
+      <article class="evidence-card" role="listitem">
+        <div class="evidence-card__media">
+          <img src="{{ "images/cantina-archway-bg.webp" | relURL }}" alt="Distillery Aging Barrels" loading="lazy" decoding="async">
+        </div>
+        <div class="evidence-card__body">
+          <p class="evidence-card__eyebrow">The Process</p>
+          <h3 class="evidence-card__title">Double Distilled. Zero Explanations.</h3>
+          <p class="evidence-card__desc">Built for nights that blur.</p>
+          <a class="evidence-card__link" href="{{ "the-lineup/" | relURL }}">The Process &rarr;</a>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
