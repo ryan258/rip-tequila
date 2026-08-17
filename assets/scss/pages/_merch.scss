@@ -1,0 +1,840 @@
+// -------------------------------------------------------------
+// MERCH PAGE (Artifacts From the Afterparty Layout)
+// -------------------------------------------------------------
+
+.merch-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  position: relative;
+  overflow: hidden;
+}
+
+.merch-container {
+  @include container($container-max);
+  padding-inline: var(--page-gutter);
+}
+
+// -------------------------------------------------------------
+// 1. HERO SECTION
+// -------------------------------------------------------------
+.merch-hero {
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 4.5vw, 4rem);
+  position: relative;
+}
+
+.merch-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.merch-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.merch-hero__eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 $space-xs 0;
+}
+
+.merch-hero__title {
+  @include poster-title(3.2rem, 5.8vw, 5.2rem);
+  line-height: 0.88;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0 0 $space-md 0;
+  letter-spacing: 0.015em;
+}
+
+// Skull Divider with Line Accents
+.merch-divider {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: $space-md;
+}
+
+.merch-divider__line {
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.merch-divider__skull {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-red;
+}
+
+.merch-hero__desc {
+  font-family: $font-body;
+  font-size: clamp(0.98rem, 1.1vw, 1.12rem);
+  line-height: 1.55;
+  color: rgba($color-black, 0.88);
+  margin: 0 0 $space-xl 0;
+  max-width: 520px;
+}
+
+.merch-hero__cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-md;
+  margin-bottom: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.merch-hero__btn {
+  padding: 0.85rem 1.75rem;
+  font-family: $font-accent;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+// Hero Standards Badges
+.merch-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  padding-top: $space-md;
+  border-top: 1px dashed rgba($color-black, 0.2);
+  width: 100%;
+}
+
+.merch-badge {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.merch-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-red;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.merch-badge__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.merch-badge__title {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-black;
+  line-height: 1.15;
+}
+
+.merch-badge__sub {
+  font-size: 0.75rem;
+  color: rgba($color-black, 0.65);
+  line-height: 1.2;
+}
+
+// Right Hero Visual Frame
+.merch-hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.merch-hero__frame {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba($color-black, 0.15);
+  background: $color-black;
+  width: 100%;
+  max-width: 580px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.merch-hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s $ease-standard;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+// -------------------------------------------------------------
+// 2. VALUE PILLARS BAR (DARK BAND)
+// -------------------------------------------------------------
+.merch-pillars {
+  background: $color-black;
+  color: $color-cream;
+  padding-block: clamp(1.75rem, 3vw, 2.5rem);
+  border-top: 2px solid $color-gold;
+  border-bottom: 1px solid rgba($color-cream, 0.15);
+  position: relative;
+}
+
+.merch-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+}
+
+.merch-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+}
+
+.merch-pillar__icon {
+  color: $color-gold;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-top: 2px;
+}
+
+.merch-pillar__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.merch-pillar__title {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.05vw, 1.1rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-cream;
+  margin: 0 0 $space-2xs 0;
+}
+
+.merch-pillar__desc {
+  font-family: $font-body;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba($color-cream, 0.75);
+  margin: 0;
+}
+
+// -------------------------------------------------------------
+// 3. FEATURED ARTIFACTS / CATALOG SECTION
+// -------------------------------------------------------------
+.merch-catalog {
+  padding-block: clamp(3rem, 5.5vw, 5rem);
+  position: relative;
+}
+
+.merch-catalog__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: $space-lg;
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.merch-catalog__copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.merch-catalog__eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 $space-2xs 0;
+}
+
+.merch-catalog__title {
+  @include poster-title(2.2rem, 3.8vw, 3.2rem);
+  line-height: 0.92;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+// Category Filter Tabs
+.merch-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.merch-filter-btn {
+  background: transparent;
+  border: 1px solid rgba($color-black, 0.2);
+  color: $color-black;
+  padding: 0.45rem 1rem;
+  border-radius: 4px;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &:hover {
+    border-color: $color-black;
+    background: rgba($color-black, 0.05);
+  }
+
+  &.is-active {
+    background: $color-red;
+    border-color: $color-red;
+    color: $color-cream;
+    box-shadow: 0 2px 8px rgba($color-red, 0.3);
+  }
+}
+
+// 5-Column Merch Grid
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+
+  @media (max-width: $breakpoint-xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.merch-product-card {
+  display: flex;
+  flex-direction: column;
+  background: #fbf8f2;
+  border: 1px solid rgba($color-black, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform $transition-fast, box-shadow $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: rgba($color-black, 0.35);
+
+    .merch-product-card__img {
+      transform: scale(1.04);
+    }
+
+    .merch-product-card__action {
+      color: $color-red;
+      transform: translateX(3px);
+    }
+  }
+}
+
+.merch-product-card__link-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: clamp(0.85rem, 1.2vw, 1.15rem);
+}
+
+.merch-product-card__media {
+  background: #f4efe4;
+  border: 1px solid rgba($color-black, 0.08);
+  border-radius: 3px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: $space-md;
+  position: relative;
+}
+
+.merch-product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: $space-xs;
+  transition: transform 0.4s $ease-standard;
+}
+
+.merch-product-card__glyph {
+  width: 50%;
+  height: 50%;
+  color: $color-black;
+  opacity: 0.6;
+}
+
+.merch-product-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.merch-product-card__category {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-red;
+  margin-bottom: $space-2xs;
+}
+
+.merch-product-card__title {
+  font-family: $font-display;
+  font-size: 1.22rem;
+  line-height: 1.1;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0 0 $space-2xs 0;
+  letter-spacing: 0.02em;
+}
+
+.merch-product-card__line {
+  font-family: $font-body;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: rgba($color-black, 0.7);
+  margin: 0 0 $space-md 0;
+  flex: 1;
+}
+
+.merch-product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $space-xs;
+  border-top: 1px dashed rgba($color-black, 0.15);
+  margin-top: auto;
+}
+
+.merch-product-card__price {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: $color-black;
+  letter-spacing: 0.04em;
+}
+
+.merch-product-card__action {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: $color-red;
+  transition: transform $transition-fast, color $transition-fast;
+  display: inline-flex;
+  align-items: center;
+}
+
+.merch-catalog__all-row {
+  display: flex;
+  justify-content: center;
+}
+
+.merch-catalog__all-btn {
+  padding: 0.75rem 2.2rem;
+  font-family: $font-accent;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+// -------------------------------------------------------------
+// 4. THE EVIDENCE LOCKER SECTION
+// -------------------------------------------------------------
+.merch-locker {
+  padding-block: clamp(3rem, 5vw, 4.5rem);
+  background: #eae4d5;
+  border-top: 1px solid rgba($color-black, 0.15);
+  border-bottom: 1px solid rgba($color-black, 0.15);
+  position: relative;
+}
+
+.merch-locker__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 4.5vw, 4.5rem);
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.merch-locker__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.merch-locker__frame {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba($color-black, 0.15);
+  background: #f4efe4;
+  width: 100%;
+}
+
+.merch-locker__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.merch-locker__copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.merch-locker__eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 $space-2xs 0;
+}
+
+.merch-locker__title {
+  @include poster-title(2.2rem, 3.8vw, 3rem);
+  line-height: 0.94;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0 0 $space-md 0;
+}
+
+.merch-locker__desc {
+  font-family: $font-body;
+  font-size: clamp(0.95rem, 1.05vw, 1.08rem);
+  line-height: 1.6;
+  color: rgba($color-black, 0.85);
+  margin: 0 0 $space-xl 0;
+
+  strong {
+    color: $color-black;
+  }
+}
+
+.merch-locker__features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 1.5vw, 1.5rem);
+  padding-top: $space-md;
+  border-top: 1px dashed rgba($color-black, 0.2);
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.merch-locker-feat {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.merch-locker-feat__icon {
+  color: $color-red;
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.merch-locker-feat__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.merch-locker-feat__title {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-black;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.merch-locker-feat__sub {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: rgba($color-black, 0.65);
+}
+
+// -------------------------------------------------------------
+// 5. RIP SOCIAL CLUB CALLOUT SECTION (DARK)
+// -------------------------------------------------------------
+.merch-club {
+  background: $color-black;
+  color: $color-cream;
+  padding-block: clamp(3rem, 5vw, 4.5rem);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba($color-gold, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.merch-club__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 160px) minmax(0, 1fr) minmax(0, 220px);
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: minmax(0, 140px) 1fr;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+  }
+}
+
+.merch-club__portal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 140px;
+    margin: 0 auto;
+  }
+}
+
+.merch-club__portal-img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.5));
+}
+
+.merch-club__copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.merch-club__eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 $space-2xs 0;
+}
+
+.merch-club__title {
+  @include poster-title(2.2rem, 3.8vw, 3.2rem);
+  line-height: 0.92;
+  color: $color-cream;
+  text-transform: uppercase;
+  margin: 0 0 $space-sm 0;
+}
+
+.merch-club__desc {
+  font-family: $font-body;
+  font-size: clamp(0.92rem, 1vw, 1.02rem);
+  line-height: 1.55;
+  color: rgba($color-cream, 0.8);
+  margin: 0 0 $space-lg 0;
+  max-width: 580px;
+}
+
+.merch-club__perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.merch-club-perk {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.merch-club-perk__icon {
+  color: $color-gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.merch-club-perk__text {
+  display: flex;
+  flex-direction: column;
+
+  strong {
+    font-family: $font-accent;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-cream;
+    line-height: 1.2;
+  }
+
+  span {
+    font-size: 0.72rem;
+    color: rgba($color-cream, 0.65);
+    line-height: 1.2;
+  }
+}
+
+.merch-club__action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+  text-align: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-column: 1 / -1;
+  }
+}
+
+.merch-club__btn {
+  padding: 0.95rem 2rem;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+}
+
+.merch-club__subtext {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba($color-cream, 0.55);
+  margin: 0;
+}
+
+// -------------------------------------------------------------
+// 6. MARQUEE SLOGAN STRIP
+// -------------------------------------------------------------
+.merch-marquee-band {
+  background: $color-red;
+  color: $color-cream;
+  padding-block: 0.85rem;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.merch-marquee-band__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  width: 100%;
+}
+
+.merch-marquee-item {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.35vw, 1.25rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.merch-marquee-icon {
+  color: $color-cream;
+  display: inline-flex;
+  align-items: center;
+}
