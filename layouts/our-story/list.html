@@ -1,0 +1,293 @@
+{{ define "main" }}
+<article class="story-page">
+
+  {{/* 1. HERO SECTION */}}
+  <section class="story-hero">
+    <div class="story-container story-hero__inner">
+
+      {{/* Left Column: Copy & CTA */}}
+      <div class="story-hero__copy">
+        <p class="story-hero__eyebrow">{{ .Params.eyebrow | default "Born in Agave" }}</p>
+        <h1 class="story-hero__title">{{ .Params.headline | default "Buried in Legend" }}</h1>
+        <p class="story-hero__desc">
+          {{ .Params.description | default "The heritage, the heartbreak, and the questionable decisions behind RIP Tequila — handcrafted in the afterlife, poured at La Cantina del Último Trago." }}
+        </p>
+        <div class="story-hero__cta-row">
+          <a class="button button--primary story-hero__btn" href="{{ strings.TrimPrefix "/" (.Params.cta_href | default "/the-cantina/") | relURL }}">
+            {{ .Params.cta_label | default "Enter the Cantina" }}
+          </a>
+        </div>
+      </div>
+
+      {{/* Right Column: Book Artwork & Rubber Stamp */}}
+      <div class="story-hero__visual">
+
+        {{/* Top-Right Rubber Stamp */}}
+        <div class="story-stamp" aria-hidden="true">
+          <svg viewBox="0 0 140 140" class="story-stamp__svg">
+            <defs>
+              <path id="cantina-stamp-top" d="M 20,70 A 50,50 0 0,1 120,70" />
+              <path id="cantina-stamp-bottom" d="M 120,70 A 50,50 0 0,1 20,70" />
+            </defs>
+            <circle cx="70" cy="70" r="64" class="story-stamp__outer" />
+            <circle cx="70" cy="70" r="58" class="story-stamp__inner" />
+            <text class="story-stamp__text">
+              <textPath href="#cantina-stamp-top" startOffset="50%" text-anchor="middle">
+                ★ LA CANTINA ★
+              </textPath>
+            </text>
+            <text class="story-stamp__text">
+              <textPath href="#cantina-stamp-bottom" startOffset="50%" text-anchor="middle">
+                DEL ÚLTIMO TRAGO
+              </textPath>
+            </text>
+            <path d="M70 48L72 56L80 57L74 62L76 70L70 65L64 70L66 62L60 57L68 56L70 48Z" fill="currentColor"/>
+          </svg>
+        </div>
+
+        {{/* Book Artwork */}}
+        <div class="story-hero__book-wrap">
+          <img src="{{ "images/our-story-book-hero.webp" | relURL }}" alt="RIP Tequila Afterlife Chronicle Ledger" class="story-hero__book-img" loading="eager" decoding="async">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 2. THE ORIGIN STORY (2-COLUMN GRID) */}}
+  <section class="story-origin">
+    <div class="story-container story-origin__grid">
+
+      {{/* Left Column: Narrative */}}
+      <div class="story-origin__narrative">
+        <p class="story-section-eyebrow">The Origin Story</p>
+        <h2 class="story-origin__heading">Some Legends Never Die.<br>They Just Open A Cantina.</h2>
+        <div class="story-origin__body">
+          <p>
+            Most luxury tequila brands tell you about their great-grandfather’s copper pot still, volcanic spring water filtered through ancient jade, and jimadores who sing to the agave under a harvest moon.
+          </p>
+          <p>
+            We don’t have a great-grandfather. We have <strong>Don Muerte</strong>. He didn’t inherit a distillery; he won the late shift in a coin toss against the sunrise, and he’s been running <strong>La Cantina del Último Trago</strong> (<em>The Cantina of the Last Drink</em>) ever since.
+          </p>
+          <p>
+            Nestled exactly three miles past last call, right where the desert highway turns into a rumor, the cantina operates on a simple philosophy: <strong>Rest In Proof.</strong>
+          </p>
+        </div>
+      </div>
+
+      {{/* Right Column: Display Quote */}}
+      <div class="story-origin__quote-col">
+        <div class="story-origin__quote-box">
+          <span class="story-origin__quote-mark" aria-hidden="true">“</span>
+          <blockquote class="story-origin__quote-text">
+            NO ACTUAL SPIRITS.<br>ALL THE SPIRIT.
+          </blockquote>
+          <cite class="story-origin__quote-author">— LA CANTINA DEL ÚLTIMO TRAGO</cite>
+
+          <div class="story-origin__quote-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-skull">
+              {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}
+            </span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 3. THE EIGHT WHO RUN THE ROOM */}}
+  <section class="story-cast">
+    <div class="story-container">
+
+      <div class="story-section-header">
+        <h2 class="story-section-title">The Eight Who Run The Room</h2>
+        <span class="story-section-rule"></span>
+      </div>
+
+      <div class="story-cast__grid">
+
+        {{/* 1. Don Muerte */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/don-muerte.webp" | relURL }}" alt="Don Muerte" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">Don Muerte</h3>
+          <p class="cast-card__desc">Hosts the floor with an unreadable grin and a single shot glass he never empties.</p>
+        </article>
+
+        {{/* 2. Cantina Jack */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/cantina-jack.webp" | relURL }}" alt="Cantina Jack" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">Cantina Jack</h3>
+          <p class="cast-card__desc">Mans the mahogany bar, pouring crisp Blanco while filing your deepest secrets under <em>unnecessary details</em>.</p>
+        </article>
+
+        {{/* 3. Campana Roja */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/campana-roja.webp" | relURL }}" alt="Campana Roja" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">Campana Roja</h3>
+          <p class="cast-card__desc">Watches the brass bell above the door. When she rings it, your evening officially transitions.</p>
+        </article>
+
+        {{/* 4. La Rosa Negra */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/la-rosa-negra.webp" | relURL }}" alt="La Rosa Negra" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">La Rosa Negra</h3>
+          <p class="cast-card__desc">Takes the stage when the mariachi hits, singing boleros so haunting they’ll make a grown man apologize.</p>
+        </article>
+
+        {{/* 5. Padre Proof */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/padre-proof.webp" | relURL }}" alt="Padre Proof" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">Padre Proof</h3>
+          <p class="cast-card__desc">Sits in the corner booth, offering official ecclesiastical absolution for your worst cocktail napkin ideas.</p>
+        </article>
+
+        {{/* 6. El Sepulturero */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/el-sepulturero.webp" | relURL }}" alt="El Sepulturero" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">El Sepulturero</h3>
+          <p class="cast-card__desc">Walks the back lot with a shovel and a leather manifest, respectfully burying lost arguments and abandoned dignity.</p>
+        </article>
+
+        {{/* 7. Los Maracas */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/los-maracas.webp" | relURL }}" alt="Los Maracas" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">Los Maracas</h3>
+          <p class="cast-card__desc">Provide the unstoppable skeletal rhythm section, ensuring nobody sits down until their boots give out.</p>
+        </article>
+
+        {{/* 8. El Vigía */}}
+        <article class="cast-card">
+          <div class="cast-card__media">
+            <img src="{{ "images/cast/el-vigia.webp" | relURL }}" alt="El Vigía" loading="lazy" decoding="async">
+          </div>
+          <h3 class="cast-card__name">El Vigía</h3>
+          <p class="cast-card__desc">Stands sentinel on the desert road, nodding silently as late arrivals navigate their way toward the glowing neon sign.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  {{/* 4. FIVE BOTTLES. FIVE HOURS OF THE NIGHT */}}
+  <section class="story-bottles">
+    <div class="story-container">
+
+      <div class="story-section-header">
+        <h2 class="story-section-title">Five Bottles. Five Hours Of The Night.</h2>
+        <span class="story-section-rule"></span>
+      </div>
+
+      <div class="story-bottles__grid">
+
+        {{/* Bottle 1: Blanco */}}
+        <div class="bottle-col">
+          <div class="bottle-col__media">
+            <img src="{{ "images/bottles/blanco-transparent.png" | relURL }}" alt="RIP Blanco Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+          </div>
+          <div class="bottle-col__info">
+            <div class="bottle-col__icon" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" "star-burst" "class" "rip-glyph--md") }}
+            </div>
+            <h3 class="bottle-col__title">Blanco</h3>
+            <p class="bottle-col__desc">Bright optimism of the opening round. Crisp, clean, and ready for anything.</p>
+          </div>
+        </div>
+
+        {{/* Bottle 2: Reposado */}}
+        <div class="bottle-col">
+          <div class="bottle-col__media">
+            <img src="{{ "images/bottles/reposado-transparent.png" | relURL }}" alt="RIP Reposado Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+          </div>
+          <div class="bottle-col__info">
+            <div class="bottle-col__icon" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" "star-diamond" "class" "rip-glyph--md") }}
+            </div>
+            <h3 class="bottle-col__title">Reposado</h3>
+            <p class="bottle-col__desc">Aged in atmosphere. Smooth stories, golden confessions, and second round wisdom.</p>
+          </div>
+        </div>
+
+        {{/* Bottle 3: Añejo */}}
+        <div class="bottle-col">
+          <div class="bottle-col__media">
+            <img src="{{ "images/bottles/anejo-transparent.png" | relURL }}" alt="RIP Añejo Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+          </div>
+          <div class="bottle-col__info">
+            <div class="bottle-col__icon" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" "star-eight" "class" "rip-glyph--md") }}
+            </div>
+            <h3 class="bottle-col__title">Añejo</h3>
+            <p class="bottle-col__desc">Deeper truths surface. Rich, bold, and best shared with no apologies.</p>
+          </div>
+        </div>
+
+        {{/* Bottle 4: Extra Añejo */}}
+        <div class="bottle-col">
+          <div class="bottle-col__media">
+            <img src="{{ "images/bottles/extra-anejo-transparent.png" | relURL }}" alt="RIP Extra Añejo Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+          </div>
+          <div class="bottle-col__info">
+            <div class="bottle-col__icon" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" "star-cross" "class" "rip-glyph--md") }}
+            </div>
+            <h3 class="bottle-col__title">Extra Añejo</h3>
+            <p class="bottle-col__desc">The night gets interesting. Rare, complex, and perfect for the real conversations.</p>
+          </div>
+        </div>
+
+        {{/* Bottle 5: Midnight Agave Reserve */}}
+        <div class="bottle-col">
+          <div class="bottle-col__media">
+            <img src="{{ "images/bottles/midnight-reserve-transparent.png" | relURL }}" alt="RIP Midnight Agave Reserve Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+          </div>
+          <div class="bottle-col__info">
+            <div class="bottle-col__icon" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" "moon-star" "class" "rip-glyph--md") }}
+            </div>
+            <h3 class="bottle-col__title">Midnight Agave Reserve</h3>
+            <p class="bottle-col__desc">Final call. Dark, mysterious, and unforgettable — like the best decisions.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 5. ASTRAL DISTRIBUTION CTA BOX */}}
+  <section class="story-astral">
+    <div class="story-container">
+      <div class="story-astral__box">
+        <div class="story-astral__badge" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "agave" "class" "rip-glyph--hero") }}
+        </div>
+        <p class="story-astral__text">
+          Our distribution network exists entirely on the astral plane.<br class="desktop-break">
+          Collect the evidence, wear the marks, and toast like you mean it.
+        </p>
+        <div class="story-astral__action">
+          <a class="button button--primary story-astral__btn" href="{{ "find-us/" | relURL }}">Find Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</article>
+{{ end }}
