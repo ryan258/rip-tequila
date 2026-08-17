@@ -1,0 +1,163 @@
+{{ define "main" }}
+<article class="find-us-page">
+
+  {{/* 1. HERO SECTION */}}
+  <section class="find-us-hero" aria-labelledby="find-us-hero-title">
+    <div class="find-us-container find-us-hero__inner">
+
+      {{/* Left Column: Copy & CTA */}}
+      <div class="find-us-hero__copy">
+        <p class="find-us-hero__eyebrow">{{ .Params.eyebrow | default "Coordinates" }}</p>
+        <h1 class="find-us-hero__title" id="find-us-hero-title">
+          {{ .Params.headline | default "No Storefront. Undeniable Signal." }}
+        </h1>
+        <p class="find-us-hero__desc">
+          {{ .Params.description | default "Press inquiries, artistic collaborations, and afterlife dispatches — how to transmit a message into La Cantina del Último Trago." }}
+        </p>
+        <div class="find-us-hero__cta-row">
+          <a class="button button--primary find-us-hero__btn" href="{{ strings.TrimPrefix "/" (.Params.cta_href | default "/don-muerte-social-club/") | relURL }}">
+            {{ .Params.cta_label | default "Join the Club" }}
+          </a>
+        </div>
+      </div>
+
+      {{/* Right Column: Parchment Map Card Graphic */}}
+      <div class="find-us-hero__visual">
+        <div class="find-us-hero__card-wrap">
+          <img src="{{ "images/find-us-map-pin.webp" | relURL }}" alt="La Cantina Coordinates Map Pin" class="find-us-hero__card-img" loading="eager" decoding="async">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 2. SKULL DIVIDER */}}
+  <div class="find-us-container" aria-hidden="true">
+    <div class="find-us-divider">
+      <span class="find-us-divider__line"></span>
+      <span class="find-us-divider__glyph">
+        {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}
+      </span>
+      <span class="find-us-divider__line"></span>
+    </div>
+  </div>
+
+  {{/* 3. TWO-COLUMN DIRECTORY SECTION */}}
+  <section class="find-us-content" aria-label="Contact Channels and Location Dispatches">
+    <div class="find-us-container find-us-content__grid">
+
+      {{/* Left Column: Quick Overview Badges */}}
+      <div class="find-us-overview">
+
+        {{/* Channel 1: Press & Media */}}
+        <div class="find-us-channel">
+          <div class="find-us-channel__badge" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "megaphone" "class" "find-us-channel__icon") }}
+          </div>
+          <div class="find-us-channel__content">
+            <h2 class="find-us-channel__title">Press & Media</h2>
+            <p class="find-us-channel__desc">
+              Writing a feature on dark humor branding, afterlife design, or the strange business of a spirit that's never left the cantina? Send it our way.
+            </p>
+          </div>
+        </div>
+
+        {{/* Channel 2: Collaborations & Art */}}
+        <div class="find-us-channel">
+          <div class="find-us-channel__badge" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "pencils" "class" "find-us-channel__icon") }}
+          </div>
+          <div class="find-us-channel__content">
+            <h2 class="find-us-channel__title">Collaborations & Art</h2>
+            <p class="find-us-channel__desc">
+              Designers, artists, musicians, illustrators — let's build something that belongs in the cantina universe.
+            </p>
+          </div>
+        </div>
+
+        {{/* Channel 3: Looking for Physical Bottles? */}}
+        <div class="find-us-channel">
+          <div class="find-us-channel__badge" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "bottle" "class" "find-us-channel__icon") }}
+          </div>
+          <div class="find-us-channel__content">
+            <h2 class="find-us-channel__title">Looking for Physical Bottles?</h2>
+            <p class="find-us-channel__desc">
+              RIP Tequila does not exist on retail shelves. If you find a bottle, consider it a temporal anomaly. Please do not drink it.
+            </p>
+          </div>
+        </div>
+
+        {{/* Channel 4: Physical Location */}}
+        <div class="find-us-channel">
+          <div class="find-us-channel__badge" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "map" "class" "find-us-channel__icon") }}
+          </div>
+          <div class="find-us-channel__content">
+            <h2 class="find-us-channel__title">Physical Location</h2>
+            <address class="find-us-channel__address">
+              <strong>La Cantina del Último Trago</strong><br>
+              Desert Highway 00,<br>
+              Mile Marker Infinity<br>
+              Open: Past Midnight<br>
+              Address: Deliberately Withheld by Tradition
+            </address>
+          </div>
+        </div>
+
+      </div>
+
+      {{/* Right Column: Detailed Editorial Copy & Directives */}}
+      <div class="find-us-details">
+
+        <div class="find-us-details__intro">
+          <p>You won't find a street number, storefront, or Google Maps pin. La Cantina del Último Trago does not participate in commercial zoning.</p>
+          <p>If you are trying to reach the creative team behind <strong>RIP Tequila</strong> — for press features, brand collaborations, creative direction inquiries, or licensing — the direct pipeline runs through the <strong>Don Muerte Social Club</strong>.</p>
+        </div>
+
+        {{/* Detail 1: Press & Media */}}
+        <div class="find-us-detail-block">
+          <h3 class="find-us-detail-heading">Press & Media</h3>
+          <span class="find-us-detail-bar" aria-hidden="true"></span>
+          <p class="find-us-detail-text">
+            Writing a feature on dark humor branding, afterlife design, or the strange business of a spirit that's never left the cantina? Sign up to the Social Club and reply directly to any dispatch. Embargoed assets, high-res poster mocks, and creator commentary are routed from there.
+          </p>
+        </div>
+
+        {{/* Detail 2: Collaborations & Art */}}
+        <div class="find-us-detail-block">
+          <h3 class="find-us-detail-heading">Collaborations & Art</h3>
+          <span class="find-us-detail-bar" aria-hidden="true"></span>
+          <p class="find-us-detail-text">
+            Are you a designer, screen printer, musician, or illustrator interested in building within the cantina universe? We actively collaborate on limited capsule drops and poster releases. Connect with us through the club ledger.
+          </p>
+        </div>
+
+        {{/* Detail 3: Looking for Physical Bottles? */}}
+        <div class="find-us-detail-block">
+          <h3 class="find-us-detail-heading">Looking for Physical Bottles?</h3>
+          <span class="find-us-detail-bar" aria-hidden="true"></span>
+          <p class="find-us-detail-text">
+            We repeat: the cantina pours exclusively on the astral plane. We do not manufacture, bottle, or ship actual tequila. If you encounter a physical bottle of RIP Tequila in a retail liquor store, congratulations on discovering a temporal anomaly, but please do not drink it.
+          </p>
+        </div>
+
+        {{/* Detail 4: Physical Location */}}
+        <div class="find-us-detail-block">
+          <h3 class="find-us-detail-heading">Physical Location</h3>
+          <span class="find-us-detail-bar" aria-hidden="true"></span>
+          <address class="find-us-detail-address">
+            <strong>La Cantina del Último Trago</strong><br>
+            Desert Highway 00, Mile Marker Infinity<br>
+            Open: Past Midnight<br>
+            Address: Deliberately Withheld by Tradition
+          </address>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</article>
+{{ end }}

@@ -1,0 +1,329 @@
+// -------------------------------------------------------------
+// FIND US PAGE (Coordinates & Inquiries Layout)
+// -------------------------------------------------------------
+
+.find-us-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  position: relative;
+  overflow: hidden;
+}
+
+.find-us-container {
+  @include container(1140px);
+  padding-inline: var(--page-gutter);
+}
+
+// -------------------------------------------------------------
+// 1. HERO SECTION
+// -------------------------------------------------------------
+.find-us-hero {
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  position: relative;
+}
+
+.find-us-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 4.5vw, 4.5rem);
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.find-us-hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.find-us-hero__eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 $space-xs 0;
+}
+
+.find-us-hero__title {
+  @include poster-title(3.4rem, 6.2vw, 5.6rem);
+  line-height: 0.88;
+  color: $color-black;
+  text-transform: uppercase;
+  margin: 0 0 $space-md 0;
+  letter-spacing: 0.015em;
+}
+
+.find-us-hero__desc {
+  font-family: $font-body;
+  font-size: clamp(0.98rem, 1.15vw, 1.125rem);
+  line-height: 1.55;
+  color: #222222;
+  margin: 0 0 $space-xl 0;
+  max-width: 44ch;
+}
+
+.find-us-hero__cta-row {
+  margin-top: $space-xs;
+}
+
+.find-us-hero__btn {
+  background: $color-red;
+  color: #ffffff;
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.65rem;
+  border-radius: 0;
+  border: 1px solid $color-red;
+  box-shadow: 4px 4px 0 rgba($color-black, 0.25);
+  transition: transform $transition-fast, box-shadow $transition-fast, background-color $transition-fast;
+
+  &:hover {
+    background: $color-red-light;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgba($color-black, 0.3);
+    color: #ffffff;
+  }
+}
+
+.find-us-hero__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.find-us-hero__card-wrap {
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+  transform: rotate(-1.5deg);
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: rotate(0deg) scale(1.02);
+  }
+}
+
+.find-us-hero__card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 6px 10px 24px rgba($color-black, 0.15);
+}
+
+// -------------------------------------------------------------
+// 2. SKULL DIVIDER
+// -------------------------------------------------------------
+.find-us-divider {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  width: 100%;
+  margin-block: clamp(1rem, 2.5vw, 2rem);
+
+  .find-us-divider__line {
+    flex: 1;
+    height: 1.5px;
+    background: rgba($color-black, 0.18);
+  }
+
+  .find-us-divider__glyph {
+    color: $color-red;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// -------------------------------------------------------------
+// 3. TWO-COLUMN DIRECTORY & DETAILS SECTION
+// -------------------------------------------------------------
+.find-us-content {
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.find-us-content__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: start;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+// Left Column: Overview Channels
+.find-us-overview {
+  display: flex;
+  flex-direction: column;
+}
+
+.find-us-channel {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  padding-block: clamp(1.2rem, 2vw, 1.65rem);
+  border-bottom: 1px solid rgba($color-black, 0.14);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.find-us-channel__badge {
+  width: clamp(58px, 6vw, 68px);
+  height: clamp(58px, 6vw, 68px);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ece0ca;
+  border: 1.5px solid rgba($color-black, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-red;
+  box-shadow: inset 0 1px 3px rgba($color-black, 0.08);
+  transition: transform $transition-fast, background-color $transition-fast;
+
+  .find-us-channel:hover & {
+    transform: scale(1.05);
+    background: #e6d8be;
+  }
+}
+
+.find-us-channel__icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.find-us-channel__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.find-us-channel__title {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.25;
+}
+
+.find-us-channel__desc,
+.find-us-channel__address {
+  font-family: $font-body;
+  font-size: clamp(0.85rem, 0.95vw, 0.92rem);
+  line-height: 1.55;
+  color: #333333;
+  margin: 0;
+  font-style: normal;
+
+  strong {
+    font-weight: 700;
+    color: $color-black;
+  }
+}
+
+// Right Column: Detailed Copy & Directives
+.find-us-details {
+  border-left: 1px solid rgba($color-black, 0.16);
+  padding-left: clamp(2rem, 3.5vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.65rem, 2.5vw, 2.25rem);
+
+  @media (max-width: $breakpoint-lg) {
+    border-left: none;
+    border-top: 1px solid rgba($color-black, 0.16);
+    padding-left: 0;
+    padding-top: $space-xl;
+  }
+}
+
+.find-us-details__intro {
+  p {
+    font-family: $font-body;
+    font-size: clamp(0.92rem, 1vw, 0.98rem);
+    line-height: 1.65;
+    color: #222222;
+    margin: 0 0 $space-sm 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      font-weight: 700;
+      color: $color-black;
+    }
+  }
+}
+
+.find-us-detail-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.find-us-detail-heading {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: clamp(1.02rem, 1.15vw, 1.15rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-red;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.2;
+}
+
+.find-us-detail-bar {
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: $color-red;
+  margin-bottom: 0.6rem;
+}
+
+.find-us-detail-text,
+.find-us-detail-address {
+  font-family: $font-body;
+  font-size: clamp(0.88rem, 0.95vw, 0.93rem);
+  line-height: 1.65;
+  color: #2e2e2e;
+  margin: 0;
+  font-style: normal;
+
+  strong {
+    font-weight: 700;
+    color: $color-black;
+  }
+}
