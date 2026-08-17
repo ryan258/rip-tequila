@@ -185,9 +185,8 @@
 .char-hero {
   @include paper-texture($texture-opacity-light);
   position: relative;
-  overflow: hidden;
-  background: $color-black;
-  color: $color-cream;
+  background: $color-cream;
+  color: $color-black;
   isolation: isolate;
   min-height: 520px;
   padding-top: clamp($space-2xl, 6vw, $space-3xl);
@@ -206,12 +205,20 @@
   overflow: hidden;
 
   img {
-    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
-    opacity: 0.28;
-    filter: contrast(1.15) brightness(0.9);
+    object-position: center;
+    opacity: 0.85;
+    mix-blend-mode: multiply;
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      opacity: 0.15;
+    }
   }
 }
 
@@ -249,9 +256,9 @@
 
 .char-hero__body {
   @include body-copy(clamp(1.05rem, 1.25vw, 1.25rem));
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
-  color: rgba($color-cream, 0.9);
+  color: rgba($color-black, 0.85);
 }
 
 .char-hero__actions {
@@ -298,7 +305,7 @@
 .char-features-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: $color-cream;
+  background: #ffffff;
   color: $color-black;
   border: 2px solid $color-black;
   box-shadow: 8px 8px 0 rgba($color-black, 0.15);
