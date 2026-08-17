@@ -3,6 +3,7 @@ title: "El Vigía"
 weight: 80
 role: "The Watcher"
 accent: "deep-green"
+card_bio: "Follows the agave after midnight."
 prop: "Boots or vulture"
 icon: "eye"
 line: "Follow the agave after midnight."

@@ -3,6 +3,7 @@ title: "Don Muerte"
 weight: 10
 role: "The Host"
 accent: "red"
+card_bio: "Lives for stories. Toasts to endings."
 prop: "Shot glass"
 icon: "skull"
 line: "Life's short. Toast accordingly."

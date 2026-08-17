@@ -3,6 +3,7 @@ title: "Cantina Jack"
 weight: 50
 role: "The Bartender"
 accent: "red"
+card_bio: "Pouring truth. No last call. Only legends."
 prop: "Bottle or bar towel"
 icon: "glass"
 line: "Last round, first legend."

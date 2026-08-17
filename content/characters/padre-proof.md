@@ -1,8 +1,9 @@
 ---
 title: "Padre Proof"
 weight: 30
-role: "The Blesser"
+role: "The Priest"
 accent: "gold"
+card_bio: "Forgives no one. Raises the bar."
 prop: "Small bottle or book"
 icon: "cross"
 line: "I bless this mess."

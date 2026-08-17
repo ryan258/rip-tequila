@@ -3,6 +3,7 @@ title: "La Rosa Negra"
 weight: 20
 role: "The Singer"
 accent: "red"
+card_bio: "Voice like velvet. Songs that still hurt."
 prop: "Rose or microphone"
 icon: "microphone"
 line: "The dead still dance."

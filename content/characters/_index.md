@@ -2,7 +2,7 @@
 title: "Characters"
 eyebrow: "The Cast"
 headline: "Meet the Afterlife Cast"
-description: "Eight legends. One questionably licensed cantina. Every bottle has a custodian, every pour has an alibi, and every night has a witness."
+description: "Eight legends. One questionably licensed cantina. Every bottle has a custodian, every pour has a meaning, and every night has a witness."
 seo_title: "Meet the Cast — Eight Afterlife Cantina Characters | RIP Tequila"
 seo_description: "Don Muerte, La Rosa Negra, Padre Proof, El Sepulturero, Cantina Jack, Campana Roja, Los Maracas, El Vigía — the eight unforgettable characters behind RIP Tequila."
 cta_label: "Enter the Cantina"

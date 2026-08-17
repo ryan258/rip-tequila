@@ -3,6 +3,7 @@ title: "Los Maracas"
 weight: 70
 role: "The Rhythm"
 accent: "green"
+card_bio: "Keep time. Because the night is eternal."
 prop: "Maracas"
 icon: "maracas"
 line: "Shake now. Explain later."

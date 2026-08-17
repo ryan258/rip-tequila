@@ -1,8 +1,9 @@
 ---
 title: "Campana Roja"
 weight: 60
-role: "The Signal"
+role: "The Keeper"
 accent: "red"
+card_bio: "Rings once. The final round. Always."
 prop: "Bell"
 icon: "bell"
 line: "The bell rang. You're in."

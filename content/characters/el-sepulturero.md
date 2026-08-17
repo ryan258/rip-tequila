@@ -1,8 +1,9 @@
 ---
 title: "El Sepulturero"
 weight: 40
-role: "The Caretaker"
+role: "The Cabinet"
 accent: "green"
+card_bio: "Here lies your judgment."
 prop: "Shovel"
 icon: "shovel"
 line: "Here lies your judgment."
