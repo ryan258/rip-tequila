@@ -1,17 +1,126 @@
 {{ define "main" }}
-{{ partial "page-hero.html" . }}
-{{ if .Content }}
-<section class="editorial-section">
-  <div class="editorial-section__inner">
-    {{ .Content }}
+<!-- Custom Character Page Hero -->
+<section class="char-hero">
+  <div class="char-hero__backdrop" aria-hidden="true">
+    <img src="{{ "images/characters-hero-bg.webp" | relURL }}" alt="" loading="eager" decoding="async">
+  </div>
+  <div class="char-hero__inner">
+    <div class="char-hero__copy">
+      <p class="char-hero__eyebrow">{{ .Params.eyebrow | default "The Cast" }}</p>
+      <h1 class="char-hero__title">{{ .Params.headline | default "Meet the Afterlife Cast" }}</h1>
+      <p class="char-hero__body">{{ .Description }}</p>
+      
+      <div class="char-hero__actions">
+        <a class="button button--primary" href="{{ "the-cantina/" | relURL }}">Join the Cantina</a>
+        <a class="button button--outline" href="{{ "the-lineup/" | relURL }}">View the Lineup</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlapping Features Strip -->
+  <div class="char-features-container">
+    <div class="char-features-strip" aria-label="Cast features">
+      <div class="char-feature">
+        <span class="char-feature__icon" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "agave" "class" "rip-glyph--sm rip-glyph--red") }}
+        </span>
+        <div class="char-feature__details">
+          <h3 class="char-feature__title">Handcrafted</h3>
+          <p class="char-feature__text">In otherworldly agave fields.</p>
+        </div>
+      </div>
+      <div class="char-feature">
+        <span class="char-feature__icon" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "glass" "class" "rip-glyph--sm rip-glyph--red") }}
+        </span>
+        <div class="char-feature__details">
+          <h3 class="char-feature__title">Double Distilled</h3>
+          <p class="char-feature__text">For maximum plausible deniability.</p>
+        </div>
+      </div>
+      <div class="char-feature">
+        <span class="char-feature__icon" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm rip-glyph--red") }}
+        </span>
+        <div class="char-feature__details">
+          <h3 class="char-feature__title">Rest in Proof</h3>
+          <p class="char-feature__text">No actual spirits. All the spirit.</p>
+        </div>
+      </div>
+      <div class="char-feature">
+        <span class="char-feature__icon" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "bell" "class" "rip-glyph--sm rip-glyph--red") }}
+        </span>
+        <div class="char-feature__details">
+          <h3 class="char-feature__title">The Afterlife Awaits</h3>
+          <p class="char-feature__text">Step inside, if you dare.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-{{ end }}
-<section class="catalog-section" aria-label="Full RIP Tequila character cast">
-  <div class="catalog-section__inner character-strip__grid" role="list">
-    {{ range .Pages.ByWeight }}
-      <div role="listitem">{{ partial "character-card.html" . }}</div>
-    {{ end }}
+
+<!-- Side-by-Side Editorial Section -->
+<section class="char-editorial-section">
+  <div class="char-editorial__inner">
+    <div class="char-editorial__left">
+      <div class="char-obsidian-box">
+        <div class="char-obsidian-box__skull" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm rip-glyph--gold") }}
+        </div>
+        <h2 class="char-obsidian-box__text">THE DEAD HAVE BETTER MUSIC— AND SIGNIFICANTLY BETTER TEQUILA.</h2>
+        <div class="char-obsidian-box__agave" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "agave" "class" "rip-glyph--sm rip-glyph--gold") }}
+        </div>
+      </div>
+    </div>
+    
+    <div class="char-editorial__right">
+      <p class="char-editorial__lead">The night pours into La Cantina del Último Trago, no one here remembers faces, group mascots, or paid influencers. They are the room itself.</p>
+      
+      <ul class="char-bullet-list">
+        <li><strong>Don Muerte</strong> presides over the bar, delivering lore or cocktail cuts.</li>
+        <li><strong>La Rosa Negra</strong> sings the songs that still hurt.</li>
+        <li><strong>Padre Proof</strong> offers sermons you didn't ask for.</li>
+        <li><strong>Cantina Jack</strong> runs the room, no round goes untouched.</li>
+        <li><strong>Campana Roja</strong> rings once. The final round.</li>
+        <li><strong>Los Maracas</strong> keep the bones moving.</li>
+        <li><strong>El Sepulturero</strong> files the receipts for arguments that never die.</li>
+        <li><strong>El Vigía</strong> watches from the ridge.</li>
+      </ul>
+
+      <div class="char-editorial__quote-wrapper">
+        <p class="char-editorial__quote">“The dead have better music— and significantly better tequila.”</p>
+        <div class="char-editorial__quote-divider">
+          <span class="divider-line"></span>
+          <span class="divider-dot"></span>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cast Grid Section -->
+<section class="char-grid-section" aria-label="Full RIP Tequila character cast">
+  <div class="char-grid__inner">
+    <div class="char-grid" role="list">
+      {{ range .Pages.ByWeight }}
+        <div role="listitem">{{ partial "character-card.html" . }}</div>
+      {{ end }}
+    </div>
+
+    <!-- Red Slogan Divider -->
+    <div class="char-slogan-divider">
+      <div class="slogan-divider">
+        <span class="divider-line"></span>
+        <div class="slogan-divider__skull" aria-hidden="true">
+          {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}
+        </div>
+        <span class="divider-line"></span>
+      </div>
+      <h2 class="char-slogan-divider__text">EIGHT LEGENDS. ONE CANTINA. ALL AFTERLIFE.</h2>
+    </div>
   </div>
 </section>
 {{ end }}

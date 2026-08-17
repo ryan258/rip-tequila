@@ -1,10 +1,14 @@
 {{ $accent := .Params.accent | default "red" }}
-<a class="character-card" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
-  <span class="character-card__figure" aria-hidden="true">
-    {{ partial "glyph.html" (dict "name" .Params.icon "class" "character-card__glyph-mark rip-glyph--animated") }}
-  </span>
-  <span class="character-card__name">{{ .Title }}</span>
-  <span class="character-card__role">{{ .Params.role }}</span>
-  <span class="character-card__prop">{{ .Params.prop }}</span>
-  <span class="character-card__line">{{ .Params.line }}</span>
+{{ $slug := .File.TranslationBaseName }}
+{{ $imagePath := printf "images/cast/%s.webp" $slug }}
+<a class="char-card" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
+  <div class="char-card__image-container">
+    <img src="{{ $imagePath | relURL }}" alt="{{ .Title }}" class="char-card__img" loading="lazy">
+  </div>
+  <div class="char-card__details">
+    <h3 class="char-card__name">{{ .Title }}</h3>
+    <span class="char-card__role">{{ .Params.role }}</span>
+    <p class="char-card__bio">{{ .Params.card_bio | default .Params.line }}</p>
+    <div class="char-card__divider"></div>
+  </div>
 </a>
