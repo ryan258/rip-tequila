@@ -5,8 +5,20 @@ category: "Headwear"
 accent: "black"
 icon: "hat"
 image: "images/merch/rip-tequila-hat.webp"
+detail_image: "images/merch/rip-tequila-hat-embroidery.webp"
+secondary_image: "images/merch/rip-tequila-hat-strap.webp"
 line: "Low profile. High proof."
 price: "$30"
+deckle_icon: "agave"
+deckle_quote: "THE PIECE YOU WEAR WHEN YOU WANT TO SIGNAL YOUR IMPECCABLE TASTE WITHOUT HAVING TO SHOUT ACROSS A LOUD ROOM."
+quote: "Low profile. High proof."
+built_for:
+  - icon: "sun"
+    text: "Shielding your eyes from the harsh sunlight after an evening that lasted too long."
+  - icon: "wind"
+    text: "Long highway drives with the windows rolled completely down."
+  - icon: "agave"
+    text: "Subtle luxury flexes in dive bars where everyone else is wearing corporate swag."
 seo_title: "RIP Tequila Hat — Dark Humor Tequila Headwear | RIP Tequila"
 seo_description: "Unstructured low-profile strapback cap with the embroidered RIP monogram. Low profile. High proof. Subtle luxury headwear from the afterlife cantina."
 ---
@@ -26,4 +38,3 @@ If someone recognizes the mark, you’ve instantly found a kindred spirit. If th
 - Subtle luxury flexes in dive bars where everyone else is wearing corporate swag.
 
 > *"Low profile. High proof."*
-

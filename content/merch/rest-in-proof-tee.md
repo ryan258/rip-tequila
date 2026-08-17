@@ -8,6 +8,16 @@ image: "images/merch/rest-in-proof-tee.webp"
 line: "Built for legendary exits."
 price: "$28"
 feature: true
+deckle_icon: "shirt"
+deckle_quote: "THE FLAGSHIP UNIFORM OF LA CANTINA DEL ÚLTIMO TRAGO. BUILT FOR QUIET ENTRANCES AND LEGENDARY EXITS."
+quote: "Built for legendary exits."
+built_for:
+  - icon: "monument"
+    text: "Looking impeccably dressed at occasions you barely remember RSVPing to."
+  - icon: "door"
+    text: "Walking into a room like you own the place and leaving like you own the night."
+  - icon: "glass"
+    text: "The precise stylistic intersection between an upscale gala and an unscheduled afterparty."
 seo_title: "Rest In Proof Tee — Dark Humor Tequila Apparel | RIP Tequila"
 seo_description: "The signature heavyweight black tee of RIP Tequila — minimalist luxury monogram on the chest, Rest In Proof statement across the back. Built for legendary exits."
 ---
@@ -27,4 +37,3 @@ Inside the neck collar sits a discreet printed confession: *Member of the Round.
 - The precise stylistic intersection between an upscale gala and an unscheduled afterparty.
 
 > *"Built for legendary exits."*
-

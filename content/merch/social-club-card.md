@@ -7,6 +7,16 @@ icon: "card"
 image: "images/merch/social-club-card.webp"
 line: "Membership expires never."
 price: "Join Free"
+deckle_icon: "card"
+deckle_quote: "THE PHYSICAL CREDENTIAL OF THE AFTERLIFE INNER CIRCLE. MEMBERSHIP EXPIRES NEVER."
+quote: "Membership expires never. Benefits are questionable. Hydration encouraged."
+built_for:
+  - icon: "card"
+    text: "Wallets that need an undeniably intriguing conversation piece."
+  - icon: "skull"
+    text: "Collectors who appreciate a dark joke told with a straight face and real production budget."
+  - icon: "glass"
+    text: "Anyone who knows that true loyalty programs shouldn't require monthly subscription fees."
 seo_title: "Don Muerte Social Club Card — Membership Collectible | RIP Tequila"
 seo_description: "The official Don Muerte Social Club membership card. Heavy matte black cardstock with metallic gold foil. Membership Expires Never."
 ---
@@ -30,4 +40,3 @@ This card is not sold on a rack. It is issued. When you join the **Don Muerte So
 - Anyone who knows that true loyalty programs shouldn't require monthly subscription fees.
 
 > *"Membership expires never. Benefits are questionable. Hydration encouraged."*
-

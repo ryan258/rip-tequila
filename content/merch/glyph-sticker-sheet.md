@@ -7,6 +7,16 @@ icon: "stickers"
 image: "images/merch/glyph-sticker-sheet.webp"
 line: "One symbol. One bad idea."
 price: "$8"
+deckle_icon: "stickers"
+deckle_quote: "TWELVE DIE-CUT VINYL HIEROGLYPHS DESIGNED TO TRANSFORM MUNDANE PERSONAL POSSESSIONS INTO ARTIFACTS OF LEGEND."
+quote: "One symbol. One bad idea."
+built_for:
+  - icon: "bell"
+    text: "Brass Bell on the espresso machine (status: guaranteed morning ritual)."
+  - icon: "skull"
+    text: "Sombrero Skull on a titanium laptop lid (status: brings instant authority)."
+  - icon: "monument"
+    text: "Caretaker Monument on the inside lid of an emergency flask (status: highly recommended)."
 seo_title: "Glyph Sticker Sheet — Dark Humor Stickers | RIP Tequila"
 seo_description: "Twelve thick vinyl die-cut glyph stickers from RIP Tequila — agave, skull, bell, lime, bottle, monument, rose, maracas, moon, cross, shot glass, and the RIP seal."
 ---
@@ -24,4 +34,3 @@ Engineered to endure dishwasher cycles, desert dust storms, and the chaotic inte
 - **Caretaker Monument** on the inside lid of an emergency flask (status: highly recommended).
 
 > *"One symbol. One bad idea."*
-
