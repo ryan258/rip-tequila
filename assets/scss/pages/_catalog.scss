@@ -176,3 +176,515 @@
     min-height: 180px;
   }
 }
+
+/* ==========================================================================
+   Characters Page Redesign Styles
+   ========================================================================== */
+
+// 1. Custom Hero Section
+.char-hero {
+  @include paper-texture($texture-opacity-light);
+  position: relative;
+  overflow: hidden;
+  background: $color-black;
+  color: $color-cream;
+  isolation: isolate;
+  min-height: 520px;
+  padding-top: clamp($space-2xl, 6vw, $space-3xl);
+  padding-bottom: 120px; // space for overlapping features container
+
+  @media (max-width: $breakpoint-md) {
+    padding-bottom: $space-2xl;
+  }
+}
+
+.char-hero__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0.28;
+    filter: contrast(1.15) brightness(0.9);
+  }
+}
+
+.char-hero__inner {
+  @include container;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: $space-2xl;
+  align-items: center;
+  
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.char-hero__copy {
+  display: grid;
+  gap: $space-md;
+  max-width: 580px;
+}
+
+.char-hero__eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  font-size: 1.1rem;
+}
+
+.char-hero__title {
+  @include poster-title(3rem, 7vw, 6.2rem);
+  line-height: 0.9;
+  margin: 0;
+}
+
+.char-hero__body {
+  @include body-copy(clamp(1.05rem, 1.25vw, 1.25rem));
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba($color-cream, 0.9);
+}
+
+.char-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-md;
+  margin-top: $space-sm;
+}
+
+// Custom Red Outline Button
+.button--outline {
+  border-color: $color-red;
+  color: $color-red;
+  background: transparent;
+  
+  &:hover,
+  &:focus-visible {
+    background: $color-red;
+    color: $color-cream;
+    border-color: $color-red;
+  }
+}
+
+// 2. Overlapping Features Container
+.char-features-container {
+  @include container;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 10;
+
+  @media (max-width: $breakpoint-md) {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: $space-xl;
+    padding-inline: 0;
+  }
+}
+
+.char-features-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: $color-cream;
+  color: $color-black;
+  border: 2px solid $color-black;
+  box-shadow: 8px 8px 0 rgba($color-black, 0.15);
+  padding: $space-md;
+  gap: $space-md;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-lg;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+    gap: $space-md;
+  }
+}
+
+.char-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-sm;
+  padding-inline: $space-xs;
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba($color-black, 0.12);
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    &:nth-child(even) {
+      border-right: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    border-right: none !important;
+    border-bottom: 1px solid rgba($color-black, 0.08);
+    padding-bottom: $space-sm;
+    
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.char-feature__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+  
+  .rip-glyph--red {
+    color: $color-red;
+    --glyph-size: 1.8rem;
+  }
+}
+
+.char-feature__details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.char-feature__title {
+  font-family: $font-accent;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.char-feature__text {
+  font-family: $font-body;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgba($color-black, 0.75);
+  margin: 0;
+}
+
+// 3. Editorial Section
+.char-editorial-section {
+  @include section-padding;
+  background: $color-cream;
+  color: $color-black;
+  padding-top: 100px; // account for overlapping hero container
+
+  @media (max-width: $breakpoint-md) {
+    padding-top: $space-2xl;
+  }
+}
+
+.char-editorial__inner {
+  @include container;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: clamp($space-xl, 6vw, $space-3xl);
+  align-items: flex-start;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+  }
+}
+
+.char-editorial__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.char-obsidian-box {
+  @include paper-texture($texture-opacity-light);
+  background: $color-black;
+  color: $color-cream;
+  border: 4px double $color-gold;
+  padding: $space-xl $space-lg;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 380px;
+  max-width: 380px;
+  box-shadow: 12px 12px 0 rgba($color-black, 0.08);
+
+  @media (max-width: $breakpoint-sm) {
+    min-height: 320px;
+    padding: $space-lg $space-md;
+  }
+}
+
+.char-obsidian-box__skull,
+.char-obsidian-box__agave {
+  color: $color-gold;
+  --glyph-size: 2.2rem;
+}
+
+.char-obsidian-box__text {
+  font-family: $font-display;
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin: $space-md 0;
+}
+
+.char-editorial__right {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.char-editorial__lead {
+  font-family: $font-body;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: $color-black;
+  margin: 0;
+}
+
+.char-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: $space-sm 0;
+  display: grid;
+  gap: $space-xs;
+
+  li {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "•";
+      color: $color-red;
+      font-size: 1.4rem;
+      position: absolute;
+      left: 4px;
+      top: -2px;
+    }
+
+    strong {
+      font-weight: 700;
+      color: $color-black;
+    }
+  }
+}
+
+.char-editorial__quote-wrapper {
+  margin-top: $space-lg;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+}
+
+.char-editorial__quote {
+  font-family: $font-accent;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 700;
+  color: $color-red;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.char-editorial__quote-divider {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  width: 100%;
+  max-width: 180px;
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: rgba($color-black, 0.15);
+  }
+
+  .divider-dot {
+    width: 6px;
+    height: 6px;
+    background: $color-red;
+    border-radius: 50%;
+  }
+}
+
+// 4. Cast Grid Section
+.char-grid-section {
+  background: $color-cream;
+  color: $color-black;
+  padding-bottom: clamp($space-2xl, 6vw, $space-3xl);
+  padding-top: $space-sm;
+}
+
+.char-grid__inner {
+  @include container;
+}
+
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.75rem, 1.2vw, 1.25rem);
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Horizontal Character Card
+.char-card {
+  display: flex;
+  background: $color-cream;
+  color: $color-black;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  min-height: 140px;
+  overflow: hidden;
+  transition:
+    transform $transition-fast,
+    box-shadow $transition-fast,
+    border-color $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.18);
+    border-color: $color-red;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.char-card__image-container {
+  width: clamp(90px, 8.5vw, 110px);
+  background: rgba($color-black, 0.03);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.char-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.char-card__details {
+  flex: 1;
+  padding: $space-sm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.char-card__name {
+  font-family: $font-display;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0;
+  color: $color-black;
+}
+
+.char-card__role {
+  @include eyebrow;
+  color: $color-red;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.char-card__bio {
+  font-family: $font-body;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgba($color-black, 0.75);
+  margin: 2px 0 0 0;
+}
+
+.char-card__divider {
+  width: 18px;
+  height: 2px;
+  background: $color-red;
+  margin-top: $space-xs;
+}
+
+// 5. Bottom Slogan Divider
+.char-slogan-divider {
+  margin-top: clamp($space-2xl, 8vw, $space-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+  text-align: center;
+}
+
+.slogan-divider {
+  display: flex;
+  align-items: center;
+  gap: $space-lg;
+  width: 100%;
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: $color-red;
+  }
+
+  .slogan-divider__skull {
+    color: $color-red;
+    --glyph-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.char-slogan-divider__text {
+  font-family: $font-accent;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  color: $color-red;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
