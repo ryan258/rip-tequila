@@ -7,7 +7,6 @@ icon: "shirt"
 image: "images/merch/rest-in-proof-tee.webp"
 line: "Built for legendary exits."
 price: "$28"
-feature: true
 deckle_icon: "shirt"
 deckle_quote: "THE FLAGSHIP UNIFORM OF LA CANTINA DEL ÚLTIMO TRAGO. BUILT FOR QUIET ENTRANCES AND LEGENDARY EXITS."
 quote: "Built for legendary exits."

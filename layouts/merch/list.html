@@ -65,6 +65,14 @@
     </div>
   </section>
 
+  {{ if .Content }}
+  <section class="editorial-section">
+    <div class="editorial-section__inner">
+      {{ .Content }}
+    </div>
+  </section>
+  {{ end }}
+
   {{/* 2. VALUE PILLARS BAR (DARK STRIP) */}}
   <section class="merch-pillars" aria-label="Merchandise standards and benefits">
     <div class="merch-container merch-pillars__grid">
@@ -97,14 +105,16 @@
           <h2 class="merch-catalog__title" id="catalog-heading">Curated for the Morning After</h2>
         </div>
 
-        {{/* Category Filter Tabs */}}
+        {{/* Category Filter Tabs — derived from content so a new category can't go missing */}}
+        {{ $categories := slice }}
+        {{ range .Pages.ByWeight }}
+          {{ $categories = $categories | append (.Params.category | lower) }}
+        {{ end }}
         <nav class="merch-filters" aria-label="Merch category filter">
           <button type="button" class="merch-filter-btn is-active" data-filter="all">ALL</button>
-          <button type="button" class="merch-filter-btn" data-filter="apparel">APPAREL</button>
-          <button type="button" class="merch-filter-btn" data-filter="headwear">HEADWEAR</button>
-          <button type="button" class="merch-filter-btn" data-filter="barware">BARWARE</button>
-          <button type="button" class="merch-filter-btn" data-filter="stickers">STICKERS</button>
-          <button type="button" class="merch-filter-btn" data-filter="club goods">CLUB GOODS</button>
+          {{ range $categories | uniq | sort }}
+            <button type="button" class="merch-filter-btn" data-filter="{{ . }}">{{ . | upper }}</button>
+          {{ end }}
         </nav>
       </div>
 
@@ -143,6 +153,8 @@
 
     </div>
   </section>
+
+  {{ partial "sections/disclaimer.html" . }}
 
   {{/* 4. THE EVIDENCE LOCKER SECTION */}}
   <section class="merch-locker" aria-labelledby="locker-heading">
