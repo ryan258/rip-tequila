@@ -84,6 +84,18 @@
   {{ $name = "star-cross" }}
 {{ else if or (eq $name "moon-star") (eq $name "crescent-star") }}
   {{ $name = "moon-star" }}
+{{ else if or (eq $name "megaphone") (eq $name "bullhorn") (eq $name "press") }}
+  {{ $name = "megaphone" }}
+{{ else if or (eq $name "pencils") (eq $name "pencil") (eq $name "pen") (eq $name "art") }}
+  {{ $name = "pencils" }}
+{{ else if or (eq $name "map") (eq $name "folded-map") }}
+  {{ $name = "map" }}
+{{ else if or (eq $name "still") (eq $name "alembic") (eq $name "distill") }}
+  {{ $name = "still" }}
+{{ else if or (eq $name "rose") (eq $name "flower") }}
+  {{ $name = "rose" }}
+{{ else if or (eq $name "infinity") (eq $name "loop") }}
+  {{ $name = "infinity" }}
 {{ else if eq $name "star" }}
   {{ $name = "star" }}
 {{ end }}
@@ -325,9 +337,46 @@
       <path d="M11 3C7 3.5 4 7 4 11.5C4 16.2 7.8 20 12.5 20C15.2 20 17.6 18.7 19.1 16.8C15 16.5 11.8 13.2 11.8 9.2C11.8 6.7 13.1 4.5 15 3.2C13.8 3.1 12.4 3 11 3Z" fill="currentColor"/>
       <path d="M18 4L18.8 6.2L21 7L18.8 7.8L18 10L17.2 7.8L15 7L17.2 6.2L18 4Z" fill="currentColor"/>
 
+    {{ else if eq $name "megaphone" }}
+      {{/* Press & Media Bullhorn */}}
+      <path d="M4 14V10C4 9.45 4.45 9 5 9H8L15 4V20L8 15H5C4.45 15 4 14.55 4 14Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+      <path d="M6 15V19C6 19.55 6.45 20 7 20H8C8.55 20 9 19.55 9 19V15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M18 8.5C19.2 9.5 20 10.7 20 12C20 13.3 19.2 14.5 18 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M20.5 6C22.2 7.8 23 9.8 23 12C23 14.2 22.2 16.2 20.5 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+
+    {{ else if eq $name "pencils" }}
+      {{/* Collaborations & Art Crossed Pencils */}}
+      <path d="M4.5 19.5L7.5 19L19.5 7L17 4.5L5 16.5L4.5 19.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+      <path d="M19.5 19.5L16.5 19L4.5 7L7 4.5L19 16.5L19.5 19.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+      <path d="M6.5 17.5L17.5 6.5M17.5 17.5L6.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+
+    {{ else if eq $name "map" }}
+      {{/* Folded Location Map */}}
+      <path d="M3 6.5L8.5 4L15.5 6.5L21 4V17.5L15.5 20L8.5 17.5L3 20V6.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+      <path d="M8.5 4V17.5M15.5 6.5V20" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5.5 11.5L6.5 12.5M11.5 10.5L12.5 11.5M17.5 12.5L18.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+
+    {{ else if eq $name "still" }}
+      {{/* Copper Pot Distillation Still */}}
+      <path d="M7 21H17M12 14C15 14 17 17 17 21H7C7 17 9 14 12 14Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+      <path d="M11 7H13V14H11V7Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+      <path d="M12 7C12 4 15 3 18 3V5C16.5 5 15 5.5 15 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M18 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+
+    {{ else if eq $name "rose" }}
+      {{/* La Rosa Negra Afterlife Rose */}}
+      <circle cx="12" cy="9" r="6" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+      <path d="M12 5C10 7 10 11 12 13M12 5C14 7 14 11 12 13" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M8 9C10 9 14 9 16 9" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M12 15V22M12 18L15 16M12 19L9 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+
+    {{ else if eq $name "infinity" }}
+      {{/* Los Maracas Eternal Rhythm Infinity */}}
+      <path d="M8 12C5.5 12 4 10 4 8C4 6 5.5 4 8 4C10.5 4 12 6 12 8C12 10 13.5 12 16 12C18.5 12 20 10 20 8C20 6 18.5 4 16 4C13.5 4 12 6 12 8C12 10 10.5 12 8 12Z" transform="rotate(45 12 12)" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="currentColor" fill-opacity="0.15"/>
+
     {{ else if eq $name "star" }}
-      {{/* Cantina 5-Point Star */}}
-      <path d="M12 2L14.9 8.2L21.7 9.2L16.8 14L18 20.8L12 17.5L6 20.8L7.2 14L2.3 9.2L9.1 8.2L12 2Z" fill="currentColor"/>
+      {{/* Classic 5-Point Star */}}
+      <path d="M12 2L14.9 8.6L22 9.3L16.7 14.1L18.2 21.2L12 17.6L5.8 21.2L7.3 14.1L2 9.3L9.1 8.6L12 2Z" fill="currentColor"/>
 
     {{ else if or (eq $name "arrow-right") (eq $name "arrow") }}
       <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
