@@ -70,6 +70,22 @@
   {{ $name = "people" }}
 {{ else if or (eq $name "wine-bottle") (eq $name "bottle") }}
   {{ $name = "bottle" }}
+{{ else if or (eq $name "sun") (eq $name "sunlight") }}
+  {{ $name = "sun" }}
+{{ else if or (eq $name "wind") (eq $name "waves") (eq $name "road") }}
+  {{ $name = "wind" }}
+{{ else if or (eq $name "star-burst") (eq $name "sunburst") }}
+  {{ $name = "star-burst" }}
+{{ else if or (eq $name "star-diamond") (eq $name "diamond-star") }}
+  {{ $name = "star-diamond" }}
+{{ else if or (eq $name "star-eight") (eq $name "faceted-star") }}
+  {{ $name = "star-eight" }}
+{{ else if or (eq $name "star-cross") (eq $name "iron-star") }}
+  {{ $name = "star-cross" }}
+{{ else if or (eq $name "moon-star") (eq $name "crescent-star") }}
+  {{ $name = "moon-star" }}
+{{ else if eq $name "star" }}
+  {{ $name = "star" }}
 {{ end }}
 
 <span class="rip-glyph rip-glyph--{{ $name }}{{ with $class }} {{ . }}{{ end }}"{{ with $size }} style="--glyph-size: {{ . }};"{{ end }}{{ if $ariaHidden }} aria-hidden="true"{{ else }}{{ with $ariaLabel }} role="img" aria-label="{{ . }}"{{ end }}{{ end }}>
@@ -272,6 +288,46 @@
 
     {{ else if eq $name "social-youtube" }}
       <path d="M21.5 6.5C21.8 7.6 22 9.2 22 12C22 14.8 21.8 16.4 21.5 17.5C21.2 18.6 20.3 19.5 19.2 19.8C17.8 20.2 12 20.2 12 20.2C12 20.2 6.2 20.2 4.8 19.8C3.7 19.5 2.8 18.6 2.5 17.5C2.2 16.4 2 14.8 2 12C2 9.2 2.2 7.6 2.5 6.5C2.8 5.4 3.7 4.5 4.8 4.2C6.2 3.8 12 3.8 12 3.8C12 3.8 17.8 3.8 19.2 4.2C20.3 4.5 21.2 5.4 21.5 6.5ZM10 8.5V15.5L16 12L10 8.5Z" fill="currentColor"/>
+
+    {{ else if eq $name "sun" }}
+      {{/* Desert Sun / Sunlight */}}
+      <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+      <path d="M12 2V5M12 19V22M2 12H5M19 12H22M4.93 4.93L7.05 7.05M16.95 16.95L19.07 19.07M4.93 19.07L7.05 16.95M16.95 7.05L19.07 4.93" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+
+    {{ else if eq $name "wind" }}
+      {{/* Open Highway Wind & Waves */}}
+      <path d="M3 8C6 6.2 9 6.2 12 8C15 9.8 18 9.8 21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 12C6 10.2 9 10.2 12 12C15 13.8 18 13.8 21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 16C6 14.2 9 14.2 12 16C15 17.8 18 17.8 21 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+    {{ else if eq $name "star-burst" }}
+      {{/* Blanco Sunburst Star */}}
+      <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
+      <path d="M12 1L13.2 8L18.5 3.5L14 8.8L21 10L14 11.2L18.5 16.5L13.2 12L12 19L10.8 12L5.5 16.5L10 11.2L3 10L10 8.8L5.5 3.5L10.8 8L12 1Z" fill="currentColor"/>
+
+    {{ else if eq $name "star-diamond" }}
+      {{/* Reposado 4-Point Diamond Star */}}
+      <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="currentColor"/>
+      <circle cx="12" cy="12" r="1.5" fill="var(--color-cream, #f2ede0)"/>
+
+    {{ else if eq $name "star-eight" }}
+      {{/* Añejo 8-Ray Star */}}
+      <path d="M12 2L13.8 8.2L20 6.5L15.8 11L20.5 15.5L14.2 14.2L12 20.5L9.8 14.2L3.5 15.5L8.2 11L4 6.5L10.2 8.2L12 2Z" fill="currentColor"/>
+
+    {{ else if eq $name "star-cross" }}
+      {{/* Extra Añejo Cross Star */}}
+      <path d="M12 2V22M2 12H22" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+      <circle cx="12" cy="12" r="3" fill="currentColor"/>
+      <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+
+    {{ else if eq $name "moon-star" }}
+      {{/* Midnight Agave Reserve Moon & Radiant Star */}}
+      <path d="M11 3C7 3.5 4 7 4 11.5C4 16.2 7.8 20 12.5 20C15.2 20 17.6 18.7 19.1 16.8C15 16.5 11.8 13.2 11.8 9.2C11.8 6.7 13.1 4.5 15 3.2C13.8 3.1 12.4 3 11 3Z" fill="currentColor"/>
+      <path d="M18 4L18.8 6.2L21 7L18.8 7.8L18 10L17.2 7.8L15 7L17.2 6.2L18 4Z" fill="currentColor"/>
+
+    {{ else if eq $name "star" }}
+      {{/* Cantina 5-Point Star */}}
+      <path d="M12 2L14.9 8.2L21.7 9.2L16.8 14L18 20.8L12 17.5L6 20.8L7.2 14L2.3 9.2L9.1 8.2L12 2Z" fill="currentColor"/>
 
     {{ else if or (eq $name "arrow-right") (eq $name "arrow") }}
       <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
