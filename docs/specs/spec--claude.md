@@ -13,9 +13,10 @@ to an AI — it's the spec that prompt (or any engineer) should build against.
 **RIP Tequila** is a fictional parody spirits brand: the house label of "La
 Cantina del Último Trago," an afterlife cantina staffed by eight deceased
 characters who pour five bottles with the total sincerity of a real luxury
-spirits company. It's a static marketing/brand site — no cart, no checkout,
-no real product. The "merch" pages are the one place a real transaction can
-happen (external, off-site).
+spirits company. It's a static marketing/brand prototype — no cart, no
+checkout, and no live product. The merch pages are designed to support a real
+external transaction later, but currently present clearly labeled artifact
+concepts only.
 
 **What it's parodying:** ultra-premium spirits marketing conventions —
 master-blender legacy stories, small-batch mythology, three-generations-of-
@@ -104,8 +105,14 @@ Body ends with a "what he/she pours" callout linking to their bottle.
 
 **Merch products** (`content/merch/*.md`): `weight`, `category`, `accent`,
 `icon`, `image`, `line`, `price`, `deckle_icon`, `deckle_quote`, `quote`,
-`built_for` (list of `{icon, text}`), plus SEO fields. Current `category`
-values: Apparel, Headwear, Barware, Stickers, Club Goods.
+`built_for` (list of `{icon, text}`), `provenance` (`custodian`,
+`custodian_href`, `origin`, `expression`, `expression_href`, `record`), plus
+SEO fields. The provenance block is the structural bridge from a physical
+artifact concept to its character, cantina origin, and fictional bottle; the
+merch list and single templates must continue to render it. `price` is
+optional: a product with no price renders as "issued, not sold" in the list and
+omits the price row on the detail page (the Social Club card uses this).
+Current `category` values: Apparel, Headwear, Barware, Stickers, Club Goods.
 
 > **Contract:** the merch list template derives its category-filter tabs
 > from the `category` values present in content at build time — it must
@@ -201,9 +208,9 @@ layouts/
 
 `sections/disclaimer.html` renders the "No Actual Spirits. All the Spirit."
 callout. It belongs on `/merch/` specifically, directly under the product
-grid — that's the one page where a real purchase happens, so a merch-page
-redesign must not quietly drop it in favor of the smaller sitewide footer
-disclaimer alone.
+grid — that's the one page designed to become a real external purchase route,
+so a merch-page redesign must not quietly drop it in favor of the smaller
+sitewide footer disclaimer alone.
 
 ---
 
@@ -262,7 +269,8 @@ validation beyond Hugo's own build failing on broken template syntax.
 
 ## 9. Non-goals / guardrails
 
-- No real e-commerce: merch pages link out, they don't take payment on-site.
+- No on-site e-commerce: a future live merch state may link to a real external
+  purchase destination, but it must not take payment on-site.
 - No real alcohol claims: no ABV, no production/distillation claims, no
   claims that would need real alcohol-marketing legal review.
 - No photography, no stock icons, no 3D/AI-rendered "photoreal" scenes —
@@ -271,3 +279,19 @@ validation beyond Hugo's own build failing on broken template syntax.
 - No template change that stops rendering `.Content` or a disclaimer partial
   without an equivalent replacement — both have silently regressed before
   during a redesign; treat their presence as testable, not just reviewable.
+
+### Prototype feature gates
+
+`hugo.yaml` owns the current capability state under `params.features`:
+
+- `commerce: false` labels merchandise and drop records as concepts, changes
+  prices to concept prices, and prevents the UI from implying orders are open.
+- `social_club_enrollment: false` removes email inputs from rendered pages and
+  presents the charter and credential as forthcoming. The dormant form and
+  TypeScript handler remain in source for a later real integration.
+
+Changing either flag is not sufficient release evidence by itself. Commerce
+requires a confirmed external purchase path, inventory/fulfillment truth, and
+updated terms. Enrollment requires a real provider, successful persistence,
+privacy/retention terms, unsubscribe and deletion paths, and an end-to-end
+submission test before the flag can be enabled.

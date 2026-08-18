@@ -2,6 +2,11 @@
 
 A modular Hugo prototype for the fictional RIP Tequila parody brand.
 
+The checked-in configuration intentionally keeps commerce and Social Club
+enrollment disabled. Merchandise is presented as concept work, and the Social
+Club is forthcoming; see `params.features` in `hugo.yaml` and the release
+requirements in `docs/specs/spec--claude.md` before enabling either capability.
+
 ## Run
 
 ```sh
