@@ -347,14 +347,9 @@
 
 .cantina-geography__grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: clamp(0.6rem, 1vw, 1rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.4vw, 1.25rem);
   align-items: stretch;
-
-  @media (max-width: $breakpoint-xl) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: $space-md;
-  }
 
   @media (max-width: $breakpoint-lg) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -450,6 +445,25 @@
   }
 }
 
+.geo-card__character {
+  font-family: $font-accent;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-red;
+  margin-top: auto;
+  padding-top: $space-sm;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-black;
+  }
+}
+
 // -------------------------------------------------------------
 // 4. THE DESERT SENTINEL / EL VIGÍA BANNER
 // -------------------------------------------------------------
@@ -538,6 +552,10 @@
   margin-top: $space-md;
   margin-bottom: 0;
   max-width: 160px;
+}
+
+.cantina-sentinel__copy .button {
+  margin-top: $space-md;
 }
 
 // -------------------------------------------------------------

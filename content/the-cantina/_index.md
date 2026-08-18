@@ -16,15 +16,14 @@ Step past the heavy wooden archway and the world outside goes silent:
 
 ### The Geography of the Room
 
-- **The Long Mahogany Bar**: Cantina Jack’s sacred domain. Polished until you can see your own startled reflection, lined with heavy bottomed glassware and bottles that glow like liquid topaz under the low amber lights.
-- **The Crimson Stage**: A modest platform draped in dusty black velvet where **La Rosa Negra** commands the room. When her voice rises, conversations freeze mid-sentence and glasses pause halfway to lips.
-- **The Red-Ribboned Bell**: Forged from solid brass and mounted directly above the heavy entrance. **Campana Roja** keeps one hand near the cord. It chimes only once per evening — the exact moment your casual stop-in becomes an indelible chapter of your personal mythology.
-- **The Absolution Booth**: A leather-lined corner booth where **Padre Proof** presides with a small black book, nodding sympathetically as patrons confess why they ordered that fourth round on a Tuesday.
-- **The Back Office**: Where **El Sepulturero** meticulously records every name, toast, and forgotten argument in a leather-bound manifest that never leaves the building.
-- **The Moonlit Patio**: Where **Los Maracas** keep a relentless, syncopated rhythm going on brass and bone, because nobody in the afterlife believes in closing time.
-- **The High Back Chair**: Carved from dark ironwood at the head of the bar. It belongs to **Don Muerte**. Even when it sits empty, you can feel the room organizing itself around it.
+- **The Long Mahogany Bar**: Cantina Jack keeps the premium bottles below Los Maracas’ downbeat. The house catalog calls the lower shelf *earth-rested storage*. Jack calls it learning.
+- **The Crimson Stage**: **La Rosa Negra** chooses the heartbreak; Los Maracas dispute the tempo. Every encore adds another row to El Sepulturero’s dignity plot.
+- **The Red-Ribboned Bell**: El Vigía tips his hat, Don Muerte declines his ceremonial veto, and **Campana Roja** rings. The admissions policy remains prestigious, selective, and undocumented.
+- **The Absolution Booth**: **Padre Proof** reconciles *Still Owed* against Jack’s tab. The totals have disagreed for 214 years; both records remain independently certified.
+- **The Back Office**: **El Sepulturero** receives Padre’s absolved mistakes and El Vigía’s abandoned excuses. Nothing may be called rare until he fails to locate it twice.
+- **The Moonlit Patio**: **Los Maracas** turn Rosa’s heartbreak into dance music and Jack’s top shelf into a liability. Officially, the floor vibration is a finishing process.
+- **The High Back Chair**: **Don Muerte** raises the glass; Campana holds the bell; Rosa waits on the first note. The brochure calls it a proprietary opening. Don calls it Tuesday.
 
-Outside, stretching to the dark horizon, is the desert. **El Vigía** watches the highway lights. Nothing and nobody reaches the door without him knowing first.
+Outside, stretching to the dark horizon, **El Vigía** watches the highway lights while Campana Roja watches for his hat. The criteria are unpublished. The waitlist is imaginary. Demand remains exceptional.
 
 > *"The bell rang. You're in. Make it a night worth haunting."*
-

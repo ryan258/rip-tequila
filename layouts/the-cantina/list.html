@@ -104,7 +104,7 @@
     </div>
   </section>
 
-  {{/* 3. THE GEOGRAPHY OF THE ROOM (7-CARD GRID) */}}
+  {{/* 3. THE GEOGRAPHY OF THE ROOM (CONNECTED CARD GRID) */}}
   <section class="cantina-geography" aria-labelledby="geography-heading">
     <div class="cantina-container">
 
@@ -124,6 +124,7 @@
                   {{ partial "image.html" (dict "src" (.image) "alt" (.title) "class" "geo-card__img" "loading" "lazy" "decoding" "async") }}
                 </div>
                 <p class="geo-card__desc">{{ .desc | safeHTML }}</p>
+                <a class="geo-card__character" href="{{ strings.TrimPrefix "/" .character_href | relURL }}">Open {{ .character }} dossier →</a>
               </div>
             </div>
           </article>
@@ -145,9 +146,11 @@
             </div>
 
             <div class="cantina-sentinel__copy">
-              <p class="cantina-sentinel__lead">Outside, stretching to the dark horizon, is the desert.</p>
-              <p class="cantina-sentinel__highlight"><strong>El Vigía</strong> watches the highway lights.</p>
-              <p class="cantina-sentinel__sub">Nothing and nobody reaches the door without him knowing first.</p>
+              <p class="cantina-sentinel__lead">Outside, stretching to the dark horizon, is the least documented allocation system in the premium-spirit industry.</p>
+              <p class="cantina-sentinel__highlight"><strong>El Vigía</strong> watches the highway lights; Campana Roja watches for his hat.</p>
+              <p class="cantina-sentinel__sub">The criteria are unpublished. The waitlist is imaginary. Demand remains exceptional.</p>
+
+              <a class="button button--outline" href="{{ "characters/el-vigia/" | relURL }}">Open El Vigía’s Dossier</a>
 
               <div class="cantina-divider cantina-divider--center cantina-sentinel__divider" aria-hidden="true">
                 <span class="cantina-divider__line"></span>
