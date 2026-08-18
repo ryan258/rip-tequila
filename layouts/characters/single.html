@@ -109,6 +109,38 @@
     </div>
   </section>
 
+  {{ with .Params.connections }}
+  <!-- Reciprocal ensemble relationships: every dossier shows how this role
+       affects the same nightly shift as the rest of the cast. -->
+  <section class="char-detail-connections-section" aria-labelledby="connections-{{ $slug }}">
+    <div class="char-detail-connections-inner">
+      <div class="char-detail-connections-header">
+        <p class="char-detail-connections-eyebrow">⤛ The Night Shift ⤜</p>
+        <h2 class="char-detail-connections-title" id="connections-{{ $slug }}">Nobody Haunts Alone</h2>
+        <p class="char-detail-connections-intro">Every legend in the cantina is somebody else’s procedure, problem, or alibi.</p>
+      </div>
+
+      <ul class="char-detail-connections-grid" role="list">
+        {{ range . }}
+        <li class="char-detail-connection-item">
+          <a class="char-detail-connection-card" href="{{ strings.TrimPrefix "/" .href | relURL }}">
+            <span class="char-detail-connection-icon" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md rip-glyph--gold") }}
+            </span>
+            <span class="char-detail-connection-copy">
+              <span class="char-detail-connection-label">{{ .label }}</span>
+              <span class="char-detail-connection-name">{{ .name }}</span>
+              <span class="char-detail-connection-text">{{ .text }}</span>
+              <span class="char-detail-connection-action">Open dossier →</span>
+            </span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+  {{ end }}
+
   <!-- Bottom Section: Pour & Speaks -->
   <section class="char-detail-bottom-section">
     <div class="char-detail-bottom-row">

@@ -1045,7 +1045,158 @@ a.merch-detail__drop-banner:hover {
   max-width: 32ch;
 }
 
-// 3. Bottom Pour & Speaks Section
+// 3. Reciprocal ensemble relationships
+.char-detail-connections-section {
+  @include section-padding;
+  @include paper-texture($texture-opacity-light);
+  background: $color-black;
+  color: $color-cream;
+  border-bottom: 3px solid $color-red;
+}
+
+.char-detail-connections-inner {
+  @include container;
+}
+
+.char-detail-connections-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  column-gap: clamp($space-lg, 5vw, $space-3xl);
+  align-items: end;
+  margin-bottom: $space-xl;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $space-xs;
+  }
+}
+
+.char-detail-connections-eyebrow {
+  @include eyebrow;
+  grid-column: 1 / -1;
+  color: $color-gold;
+  margin: 0 0 $space-xs;
+}
+
+.char-detail-connections-title {
+  font-family: $font-display;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $color-cream;
+  margin: 0;
+}
+
+.char-detail-connections-intro {
+  font-family: $font-body;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-weight: 600;
+  line-height: 1.55;
+  color: rgba($color-cream, 0.78);
+  max-width: 52ch;
+  margin: 0;
+}
+
+.char-detail-connections-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $space-lg;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.char-detail-connection-item {
+  min-width: 0;
+}
+
+.char-detail-connection-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: $space-md;
+  height: 100%;
+  padding: $space-lg;
+  color: $color-black;
+  background: $color-cream;
+  border: 2px solid $color-gold;
+  box-shadow: 7px 7px 0 rgba($color-red, 0.55);
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-black;
+    border-color: $color-red;
+    outline: 3px solid $color-gold;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+    padding: $space-md;
+  }
+}
+
+.char-detail-connection-icon {
+  display: grid;
+  place-items: center;
+  align-self: start;
+  width: 54px;
+  height: 54px;
+  color: $color-gold;
+  background: $color-black;
+  border: 2px solid $color-gold;
+  border-radius: 50%;
+}
+
+.char-detail-connection-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.char-detail-connection-label {
+  font-family: $font-accent;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-red;
+}
+
+.char-detail-connection-name {
+  font-family: $font-display;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.char-detail-connection-text {
+  font-family: $font-body;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba($color-black, 0.75);
+  margin-top: $space-xs;
+}
+
+.char-detail-connection-action {
+  font-family: $font-accent;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-red;
+  margin-top: auto;
+  padding-top: $space-sm;
+}
+
+// 4. Bottom Pour & Speaks Section
 .char-detail-bottom-section {
   @include section-padding;
   background: $color-cream;
@@ -1256,7 +1407,7 @@ a.merch-detail__drop-banner:hover {
   margin: 0;
 }
 
-// 4. Bottom Ribbon quote
+// 5. Bottom Ribbon quote
 .char-detail-ribbon-section {
   background: $color-cream;
 }

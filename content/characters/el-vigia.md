@@ -17,6 +17,17 @@ location_image: "images/cantina/el-vigia-desert.webp"
 icon: "eye"
 line: "Follow the agave after midnight."
 lead: "Posted where the asphalt ends and the agave begins, watching the headlights of everyone still looking for the door."
+connections:
+  - name: "El Sepulturero"
+    href: "/characters/el-sepulturero/"
+    label: "Desert Intake"
+    text: "He collects the excuses travelers abandon on the road. El Sepulturero catalogs them as recovered evidence."
+    icon: "shovel"
+  - name: "Campana Roja"
+    href: "/characters/campana-roja/"
+    label: "Admissions"
+    text: "His hat admits the traveler. Her bell admits the story. The waitlist exists entirely by rumor."
+    icon: "bell"
 highlights:
   - title: "Boundary Sentinel"
     text: "Posted where the asphalt ends and the agave begins."
@@ -51,12 +62,13 @@ seo_description: "El Vigía watches the road into La Cantina del Último Trago. 
 
 Some travelers arrive because they are lost. Others arrive because they have finally run out of reasons to keep driving. He never asks which.
 
-He doesn’t deliver speeches, check IDs, or issue formal invitations. He simply leans against an ancient fencepost in sun-cracked leather boots, tilts his wide-brimmed hat, and lets the deserving pass. Perched on a bleached deadwood branch beside him, a patient vulture keeps watch and offers zero small talk.
+He doesn’t deliver speeches, check IDs, or issue formal invitations. He simply leans against an ancient fencepost in sun-cracked leather boots, tilts his wide-brimmed hat, and lets the deserving pass. The label calls this an allocation system. The waitlist exists entirely by rumor, the acceptance criteria have never been published, and demand remains exceptional.
 
-He knows every detour, every traveler, and every excuse ever offered for being out on the road past 2:00 AM. When you finally spot the warm neon glow of the cantina in the distance, know this: El Vigía saw you coming an hour ago.
+Perched on a bleached deadwood branch beside him, a patient vulture keeps watch and offers zero small talk. Travelers leave their least convincing excuses at the fencepost. **El Sepulturero** collects them at dawn and enters each one into the Manifest as recovered evidence.
+
+He knows every detour, every traveler, and every excuse ever offered for being out on the road past 2:00 AM. When you finally spot the warm neon glow of the cantina in the distance, know this: El Vigía saw you coming an hour ago. If his hat tips, **Campana Roja** already has one hand on the cord.
 
 
 ## What he pours
 
 **Midnight Agave Reserve.** The rare, contemplative late-arrival pour. If a glass is waiting when you sit down, El Vigía sent it in ahead of you.
-

@@ -17,6 +17,17 @@ location_image: "images/cantina/the-high-back-chair.webp"
 icon: "skull"
 line: "Life's short. Toast accordingly."
 lead: "Master of ceremonies, arbiter of taste, and the only voice in the building that can stop a brass section mid-crescendo."
+connections:
+  - name: "Campana Roja"
+    href: "/characters/campana-roja/"
+    label: "Ceremonial Governance"
+    text: "She controls the bell. He retains one ceremonial veto, an ancient system neither of them can document."
+    icon: "bell"
+  - name: "La Rosa Negra"
+    href: "/characters/la-rosa-negra/"
+    label: "The Handoff"
+    text: "His toast creates the silence. Her first note breaks it. The label calls this a proprietary two-stage opening."
+    icon: "rose"
 highlights:
   - title: "Master of Ceremonies"
     text: "He keeps order with a raised glass."
@@ -51,14 +62,15 @@ Don Muerte runs the room. He is the master of ceremonies, the arbiter of taste, 
 
 He wears a wide-brimmed black sombrero embroidered with silver thread. What lies beneath the brim is subject to enthusiastic debate; he has never confirmed the presence of a skull, and the regulars learned long ago that asking questions only results in a longer bar tab. 
 
-He carries a single vintage shot glass from which he pours with surgical precision, though nobody has ever seen him take a sip. Behind his station sits a single century-old agave plant that has survived three revolutions and an indefinite number of poorly planned afterparties.
+He carries a single vintage shot glass from which he pours with surgical precision, though nobody has ever seen him take a sip. Behind his station sits a single century-old agave plant that has survived three revolutions, an indefinite number of poorly planned afterparties, and seven competing claims about who planted it. Every official origin story cites the plant. None cite the same century.
 
 He gives exactly one toast per night. When he taps his glass, listen carefully — it’s the only advice you’ll receive that doesn't cost anything.
 
 The toast is rarely for the loudest person in the room. More often, it is for someone absent whose name still deserves a place at the table.
 
+When the glass comes down, **Campana Roja** decides whether the bell answers. When the room is finally still, **La Rosa Negra** takes the first note. A branding consultant once called the sequence a proprietary two-stage ritual. Don Muerte called it Tuesday.
+
 
 ## What he pours
 
 **RIP Añejo.** Dark, opulent, gold at the edges, and aged until it develops the gravitas of a final confession.
-

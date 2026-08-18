@@ -1,7 +1,7 @@
 ---
 title: "El Sepulturero"
 weight: 40
-role: "The Cabinet"
+role: "The Caretaker"
 accent: "green"
 card_bio: "Here lies your judgment."
 prop: "Iron Spade"
@@ -17,6 +17,17 @@ location_image: "images/cantina/the-back-office.webp"
 icon: "shovel"
 line: "Here lies your judgment."
 lead: "He works the quiet hours between closing time and whatever comes next — spade in one hand, Manifest in the other."
+connections:
+  - name: "Padre Proof"
+    href: "/characters/padre-proof/"
+    label: "Chain of Custody"
+    text: "Padre forgives the incident. El Sepulturero files it anyway. Absolution is not a retention policy."
+    icon: "cross"
+  - name: "El Vigía"
+    href: "/characters/el-vigia/"
+    label: "Desert Intake"
+    text: "The watcher sends in abandoned excuses from the road. The caretaker assigns each one a provenance number."
+    icon: "eye"
 highlights:
   - title: "Caretaker of the Morning"
     text: "Manages the quiet hours and inters what is left behind."
@@ -49,17 +60,16 @@ seo_description: "El Sepulturero manages the morning after at La Cantina del Úl
 
 **El Sepulturero** handles the quiet hours between closing time and whatever comes next.
 
-When the toasts have run out, the brass bell has quieted, and the patrons have stumbled out into the desert breeze, he walks the grounds with a heavy iron spade and a ledger known simply as *"The Manifest."* 
+When the toasts have run out, the brass bell has quieted, and the patrons have stumbled out into the desert breeze, he walks the grounds with a heavy iron spade and a ledger known simply as *"The Manifest."* **Padre Proof** may absolve the incident before closing. El Sepulturero still files it. Absolution, he maintains, is not a retention policy.
 
 He does not bury people — he buries the collateral damage of a memorable evening. Lost arguments, ill-advised text messages sent at 2:43 AM, forgotten jackets, and abandoned dignity are all interred with solemn dignity and marked with a discreet stone.
 
-He possesses a dry, unflinching wit and an encyclopedic record of every tab ever run in the cantina's history. He doesn't judge you for your mistakes; he simply categorizes them.
+He possesses a dry, unflinching wit and an encyclopedic record of every tab ever run in the cantina's history. **El Vigía** sends him the excuses travelers abandon on the desert road; each receives a provenance number, a condition grade, and a resting place behind the kitchen.
+
+He doesn't judge you for your mistakes; he simply categorizes them. The Manifest is also the cantina's official limited-edition registry. Nothing may be called rare until El Sepulturero has failed to locate it twice.
 
 > *"Leave the judgment. Take the story."*
 
 ## What he pours
 
 **RIP Extra Añejo**, aged 36 months in deep darkness. For extraordinary occasions, he unearths **Gravedigger's Reserve.**
-
->
-

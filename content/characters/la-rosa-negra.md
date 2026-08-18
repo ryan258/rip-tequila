@@ -17,6 +17,17 @@ location_image: "images/cantina/the-crimson-stage.webp"
 icon: "microphone"
 line: "The dead still dance."
 lead: "The undisputed voice of the afterlife. Boleros of doomed romance and 3:00 AM epiphanies, delivered with surgical precision."
+connections:
+  - name: "Don Muerte"
+    href: "/characters/don-muerte/"
+    label: "The Handoff"
+    text: "His toast stills the room. She decides when the silence has aged long enough to sing through."
+    icon: "skull"
+  - name: "Los Maracas"
+    href: "/characters/los-maracas/"
+    label: "Tempo Negotiations"
+    text: "She chooses the heartbreak. They choose how fast it dances. No agreement has survived the first chorus."
+    icon: "maracas"
 highlights:
   - title: "Midnight Boleros"
     text: "Sings of doomed romance and glorious mistakes."
@@ -51,11 +62,12 @@ When **La Rosa Negra** steps to the vintage microphone, the cantina goes dead si
 
 She is the undisputed voice of the afterlife. She sings boleros of doomed romance, glorious mistakes, and 3:00 AM epiphanies with the emotional precision of a master surgeon. She pins a single black rose to her lapel — a flower delivered decades ago for a suitor who never arrived — and keeps a lone candle burning on the edge of the stage. 
 
-Her setlist has never been written down. Some evenings she delivers a smoldering torch ballad that reduces tough guys to tears; other nights she unleashes a high-tempo ranchera that has the entire room stomping on the hardwood. There are no recordings, no live streams, and no encore negotiations.
+Her setlist has never been written down. **Don Muerte** gives her the room with a raised glass; **Los Maracas** immediately begin disputing the tempo. Some evenings she delivers a smoldering torch ballad that reduces tough guys to tears; other nights their high-tempo counterargument has the entire room stomping on the hardwood.
+
+There are no recordings, no live streams, and no encore negotiations. The label describes this as disciplined scarcity. La Rosa Negra describes it as not repeating herself for people who arrived late.
 
 
 ## What she pours
 
 **Rosa Reposado**, an exclusive special edition poured just before her midnight set. Sip it slowly. Never ask for requests.
-
 

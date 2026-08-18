@@ -17,6 +17,17 @@ location_image: "images/cantina/the-absolution-booth.webp"
 icon: "cross"
 line: "I bless this mess."
 lead: "Resident spiritual advisor to anyone whose judgment thins out after 11:00 PM. Absolution is immediate and unbureaucratic."
+connections:
+  - name: "Cantina Jack"
+    href: "/characters/cantina-jack/"
+    label: "Nightly Reconciliation"
+    text: "Jack records what was poured. Padre records what is owed. Their audit has ended in a tie for 214 years."
+    icon: "glass"
+  - name: "El Sepulturero"
+    href: "/characters/el-sepulturero/"
+    label: "Chain of Custody"
+    text: "Padre absolves the mistake. El Sepulturero still requires the receipt, the witness, and the shovel."
+    icon: "shovel"
 highlights:
   - title: "Unbureaucratic Absolution"
     text: "Grants generous sign-offs on late-night vows."
@@ -51,9 +62,13 @@ seo_description: "Padre Proof presides over questionable choices, signs off on m
 
 Stationed in the velvet corner booth, he offers full, unbureaucratic absolution for impulsive toasts, sudden romantic declarations, and questionable karaoke song selections. His paperwork is pristine; his theological tolerance is infinite.
 
-He carries a worn, black leather-bound volume that patrons assume is a liturgical breviary. In reality, it contains tasting notes, cocktail recipes, and a single handwritten ledger titled *"Still Owed to the Bartender."* He has never once judged a soul who sat in his booth — mostly because he has heard every possible variation of human folly and found them all thoroughly entertaining.
+He carries a worn, black leather-bound volume that patrons assume is a liturgical breviary. In reality, it contains tasting notes, cocktail recipes, and a single handwritten ledger titled *"Still Owed to the Bartender."* Every morning he reconciles it against **Cantina Jack's** tab. The totals have disagreed for 214 consecutive years, a record both men cite as proof of independent oversight.
+
+He has never once judged a soul who sat in his booth — mostly because he has heard every possible variation of human folly and found them all thoroughly entertaining. When absolution is granted, **El Sepulturero** still insists on a receipt, a witness, and a complete chain of custody for whatever dignity must be buried.
 
 If you’re wondering whether ordering that extra round of Añejo is a sound life choice, consult Padre Proof. He’ll make the sign of the cross, bless the glass, and tell you it’s a sacrament.
+
+He also chairs the cantina's independent tasting panel. The other voting member is his candle. No expression has scored below 97 points.
 
 > *"Blessed are the almost responsible."*
 

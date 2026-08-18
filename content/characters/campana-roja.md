@@ -17,6 +17,17 @@ location_image: "images/cantina/the-red-ribboned-bell.webp"
 icon: "bell"
 line: "The bell rang. You're in."
 lead: "One hand near the cord, all night. She is not deciding whether the bell rings — only when."
+connections:
+  - name: "El Vigía"
+    href: "/characters/el-vigia/"
+    label: "Admissions"
+    text: "His hat tips on the ridge; her bell confirms the room. No published criteria. Permanent demand."
+    icon: "eye"
+  - name: "Don Muerte"
+    href: "/characters/don-muerte/"
+    label: "One Veto"
+    text: "He may delay the bell once per night. He never has, which is why the privilege remains prestigious."
+    icon: "skull"
 highlights:
   - title: "Portal Guardian"
     text: "Watches the room from the heavy timber entrance."
@@ -49,14 +60,15 @@ seo_description: "Campana Roja rings the brass bell over the portal of La Cantin
 
 **Campana Roja** is the turning point of every evening. She doesn't participate in small talk; she commands destiny.
 
-Standing by the heavy timber entrance with one gloved hand resting near the crimson ribbon of the brass bell, she watches the room with cool discernment. When she decides a night has officially reached its critical mass of joy, audacity, and questionable decisions, she pulls the cord.
+Standing by the heavy timber entrance with one gloved hand resting near the crimson ribbon of the brass bell, she watches the room with cool discernment. **El Vigía** signals from the ridge when the right travelers are approaching. Campana Roja never asks how he chooses them. The resulting admissions policy is described in official materials as *highly selective* because nobody has succeeded in writing it down.
 
-The chime that rings out doesn't signal closing time. It signals transition: the moment you stop being an outsider visiting a bar and become part of the cantina's permanent folklore. After the bell rings, there is no turning back.
+When she decides a night has officially reached its critical mass of joy, audacity, and questionable decisions, she pulls the cord. **Don Muerte** retains one ceremonial veto per evening. He has never exercised it, which has only increased its perceived value.
+
+The chime that rings out doesn't signal closing time. It signals transition: the moment you stop being an outsider visiting a bar and become part of the cantina's permanent folklore. The house attempted to trademark the precise emotional interval between visitor and legend. Campana Roja refused to ring for the paperwork.
 
 > *"I do not announce last call. I announce fate."*
 
 ## What she pours
 
 **RIP Reposado.** The house staple, smooth and amber, poured the split second the bell tolls. For exclusive runs, **Red Bell Reposado.**
-
 
