@@ -3,7 +3,7 @@
 {{ $imagePath := printf "images/cast/%s.webp" $slug }}
 <a class="char-card" href="{{ .RelPermalink }}" data-accent="{{ $accent }}">
   <div class="char-card__image-container">
-    {{ partial "image.html" (dict "src" ($imagePath) "alt" (.Title) "class" "char-card__img" "loading" "lazy") }}
+    {{ partial "image.html" (dict "src" ($imagePath) "alt" (.Title) "class" "char-card__img" "sizes" "110px" "loading" "lazy") }}
   </div>
   <div class="char-card__details">
     <h3 class="char-card__name">{{ .Title }}</h3>

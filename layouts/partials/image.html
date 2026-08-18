@@ -4,7 +4,12 @@
 
        dict keys: src (required, e.g. "images/cast/don-muerte.webp"), alt
        (required, "" for decorative), class, loading (default "lazy"),
-       decoding (default "async").
+       decoding (default "async"), sizes.
+
+       Passing "sizes" (e.g. "90px") opts into resized webp derivatives, for
+       slots far smaller than the source art — a 1254px portrait rendered at
+       30px is a megabyte of wasted download. Without it the original ships
+       unchanged, which is correct for full-bleed heroes and detail shots.
 
        A missing file falls back to a plain tag rather than failing the build —
        front matter can point at art that hasn't landed yet. */ -}}
@@ -13,7 +18,18 @@
 {{- $loading := .loading | default "lazy" -}}
 {{- $decoding := .decoding | default "async" -}}
 {{- if $res -}}
-<img src="{{ $res.RelPermalink }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }} width="{{ $res.Width }}" height="{{ $res.Height }}" loading="{{ $loading }}" decoding="{{ $decoding }}">
+{{- $srcset := "" -}}
+{{- if and .sizes (in (slice "png" "jpeg" "webp") $res.MediaType.SubType) -}}
+  {{- $set := slice -}}
+  {{- range (slice 160 320 640) -}}
+    {{- if lt . $res.Width -}}
+      {{- $d := $res.Resize (printf "%dx webp q80" .) -}}
+      {{- $set = $set | append (printf "%s %dw" $d.RelPermalink .) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $srcset = delimit ($set | append (printf "%s %dw" $res.RelPermalink $res.Width)) ", " -}}
+{{- end -}}
+<img src="{{ $res.RelPermalink }}"{{ with $srcset }} srcset="{{ . }}" sizes="{{ $.sizes }}"{{ end }} alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }} width="{{ $res.Width }}" height="{{ $res.Height }}" loading="{{ $loading }}" decoding="{{ $decoding }}">
 {{- else -}}
 {{- warnf "partial image.html: no asset at %q" $src -}}
 <img src="{{ $src | relURL }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }} loading="{{ $loading }}" decoding="{{ $decoding }}">

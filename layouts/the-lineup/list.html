@@ -71,7 +71,7 @@
             <div class="lineup-card__visual">
               <a href="{{ .RelPermalink }}" class="lineup-card__visual-link" aria-label="View {{ .Title }} details">
                 {{ if .Params.image }}
-                  {{ partial "image.html" (dict "src" (.Params.image) "alt" .Title "class" "lineup-card__bottle-img" "loading" "lazy" "decoding" "async") }}
+                  {{ partial "image.html" (dict "src" (.Params.image) "alt" .Title "class" "lineup-card__bottle-img" "sizes" "90px" "loading" "lazy" "decoding" "async") }}
                 {{ else }}
                   {{ partial "glyph.html" (dict "name" .Params.icon "class" "lineup-card__glyph rip-glyph--2xl") }}
                 {{ end }}
@@ -88,7 +88,7 @@
 
               <div class="lineup-card__custodian">
                 <div class="lineup-card__custodian-avatar">
-                  {{ partial "image.html" (dict "src" $avatarPath "alt" .Params.character_name "class" "lineup-card__avatar-img" "loading" "lazy") }}
+                  {{ partial "image.html" (dict "src" $avatarPath "alt" .Params.character_name "class" "lineup-card__avatar-img" "sizes" "40px" "loading" "lazy") }}
                 </div>
                 <div class="lineup-card__custodian-info">
                   <span class="lineup-card__custodian-label">POURED BY:</span>
