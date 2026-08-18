@@ -7,6 +7,27 @@ icon: "moon"
 line: "Follow the Agave After Midnight."
 descriptor: "Dark. Quiet. For late arrivals."
 detail_headline: "The late-arrival bottle for the edge of the desert."
+image: "images/bottles/midnight-reserve-transparent.png"
+abv: "45% ABV (90 Proof)"
+aging: "Solera Maturation Under High Desert Skies"
+agave: "100% Wild Foraged Desert Agave"
+distillation: "Triple Copper Pot Distilled"
+oven: "Underground Earth Pits"
+batch: "Batch #000 (The Ghost Solera)"
+character_name: "El Vigía"
+character_role: "The Watcher"
+character_href: "/characters/el-vigia/"
+tasting_profile:
+  agave: 85
+  oak: 75
+  caramel: 65
+  citrus: 30
+  warmth: 98
+notes:
+  aroma: "Slow-charred wild agave, cold desert sagebrush, dark roast espresso, and crisp midnight air."
+  palate: "Smoked mineral slate, wild blackberry reduction, toasted mesquite, and quiet brooding sweetness."
+  finish: "Infinite, contemplative, and dry as the Sonoran wind."
+  pairing: "Room temperature pour, the cap left off for the ghosts, and a gaze toward the dark horizon."
 seo_title: "Midnight Agave Reserve — The Late-Arrival Bottle | RIP Tequila"
 seo_description: "Midnight Agave Reserve is the rare late-arrival expression of RIP Tequila. Guarded by El Vigía on the desert frontier. Follow the Agave After Midnight."
 ---

@@ -1,18 +1,120 @@
 {{ define "main" }}
-{{ partial "page-hero.html" . }}
-{{ if .Content }}
-<section class="editorial-section">
-  <div class="editorial-section__inner">
-    {{ .Content }}
-  </div>
-</section>
-{{ end }}
-<section class="catalog-section catalog-section--dark" aria-label="Full RIP Tequila lineup">
-  <div class="catalog-section__inner product-preview__grid" role="list">
-    {{ range .Pages.ByWeight }}
-      <div role="listitem">{{ partial "product-card.html" . }}</div>
+<article class="lineup-catalog-page">
+  <section class="lineup-hero">
+    <div class="lineup-hero__backdrop" aria-hidden="true">
+      <img src="{{ "images/lineup-hero-bg.webp" | relURL }}" alt="" loading="eager" decoding="async">
+    </div>
+    <div class="lineup-hero__inner">
+      <div class="lineup-hero__copy">
+        <p class="lineup-hero__eyebrow">⤛ {{ .Params.eyebrow }} ⤜</p>
+        <h1 class="lineup-hero__title">{{ .Params.headline | default .Title }}</h1>
+        {{ with .Description }}<p class="lineup-hero__body">{{ . }}</p>{{ end }}
+        <div class="lineup-hero__actions">
+          <a class="button button--primary" href="#bottles-catalog">Explore the Expressions</a>
+          <a class="button button--outline" href="{{ "characters/" | relURL }}">Meet the Custodians</a>
+        </div>
+      </div>
+    </div>
+
+    {{ with .Params.process }}
+    <div class="lineup-process-container">
+      <div class="lineup-process-strip" aria-label="Distillery standards">
+        {{ range . }}
+        <div class="lineup-process-item">
+          <span class="lineup-process-item__icon">
+            {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md rip-glyph--red") }}
+          </span>
+          <div class="lineup-process-item__details">
+            <p class="lineup-process-item__title">{{ .title }}</p>
+            <p class="lineup-process-item__text">{{ .text }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
     {{ end }}
-  </div>
-</section>
-{{ partial "sections/disclaimer.html" . }}
+  </section>
+
+  <section class="lineup-catalog-section" id="bottles-catalog" aria-label="RIP Tequila product catalog">
+    <div class="lineup-catalog-container">
+      <div class="lineup-catalog-header">
+        <p class="lineup-catalog-header__eyebrow">{{ .Params.catalog_eyebrow }}</p>
+        <h2 class="lineup-catalog-header__title">{{ .Params.catalog_title }}</h2>
+        <p class="lineup-catalog-header__desc">{{ .Params.catalog_desc }}</p>
+      </div>
+
+      <div class="lineup-bottles-grid">
+        {{ range .Pages.ByWeight }}
+          <article class="lineup-card" data-accent="{{ .Params.accent }}">
+            <div class="lineup-card__badge-row">
+              <span class="lineup-card__variant-badge">{{ .Params.variant | upper }}</span>
+              <span class="lineup-card__abv-badge">{{ .Params.abv }}</span>
+            </div>
+
+            {{/* Decorative duplicate of the title link below; hidden so the card
+                 announces one link per destination rather than three. */}}
+            <div class="lineup-card__visual">
+              <a href="{{ .RelPermalink }}" class="lineup-card__visual-link" tabindex="-1" aria-hidden="true">
+                {{ if .Params.image }}
+                  <img src="{{ .Params.image | relURL }}" alt="" class="lineup-card__bottle-img" loading="lazy" decoding="async">
+                {{ else }}
+                  {{ partial "glyph.html" (dict "name" .Params.icon "class" "lineup-card__glyph rip-glyph--2xl") }}
+                {{ end }}
+              </a>
+            </div>
+
+            <div class="lineup-card__body">
+              <span class="lineup-card__aging">{{ .Params.aging }}</span>
+              <h3 class="lineup-card__title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+              <p class="lineup-card__line">“{{ .Params.line }}”</p>
+              <p class="lineup-card__descriptor">{{ .Params.descriptor }}</p>
+
+              <div class="lineup-card__custodian">
+                <span class="lineup-card__custodian-label">POURED BY:</span>
+                <a href="{{ strings.TrimPrefix "/" .Params.character_href | relURL }}" class="lineup-card__custodian-link">
+                  <strong>{{ .Params.character_name }}</strong> ({{ .Params.character_role }})
+                </a>
+              </div>
+
+              <div class="lineup-card__footer">
+                <a href="{{ .RelPermalink }}" class="button button--primary lineup-card__btn">
+                  Explore {{ .Params.variant }} &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{ with .Params.standards }}
+  <section class="lineup-standards-section">
+    <div class="lineup-standards-container">
+      <div class="lineup-standards-card">
+        <div class="lineup-standards-card__icon">
+          {{ partial "glyph.html" (dict "name" "monument" "class" "rip-glyph--xl rip-glyph--gold") }}
+        </div>
+        <div class="lineup-standards-card__copy">
+          <h2 class="lineup-standards-card__title">{{ .title }}</h2>
+          <p class="lineup-standards-card__text">{{ .text }}</p>
+        </div>
+        <div class="lineup-standards-card__action">
+          <a class="button button--outline" href="{{ strings.TrimPrefix "/" .href | relURL }}">{{ .cta }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{ partial "sections/disclaimer.html" . }}
+
+  {{ with .Params.ribbon }}
+  <section class="rip-ribbon">
+    <p class="rip-ribbon__text">{{ . }}</p>
+  </section>
+  {{ end }}
+</article>
 {{ end }}

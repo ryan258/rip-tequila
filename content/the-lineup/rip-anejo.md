@@ -1,12 +1,33 @@
 ---
-title: "RIP Anejo"
+title: "RIP Añejo"
 weight: 30
-variant: "Anejo"
+variant: "Añejo"
 accent: "gold"
 icon: "skull"
 line: "Proof You Lived."
 descriptor: "Rich. Bold. Time well spent."
 detail_headline: "The premium proof mark of the lineup."
+image: "images/bottles/anejo-transparent.png"
+abv: "40% ABV (80 Proof)"
+aging: "18 Months in Deep Toasted Oak"
+agave: "100% Blue Weber Highland Agave"
+distillation: "Double Copper Pot Distilled"
+oven: "Traditional Stone Pit Ovens"
+batch: "Batch #003 (The Host's Reserve)"
+character_name: "Don Muerte"
+character_role: "The Host"
+character_href: "/characters/don-muerte/"
+tasting_profile:
+  agave: 70
+  oak: 90
+  caramel: 85
+  citrus: 30
+  warmth: 90
+notes:
+  aroma: "Dark cacao nibs, slow-roasted agave heart, aged pipe tobacco, and cedarwood boxes."
+  palate: "Rich Mexican chocolate, toasted marcona almond, dried black cherry, and warm Mexican cinnamon."
+  finish: "Majestic, velvety, and fully aware of its own legend."
+  pairing: "A silent table, an impeccably delivered toast, and memories argued about for years."
 seo_title: "RIP Añejo — The Signature Bottle of the Lineup | RIP Tequila"
 seo_description: "Don Muerte's signature pour. RIP Añejo is the crowning toast of La Cantina del Último Trago — dark, considered, gold at the edges, and rich with legend."
 ---

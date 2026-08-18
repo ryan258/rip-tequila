@@ -1,12 +1,33 @@
 ---
-title: "RIP Extra Anejo"
+title: "RIP Extra Añejo"
 weight: 40
-variant: "Extra Anejo"
+variant: "Extra Añejo"
 accent: "black"
 icon: "monument"
 line: "Here Lies Your Judgment."
 descriptor: "Deep. Rare. Worth the wait."
 detail_headline: "The dark bottle with the final word."
+image: "images/bottles/extra-anejo-transparent.png"
+abv: "42% ABV (84 Proof)"
+aging: "36 Months in Deep Charred Oak Vaults"
+agave: "100% Blue Weber Highland Agave"
+distillation: "Double Copper Pot Distilled"
+oven: "Traditional Stone Pit Ovens"
+batch: "Batch #004 (The Gravedigger's Cut)"
+character_name: "El Sepulturero"
+character_role: "The Cabinet"
+character_href: "/characters/el-sepulturero/"
+tasting_profile:
+  agave: 60
+  oak: 98
+  caramel: 90
+  citrus: 20
+  warmth: 95
+notes:
+  aroma: "Deep charred oak, bittersweet dark chocolate, sun-dried mission fig, and campfire smoke."
+  palate: "Decadent roasted espresso bean, blackened caramel, old leather, and rich agave syrupy depth."
+  finish: "Monumental, smoky, and lingering long after the last candle flickers out."
+  pairing: "A secluded corner booth, a friend who knows where the bodies are buried, and respect for silence."
 seo_title: "RIP Extra Añejo — The Long-Aged Bottle | RIP Tequila"
 seo_description: "El Sepulturero's bottle. RIP Extra Añejo is aged three years in darkness and charred oak. The final word of the RIP Tequila lineup. Some Nights Deserve a Shovel."
 ---

@@ -7,6 +7,27 @@ icon: "bell"
 line: "The Bell Rang. You're In."
 descriptor: "Smooth. Warm. Always welcome."
 detail_headline: "The house bottle for the afterlife cantina."
+image: "images/bottles/reposado-transparent.png"
+abv: "40% ABV (80 Proof)"
+aging: "8 Months in Charred American Oak"
+agave: "100% Blue Weber Highland Agave"
+distillation: "Double Copper Pot Distilled"
+oven: "Traditional Stone Pit Ovens"
+batch: "Batch #002 (Afterlife Standard)"
+character_name: "Campana Roja"
+character_role: "The Keeper"
+character_href: "/characters/campana-roja/"
+tasting_profile:
+  agave: 80
+  oak: 60
+  caramel: 75
+  citrus: 40
+  warmth: 80
+notes:
+  aroma: "Wild clover honey, toasted oak, cooked vanilla bean, and the comforting sensation of someone else splitting the bill."
+  palate: "Velvety butterscotch, gentle baking spice, caramelized agave, and a warm cinnamon embrace."
+  finish: "Smooth, lingering, and softly persuasive."
+  pairing: "A story you've definitely exaggerated twice, a warm booth, and zero intention of looking at a clock."
 seo_title: "RIP Reposado — The House Bottle of the Cantina | RIP Tequila"
 seo_description: "RIP Reposado is the warm amber centerpiece of La Cantina del Último Trago — rested in charred oak, announced by Campana Roja, and poured when the evening gets interesting."
 ---

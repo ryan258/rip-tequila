@@ -1,20 +1,172 @@
 {{ define "main" }}
-<article class="product-detail" data-accent="{{ .Params.accent }}">
-  <header class="product-detail__hero">
-    <div class="product-detail__copy">
-      <p class="section-heading__eyebrow">{{ with .CurrentSection }}{{ .Title }}{{ else }}The Lineup{{ end }} / {{ .Params.variant }}</p>
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Params.detail_headline }}</p>
-      <a class="button button--primary" href="{{ "the-lineup/" | relURL }}">Back to the Lineup</a>
-    </div>
-    <div class="product-detail__bottle">
-      {{ partial "product-card.html" (dict "page" . "is_link" false) }}
+{{ $accent := .Params.accent | default "gold" }}
+
+<article class="bottle-detail" data-accent="{{ $accent }}">
+  <!-- 1. Hero Dossier Section -->
+  <header class="bottle-detail-hero">
+    <div class="bottle-detail-hero__inner">
+      <div class="bottle-detail-hero__copy">
+        <p class="bottle-detail-hero__eyebrow">⤛ The Expression • {{ .Params.variant | upper }} ⤜</p>
+        <h1 class="bottle-detail-hero__title">{{ .Title }}</h1>
+        <p class="bottle-detail-hero__tagline">{{ .Params.line }}</p>
+        <p class="bottle-detail-hero__headline">{{ .Params.detail_headline }}</p>
+        <p class="bottle-detail-hero__descriptor">{{ .Params.descriptor }}</p>
+
+        <div class="bottle-detail-hero__actions">
+          <a class="button button--primary" href="{{ "the-lineup/" | relURL }}">Back to the Lineup</a>
+          <a class="button button--outline" href="{{ strings.TrimPrefix "/" .Params.character_href | relURL }}">Meet {{ .Params.character_name }}</a>
+        </div>
+
+        <p class="detail-note">No actual spirits. All the spirit.</p>
+
+        <div class="bottle-detail-quick-stats">
+          {{ range slice
+              (dict "label" "ABV / PROOF" "val" .Params.abv)
+              (dict "label" "AGING" "val" .Params.aging)
+              (dict "label" "AGAVE" "val" .Params.agave)
+              (dict "label" "RUN" "val" .Params.batch) }}
+          <div class="bottle-stat-pill">
+            <span class="bottle-stat-pill__label">{{ .label }}</span>
+            <strong class="bottle-stat-pill__val">{{ .val }}</strong>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="bottle-detail-hero__visual">
+        <div class="bottle-detail-hero__frame">
+          <div class="bottle-detail-hero__aura" aria-hidden="true"></div>
+          {{ if .Params.image }}
+            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="bottle-detail-hero__img" loading="eager" decoding="async">
+          {{ else }}
+            {{ partial "glyph.html" (dict "name" .Params.icon "class" "bottle-detail-hero__glyph rip-glyph--2xl") }}
+          {{ end }}
+
+          <div class="bottle-detail-hero__seal" aria-hidden="true">
+            <div class="bottle-detail-hero__seal-inner">
+              {{ partial "glyph.html" (dict "name" .Params.icon "class" "rip-glyph--xs") }}
+              <span>REST IN PROOF</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
-  <div class="detail-page__body">
-    {{ .Content }}
-    <p><strong>{{ .Params.line }}</strong> {{ .Params.descriptor }}</p>
-    <p class="detail-note">No actual spirits. All the spirit.</p>
-  </div>
+
+  <!-- 2. Technical Distillery Data Sheet -->
+  <section class="bottle-detail-specs-section">
+    <div class="bottle-detail-specs-container">
+      <h2 class="bottle-detail-section-title">⤛ Distillery Technical Manifest ⤜</h2>
+      <div class="bottle-detail-specs-grid">
+        {{ range slice
+            (dict "label" "AGAVE SOURCE" "val" .Params.agave)
+            (dict "label" "COOKING METHOD" "val" .Params.oven)
+            (dict "label" "EXTRACTION" "val" "Traditional Stone Tahona & Roller")
+            (dict "label" "FERMENTATION" "val" "Wild Airborne Yeasts in Open Pine Vats")
+            (dict "label" "DISTILLATION" "val" .Params.distillation)
+            (dict "label" "BARREL MATURATION" "val" .Params.aging)
+            (dict "label" "WATER SOURCE" "val" "Deep Volcanic Spring Aquifer")
+            (dict "label" "ADDITIVES" "val" "0% Additives (Pure Distillate)") }}
+        <div class="bottle-spec-card">
+          <span class="bottle-spec-card__label">{{ .label }}</span>
+          <strong class="bottle-spec-card__val">{{ .val }}</strong>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Sensory Profile & Tasting Notes -->
+  <section class="bottle-detail-tasting-section">
+    <div class="bottle-detail-tasting-container">
+      <h2 class="bottle-detail-section-title">⤛ Sensory Profile & Tasting Notes ⤜</h2>
+      <div class="bottle-detail-tasting-row">
+        {{ with .Params.tasting_profile }}
+        <div class="bottle-detail-profile-card">
+          <h3 class="bottle-detail-profile-card__title">Palate Spectrum</h3>
+          <div class="bottle-profile-bars">
+            {{ range slice
+                (dict "key" "agave" "label" "Agave Purity")
+                (dict "key" "oak" "label" "Oak & Smoke")
+                (dict "key" "caramel" "label" "Caramel & Vanilla")
+                (dict "key" "citrus" "label" "Citrus & Pepper Snap")
+                (dict "key" "warmth" "label" "Warmth & Proof") }}
+              {{ $pct := index $.Params.tasting_profile .key }}
+              <div class="bottle-profile-bar">
+                <div class="bottle-profile-bar__header">
+                  <span>{{ .label }}</span>
+                  <span>{{ $pct }}%</span>
+                </div>
+                <div class="bottle-profile-bar__track" aria-hidden="true">
+                  <div class="bottle-profile-bar__fill" style="--bar-fill: {{ $pct }}%;"></div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
+        {{ with .Params.notes }}
+        <div class="bottle-detail-notes-grid">
+          {{ range slice
+              (dict "icon" "flower" "title" "Aroma" "text" .aroma)
+              (dict "icon" "glass" "title" "Palate" "text" .palate)
+              (dict "icon" "moon" "title" "Finish" "text" .finish)
+              (dict "icon" "skull" "title" "Recommended Pairing" "text" .pairing) }}
+          <div class="bottle-note-card">
+            <span class="bottle-note-card__icon">
+              {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md rip-glyph--red") }}
+            </span>
+            <div class="bottle-note-card__content">
+              <h3 class="bottle-note-card__title">{{ .title }}</h3>
+              <p class="bottle-note-card__text">{{ .text }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Story & Custodian Connection -->
+  <section class="bottle-detail-story-section">
+    <div class="bottle-detail-story-container">
+      <div class="bottle-detail-story-row">
+        <div class="bottle-detail-story-col">
+          <h2 class="bottle-detail-section-title">⤛ The Chronicle ⤜</h2>
+          <div class="bottle-detail-story-content">
+            {{ .Content }}
+          </div>
+          <div class="bottle-detail-quote-box">
+            <div class="bottle-detail-quote-box__skull" aria-hidden="true">
+              {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm rip-glyph--red") }}
+            </div>
+            <p class="bottle-detail-quote-box__text">“ {{ .Params.line }} ”</p>
+          </div>
+        </div>
+
+        <div class="bottle-detail-custodian-col">
+          <div class="bottle-detail-custodian-card">
+            <p class="bottle-detail-custodian-card__eyebrow">✦ CUSTODIAN OF THE POUR ✦</p>
+            <h3 class="bottle-detail-custodian-card__name">{{ .Params.character_name }}</h3>
+            <span class="bottle-detail-custodian-card__role">{{ .Params.character_role }}</span>
+            <p class="bottle-detail-custodian-card__desc">
+              Reaches for this expression when the tone of the room shifts from ordinary celebration to irreversible folklore.
+            </p>
+            <div class="bottle-detail-custodian-card__action">
+              <a href="{{ strings.TrimPrefix "/" .Params.character_href | relURL }}" class="button button--primary">
+                View {{ .Params.character_name }}'s Dossier &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rip-ribbon">
+    <p class="rip-ribbon__text">“ {{ .Params.line }} ”</p>
+  </section>
 </article>
 {{ end }}
