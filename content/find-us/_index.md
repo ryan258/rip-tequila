@@ -5,22 +5,22 @@ headline: "No Storefront. Undeniable Signal."
 description: "Press inquiries, artistic collaborations, and afterlife dispatches — how to transmit a message into La Cantina del Último Trago."
 seo_title: "Contact RIP Tequila — Press, Collaborations & Inquiries"
 seo_description: "Contact the creators behind RIP Tequila: press inquiries, design collaborations, brand partnerships, and Don Muerte Social Club dispatches."
-cta_label: "Join the Club"
+cta_label: "Preview the Club"
 cta_href: "/don-muerte-social-club/"
 icon: "location"
 ---
 
 You won't find a street number, storefront, or Google Maps pin. La Cantina del Último Trago does not participate in commercial zoning. 
 
-If you are trying to reach the creative team behind **RIP Tequila** — for press features, brand collaborations, creative direction inquiries, or licensing — the direct pipeline runs through the **Don Muerte Social Club**.
+If you are trying to reach the creative team behind **RIP Tequila** — for press features, brand collaborations, creative direction inquiries, or licensing — that direct pipeline is still forthcoming. The **Don Muerte Social Club** page records the intended route.
 
 ## Press & Media
 
-Writing a feature on dark humor branding, afterlife design, or the strange business of a spirit that's never left the cantina? Sign up to the Social Club and reply directly to any dispatch. Embargoed assets, high-res poster mocks, and creator commentary are routed from there.
+Writing a feature on dark humor branding, afterlife design, or the strange business of a spirit that's never left the cantina? The future press route will be published when the Social Club manifest opens. No inquiry is accepted or silently discarded here today.
 
 ## Collaborations & Art
 
-Are you a designer, screen printer, musician, or illustrator interested in building within the cantina universe? We actively collaborate on limited capsule drops and poster releases. Connect with us through the club ledger.
+Are you a designer, screen printer, musician, or illustrator interested in building within the cantina universe? The collaboration and club pipelines are forthcoming; the Social Club page records what is planned without pretending the ledger is already open.
 
 ## Looking for Physical Bottles?
 
@@ -32,4 +32,3 @@ We repeat: the cantina pours exclusively on the astral plane. We do not manufact
 Desert Highway 00, Mile Marker Infinity  
 Open: Past Midnight  
 Address: Deliberately Withheld by Tradition
-

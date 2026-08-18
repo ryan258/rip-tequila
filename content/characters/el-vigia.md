@@ -49,6 +49,8 @@ seo_description: "El Vigía watches the road into La Cantina del Último Trago. 
 
 **El Vigía** is the sentinel of the outer boundary. Posted out in the vast Sonoran silence where the asphalt ends and the agave wilderness begins, he watches the headlights of those searching for the cantina.
 
+Some travelers arrive because they are lost. Others arrive because they have finally run out of reasons to keep driving. He never asks which.
+
 He doesn’t deliver speeches, check IDs, or issue formal invitations. He simply leans against an ancient fencepost in sun-cracked leather boots, tilts his wide-brimmed hat, and lets the deserving pass. Perched on a bleached deadwood branch beside him, a patient vulture keeps watch and offers zero small talk.
 
 He knows every detour, every traveler, and every excuse ever offered for being out on the road past 2:00 AM. When you finally spot the warm neon glow of the cantina in the distance, know this: El Vigía saw you coming an hour ago.
@@ -57,5 +59,4 @@ He knows every detour, every traveler, and every excuse ever offered for being o
 ## What he pours
 
 **Midnight Agave Reserve.** The rare, contemplative late-arrival pour. If a glass is waiting when you sit down, El Vigía sent it in ahead of you.
-
 

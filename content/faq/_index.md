@@ -14,7 +14,7 @@ faqs:
     a: |
       **No.** RIP Tequila is the house label of La Cantina del Último Trago — the afterlife cantina that opens only after last call, where the staff is deceased and the five bottles exist purely in the metaphysical realm. **No actual spirits are distilled, bottled, or sold here.**
 
-      What is real: the poster art, the high-end apparel, the barware, the sticker sheets, and the lore.
+      What is real today: the poster art, product designs, character world, and working site prototype. The physical merchandise remains concept work.
 
   - q: "What is the point of a tequila brand that doesn't sell tequila?"
     icon: "agave"
@@ -24,7 +24,7 @@ faqs:
   - q: "Can I actually buy the merchandise?"
     icon: "box-open"
     a: |
-      **Yes.** The bottles never leave the cantina, but our physical merchandise is very real and built to the highest production standards. Heavyweight cotton tees, barware coaster sets, low-profile strapback hats, and die-cut vinyl sticker sheets ship worldwide. Drops are announced via the [Don Muerte Social Club](/don-muerte-social-club/).
+      **Not yet.** The current merch pages are product concepts with target prices, proposed materials, and no ordering path. If a physical run enters production, the site will publish confirmed specifications, inventory, fulfillment terms, and a real purchase destination before calling it available. The [Don Muerte Social Club](/don-muerte-social-club/) is also forthcoming.
 
   - q: "Where can I find a physical bottle to display on my bar?"
     icon: "glass"
@@ -45,7 +45,7 @@ faqs:
   - q: "How much does it cost to join the Don Muerte Social Club?"
     icon: "card"
     a: |
-      **Zero dollars.** There are no fees, no subscription models, and no tiers. Sign up on the [Social Club page](/don-muerte-social-club/), receive your permanent roster number, and get early access to every drop.
+      **Zero dollars when it opens.** There will be no fees, subscription model, or hidden tiers. Enrollment is currently forthcoming, so the [Social Club page](/don-muerte-social-club/) previews the proposed charter without collecting an email or issuing a fictional roster number.
 
   - q: "What if I drink actual tequila in the real world?"
     icon: "warning"
@@ -54,5 +54,5 @@ faqs:
 
 help_card:
   title: "Have a Question for El Sepulturero?"
-  text: "If you need further clarifications on merchandise orders, drop schedules, or cantina protocol, join the Social Club or view our legal disclaimer."
+  text: "For the current status of merchandise, drop schedules, or the forthcoming roster, preview the Social Club charter or read the legal disclaimer."
 ---

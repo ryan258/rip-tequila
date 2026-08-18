@@ -51,11 +51,12 @@ seo_description: "Cantina Jack pours every bottle in the RIP Tequila lineup. He 
 
 His bar rag has absorbed enough secrets to bring down three municipal governments. His memory is terrifyingly photographic: he remembers what you drank last October, the name of the person you arrived with, and the exact speech you gave about why you were switching to green tea forever. He will never use this information against you; he simply nods, files it away, and slides a fresh glass in your direction.
 
+He also remembers who stayed beside you until the story stopped hurting. Those names never go on the tab.
+
 He communicates primarily in gestures, eyebrow raises, and clean tequila pours.
 
 
 ## What he pours
 
 **RIP Blanco** — crisp, unaged, and fast across the counter. For marathon evenings, he pulls down **Last Round Añejo**, his personal special reserve.
-
 

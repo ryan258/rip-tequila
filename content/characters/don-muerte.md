@@ -55,9 +55,10 @@ He carries a single vintage shot glass from which he pours with surgical precisi
 
 He gives exactly one toast per night. When he taps his glass, listen carefully — it’s the only advice you’ll receive that doesn't cost anything.
 
+The toast is rarely for the loudest person in the room. More often, it is for someone absent whose name still deserves a place at the table.
+
 
 ## What he pours
 
 **RIP Añejo.** Dark, opulent, gold at the edges, and aged until it develops the gravitas of a final confession.
-
 

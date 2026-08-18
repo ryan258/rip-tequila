@@ -2,29 +2,29 @@
 title: "Privacy"
 eyebrow: "Info"
 headline: "Privacy"
-description: "How RIP Tequila handles your email when you join the Don Muerte Social Club."
+description: "The current no-collection state of the forthcoming Don Muerte Social Club."
 seo_title: "Privacy — Don Muerte Social Club Signup Notice | RIP Tequila"
-seo_description: "How RIP Tequila handles email and signup data for the Don Muerte Social Club. Plain-language privacy practices from La Cantina del Último Trago."
+seo_description: "The Don Muerte Social Club is forthcoming and this prototype does not currently collect signup email addresses."
 icon: "lock"
 ---
 
-When you sign up for the **Don Muerte Social Club**, RIP Tequila collects only what's needed to send you drops and dispatches — your email address.
+The **Don Muerte Social Club** roster is closed. This prototype does not currently collect or retain signup email addresses.
 
 ## What we collect
 
-- Your email address, when you sign up.
-- That's it.
+- No Social Club signup data while enrollment is closed.
+- No placeholder addresses retained behind the scenes.
 
 ## What we will not do
 
-- Sell your email address.
-- Share your information with third-party advertisers.
-- Send anything outside the cantina's normal drop and dispatch cadence.
+- Pretend an address was enrolled when no list exists.
+- Sell or share signup information if enrollment opens later.
+- Activate collection without updating this notice to identify the real handling practice.
 
 ## What you can always do
 
-- Unsubscribe from any dispatch with one click. Membership doesn't require an open inbox.
-- Ask for your record to be removed.
-- Read the **Disclaimer** to confirm what this brand is and isn't selling.
+- Leave without submitting anything; there is currently no signup field.
+- Return to this page when enrollment opens to review the updated terms before joining.
+- Read the **Disclaimer** to confirm what this prototype is and isn't selling.
 
-This policy may be updated as the cantina adds new ways to dispatch. Updates will be dated and visible at the top of the page.
+Before the manifest opens, this policy must be updated with the connected provider, retention practice, unsubscribe path, and deletion process. Updates will be dated and visible at the top of the page.
