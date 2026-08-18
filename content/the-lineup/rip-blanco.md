@@ -17,6 +17,21 @@ batch: "Batch #001 (Immortal Run)"
 character_name: "Cantina Jack"
 character_role: "The Bartender"
 character_href: "/characters/cantina-jack/"
+moment: "8:07 PM · The Alibi Still Works"
+occasion: "For opening the night before anyone admits the night has opened."
+panel_score: "98 Points · Padre Proof & Candle"
+allocation: "Open Edition · Until the First Bad Idea"
+house_claim: "The clearest possible expression of agave, intent, and rapidly weakening restraint."
+custodian_note: "Jack reaches for Blanco while everyone is still pretending they have somewhere else to be. He pours it fast, clean, and without the indignity of an upsell."
+extraction: "Stone Tahona, Roller & One Unnamed Witness"
+fermentation: "Open Pine Vats Before Anyone Checks the Calendar"
+water: "Highland Spring Water, Exact Coordinates Redacted"
+additives: "Zero Declared. Plausible Deniability Occurs Naturally."
+ritual_title: "Open the Night"
+ritual_steps:
+  - "Remove every visible clock from the decision-making process."
+  - "Let Cantina Jack pour before anyone finishes saying just one."
+  - "Name the evening only after the first plan has been abandoned."
 tasting_profile:
   agave: 95
   oak: 10
@@ -45,11 +60,3 @@ This is the opening salvo of the evening. The spark that turns a reasonable sche
 > *"I pour. You explain tomorrow."* — Cantina Jack
 
 Jack will never try to upsell you on a Blanco. He doesn't need to. He simply slides the glass across the bar with the quiet confidence of a man who has watched five thousand consecutive people make the exact same choice.
-
-## Concept tasting notes: What's in the glass
-
-- **Aroma**: Fresh-cracked blue agave, zesty lime oil, morning desert dew, and the faint scent of canceled morning commitments.
-- **Palate**: Crisp citrus bite, bright green pepper, white pepper snap, and an unmistakable electric hum across the palate.
-- **Finish**: Clean, snappy, and dangerously prompt. Ready for the next chapter.
-- **Pairing**: Fresh-cut lime, a pinch of sea salt, and a companion who knows how to keep a secret.
-

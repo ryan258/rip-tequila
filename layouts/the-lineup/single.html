@@ -8,6 +8,7 @@
       <div class="bottle-detail-hero__copy">
         <p class="bottle-detail-hero__eyebrow">⤛ The Expression • {{ .Params.variant | upper }} ⤜</p>
         <h1 class="bottle-detail-hero__title">{{ .Title }}</h1>
+        <p class="bottle-detail-hero__moment">{{ .Params.moment }}</p>
         <p class="bottle-detail-hero__tagline">{{ .Params.line }}</p>
         <p class="bottle-detail-hero__headline">{{ .Params.detail_headline }}</p>
         <p class="bottle-detail-hero__descriptor">{{ .Params.descriptor }}</p>
@@ -56,17 +57,17 @@
   <!-- 2. Technical Distillery Data Sheet -->
   <section class="bottle-detail-specs-section">
     <div class="bottle-detail-specs-container">
-      <h2 class="bottle-detail-section-title">⤛ Distillery Technical Manifest ⤜</h2>
+      <h2 class="bottle-detail-section-title">⤛ Officially Unverifiable Technical Manifest ⤜</h2>
       <div class="bottle-detail-specs-grid">
         {{ range slice
             (dict "label" "AGAVE SOURCE" "val" .Params.agave)
             (dict "label" "COOKING METHOD" "val" .Params.oven)
-            (dict "label" "EXTRACTION" "val" "Traditional Stone Tahona & Roller")
-            (dict "label" "FERMENTATION" "val" "Wild Airborne Yeasts in Open Pine Vats")
+            (dict "label" "EXTRACTION" "val" .Params.extraction)
+            (dict "label" "FERMENTATION" "val" .Params.fermentation)
             (dict "label" "DISTILLATION" "val" .Params.distillation)
             (dict "label" "BARREL MATURATION" "val" .Params.aging)
-            (dict "label" "WATER SOURCE" "val" "Deep Volcanic Spring Aquifer")
-            (dict "label" "ADDITIVES" "val" "0% Additives (Pure Distillate)") }}
+            (dict "label" "WATER SOURCE" "val" .Params.water)
+            (dict "label" "ADDITIVES" "val" .Params.additives) }}
         <div class="bottle-spec-card">
           <span class="bottle-spec-card__label">{{ .label }}</span>
           <strong class="bottle-spec-card__val">{{ .val }}</strong>
@@ -76,7 +77,51 @@
     </div>
   </section>
 
-  <!-- 3. Sensory Profile & Tasting Notes -->
+  {{ with .Params.ritual_steps }}
+  <!-- 3. The expression-specific ritual and house claims record -->
+  <section class="bottle-detail-ritual-section" aria-labelledby="bottle-ritual-title">
+    <div class="bottle-detail-ritual-container">
+      <div class="bottle-detail-ritual-copy">
+        <p class="bottle-detail-ritual-eyebrow">{{ $.Params.moment }}</p>
+        <h2 class="bottle-detail-ritual-title" id="bottle-ritual-title">{{ $.Params.ritual_title }}</h2>
+        <p class="bottle-detail-ritual-occasion">{{ $.Params.occasion }}</p>
+
+        <div class="bottle-detail-ritual-claim">
+          <p class="bottle-detail-ritual-claim__label">Official House Claim</p>
+          <p class="bottle-detail-ritual-claim__text">“{{ $.Params.house_claim }}”</p>
+        </div>
+
+        <dl class="bottle-detail-ritual-meta">
+          <div>
+            <dt>House Panel</dt>
+            <dd>{{ $.Params.panel_score }}</dd>
+          </div>
+          <div>
+            <dt>Allocation</dt>
+            <dd>{{ $.Params.allocation }}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="bottle-detail-ritual-steps-wrap">
+        <p class="bottle-detail-ritual-steps-label">Service Procedure</p>
+        {{/* role="list" survives `list-style: none`, which WebKit otherwise
+             treats as a cue to drop list semantics — and the visible step
+             numbers are aria-hidden, so there is no spoken fallback. */}}
+        <ol class="bottle-detail-ritual-steps" role="list">
+          {{ range $index, $step := . }}
+          <li>
+            <span class="bottle-detail-ritual-step-number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
+            <p>{{ $step }}</p>
+          </li>
+          {{ end }}
+        </ol>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- 4. Sensory Profile & Tasting Notes -->
   <section class="bottle-detail-tasting-section">
     <div class="bottle-detail-tasting-container">
       <h2 class="bottle-detail-section-title">⤛ Sensory Profile & Tasting Notes ⤜</h2>
@@ -84,6 +129,7 @@
         {{ with .Params.tasting_profile }}
         <div class="bottle-detail-profile-card">
           <h3 class="bottle-detail-profile-card__title">Palate Spectrum</h3>
+          <p class="bottle-detail-profile-card__note">Proprietary percentages derived by Padre Proof from a scale he declines to publish.</p>
           <div class="bottle-profile-bars">
             {{ range slice
                 (dict "key" "agave" "label" "Agave Purity")
@@ -129,7 +175,7 @@
     </div>
   </section>
 
-  <!-- 4. Story & Custodian Connection -->
+  <!-- 5. Story & Custodian Connection -->
   <section class="bottle-detail-story-section">
     <div class="bottle-detail-story-container">
       <div class="bottle-detail-story-row">
@@ -152,7 +198,7 @@
             <h3 class="bottle-detail-custodian-card__name">{{ .Params.character_name }}</h3>
             <span class="bottle-detail-custodian-card__role">{{ .Params.character_role }}</span>
             <p class="bottle-detail-custodian-card__desc">
-              Reaches for this expression when the tone of the room shifts from ordinary celebration to irreversible folklore.
+              {{ .Params.custodian_note }}
             </p>
             <div class="bottle-detail-custodian-card__action">
               <a href="{{ strings.TrimPrefix "/" .Params.character_href | relURL }}" class="button button--primary">

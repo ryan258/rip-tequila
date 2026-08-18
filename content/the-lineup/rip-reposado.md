@@ -17,6 +17,21 @@ batch: "Batch #002 (Afterlife Standard)"
 character_name: "Campana Roja"
 character_role: "The Keeper"
 character_href: "/characters/campana-roja/"
+moment: "9:42 PM · The Bell Makes It Official"
+occasion: "For the round that turns a stop-in into a story."
+panel_score: "97 Points · Padre Proof & Candle"
+allocation: "House Pour · Summoned, Never Ordered"
+house_claim: "Rested until the agave stopped interrupting and the oak learned not to dominate the conversation."
+custodian_note: "Campana Roja never pours the Reposado. She rings once; the glasses fill before the brass stops moving. No one has identified the server."
+extraction: "Stone Tahona & Roller, Timed to Bell Rehearsal"
+fermentation: "Open Pine Vats Within Earshot of the Chime"
+water: "Volcanic Spring Water, Softened by Flattering Candlelight"
+additives: "Zero Declared. Warmth Attributed to Oak and Circumstance."
+ritual_title: "Answer the Bell"
+ritual_steps:
+  - "Fill the glasses before Campana Roja touches the cord."
+  - "Let the chime settle; no toast may compete with brass."
+  - "The first story told afterward becomes official, accuracy notwithstanding."
 tasting_profile:
   agave: 80
   oak: 60
@@ -45,11 +60,3 @@ When **Campana Roja** pulls the crimson cord on the brass bell above the door, t
 > *"I do not announce last call. I announce fate."* — Campana Roja
 
 She doesn't pour the drink. She strikes the chime. The Reposado is what fills the glasses before the reverberation even fades from the rafters.
-
-## Concept tasting notes: What's in the glass
-
-- **Aroma**: Wild clover honey, toasted oak, cooked vanilla bean, and the comforting sensation of someone else offering to split the bill.
-- **Palate**: Velvety butterscotch, gentle baking spice, caramelized agave, and a warm cinnamon embrace that makes bad ideas sound like strategic breakthroughs.
-- **Finish**: Smooth, lingering, and softly persuasive.
-- **Pairing**: A story you've definitely exaggerated twice, a warm booth, and zero intention of looking at a clock.
-

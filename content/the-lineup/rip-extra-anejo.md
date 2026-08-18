@@ -15,8 +15,23 @@ distillation: "Double Copper Pot Distilled"
 oven: "Traditional Stone Pit Ovens"
 batch: "Batch #004 (The Gravedigger's Cut)"
 character_name: "El Sepulturero"
-character_role: "The Cabinet"
+character_role: "The Caretaker"
 character_href: "/characters/el-sepulturero/"
+moment: "1:43 AM · The NDA Hour"
+occasion: "For conclusions too expensive to revisit in daylight."
+panel_score: "98 Points · Entered into the Manifest"
+allocation: "Manifest-Controlled · Rare After Two Failed Searches"
+house_claim: "Thirty-six months in charred oak and complete darkness; every bottle exits with a chain of custody."
+custodian_note: "El Sepulturero places the Extra Añejo beside the Manifest and records the silence that follows. He does not offer a second pour; he opens a second file."
+extraction: "Stone Tahona; Records Sealed in the Manifest"
+fermentation: "Open Vats in a Room Sunlight Has Never Audited"
+water: "Deep Volcanic Spring, Drawn During Quiet Hours"
+additives: "Zero Declared. Darkness Added by Architecture."
+ritual_title: "Bury the Evidence"
+ritual_steps:
+  - "El Sepulturero places the bottle down and opens the Manifest."
+  - "State the version of the evening you intend to defend tomorrow."
+  - "Leave the judgment. Take the story. Sign nothing in pencil."
 tasting_profile:
   agave: 60
   oak: 98
@@ -45,11 +60,3 @@ This is not a drink for casual banter. This is a pour for conversations you’ll
 > *"Here lies your judgment."* — El Sepulturero
 
 El Sepulturero pours your measure, places the bottle down with a muffled thud, and steps back into the shadows with his ledger. Don't invite him to sit down. He’s already recording your statement.
-
-## Concept tasting notes: What's in the glass
-
-- **Aroma**: Deep charred oak, bittersweet dark chocolate, sun-dried mission fig, rich tobacco leaf, and distant campfire smoke.
-- **Palate**: Decadent roasted espresso bean, blackened caramel, old leather armchair, and rich agave syrupy depth.
-- **Finish**: Monumental, smoky, and lingering long after the last candle flickers out.
-- **Pairing**: A secluded corner booth, a friend who knows where the bodies are buried, and a profound respect for silence.
-

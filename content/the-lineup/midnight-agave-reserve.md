@@ -17,6 +17,21 @@ batch: "Batch #000 (The Ghost Solera)"
 character_name: "El Vigía"
 character_role: "The Watcher"
 character_href: "/characters/el-vigia/"
+moment: "2:17 AM · The Road Chooses You"
+occasion: "For arrivals too late, too dusty, and too specific to be accidental."
+panel_score: "100 Points · Panel Could Not Locate It"
+allocation: "By Hat Tilt Only · Waitlist Exists by Rumor"
+house_claim: "Wild desert agave, moonlit solera, and a distribution strategy consisting entirely of El Vigía."
+custodian_note: "El Vigía never enters the cantina. If the Reserve is waiting at your chair, his hat already approved the allocation somewhere beyond the last paved road."
+extraction: "Hand-Crushed Beyond the Last Paved Road"
+fermentation: "Wild Open-Air Fermentation Under an Indifferent Moon"
+water: "High Desert Spring Visible Only to El Vigía"
+additives: "Zero Declared. Night Air Refuses Classification."
+ritual_title: "Arrive Without Asking"
+ritual_steps:
+  - "Take the unpaved fork after the last sensible exit."
+  - "Wait for El Vigía’s hat to tip. Do not wave first."
+  - "If the bottle is at your table, allocation is confirmed. Ask nothing further."
 tasting_profile:
   agave: 85
   oak: 75
@@ -45,11 +60,3 @@ Distilled from rare wild desert agave, aged under an indifferent moon, and finis
 > *"Follow the agave after midnight."* — El Vigía
 
 El Vigía never enters the cantina; he stays posted on the desert perimeter with his boots in the dust and a watchful eye on the highway lights. If this bottle is on your table, consider it his personal stamp of entry.
-
-## Concept tasting notes: What's in the glass
-
-- **Aroma**: Slow-charred wild agave, cold desert sagebrush, dark roast espresso, and crisp midnight air after a scorching day.
-- **Palate**: Smoked mineral slate, wild blackberry reduction, toasted mesquite, and a quiet, brooding sweetness that unfolds slowly.
-- **Finish**: Infinite, contemplative, and dry as the Sonoran wind.
-- **Pairing**: Room temperature pour, the cap left off for the ghosts, and a long gaze toward the dark horizon.
-

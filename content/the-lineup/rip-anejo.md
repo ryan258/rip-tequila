@@ -17,6 +17,21 @@ batch: "Batch #003 (The Host's Reserve)"
 character_name: "Don Muerte"
 character_role: "The Host"
 character_href: "/characters/don-muerte/"
+moment: "11:58 PM · The Room Earns a Toast"
+occasion: "For the truth that improves every time it is retold."
+panel_score: "99 Points · Padre Proof & Candle"
+allocation: "One Ceremonial Pour · Second Requires Testimony"
+house_claim: "Eighteen months in bespoke oak, followed by an undisclosed period of becoming self-important."
+custodian_note: "Don Muerte pours Añejo once per evening, after the room has earned silence. A second measure requires testimony too strange to have been rehearsed."
+extraction: "Stone Tahona Under Don Muerte’s Silent Supervision"
+fermentation: "Open Pine Vats; Consultants Excluded"
+water: "Deep Volcanic Spring, Provenance Notarized Posthumously"
+additives: "Zero Declared. Gravitas Develops Without Assistance."
+ritual_title: "Earn the Second Pour"
+ritual_steps:
+  - "Don Muerte raises the glass; the room must quiet itself."
+  - "Toast someone absent whose name still belongs at the table."
+  - "Request a second only after confessing something nobody could invent sober."
 tasting_profile:
   agave: 70
   oak: 90
@@ -45,11 +60,3 @@ It does not enter a room timidly. It enters with a sombrero, commands total atte
 > *"Proof you lived."* — Don Muerte
 
 Don Muerte only pours this once per evening. If you want a second glass, you have to earn it — usually by confessing a truth so absurd that the entire room agrees it must have actually happened.
-
-## Concept tasting notes: What's in the glass
-
-- **Aroma**: Dark cacao nibs, slow-roasted agave heart, aged pipe tobacco, and the warm scent of cedarwood boxes.
-- **Palate**: Rich Mexican chocolate, toasted marcona almond, dried black cherry, and a thread of warm Mexican cinnamon that lingers like applause.
-- **Finish**: Majestic, velvety, and fully aware of its own legend.
-- **Pairing**: A silent table, an impeccably delivered toast, and memories that will still be argued about three anniversaries from now.
-

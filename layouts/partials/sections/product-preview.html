@@ -8,8 +8,8 @@
     <div class="product-preview__header">
       <div class="product-preview__copy">
         <p class="product-preview__eyebrow">The Lineup for Legends</p>
-        <h2 class="product-preview__title" id="product-preview-title">{{ $count | title }} Expressions.<br>One Afterlife.</h2>
-        <p class="product-preview__desc">Each bottle marks a chapter of the evening.</p>
+        <h2 class="product-preview__title" id="product-preview-title">{{ $count | title }} Expressions.<br>One Night.</h2>
+        <p class="product-preview__desc">Choose the hour that matches the story you are about to tell tomorrow.</p>
         <div class="product-preview__action">
           <a class="button button--primary" href="{{ "the-lineup/" | relURL }}">Explore the Lineup</a>
         </div>
@@ -20,14 +20,16 @@
       <div class="product-preview__bottles-grid scroll-strip">
         {{ range $bottles }}
           <a class="lineup-bottle-card" href="{{ .RelPermalink }}">
-            <div class="lineup-bottle-card__shape" data-accent="{{ .Params.accent }}" aria-hidden="true">
-              <span class="lineup-bottle-card__cap"></span>
-              <span class="lineup-bottle-card__neck"></span>
-              <div class="lineup-bottle-card__body">
-                <span class="lineup-bottle-card__brand">RIP</span>
-                <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" .Params.icon "class" "rip-glyph--sm") }}</span>
-              </div>
+            <div class="lineup-bottle-card__shape">
+              {{ if .Params.image }}
+                {{/* alt="" on purpose: the card's own moment + name + descriptor
+                     already name this link, and a real alt stutters them. The bottle
+                     art is height-constrained (see .lineup-bottle-card__img), so the
+                     widest it ever renders is ~140px regardless of viewport. */}}
+                {{ partial "image.html" (dict "src" (.Params.image) "alt" "" "class" "lineup-bottle-card__img" "sizes" "140px" "loading" "lazy" "decoding" "async") }}
+              {{ end }}
             </div>
+            <p class="lineup-bottle-card__moment">{{ .Params.moment }}</p>
             <h3 class="lineup-bottle-card__name">{{ strings.TrimPrefix "RIP " .Title }}</h3>
             <p class="lineup-bottle-card__desc">{{ .Params.descriptor }}</p>
           </a>

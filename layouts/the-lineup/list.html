@@ -79,12 +79,14 @@
             </div>
 
             <div class="lineup-card__body">
+              <span class="lineup-card__moment">{{ .Params.moment }}</span>
               <span class="lineup-card__aging">{{ .Params.aging }}</span>
               <h3 class="lineup-card__title">
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
               </h3>
               <p class="lineup-card__line">“{{ .Params.line }}”</p>
               <p class="lineup-card__descriptor">{{ .Params.descriptor }}</p>
+              <p class="lineup-card__occasion"><strong>Pour this when:</strong> {{ .Params.occasion }}</p>
 
               <div class="lineup-card__custodian">
                 <div class="lineup-card__custodian-avatar">
