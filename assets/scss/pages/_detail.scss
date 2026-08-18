@@ -302,6 +302,74 @@
   }
 }
 
+.merch-detail__provenance {
+  background: #eee7d8;
+  border: 1px solid rgba($color-black, 0.2);
+  border-left: 4px solid $color-red;
+  padding: $space-lg;
+  box-shadow: 5px 5px 0 rgba($color-black, 0.08);
+}
+
+.merch-detail__provenance-eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  margin: 0 0 $space-2xs 0;
+}
+
+.merch-detail__provenance-title {
+  font-family: $font-display;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0 0 $space-md 0;
+}
+
+.merch-detail__provenance-list {
+  display: grid;
+  gap: $space-sm;
+  margin: 0;
+
+  div {
+    display: grid;
+    grid-template-columns: minmax(115px, 0.35fr) minmax(0, 1fr);
+    gap: $space-md;
+    padding-bottom: $space-xs;
+    border-bottom: 1px dashed rgba($color-black, 0.18);
+  }
+
+  dt {
+    font-family: $font-accent;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba($color-black, 0.62);
+  }
+
+  dd {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: $color-black;
+    margin: 0;
+  }
+
+  a {
+    color: $color-red;
+    font-weight: 700;
+  }
+}
+
+.merch-detail__provenance-note {
+  font-family: $font-body;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: rgba($color-black, 0.78);
+  margin: $space-md 0 0 0;
+}
+
 // Divider Line
 .merch-detail__divider {
   width: 100%;
@@ -440,13 +508,15 @@
   text-decoration: none;
   transition: all $transition-base;
   box-shadow: 4px 4px 0 rgba($color-black, 0.06);
+}
 
-  &:hover {
-    border-color: $color-red;
-    background: #ffffff;
-    box-shadow: 6px 6px 0 rgba($color-black, 0.14);
-    transform: translateY(-2px);
-  }
+// Only the linked banner reacts to hover; when commerce is gated off the same
+// markup renders as a static notice that must not claim to be clickable.
+a.merch-detail__drop-banner:hover {
+  border-color: $color-red;
+  background: #ffffff;
+  box-shadow: 6px 6px 0 rgba($color-black, 0.14);
+  transform: translateY(-2px);
 }
 
 .merch-detail__drop-star {
@@ -1225,4 +1295,3 @@
   color: $color-gold;
   text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
 }
-

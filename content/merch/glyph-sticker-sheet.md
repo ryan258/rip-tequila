@@ -10,6 +10,13 @@ price: "$8"
 deckle_icon: "stickers"
 deckle_quote: "TWELVE DIE-CUT VINYL HIEROGLYPHS DESIGNED TO TRANSFORM MUNDANE PERSONAL POSSESSIONS INTO ARTIFACTS OF LEGEND."
 quote: "One symbol. One bad idea."
+provenance:
+  custodian: "Padre Proof"
+  custodian_href: "/characters/padre-proof/"
+  origin: "The Absolution Booth evidence drawer"
+  expression: "RIP Añejo"
+  expression_href: "/the-lineup/rip-anejo/"
+  record: "Twelve marks copied from the cantina walls before the ledger could deny they existed."
 built_for:
   - icon: "bell"
     text: "Brass Bell on the espresso machine (status: guaranteed morning ritual)."
@@ -26,4 +33,3 @@ One premium sticker sheet. Twelve die-cut vinyl hieroglyphs designed to transfor
 Precision printed on heavy UV-resistant, weatherproof matte vinyl. Includes the full iconographic universe of the cantina: Agave Heart, Sombrero Skull, Brass Bell, Desert Lime, Heavy Bottle, Caretaker Monument, Black Rose, Rhythm Maracas, Desert Moon, Blessing Cross, Shot Glass, and the iconic RIP Monogram Seal.
 
 Engineered to endure dishwasher cycles, desert dust storms, and the chaotic interior of your travel bag.
-

@@ -10,6 +10,13 @@ price: "$16"
 deckle_icon: "coasters"
 deckle_quote: "FOUR HEAVYWEIGHT BARWARE COASTERS ENGINEERED TO PROTECT FINE HARDWOOD FROM HEAVY POURS AND DIGNIFIED TOASTS."
 quote: "The bell rang. Protect the table."
+provenance:
+  custodian: "Campana Roja"
+  custodian_href: "/characters/campana-roja/"
+  origin: "Beneath the red-ribboned brass bell"
+  expression: "RIP Reposado"
+  expression_href: "/the-lineup/rip-reposado/"
+  record: "Four landing places for the round that begins when the bell ends the argument."
 built_for:
   - icon: "glass"
     text: "Providing a dignified landing pad for oversized pours of Añejo."
@@ -30,4 +37,3 @@ Printed on dense 60pt pulpboard with edge-gilded foil accents. Each coaster immo
 4. **The Bell Rang. You're In.**
 
 The back of every piece is debossed with the official insignia: *La Cantina del Último Trago — Member of the Round.*
-

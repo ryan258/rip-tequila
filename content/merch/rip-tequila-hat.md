@@ -12,6 +12,13 @@ price: "$30"
 deckle_icon: "agave"
 deckle_quote: "THE PIECE YOU WEAR WHEN YOU WANT TO SIGNAL YOUR IMPECCABLE TASTE WITHOUT HAVING TO SHOUT ACROSS A LOUD ROOM."
 quote: "Low profile. High proof."
+provenance:
+  custodian: "El Vigía"
+  custodian_href: "/characters/el-vigia/"
+  origin: "Desert Highway 00, where the asphalt ends"
+  expression: "Midnight Agave Reserve"
+  expression_href: "/the-lineup/midnight-agave-reserve/"
+  record: "The brim marks travelers who found the road without requiring directions back."
 built_for:
   - icon: "sun"
     text: "Shielding your eyes from the harsh sunlight after an evening that lasted too long."
@@ -30,4 +37,3 @@ Structured with an unstructured low-profile 6-panel crown in washed obsidian twi
 Underneath the brim, tucked inside the cotton sweatband, sits the cantina’s quiet invocation: *Member of the Round.*
 
 If someone recognizes the mark, you’ve instantly found a kindred spirit. If they don’t, it’s just the best-fitting black cap they’ve ever seen.
-

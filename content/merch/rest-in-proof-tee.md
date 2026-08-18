@@ -10,6 +10,13 @@ price: "$28"
 deckle_icon: "shirt"
 deckle_quote: "THE FLAGSHIP UNIFORM OF LA CANTINA DEL ÚLTIMO TRAGO. BUILT FOR QUIET ENTRANCES AND LEGENDARY EXITS."
 quote: "Built for legendary exits."
+provenance:
+  custodian: "El Sepulturero"
+  custodian_href: "/characters/el-sepulturero/"
+  origin: "The Back Office, after closing"
+  expression: "RIP Extra Añejo"
+  expression_href: "/the-lineup/rip-extra-anejo/"
+  record: "Issued as the house uniform for anyone leaving with the story and none of the evidence."
 built_for:
   - icon: "monument"
     text: "Looking impeccably dressed at occasions you barely remember RSVPing to."
@@ -28,4 +35,3 @@ Cut from a heavyweight, substantial-feeling cotton in obsidian black — the kin
 The back reveals the full, unmistakable manifesto: **REST IN PROOF** arched across the shoulder blades in vintage display type. It makes quiet, dignified entrances possible — and loud, triumphant exits inevitable.
 
 Inside the neck collar sits a discreet printed confession: *Member of the Round.* The lower left hem bears a collectible woven run-tag.
-

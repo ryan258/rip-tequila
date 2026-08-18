@@ -459,6 +459,17 @@
   flex: 1;
 }
 
+.merch-product-card__provenance {
+  font-family: $font-accent;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba($color-black, 0.58);
+  margin: 0 0 $space-sm 0;
+}
+
 .merch-product-card__footer {
   display: flex;
   align-items: center;
