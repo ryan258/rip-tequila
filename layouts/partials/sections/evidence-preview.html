@@ -17,7 +17,7 @@
       {{/* Card 1: Where to Find Us */}}
       <article class="evidence-card" role="listitem">
         <div class="evidence-card__media">
-          <img src="{{ "images/find-us-map-pin.webp" | relURL }}" alt="Coordinates Map Pin" loading="lazy" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/find-us-map-pin.webp") "alt" "Coordinates Map Pin" "loading" "lazy" "decoding" "async") }}
         </div>
         <div class="evidence-card__body">
           <p class="evidence-card__eyebrow">Where to Find Us</p>
@@ -30,7 +30,7 @@
       {{/* Card 2: Dispatch */}}
       <article class="evidence-card" role="listitem">
         <div class="evidence-card__media">
-          <img src="{{ "images/our-story-book-hero.webp" | relURL }}" alt="Cantina Ledger Dispatch" loading="lazy" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/our-story-book-hero.webp") "alt" "Cantina Ledger Dispatch" "loading" "lazy" "decoding" "async") }}
         </div>
         <div class="evidence-card__body">
           <p class="evidence-card__eyebrow">Dispatch</p>
@@ -43,7 +43,7 @@
       {{/* Card 3: The Fields */}}
       <article class="evidence-card" role="listitem">
         <div class="evidence-card__media">
-          <img src="{{ "images/cantina/el-vigia-desert.webp" | relURL }}" alt="Agave Fields Beyond the Veil" loading="lazy" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/cantina/el-vigia-desert.webp") "alt" "Agave Fields Beyond the Veil" "loading" "lazy" "decoding" "async") }}
         </div>
         <div class="evidence-card__body">
           <p class="evidence-card__eyebrow">The Fields</p>
@@ -56,7 +56,7 @@
       {{/* Card 4: The Process */}}
       <article class="evidence-card" role="listitem">
         <div class="evidence-card__media">
-          <img src="{{ "images/cantina-archway-bg.webp" | relURL }}" alt="Distillery Aging Barrels" loading="lazy" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/cantina-archway-bg.webp") "alt" "Distillery Aging Barrels" "loading" "lazy" "decoding" "async") }}
         </div>
         <div class="evidence-card__body">
           <p class="evidence-card__eyebrow">The Process</p>

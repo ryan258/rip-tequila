@@ -2,7 +2,7 @@
 <article class="lineup-catalog-page">
   <section class="lineup-hero">
     <div class="lineup-hero__backdrop" aria-hidden="true">
-      <img src="{{ "images/lineup-hero-bg.webp" | relURL }}" alt="" loading="eager" decoding="async">
+      {{ partial "image.html" (dict "src" ("images/lineup-hero-bg.webp") "alt" "" "loading" "eager" "decoding" "async") }}
     </div>
     <div class="lineup-hero__inner">
       <div class="lineup-hero__copy">
@@ -56,7 +56,7 @@
             <div class="lineup-card__visual">
               <a href="{{ .RelPermalink }}" class="lineup-card__visual-link" tabindex="-1" aria-hidden="true">
                 {{ if .Params.image }}
-                  <img src="{{ .Params.image | relURL }}" alt="" class="lineup-card__bottle-img" loading="lazy" decoding="async">
+                  {{ partial "image.html" (dict "src" (.Params.image) "alt" "" "class" "lineup-card__bottle-img" "loading" "lazy" "decoding" "async") }}
                 {{ else }}
                   {{ partial "glyph.html" (dict "name" .Params.icon "class" "lineup-card__glyph rip-glyph--2xl") }}
                 {{ end }}

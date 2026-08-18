@@ -33,11 +33,7 @@
   line-height: 1.4;
 }
 
-.signup-form[data-state="error"] .signup-form__message {
-  color: $color-gold;
-}
-
-.signup-form[data-state="success"] .signup-form__message {
+.signup-form[data-state="pending"] .signup-form__message {
   color: $color-green-light;
 }
 

@@ -37,7 +37,7 @@
         <div class="bottle-detail-hero__frame">
           <div class="bottle-detail-hero__aura" aria-hidden="true"></div>
           {{ if .Params.image }}
-            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="bottle-detail-hero__img" loading="eager" decoding="async">
+            {{ partial "image.html" (dict "src" (.Params.image) "alt" (.Title) "class" "bottle-detail-hero__img" "loading" "eager" "decoding" "async") }}
           {{ else }}
             {{ partial "glyph.html" (dict "name" .Params.icon "class" "bottle-detail-hero__glyph rip-glyph--2xl") }}
           {{ end }}
@@ -164,6 +164,8 @@
       </div>
     </div>
   </section>
+
+  {{ partial "sections/disclaimer.html" . }}
 
   <section class="rip-ribbon">
     <p class="rip-ribbon__text">“ {{ .Params.line }} ”</p>

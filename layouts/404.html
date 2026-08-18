@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="not-found">
   <div class="not-found__backdrop" aria-hidden="true">
-    <img src="{{ "images/404-bg.webp" | relURL }}" alt="" loading="eager" decoding="async">
+    {{ partial "image.html" (dict "src" ("images/404-bg.webp") "alt" "" "loading" "eager" "decoding" "async") }}
   </div>
   <div class="not-found__inner">
     <p class="section-heading__eyebrow">404 — Lost in the Dunes</p>

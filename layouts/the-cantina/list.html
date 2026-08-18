@@ -61,7 +61,7 @@
       {{/* Right Column: Portal Hero Artwork */}}
       <div class="cantina-hero__visual">
         <div class="cantina-hero__frame">
-          <img src="{{ "images/cantina/cantina-portal-hero.webp" | relURL }}" alt="La Cantina del Último Trago Entrance" class="cantina-hero__img" loading="eager" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/cantina/cantina-portal-hero.webp") "alt" "La Cantina del Último Trago Entrance" "class" "cantina-hero__img" "loading" "eager" "decoding" "async") }}
         </div>
       </div>
 
@@ -121,7 +121,7 @@
               <div class="geo-card__inner-border">
                 <h3 class="geo-card__title">{{ .title }}</h3>
                 <div class="geo-card__media">
-                  <img src="{{ .image | relURL }}" alt="{{ .title }}" class="geo-card__img" loading="lazy" decoding="async">
+                  {{ partial "image.html" (dict "src" (.image) "alt" (.title) "class" "geo-card__img" "loading" "lazy" "decoding" "async") }}
                 </div>
                 <p class="geo-card__desc">{{ .desc | safeHTML }}</p>
               </div>
@@ -141,7 +141,7 @@
           
           <div class="cantina-sentinel__grid">
             <div class="cantina-sentinel__media">
-              <img src="{{ "images/cantina/el-vigia-desert.webp" | relURL }}" alt="El Vigía Desert Highway" class="cantina-sentinel__img" loading="lazy" decoding="async">
+              {{ partial "image.html" (dict "src" ("images/cantina/el-vigia-desert.webp") "alt" "El Vigía Desert Highway" "class" "cantina-sentinel__img" "loading" "lazy" "decoding" "async") }}
             </div>
 
             <div class="cantina-sentinel__copy">

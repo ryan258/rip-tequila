@@ -46,18 +46,6 @@
   border-color: #8f1919;
 }
 
-.button--dark {
-  background: $color-black;
-  color: $color-cream;
-  border-color: $color-black;
-}
-
-.button--dark:hover,
-.button--dark:focus-visible {
-  background: $color-red;
-  border-color: $color-red;
-}
-
 .button--light {
   background: $color-cream;
   color: $color-black;

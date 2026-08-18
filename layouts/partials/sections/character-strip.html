@@ -1,89 +1,34 @@
+{{- /* Cast comes from the dossiers, never a second hardcoded copy — the strip and
+       the headline count both track content/characters/. */ -}}
+{{ $cast := (site.GetPage "characters").Pages.ByWeight }}
+{{ $count := partial "numword.html" (len $cast) }}
 <section class="character-strip" aria-labelledby="character-strip-title">
   <div class="character-strip__inner">
-    
+
     <div class="character-strip__copy">
       <p class="character-strip__eyebrow">The Cast for Legends</p>
       <h2 class="character-strip__title" id="character-strip-title">Meet the Afterlife Cast</h2>
-      <p class="character-strip__desc">Six unforgettable souls. Six reasons the cantina never closes.</p>
+      <p class="character-strip__desc">{{ $count | title }} unforgettable souls. {{ $count | title }} reasons the cantina never closes.</p>
       <div class="character-strip__action">
         <a class="button button--light" href="{{ "characters/" | relURL }}">Meet the Cast</a>
       </div>
     </div>
 
-    <div class="character-strip__grid" role="list" aria-label="RIP Tequila afterlife cast members">
-      
-      {{/* 1. Don Muerte */}}
-      <a class="cast-box" href="{{ "characters/don-muerte/" | relURL }}" role="listitem">
-        <div class="cast-box__icon" aria-hidden="true">
-          {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--md") }}
-        </div>
-        <div class="cast-box__details">
-          <h3 class="cast-box__name">Don Muerte</h3>
-          <span class="cast-box__role">The Host</span>
-          <p class="cast-box__quote">Lives for stories. Toasts to endings.</p>
-        </div>
-      </a>
-
-      {{/* 2. La Rosa Negra */}}
-      <a class="cast-box" href="{{ "characters/la-rosa-negra/" | relURL }}" role="listitem">
-        <div class="cast-box__icon" aria-hidden="true">
-          {{ partial "glyph.html" (dict "name" "rose" "class" "rip-glyph--md") }}
-        </div>
-        <div class="cast-box__details">
-          <h3 class="cast-box__name">La Rosa Negra</h3>
-          <span class="cast-box__role">The Singer</span>
-          <p class="cast-box__quote">Voice like velvet. Songs that kill silences.</p>
-        </div>
-      </a>
-
-      {{/* 3. Padre Proof */}}
-      <a class="cast-box" href="{{ "characters/padre-proof/" | relURL }}" role="listitem">
-        <div class="cast-box__icon" aria-hidden="true">
-          {{ partial "glyph.html" (dict "name" "cross" "class" "rip-glyph--md") }}
-        </div>
-        <div class="cast-box__details">
-          <h3 class="cast-box__name">Padre Proof</h3>
-          <span class="cast-box__role">The Priest</span>
-          <p class="cast-box__quote">Forgives no one. Raises the bar.</p>
-        </div>
-      </a>
-
-      {{/* 4. Cantina Jack */}}
-      <a class="cast-box" href="{{ "characters/cantina-jack/" | relURL }}" role="listitem">
-        <div class="cast-box__icon" aria-hidden="true">
-          {{ partial "glyph.html" (dict "name" "glass" "class" "rip-glyph--md") }}
-        </div>
-        <div class="cast-box__details">
-          <h3 class="cast-box__name">Cantina Jack</h3>
-          <span class="cast-box__role">The Bartender</span>
-          <p class="cast-box__quote">Pouring truth. No fast exit. Only legends.</p>
-        </div>
-      </a>
-
-      {{/* 5. Campana Roja */}}
-      <a class="cast-box" href="{{ "characters/campana-roja/" | relURL }}" role="listitem">
-        <div class="cast-box__icon" aria-hidden="true">
-          {{ partial "glyph.html" (dict "name" "bell" "class" "rip-glyph--md") }}
-        </div>
-        <div class="cast-box__details">
-          <h3 class="cast-box__name">Campana Roja</h3>
-          <span class="cast-box__role">The Keeper</span>
-          <p class="cast-box__quote">Rings once. The final round. Always.</p>
-        </div>
-      </a>
-
-      {{/* 6. Los Maracas */}}
-      <a class="cast-box" href="{{ "characters/los-maracas/" | relURL }}" role="listitem">
-        <div class="cast-box__icon" aria-hidden="true">
-          {{ partial "glyph.html" (dict "name" "infinity" "class" "rip-glyph--md") }}
-        </div>
-        <div class="cast-box__details">
-          <h3 class="cast-box__name">Los Maracas</h3>
-          <span class="cast-box__role">The Rhythm</span>
-          <p class="cast-box__quote">Keep time. Because the night is eternal.</p>
-        </div>
-      </a>
-
+    {{/* No role="list"/"listitem" here: the boxes are grid children, and putting
+         role="listitem" on the <a> would override its implicit link role. */}}
+    <div class="character-strip__grid">
+      {{ range $cast }}
+        <a class="cast-box" href="{{ .RelPermalink }}">
+          <div class="cast-box__icon" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" .Params.icon "class" "rip-glyph--md") }}
+          </div>
+          <div class="cast-box__details">
+            <h3 class="cast-box__name">{{ .Title }}</h3>
+            <span class="cast-box__role">{{ .Params.role }}</span>
+            <p class="cast-box__quote">{{ .Params.card_bio | default .Params.line }}</p>
+          </div>
+        </a>
+      {{ end }}
     </div>
 
   </div>

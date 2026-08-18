@@ -2,7 +2,7 @@
 <!-- Custom Character Page Hero -->
 <section class="char-hero">
   <div class="char-hero__backdrop" aria-hidden="true">
-    <img src="{{ "images/characters-hero-bg.webp" | relURL }}" alt="" loading="eager" decoding="async">
+    {{ partial "image.html" (dict "src" ("images/characters-hero-bg.webp") "alt" "" "loading" "eager" "decoding" "async") }}
   </div>
   <div class="char-hero__inner">
     <div class="char-hero__copy">
@@ -19,7 +19,8 @@
 
   <!-- Overlapping Features Strip -->
   <div class="char-features-container">
-    <div class="char-features-strip" aria-label="Cast features">
+    <h2 class="sr-only">What the cantina runs on</h2>
+    <div class="char-features-strip">
       <div class="char-feature">
         <span class="char-feature__icon" aria-hidden="true">
           {{ partial "glyph.html" (dict "name" "agave" "class" "rip-glyph--sm rip-glyph--red") }}

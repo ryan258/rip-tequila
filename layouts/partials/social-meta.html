@@ -1,12 +1,18 @@
 {{- $title := or .Params.seo_title .Title site.Title -}}
 {{- $description := or .Params.seo_description .Description site.Params.description -}}
-{{- /* Only advertise a card image once one actually exists on disk — a 404 in
-       og:image renders as a broken card, which is worse than no image at all.
-       Drop the file in static/ and set params.ogImage in hugo.yaml to enable. */ -}}
-{{- $imagePath := or .Params.image site.Params.ogImage -}}
-{{- $image := "" -}}
-{{- with $imagePath -}}
-  {{- if fileExists (path.Join "static" .) -}}{{- $image = . | absURL -}}{{- end -}}
+{{- /* Cards want a 1.91:1 image; the source art is square, so Hugo crops one.
+       Deliberately keyed off `ogImage`, not the page's `image:` — that one is a
+       small product cutout that would be upscaled into a blurry card. Give a page
+       its own share art by setting `ogImage:` in its front matter. A path that
+       doesn't resolve falls back to a text-only card rather than advertising a
+       broken image, which renders worse than none at all. */ -}}
+{{- $card := "" -}}
+{{- with or .Params.ogImage site.Params.ogImage -}}
+  {{- with resources.Get . -}}
+    {{- $card = (.Fill "1200x630 center").Permalink -}}
+  {{- else -}}
+    {{- warnf "partial social-meta.html: no asset at %q" . -}}
+  {{- end -}}
 {{- end -}}
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description }}">
@@ -15,8 +21,10 @@
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
-{{- with $image }}
+{{- with $card }}
 <meta property="og:image" content="{{ . }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:image" content="{{ . }}">
 <meta name="twitter:card" content="summary_large_image">
 {{- else }}

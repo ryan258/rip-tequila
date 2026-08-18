@@ -42,8 +42,11 @@
     inset: 0;
     pointer-events: none;
     opacity: $opacity;
+    // Relative, not root-absolute: the stylesheet is served from /css/, so this
+    // resolves correctly whether the site is deployed at a domain root or under
+    // a GitHub Pages project subpath.
     background-image:
-      url("/images/paper-grain-bg.webp"),
+      url("../images/paper-grain-bg.webp"),
       linear-gradient(90deg, rgba($color-black, 0.12) 1px, transparent 1px),
       linear-gradient(rgba($color-black, 0.08) 1px, transparent 1px);
     background-size: 500px 500px, 26px 26px, 26px 26px;

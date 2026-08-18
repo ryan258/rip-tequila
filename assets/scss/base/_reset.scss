@@ -48,6 +48,11 @@ video {
   max-width: 100%;
 }
 
+// Components set their own `display`, which would otherwise beat the UA rule.
+[hidden] {
+  display: none !important;
+}
+
 button,
 input,
 textarea,

@@ -13,12 +13,16 @@
       <div class="faq-accordion-group">
         {{ range .Params.faqs }}
           <details class="faq-item"{{ if .open }} open{{ end }}>
+            {{/* <summary> takes phrasing content OR a single heading element — so the
+                 heading wraps the whole row rather than sitting between two spans. */}}
             <summary class="faq-item__summary">
-              <span class="faq-item__icon">
-                {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md rip-glyph--red") }}
-              </span>
-              <h2 class="faq-item__question">{{ .q }}</h2>
-              <span class="faq-item__toggle" aria-hidden="true"></span>
+              <h2 class="faq-item__question">
+                <span class="faq-item__icon">
+                  {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md rip-glyph--red") }}
+                </span>
+                <span class="faq-item__question-text">{{ .q }}</span>
+                <span class="faq-item__toggle" aria-hidden="true"></span>
+              </h2>
             </summary>
             <div class="faq-item__content">
               {{/* Front-matter answers can't run shortcodes, so rebase their root-relative links onto baseURL. */}}

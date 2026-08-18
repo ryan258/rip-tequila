@@ -238,7 +238,6 @@
   line-height: 1.25;
 }
 
-.find-us-channel__desc,
 .find-us-channel__address {
   font-family: $font-body;
   font-size: clamp(0.85rem, 0.95vw, 0.92rem);
@@ -313,14 +312,12 @@
   margin-bottom: 0.6rem;
 }
 
-.find-us-detail-text,
-.find-us-detail-address {
+.find-us-detail-text {
   font-family: $font-body;
   font-size: clamp(0.88rem, 0.95vw, 0.93rem);
   line-height: 1.65;
   color: #2e2e2e;
   margin: 0;
-  font-style: normal;
 
   strong {
     font-weight: 700;

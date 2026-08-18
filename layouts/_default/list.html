@@ -7,8 +7,10 @@
       {{ with .Description }}
         <p class="standard-doc-hero__desc">{{ . }}</p>
       {{ end }}
-      {{ with .Params.cta_label }}
-        <a class="button button--primary" href="{{ strings.TrimPrefix "/" ($.Params.cta_href | default "") | relURL }}">{{ . }}</a>
+      {{/* Guard on the href, not the label — a label with no destination used to
+           render a button pointing at the homepage. */}}
+      {{ with .Params.cta_href }}
+        <a class="button button--primary" href="{{ strings.TrimPrefix "/" . | relURL }}">{{ $.Params.cta_label | default "Read more" }}</a>
       {{ end }}
     </div>
   </header>

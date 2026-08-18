@@ -44,7 +44,7 @@
         <div class="merch-detail__inset-group">
           {{ with .Params.detail_image }}
             <div class="merch-detail__macro-thumb">
-              <img src="{{ . | relURL }}" alt="{{ $.Title }} detail" loading="lazy" decoding="async">
+              {{ partial "image.html" (dict "src" (.) "alt" (printf "%s detail" $.Title) "loading" "lazy" "decoding" "async") }}
             </div>
           {{ end }}
 
@@ -63,7 +63,7 @@
       <div class="merch-detail__right-col">
         <div class="merch-detail__hero-media">
           {{ if .Params.image }}
-            <img class="merch-detail__hero-img" src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="eager" decoding="async">
+            {{ partial "image.html" (dict "src" (.Params.image) "alt" (.Title) "class" "merch-detail__hero-img" "loading" "eager" "decoding" "async") }}
           {{ else }}
             <div class="merch-detail__hero-fallback">
               {{ partial "glyph.html" (dict "name" (.Params.icon | default "hat") "class" "rip-glyph--hero rip-glyph--animated") }}
@@ -71,17 +71,10 @@
           {{ end }}
         </div>
 
+        {{/* The body is story prose only — the "Built for" list and closing quote
+             come from the `built_for` and `quote` front matter below. */}}
         <div class="merch-detail__story">
-          {{ $raw := .RawContent }}
-          {{ $parts := split $raw "## Built for" }}
-          {{ if eq (len $parts) 1 }}
-            {{ $parts = split $raw "## Built For" }}
-          {{ end }}
-          {{ if eq (len $parts) 1 }}
-            {{ $parts = split $raw "## Best applications" }}
-          {{ end }}
-          {{ $story := index $parts 0 }}
-          {{ $story | markdownify }}
+          {{ .Content }}
         </div>
       </div>
 
@@ -100,34 +93,12 @@
         <h2 class="merch-detail__section-title">Built For</h2>
 
         <ul class="merch-detail__feature-list">
-          {{ if .Params.built_for }}
-            {{ range .Params.built_for }}
-              <li class="merch-detail__feature-item">
-                <span class="merch-detail__feature-icon" aria-hidden="true">
-                  {{ partial "glyph.html" (dict "name" (.icon | default "agave") "class" "rip-glyph--md") }}
-                </span>
-                <span class="merch-detail__feature-text">{{ .text }}</span>
-              </li>
-            {{ end }}
-          {{ else }}
-            {{/* Fallback for markdown list if frontmatter isn't populated */}}
+          {{ range .Params.built_for }}
             <li class="merch-detail__feature-item">
               <span class="merch-detail__feature-icon" aria-hidden="true">
-                {{ partial "glyph.html" (dict "name" "sun" "class" "rip-glyph--md") }}
+                {{ partial "glyph.html" (dict "name" (.icon | default "agave") "class" "rip-glyph--md") }}
               </span>
-              <span class="merch-detail__feature-text">Shielding your eyes from the harsh sunlight after an evening that lasted too long.</span>
-            </li>
-            <li class="merch-detail__feature-item">
-              <span class="merch-detail__feature-icon" aria-hidden="true">
-                {{ partial "glyph.html" (dict "name" "wind" "class" "rip-glyph--md") }}
-              </span>
-              <span class="merch-detail__feature-text">Long highway drives with the windows rolled completely down.</span>
-            </li>
-            <li class="merch-detail__feature-item">
-              <span class="merch-detail__feature-icon" aria-hidden="true">
-                {{ partial "glyph.html" (dict "name" "agave" "class" "rip-glyph--md") }}
-              </span>
-              <span class="merch-detail__feature-text">Subtle luxury flexes in dive bars where everyone else is wearing corporate swag.</span>
+              <span class="merch-detail__feature-text">{{ .text }}</span>
             </li>
           {{ end }}
         </ul>
@@ -171,13 +142,15 @@
 
         {{ with .Params.secondary_image }}
           <div class="merch-detail__secondary-media">
-            <img src="{{ . | relURL }}" alt="{{ $.Title }} view" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" (.) "alt" (printf "%s view" $.Title) "loading" "lazy" "decoding" "async") }}
           </div>
         {{ end }}
       </div>
 
     </div>
   </div>
+
+  {{ partial "sections/disclaimer.html" . }}
 
 </article>
 {{ end }}

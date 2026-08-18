@@ -58,7 +58,7 @@
       {{/* Right Column: Montage Artwork */}}
       <div class="merch-hero__visual">
         <div class="merch-hero__frame">
-          <img src="{{ "images/merch/merch-hero-montage.webp" | relURL }}" alt="RIP Tequila Afterparty Merchandise Collection" class="merch-hero__img" loading="eager" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/merch/merch-hero-montage.webp") "alt" "RIP Tequila Afterparty Merchandise Collection" "class" "merch-hero__img" "loading" "eager" "decoding" "async") }}
         </div>
       </div>
 
@@ -74,7 +74,8 @@
   {{ end }}
 
   {{/* 2. VALUE PILLARS BAR (DARK STRIP) */}}
-  <section class="merch-pillars" aria-label="Merchandise standards and benefits">
+  <section class="merch-pillars" aria-labelledby="merch-pillars-heading">
+    <h2 class="sr-only" id="merch-pillars-heading">Merchandise standards and benefits</h2>
     <div class="merch-container merch-pillars__grid">
       {{ range (slice
         (dict "icon" "bell" "title" "LEGENDARY ONLY" "desc" "Drops are rare for a reason. Miss it once, it's gone for good.")
@@ -110,12 +111,12 @@
         {{ range .Pages.ByWeight }}
           {{ $categories = $categories | append (.Params.category | lower) }}
         {{ end }}
-        <nav class="merch-filters" aria-label="Merch category filter">
-          <button type="button" class="merch-filter-btn is-active" data-filter="all">ALL</button>
+        <div class="merch-filters" role="group" aria-label="Filter merch by category">
+          <button type="button" class="merch-filter-btn is-active" data-filter="all" aria-pressed="true">ALL</button>
           {{ range $categories | uniq | sort }}
-            <button type="button" class="merch-filter-btn" data-filter="{{ . }}">{{ . | upper }}</button>
+            <button type="button" class="merch-filter-btn" data-filter="{{ . }}" aria-pressed="false">{{ . | upper }}</button>
           {{ end }}
-        </nav>
+        </div>
       </div>
 
       {{/* Product Cards Grid */}}
@@ -126,7 +127,7 @@
             <a class="merch-product-card__link-wrap" href="{{ .RelPermalink }}">
               <div class="merch-product-card__media">
                 {{ if .Params.image }}
-                  <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="merch-product-card__img" loading="lazy" decoding="async">
+                  {{ partial "image.html" (dict "src" (.Params.image) "alt" (.Title) "class" "merch-product-card__img" "loading" "lazy" "decoding" "async") }}
                 {{ else }}
                   {{ partial "glyph.html" (dict "name" .Params.icon "class" "merch-product-card__glyph") }}
                 {{ end }}
@@ -163,7 +164,7 @@
       {{/* Left: Woodcut Chest Art */}}
       <div class="merch-locker__visual">
         <div class="merch-locker__frame">
-          <img src="{{ "images/merch/evidence-locker-chest.webp" | relURL }}" alt="RIP Tequila Evidence Locker Crate" class="merch-locker__img" loading="lazy" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/merch/evidence-locker-chest.webp") "alt" "RIP Tequila Evidence Locker Crate" "class" "merch-locker__img" "loading" "lazy" "decoding" "async") }}
         </div>
       </div>
 
@@ -204,7 +205,7 @@
 
       {{/* Left: Archway artwork */}}
       <div class="merch-club__portal">
-        <img src="{{ "images/cantina/cantina-portal-hero.webp" | relURL }}" alt="La Cantina Archway" class="merch-club__portal-img" loading="lazy" decoding="async">
+        {{ partial "image.html" (dict "src" ("images/cantina/cantina-portal-hero.webp") "alt" "La Cantina Archway" "class" "merch-club__portal-img" "loading" "lazy" "decoding" "async") }}
       </div>
 
       {{/* Middle: Pitch and Perks */}}
@@ -256,52 +257,7 @@
     </div>
   </section>
 
+{{/* Filter behaviour lives in assets/ts/main.ts — one bundled, fingerprinted,
+     SRI-checked script rather than an inline block. */}}
 </article>
-
-{{/* Client-side category tab filter script */}}
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var filterBtns = document.querySelectorAll('.merch-filter-btn');
-    var productCards = document.querySelectorAll('.merch-product-card');
-    var viewAllBtn = document.getElementById('merch-view-all-btn');
-
-    function applyFilter(filter) {
-      filterBtns.forEach(function(btn) {
-        if (btn.getAttribute('data-filter') === filter) {
-          btn.classList.add('is-active');
-        } else {
-          btn.classList.remove('is-active');
-        }
-      });
-
-      productCards.forEach(function(card) {
-        var cardCat = card.getAttribute('data-category');
-        if (filter === 'all' || cardCat === filter) {
-          card.style.display = '';
-          card.classList.remove('is-hidden');
-        } else {
-          card.style.display = 'none';
-          card.classList.add('is-hidden');
-        }
-      });
-    }
-
-    filterBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var filter = this.getAttribute('data-filter');
-        applyFilter(filter);
-      });
-    });
-
-    if (viewAllBtn) {
-      viewAllBtn.addEventListener('click', function() {
-        applyFilter('all');
-        var catalogEl = document.getElementById('featured-artifacts');
-        if (catalogEl) {
-          catalogEl.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    }
-  });
-</script>
 {{ end }}

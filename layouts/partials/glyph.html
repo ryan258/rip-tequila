@@ -5,100 +5,31 @@
 {{ $ariaHidden := .aria_hidden | default true }}
 {{ $ariaLabel := .aria_label | default "" }}
 
-{{/* Normalize name from FA classes or raw names */}}
+{{/* Synonyms only. Canonical names pass through untouched, so this table lists
+     just the redirects — anything not here is already the glyph's real name. */}}
+{{ $aliases := dict
+  "alembic" "still"       "art" "pencils"          "badge" "card"
+  "ban" "warning"         "book-open" "book"       "box-open" "crate"
+  "bullhorn" "megaphone"  "cask" "barrel"          "certificate" "card"
+  "champagne-glasses" "glass"                      "circle-exclamation" "warning"
+  "circle-question" "question"                     "citrus" "lemon"
+  "clone" "coasters"      "crescent-star" "moon-star"
+  "diamond-star" "star-diamond"                    "distill" "still"
+  "door-open" "door"      "faceted-star" "star-eight"
+  "file-signature" "lock" "flower" "rose"          "folded-map" "map"
+  "hat-cowboy" "hat"      "icons" "stickers"       "id-badge" "card"
+  "id-card" "card"        "iron-star" "star-cross" "location-dot" "location"
+  "loop" "infinity"       "martini" "glass"        "martini-glass-citrus" "glass"
+  "microphone-lines" "microphone"                  "music" "maracas"
+  "pen" "pencils"         "pencil" "pencils"       "people-group" "people"
+  "person-digging" "shovel"                        "plant" "agave"
+  "press" "megaphone"     "road" "wind"            "scale-balanced" "scale"
+  "seedling" "agave"      "sunburst" "star-burst"  "sunlight" "sun"
+  "tee" "shirt"           "tombstone" "monument"   "watcher" "eye"
+  "waves" "wind"          "wine-bottle" "bottle"
+}}
 {{ $name := $rawName }}
-{{ $name = replace $name "fa-solid fa-" "" }}
-{{ $name = replace $name "fa-brands fa-" "social-" }}
-{{ $name = replace $name "fa-" "" }}
-
-{{/* Map aliases to canonical brand glyphs */}}
-{{ if or (eq $name "skull") (eq $name "fa-skull") }}
-  {{ $name = "skull" }}
-{{ else if or (eq $name "bell") (eq $name "fa-bell") }}
-  {{ $name = "bell" }}
-{{ else if or (eq $name "seedling") (eq $name "plant") (eq $name "agave") }}
-  {{ $name = "agave" }}
-{{ else if or (eq $name "monument") (eq $name "tombstone") }}
-  {{ $name = "monument" }}
-{{ else if eq $name "moon" }}
-  {{ $name = "moon" }}
-{{ else if eq $name "cross" }}
-  {{ $name = "cross" }}
-{{ else if or (eq $name "martini-glass-citrus") (eq $name "champagne-glasses") (eq $name "martini") }}
-  {{ $name = "glass" }}
-{{ else if or (eq $name "lemon") (eq $name "citrus") }}
-  {{ $name = "lemon" }}
-{{ else if eq $name "cactus" }}
-  {{ $name = "cactus" }}
-{{ else if or (eq $name "barrel") (eq $name "cask") }}
-  {{ $name = "barrel" }}
-{{ else if or (eq $name "eye") (eq $name "watcher") }}
-  {{ $name = "eye" }}
-{{ else if or (eq $name "music") (eq $name "maracas") }}
-  {{ $name = "maracas" }}
-{{ else if or (eq $name "microphone-lines") (eq $name "microphone") }}
-  {{ $name = "microphone" }}
-{{ else if or (eq $name "person-digging") (eq $name "shovel") }}
-  {{ $name = "shovel" }}
-{{ else if or (eq $name "hat-cowboy") (eq $name "hat") }}
-  {{ $name = "hat" }}
-{{ else if or (eq $name "shirt") (eq $name "tee") }}
-  {{ $name = "shirt" }}
-{{ else if or (eq $name "id-card") (eq $name "id-badge") (eq $name "badge") (eq $name "certificate") }}
-  {{ $name = "card" }}
-{{ else if or (eq $name "icons") (eq $name "stickers") }}
-  {{ $name = "stickers" }}
-{{ else if or (eq $name "clone") (eq $name "coasters") }}
-  {{ $name = "coasters" }}
-{{ else if or (eq $name "scale-balanced") (eq $name "scale") }}
-  {{ $name = "scale" }}
-{{ else if or (eq $name "location-dot") (eq $name "location") }}
-  {{ $name = "location" }}
-{{ else if or (eq $name "circle-exclamation") (eq $name "warning") (eq $name "ban") }}
-  {{ $name = "warning" }}
-{{ else if or (eq $name "book-open") (eq $name "book") }}
-  {{ $name = "book" }}
-{{ else if or (eq $name "door-open") (eq $name "door") }}
-  {{ $name = "door" }}
-{{ else if or (eq $name "box-open") (eq $name "crate") }}
-  {{ $name = "crate" }}
-{{ else if or (eq $name "lock") (eq $name "file-signature") }}
-  {{ $name = "lock" }}
-{{ else if eq $name "circle-question" }}
-  {{ $name = "question" }}
-{{ else if or (eq $name "people-group") (eq $name "people") }}
-  {{ $name = "people" }}
-{{ else if or (eq $name "wine-bottle") (eq $name "bottle") }}
-  {{ $name = "bottle" }}
-{{ else if or (eq $name "sun") (eq $name "sunlight") }}
-  {{ $name = "sun" }}
-{{ else if or (eq $name "wind") (eq $name "waves") (eq $name "road") }}
-  {{ $name = "wind" }}
-{{ else if or (eq $name "star-burst") (eq $name "sunburst") }}
-  {{ $name = "star-burst" }}
-{{ else if or (eq $name "star-diamond") (eq $name "diamond-star") }}
-  {{ $name = "star-diamond" }}
-{{ else if or (eq $name "star-eight") (eq $name "faceted-star") }}
-  {{ $name = "star-eight" }}
-{{ else if or (eq $name "star-cross") (eq $name "iron-star") }}
-  {{ $name = "star-cross" }}
-{{ else if or (eq $name "moon-star") (eq $name "crescent-star") }}
-  {{ $name = "moon-star" }}
-{{ else if or (eq $name "megaphone") (eq $name "bullhorn") (eq $name "press") }}
-  {{ $name = "megaphone" }}
-{{ else if or (eq $name "pencils") (eq $name "pencil") (eq $name "pen") (eq $name "art") }}
-  {{ $name = "pencils" }}
-{{ else if or (eq $name "map") (eq $name "folded-map") }}
-  {{ $name = "map" }}
-{{ else if or (eq $name "still") (eq $name "alembic") (eq $name "distill") }}
-  {{ $name = "still" }}
-{{ else if or (eq $name "rose") (eq $name "flower") }}
-  {{ $name = "rose" }}
-{{ else if or (eq $name "infinity") (eq $name "loop") }}
-  {{ $name = "infinity" }}
-{{ else if eq $name "star" }}
-  {{ $name = "star" }}
-{{ end }}
+{{ with index $aliases $name }}{{ $name = . }}{{ end }}
 
 <span class="rip-glyph rip-glyph--{{ $name }}{{ with $class }} {{ . }}{{ end }}"{{ with $size }} style="--glyph-size: {{ . }};"{{ end }}{{ if $ariaHidden }} aria-hidden="true"{{ else }}{{ with $ariaLabel }} role="img" aria-label="{{ . }}"{{ end }}{{ end }}>
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -382,7 +313,9 @@
       <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 
     {{ else }}
-      {{/* Default Fallback Skull */}}
+      {{/* Default Fallback Skull — warn so a typo'd icon name shows up in the
+           build log instead of quietly becoming a skull. */}}
+      {{ warnf "partial glyph.html: unknown glyph %q, falling back to skull" $rawName }}
       <path d="M4 11C4 6.58 7.58 3 12 3C16.42 3 20 6.58 20 11C20 13.9 18.45 16.44 16.14 17.8L16 21H8L7.86 17.8C5.55 16.44 4 13.9 4 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
       <path d="M7.5 10.5C7.5 9.67 8.17 9 9 9C9.83 9 10.5 9.67 10.5 10.5C10.5 11.33 9.83 12 9 12C8.17 12 7.5 11.33 7.5 10.5ZM13.5 10.5C13.5 9.67 14.17 9 15 9C15.83 9 16.5 9.67 16.5 10.5C16.5 11.33 15.83 12 15 12C14.17 12 13.5 11.33 13.5 10.5Z" fill="currentColor"/>
       <path d="M12 13L11 15.5H13L12 13Z" fill="currentColor"/>

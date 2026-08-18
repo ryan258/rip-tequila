@@ -373,6 +373,9 @@
   width: 22px;
   height: 10px;
   border-radius: 2px 2px 0 0;
+  // Follows the bottle's own accent token, so a new expression needs no CSS —
+  // only `accent:` in its front matter.
+  background: var(--card-accent);
 }
 
 .lineup-bottle-card__neck {
@@ -414,14 +417,6 @@
     height: 20px;
   }
 }
-
-// Cap Color Themes
-.lineup-bottle-card__shape--blanco .lineup-bottle-card__cap { background: #2e7d4f; }
-.lineup-bottle-card__shape--reposado .lineup-bottle-card__cap { background: #b22222; }
-.lineup-bottle-card__shape--anejo .lineup-bottle-card__cap { background: #c6a24a; }
-.lineup-bottle-card__shape--extra-anejo .lineup-bottle-card__cap { background: #333333; }
-.lineup-bottle-card__shape--midnight .lineup-bottle-card__cap { background: #0f3d3e; }
-.lineup-bottle-card__shape--reserva .lineup-bottle-card__cap { background: #d4af37; }
 
 .lineup-bottle-card__name {
   font-family: $font-accent;

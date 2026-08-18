@@ -1,102 +1,37 @@
+{{- /* Bottles come from the lineup pages, never a second hardcoded copy — the grid
+       and the headline count both track content/the-lineup/. */ -}}
+{{ $bottles := (site.GetPage "the-lineup").Pages.ByWeight }}
+{{ $count := partial "numword.html" (len $bottles) }}
 <section class="product-preview" aria-labelledby="product-preview-title">
   <div class="product-preview__inner">
-    
+
     <div class="product-preview__header">
       <div class="product-preview__copy">
         <p class="product-preview__eyebrow">The Lineup for Legends</p>
-        <h2 class="product-preview__title" id="product-preview-title">Six Expressions.<br>One Afterlife.</h2>
-        <p class="product-preview__desc">Five tequilas. One reserve. Each bottle marks a chapter of the evening.</p>
+        <h2 class="product-preview__title" id="product-preview-title">{{ $count | title }} Expressions.<br>One Afterlife.</h2>
+        <p class="product-preview__desc">Each bottle marks a chapter of the evening.</p>
         <div class="product-preview__action">
           <a class="button button--primary" href="{{ "the-lineup/" | relURL }}">Explore the Lineup</a>
         </div>
       </div>
 
-      <div class="product-preview__bottles-grid scroll-strip" role="list" aria-label="RIP Tequila product lineup">
-        
-        {{/* 1. Blanco */}}
-        <a class="lineup-bottle-card" href="{{ "the-lineup/rip-blanco/" | relURL }}" role="listitem">
-          <div class="lineup-bottle-card__shape lineup-bottle-card__shape--blanco" aria-hidden="true">
-            <span class="lineup-bottle-card__cap"></span>
-            <span class="lineup-bottle-card__neck"></span>
-            <div class="lineup-bottle-card__body">
-              <span class="lineup-bottle-card__brand">RIP</span>
-              <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" "star-burst" "class" "rip-glyph--sm") }}</span>
+      {{/* No role="list"/"listitem" here: the cards are grid children, and putting
+           role="listitem" on the <a> would override its implicit link role. */}}
+      <div class="product-preview__bottles-grid scroll-strip">
+        {{ range $bottles }}
+          <a class="lineup-bottle-card" href="{{ .RelPermalink }}">
+            <div class="lineup-bottle-card__shape" data-accent="{{ .Params.accent }}" aria-hidden="true">
+              <span class="lineup-bottle-card__cap"></span>
+              <span class="lineup-bottle-card__neck"></span>
+              <div class="lineup-bottle-card__body">
+                <span class="lineup-bottle-card__brand">RIP</span>
+                <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" .Params.icon "class" "rip-glyph--sm") }}</span>
+              </div>
             </div>
-          </div>
-          <h3 class="lineup-bottle-card__name">Blanco</h3>
-          <p class="lineup-bottle-card__desc">Pure. Bright.<br>First light.</p>
-        </a>
-
-        {{/* 2. Reposado */}}
-        <a class="lineup-bottle-card" href="{{ "the-lineup/rip-reposado/" | relURL }}" role="listitem">
-          <div class="lineup-bottle-card__shape lineup-bottle-card__shape--reposado" aria-hidden="true">
-            <span class="lineup-bottle-card__cap"></span>
-            <span class="lineup-bottle-card__neck"></span>
-            <div class="lineup-bottle-card__body">
-              <span class="lineup-bottle-card__brand">RIP</span>
-              <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" "bell" "class" "rip-glyph--sm") }}</span>
-            </div>
-          </div>
-          <h3 class="lineup-bottle-card__name">Reposado</h3>
-          <p class="lineup-bottle-card__desc">Rested. Warm.<br>Truth in time.</p>
-        </a>
-
-        {{/* 3. Añejo */}}
-        <a class="lineup-bottle-card" href="{{ "the-lineup/rip-anejo/" | relURL }}" role="listitem">
-          <div class="lineup-bottle-card__shape lineup-bottle-card__shape--anejo" aria-hidden="true">
-            <span class="lineup-bottle-card__cap"></span>
-            <span class="lineup-bottle-card__neck"></span>
-            <div class="lineup-bottle-card__body">
-              <span class="lineup-bottle-card__brand">RIP</span>
-              <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--sm") }}</span>
-            </div>
-          </div>
-          <h3 class="lineup-bottle-card__name">Añejo</h3>
-          <p class="lineup-bottle-card__desc">Deep. Golden.<br>Well lived.</p>
-        </a>
-
-        {{/* 4. Extra Añejo */}}
-        <a class="lineup-bottle-card" href="{{ "the-lineup/rip-extra-anejo/" | relURL }}" role="listitem">
-          <div class="lineup-bottle-card__shape lineup-bottle-card__shape--extra-anejo" aria-hidden="true">
-            <span class="lineup-bottle-card__cap"></span>
-            <span class="lineup-bottle-card__neck"></span>
-            <div class="lineup-bottle-card__body">
-              <span class="lineup-bottle-card__brand">RIP</span>
-              <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" "monument" "class" "rip-glyph--sm") }}</span>
-            </div>
-          </div>
-          <h3 class="lineup-bottle-card__name">Extra Añejo</h3>
-          <p class="lineup-bottle-card__desc">Older. Wiser.<br>Few survive.</p>
-        </a>
-
-        {{/* 5. Midnight Agave Reserve */}}
-        <a class="lineup-bottle-card" href="{{ "the-lineup/midnight-agave-reserve/" | relURL }}" role="listitem">
-          <div class="lineup-bottle-card__shape lineup-bottle-card__shape--midnight" aria-hidden="true">
-            <span class="lineup-bottle-card__cap"></span>
-            <span class="lineup-bottle-card__neck"></span>
-            <div class="lineup-bottle-card__body">
-              <span class="lineup-bottle-card__brand">RIP</span>
-              <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" "moon" "class" "rip-glyph--sm") }}</span>
-            </div>
-          </div>
-          <h3 class="lineup-bottle-card__name">Midnight Agave Reserve</h3>
-          <p class="lineup-bottle-card__desc">Rare. Shadows.<br>Collect if you can.</p>
-        </a>
-
-        {{/* 6. La Reserva */}}
-        <a class="lineup-bottle-card" href="{{ "the-lineup/" | relURL }}" role="listitem">
-          <div class="lineup-bottle-card__shape lineup-bottle-card__shape--reserva" aria-hidden="true">
-            <span class="lineup-bottle-card__cap"></span>
-            <span class="lineup-bottle-card__neck"></span>
-            <div class="lineup-bottle-card__body">
-              <span class="lineup-bottle-card__brand">RIP</span>
-              <span class="lineup-bottle-card__icon">{{ partial "glyph.html" (dict "name" "star-eight" "class" "rip-glyph--sm") }}</span>
-            </div>
-          </div>
-          <h3 class="lineup-bottle-card__name">La Reserva</h3>
-          <p class="lineup-bottle-card__desc">Once in a while.<br>Once in a lifetime.</p>
-        </a>
-
+            <h3 class="lineup-bottle-card__name">{{ strings.TrimPrefix "RIP " .Title }}</h3>
+            <p class="lineup-bottle-card__desc">{{ .Params.descriptor }}</p>
+          </a>
+        {{ end }}
       </div>
     </div>
 

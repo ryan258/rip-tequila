@@ -13,9 +13,13 @@
         <h1 class="char-detail-hero__title">{{ .Title }}</h1>
         <p class="char-detail-hero__tagline">{{ .Params.line }}</p>
         
+        {{/* A distinct hook, not .Summary — .Summary is the head of .Content, which
+             the story column renders in full further down the page. */}}
+        {{ with .Params.lead }}
         <div class="char-detail-hero__body">
-          {{ .Summary }}
+          <p>{{ . }}</p>
         </div>
+        {{ end }}
 
         <div class="char-detail-hero__actions">
           <a class="button button--primary" href="{{ "characters/" | relURL }}">Back to the Cast</a>
@@ -23,14 +27,15 @@
         </div>
 
         <!-- 4-Column Highlights Strip -->
-        <div class="char-detail-highlights" aria-label="Character highlights">
+        <h2 class="sr-only">{{ .Title }} at a glance</h2>
+        <div class="char-detail-highlights">
           {{ range .Params.highlights }}
             <div class="char-detail-highlight">
               <span class="char-detail-highlight__icon" aria-hidden="true">
                 {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm rip-glyph--red") }}
               </span>
               <div class="char-detail-highlight__details">
-                <h4 class="char-detail-highlight__title">{{ .title }}</h4>
+                <h3 class="char-detail-highlight__title">{{ .title }}</h3>
                 <p class="char-detail-highlight__text">{{ .text }}</p>
               </div>
             </div>
@@ -43,15 +48,15 @@
         <div class="char-detail-hero__collage">
           <!-- Backdrop Location Image -->
           <div class="char-detail-hero__location-bg" aria-hidden="true">
-            <img src="{{ .Params.location_image | relURL }}" alt="" class="char-detail-hero__loc-img">
+            {{ partial "image.html" (dict "src" (.Params.location_image) "alt" "" "class" "char-detail-hero__loc-img" "loading" "eager") }}
           </div>
           <!-- Portrait Image -->
           <div class="char-detail-hero__portrait-container">
-            <img src="{{ $portraitPath | relURL }}" alt="{{ .Title }}" class="char-detail-hero__portrait">
+            {{ partial "image.html" (dict "src" ($portraitPath) "alt" (.Title) "class" "char-detail-hero__portrait" "loading" "eager") }}
           </div>
           <!-- Bottle Image Overlay -->
           <div class="char-detail-hero__bottle-overlay">
-            <img src="{{ .Params.pour_image | relURL }}" alt="{{ .Params.pour_title }}" class="char-detail-hero__bottle">
+            {{ partial "image.html" (dict "src" (.Params.pour_image) "alt" (.Params.pour_title) "class" "char-detail-hero__bottle" "loading" "eager") }}
           </div>
           <!-- Circular Seal Stamp -->
           <div class="char-detail-hero__seal" aria-hidden="true">
@@ -70,7 +75,7 @@
     <div class="char-detail-body-row">
       <!-- Left Column: Story -->
       <div class="char-detail-story-col">
-        <h3 class="char-detail-section-title">⤛ The Story ⤜</h3>
+        <h2 class="char-detail-section-title">⤛ The Story ⤜</h2>
         <div class="char-detail-story-content">
           {{ .Content }}
         </div>
@@ -96,9 +101,9 @@
             </div>
           </div>
           
-          <p class="char-detail-prop-box__footer">
-            From this {{ lower .Params.prop }}, he pours with perfect measure. He doesn't drink. He delivers.
-          </p>
+          {{ with .Params.prop_line }}
+          <p class="char-detail-prop-box__footer">{{ . }}</p>
+          {{ end }}
         </div>
       </div>
     </div>
@@ -107,18 +112,18 @@
   <!-- Bottom Section: Pour & Speaks -->
   <section class="char-detail-bottom-section">
     <div class="char-detail-bottom-row">
-      <!-- Left Column: What He Pours -->
+      <!-- Left Column: The Signature Pour -->
       <div class="char-detail-pour-col">
-        <h3 class="char-detail-section-title">⤛ What He Pours ⤜</h3>
+        <h2 class="char-detail-section-title">⤛ The Signature Pour ⤜</h2>
         <div class="char-detail-pour-card">
           <div class="char-detail-pour-info">
-            <h4 class="char-detail-pour-title">{{ .Params.pour_title }}</h4>
+            <h3 class="char-detail-pour-title">{{ .Params.pour_title }}</h3>
             <p class="char-detail-pour-desc">{{ .Params.pour_desc }}</p>
             <p class="char-detail-pour-slogan">“{{ .Params.pour_line }}”</p>
             <a class="button button--primary" href="{{ strings.TrimPrefix "/" .Params.pour_href | relURL }}">Explore {{ .Params.pour_title }}</a>
           </div>
           <div class="char-detail-pour-visual">
-            <img src="{{ .Params.pour_image | relURL }}" alt="{{ .Params.pour_title }}" class="char-detail-pour-bottle-img">
+            {{ partial "image.html" (dict "src" (.Params.pour_image) "alt" (.Params.pour_title) "class" "char-detail-pour-bottle-img") }}
             <div class="char-detail-pour-seal" aria-hidden="true">
               <span class="char-detail-pour-seal__text">SIGNATURE POUR</span>
             </div>
@@ -128,11 +133,11 @@
 
       <!-- Right Column: When Speaks -->
       <div class="char-detail-speaks-col">
-        <h3 class="char-detail-section-title">⤛ When {{ .Title }} Speaks ⤜</h3>
+        <h2 class="char-detail-section-title">⤛ When {{ .Title }} Speaks ⤜</h2>
         <div class="char-detail-speaks-card">
           <!-- Location Background Watermark -->
           <div class="char-detail-speaks-watermark" aria-hidden="true">
-            <img src="{{ .Params.location_image | relURL }}" alt="" class="char-detail-speaks-wm-img">
+            {{ partial "image.html" (dict "src" (.Params.location_image) "alt" "" "class" "char-detail-speaks-wm-img") }}
           </div>
           <!-- Rules List -->
           <ul class="char-detail-speaks-list">
@@ -142,7 +147,7 @@
                   {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm rip-glyph--red") }}
                 </span>
                 <div class="char-detail-speaks-item__details">
-                  <h5 class="char-detail-speaks-item__title">{{ .title }}</h5>
+                  <h3 class="char-detail-speaks-item__title">{{ .title }}</h3>
                   <p class="char-detail-speaks-item__text">{{ .text }}</p>
                 </div>
               </li>
@@ -157,7 +162,7 @@
   <section class="char-detail-ribbon-section">
     <div class="char-detail-ribbon">
       <div class="char-detail-ribbon__bg-pattern" aria-hidden="true"></div>
-      <h2 class="char-detail-ribbon__text">“ {{ .Params.pour_line }} ”</h2>
+      <p class="char-detail-ribbon__text">“ {{ .Params.pour_line }} ”</p>
     </div>
   </section>
 </article>

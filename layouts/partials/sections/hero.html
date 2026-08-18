@@ -47,7 +47,7 @@
 
     <div class="hero-poster" aria-hidden="true">
       <div class="hero-poster__frame">
-        <img class="hero-poster__img" src="{{ "images/home-hero-poster.webp" | relURL }}" alt="RIP Tequila - Born in Agave, Buried in Legend" loading="eager" decoding="async">
+        {{ partial "image.html" (dict "src" ("images/home-hero-poster.webp") "alt" "RIP Tequila - Born in Agave, Buried in Legend" "class" "hero-poster__img" "loading" "eager" "decoding" "async") }}
       </div>
     </div>
   </div>

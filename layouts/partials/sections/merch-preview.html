@@ -13,8 +13,8 @@
       </div>
       <div class="merch-split-box__visual" aria-hidden="true">
         <div class="merch-collage">
-          <img class="merch-collage__tee" src="{{ "images/merch/rest-in-proof-tee.webp" | relURL }}" alt="Rest In Proof Tee" loading="lazy" decoding="async">
-          <img class="merch-collage__hat" src="{{ "images/merch/rip-tequila-hat.webp" | relURL }}" alt="RIP Tequila Hat" loading="lazy" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/merch/rest-in-proof-tee.webp") "alt" "Rest In Proof Tee" "class" "merch-collage__tee" "loading" "lazy" "decoding" "async") }}
+          {{ partial "image.html" (dict "src" ("images/merch/rip-tequila-hat.webp") "alt" "RIP Tequila Hat" "class" "merch-collage__hat" "loading" "lazy" "decoding" "async") }}
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
       </div>
       <div class="merch-split-box__visual" aria-hidden="true">
         <div class="social-card-wrap">
-          <img class="social-card-img" src="{{ "images/merch/social-club-card.webp" | relURL }}" alt="Don Muerte Social Club Member Card" loading="lazy" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/merch/social-club-card.webp") "alt" "Don Muerte Social Club Member Card" "class" "social-card-img" "loading" "lazy" "decoding" "async") }}
         </div>
       </div>
     </div>

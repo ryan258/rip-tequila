@@ -47,7 +47,7 @@
 
         {{/* Book Artwork */}}
         <div class="story-hero__book-wrap">
-          <img src="{{ "images/our-story-book-hero.webp" | relURL }}" alt="RIP Tequila Afterlife Chronicle Ledger" class="story-hero__book-img" loading="eager" decoding="async">
+          {{ partial "image.html" (dict "src" ("images/our-story-book-hero.webp") "alt" "RIP Tequila Afterlife Chronicle Ledger" "class" "story-hero__book-img" "loading" "eager" "decoding" "async") }}
         </div>
 
       </div>
@@ -112,7 +112,7 @@
         {{/* 1. Don Muerte */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/don-muerte.webp" | relURL }}" alt="Don Muerte" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/don-muerte.webp") "alt" "Don Muerte" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">Don Muerte</h3>
           <p class="cast-card__desc">Hosts the floor with an unreadable grin and a single shot glass he never empties.</p>
@@ -121,7 +121,7 @@
         {{/* 2. Cantina Jack */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/cantina-jack.webp" | relURL }}" alt="Cantina Jack" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/cantina-jack.webp") "alt" "Cantina Jack" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">Cantina Jack</h3>
           <p class="cast-card__desc">Mans the mahogany bar, pouring crisp Blanco while filing your deepest secrets under <em>unnecessary details</em>.</p>
@@ -130,7 +130,7 @@
         {{/* 3. Campana Roja */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/campana-roja.webp" | relURL }}" alt="Campana Roja" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/campana-roja.webp") "alt" "Campana Roja" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">Campana Roja</h3>
           <p class="cast-card__desc">Watches the brass bell above the door. When she rings it, your evening officially transitions.</p>
@@ -139,7 +139,7 @@
         {{/* 4. La Rosa Negra */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/la-rosa-negra.webp" | relURL }}" alt="La Rosa Negra" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/la-rosa-negra.webp") "alt" "La Rosa Negra" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">La Rosa Negra</h3>
           <p class="cast-card__desc">Takes the stage when the mariachi hits, singing boleros so haunting they’ll make a grown man apologize.</p>
@@ -148,7 +148,7 @@
         {{/* 5. Padre Proof */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/padre-proof.webp" | relURL }}" alt="Padre Proof" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/padre-proof.webp") "alt" "Padre Proof" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">Padre Proof</h3>
           <p class="cast-card__desc">Sits in the corner booth, offering official ecclesiastical absolution for your worst cocktail napkin ideas.</p>
@@ -157,7 +157,7 @@
         {{/* 6. El Sepulturero */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/el-sepulturero.webp" | relURL }}" alt="El Sepulturero" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/el-sepulturero.webp") "alt" "El Sepulturero" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">El Sepulturero</h3>
           <p class="cast-card__desc">Walks the back lot with a shovel and a leather manifest, respectfully burying lost arguments and abandoned dignity.</p>
@@ -166,7 +166,7 @@
         {{/* 7. Los Maracas */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/los-maracas.webp" | relURL }}" alt="Los Maracas" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/los-maracas.webp") "alt" "Los Maracas" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">Los Maracas</h3>
           <p class="cast-card__desc">Provide the unstoppable skeletal rhythm section, ensuring nobody sits down until their boots give out.</p>
@@ -175,7 +175,7 @@
         {{/* 8. El Vigía */}}
         <article class="cast-card">
           <div class="cast-card__media">
-            <img src="{{ "images/cast/el-vigia.webp" | relURL }}" alt="El Vigía" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/cast/el-vigia.webp") "alt" "El Vigía" "loading" "lazy" "decoding" "async") }}
           </div>
           <h3 class="cast-card__name">El Vigía</h3>
           <p class="cast-card__desc">Stands sentinel on the desert road, nodding silently as late arrivals navigate their way toward the glowing neon sign.</p>
@@ -199,7 +199,7 @@
         {{/* Bottle 1: Blanco */}}
         <div class="bottle-col">
           <div class="bottle-col__media">
-            <img src="{{ "images/bottles/blanco-transparent.png" | relURL }}" alt="RIP Blanco Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/bottles/blanco-transparent.png") "alt" "RIP Blanco Bottle" "class" "bottle-col__img" "loading" "lazy" "decoding" "async") }}
           </div>
           <div class="bottle-col__info">
             <div class="bottle-col__icon" aria-hidden="true">
@@ -213,7 +213,7 @@
         {{/* Bottle 2: Reposado */}}
         <div class="bottle-col">
           <div class="bottle-col__media">
-            <img src="{{ "images/bottles/reposado-transparent.png" | relURL }}" alt="RIP Reposado Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/bottles/reposado-transparent.png") "alt" "RIP Reposado Bottle" "class" "bottle-col__img" "loading" "lazy" "decoding" "async") }}
           </div>
           <div class="bottle-col__info">
             <div class="bottle-col__icon" aria-hidden="true">
@@ -227,7 +227,7 @@
         {{/* Bottle 3: Añejo */}}
         <div class="bottle-col">
           <div class="bottle-col__media">
-            <img src="{{ "images/bottles/anejo-transparent.png" | relURL }}" alt="RIP Añejo Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/bottles/anejo-transparent.png") "alt" "RIP Añejo Bottle" "class" "bottle-col__img" "loading" "lazy" "decoding" "async") }}
           </div>
           <div class="bottle-col__info">
             <div class="bottle-col__icon" aria-hidden="true">
@@ -241,7 +241,7 @@
         {{/* Bottle 4: Extra Añejo */}}
         <div class="bottle-col">
           <div class="bottle-col__media">
-            <img src="{{ "images/bottles/extra-anejo-transparent.png" | relURL }}" alt="RIP Extra Añejo Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/bottles/extra-anejo-transparent.png") "alt" "RIP Extra Añejo Bottle" "class" "bottle-col__img" "loading" "lazy" "decoding" "async") }}
           </div>
           <div class="bottle-col__info">
             <div class="bottle-col__icon" aria-hidden="true">
@@ -255,7 +255,7 @@
         {{/* Bottle 5: Midnight Agave Reserve */}}
         <div class="bottle-col">
           <div class="bottle-col__media">
-            <img src="{{ "images/bottles/midnight-reserve-transparent.png" | relURL }}" alt="RIP Midnight Agave Reserve Bottle" class="bottle-col__img" loading="lazy" decoding="async">
+            {{ partial "image.html" (dict "src" ("images/bottles/midnight-reserve-transparent.png") "alt" "RIP Midnight Agave Reserve Bottle" "class" "bottle-col__img" "loading" "lazy" "decoding" "async") }}
           </div>
           <div class="bottle-col__info">
             <div class="bottle-col__icon" aria-hidden="true">
