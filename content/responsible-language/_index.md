@@ -18,7 +18,7 @@ Every page that references spirits, toasts, or night-out culture operates under 
 
 ## The Cardinal Rules of the Cantina
 
-1. **Unmistakable Fiction**: We prominently state our fictional parody status across all product descriptions, merchandise pages, and footers.
+1. **Unmistakable Fiction**: The site footer, the disclaimer band on every product and merchandise page, and this page state plainly that nothing here is a real spirit and nothing alcoholic is for sale. The story pages stay in character; the standing notice never moves.
 2. **Prominent Safety Anchors**: Every alcohol reference is paired with our core directive: *Drink responsibly. Haunt responsibly.*
 3. **Cultural Reverence**: We honor the rich traditions of Mexican folklore, Día de los Muertos, and regional iconography with artistic admiration — never as cheap punchlines.
 4. **Zero Tolerance for Unsafe Tropes**: We never glorify binge drinking, drunk driving, underage drinking, or reckless behavior.

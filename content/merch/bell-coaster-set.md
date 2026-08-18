@@ -31,10 +31,3 @@ Printed on dense 60pt pulpboard with edge-gilded foil accents. Each coaster immo
 
 The back of every piece is debossed with the official insignia: *La Cantina del Último Trago — Member of the Round.*
 
-## Built for
-
-- Providing a dignified landing pad for oversized pours of Añejo.
-- Sparking spontaneous storytelling across the coffee table.
-- Gifting to the host of a house party when a bottle of wine feels too ordinary.
-
-> *"The bell rang. Protect the table."*

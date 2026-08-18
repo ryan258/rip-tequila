@@ -6,6 +6,7 @@ accent: "red"
 card_bio: "Lives for stories. Toasts to endings."
 prop: "Shot glass"
 prop_desc: "A single vintage shot glass. Surgical precision. Zero sips."
+prop_line: "He raises it for every toast in the house. In all these years, nobody has seen him drain it."
 prop_icon: "glass"
 pour_title: "RIP Añejo"
 pour_desc: "Dark, opulent, gold at the edges, and aged until it develops the gravitas of a final confession."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/anejo-transparent.png"
 location_image: "images/cantina/the-high-back-chair.webp"
 icon: "skull"
 line: "Life's short. Toast accordingly."
+lead: "Master of ceremonies, arbiter of taste, and the only voice in the building that can stop a brass section mid-crescendo."
 highlights:
   - title: "Master of Ceremonies"
     text: "He keeps order with a raised glass."
@@ -53,11 +55,9 @@ He carries a single vintage shot glass from which he pours with surgical precisi
 
 He gives exactly one toast per night. When he taps his glass, listen carefully — it’s the only advice you’ll receive that doesn't cost anything.
 
-> *"Life's short. Toast accordingly."*
 
 ## What he pours
 
 **RIP Añejo.** Dark, opulent, gold at the edges, and aged until it develops the gravitas of a final confession.
 
-> *"Proof You Lived."*
 

@@ -6,6 +6,7 @@ accent: "red"
 card_bio: "Pouring truth. No last call. Only legends."
 prop: "Bar Towel"
 prop_desc: "Absorbed enough secrets to bring down three local governments."
+prop_line: "He wipes the bar clean between rounds. The secrets do not come off."
 prop_icon: "glass"
 pour_title: "RIP Blanco"
 pour_desc: "Crystal-clear, unaged, and slung fast across the mahogany wood."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/blanco-transparent.png"
 location_image: "images/cantina/the-long-mahogany-bar.webp"
 icon: "glass"
 line: "Last round, first legend."
+lead: "Behind the wood since the doors opened. He remembers what you drank last October and has never once mentioned it."
 highlights:
   - title: "Vault-Tight Memory"
     text: "Remembers your drink, your alibi, and your broken promises."
@@ -51,11 +53,9 @@ His bar rag has absorbed enough secrets to bring down three municipal government
 
 He communicates primarily in gestures, eyebrow raises, and clean tequila pours.
 
-> *"Last round, first legend."*
 
 ## What he pours
 
 **RIP Blanco** — crisp, unaged, and fast across the counter. For marathon evenings, he pulls down **Last Round Añejo**, his personal special reserve.
 
-> *"I pour. You explain tomorrow."*
 

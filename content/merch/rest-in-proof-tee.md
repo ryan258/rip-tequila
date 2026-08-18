@@ -29,10 +29,3 @@ The back reveals the full, unmistakable manifesto: **REST IN PROOF** arched acro
 
 Inside the neck collar sits a discreet printed confession: *Member of the Round.* The lower left hem bears a collectible woven run-tag.
 
-## Built for
-
-- Looking impeccably dressed at occasions you barely remember RSVPing to.
-- Walking into a room like you own the place and leaving like you own the night.
-- The precise stylistic intersection between an upscale gala and an unscheduled afterparty.
-
-> *"Built for legendary exits."*

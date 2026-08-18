@@ -6,6 +6,7 @@ accent: "green"
 card_bio: "Here lies your judgment."
 prop: "Iron Spade"
 prop_desc: "Used to bury the collateral damage of memorable nights."
+prop_line: "He digs where the night needs burying, and he never asks what goes in."
 prop_icon: "shovel"
 pour_title: "RIP Extra Añejo"
 pour_desc: "Aged 36 months in deep oak darkness, complex with rich chocolate and smoke."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/extra-anejo-transparent.png"
 location_image: "images/cantina/the-back-office.webp"
 icon: "shovel"
 line: "Here lies your judgment."
+lead: "He works the quiet hours between closing time and whatever comes next — spade in one hand, Manifest in the other."
 highlights:
   - title: "Caretaker of the Morning"
     text: "Manages the quiet hours and inters what is left behind."
@@ -59,7 +61,5 @@ He possesses a dry, unflinching wit and an encyclopedic record of every tab ever
 
 **RIP Extra Añejo**, aged 36 months in deep darkness. For extraordinary occasions, he unearths **Gravedigger's Reserve.**
 
-> *"Here lies your judgment."*
 >
-> *"Some nights deserve a shovel."*
 

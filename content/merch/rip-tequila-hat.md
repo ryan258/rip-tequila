@@ -31,10 +31,3 @@ Underneath the brim, tucked inside the cotton sweatband, sits the cantina’s qu
 
 If someone recognizes the mark, you’ve instantly found a kindred spirit. If they don’t, it’s just the best-fitting black cap they’ve ever seen.
 
-## Built for
-
-- Shielding your eyes from the harsh sunlight after an evening that lasted too long.
-- Long highway drives with the windows rolled completely down.
-- Subtle luxury flexes in dive bars where everyone else is wearing corporate swag.
-
-> *"Low profile. High proof."*

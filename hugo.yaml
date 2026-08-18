@@ -38,5 +38,7 @@ params:
   tagline: "Rest In Proof"
   copyright: "RIP Tequila. La Cantina del Último Trago."
   googleFonts: "https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap"
+  # Default share card. Any page can override with `image:` in its front matter.
+  ogImage: "images/home-hero-poster.webp"
   cta_label: "Enter the Cantina"
   cta_href: "/the-cantina/"

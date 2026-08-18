@@ -33,10 +33,3 @@ This card is not sold on a rack. It is issued. When you join the **Don Muerte So
 - **Character Lore**: Early access to unreleased character backstories and secret cocktail recipes.
 - **Desert Road Reports**: Occasional cryptic observations from El Vigía when strange weather sweeps across the dunes.
 
-## Built for
-
-- Wallets that need an undeniably intriguing conversation piece.
-- Collectors who appreciate a dark joke told with a straight face and a real production budget.
-- Anyone who knows that true loyalty programs shouldn't require monthly subscription fees.
-
-> *"Membership expires never. Benefits are questionable. Hydration encouraged."*

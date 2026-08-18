@@ -6,6 +6,7 @@ accent: "deep-green"
 card_bio: "Follows the agave after midnight."
 prop: "Wide-Brimmed Hat"
 prop_desc: "Tilts to let the deserving pass, keeping the boundary secure."
+prop_line: "The brim tips, or it doesn't. That is the entire conversation."
 prop_icon: "eye"
 pour_title: "Midnight Agave Reserve"
 pour_desc: "Matte black bottling, deep mahogany juice, complex and contemplative."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/midnight-reserve-transparent.png"
 location_image: "images/cantina/el-vigia-desert.webp"
 icon: "eye"
 line: "Follow the agave after midnight."
+lead: "Posted where the asphalt ends and the agave begins, watching the headlights of everyone still looking for the door."
 highlights:
   - title: "Boundary Sentinel"
     text: "Posted where the asphalt ends and the agave begins."
@@ -51,11 +53,9 @@ He doesn’t deliver speeches, check IDs, or issue formal invitations. He simply
 
 He knows every detour, every traveler, and every excuse ever offered for being out on the road past 2:00 AM. When you finally spot the warm neon glow of the cantina in the distance, know this: El Vigía saw you coming an hour ago.
 
-> *"Follow the agave after midnight."*
 
 ## What he pours
 
 **Midnight Agave Reserve.** The rare, contemplative late-arrival pour. If a glass is waiting when you sit down, El Vigía sent it in ahead of you.
 
-> *"The Desert Remembers Every Toast."*
 

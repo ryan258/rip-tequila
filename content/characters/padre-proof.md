@@ -6,6 +6,7 @@ accent: "gold"
 card_bio: "Forgives no one. Raises the bar."
 prop: "The Ledger"
 prop_desc: "A black leather-bound ledger titled 'Still Owed to the Bartender'."
+prop_line: "Every debt goes in the book. None of them ever come out."
 prop_icon: "barrel"
 pour_title: "RIP Añejo"
 pour_desc: "Rich, deep amber, double-distilled to carry the weight of a final confession."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/anejo-transparent.png"
 location_image: "images/cantina/the-absolution-booth.webp"
 icon: "cross"
 line: "I bless this mess."
+lead: "Resident spiritual advisor to anyone whose judgment thins out after 11:00 PM. Absolution is immediate and unbureaucratic."
 highlights:
   - title: "Unbureaucratic Absolution"
     text: "Grants generous sign-offs on late-night vows."
@@ -59,6 +61,5 @@ If you’re wondering whether ordering that extra round of Añejo is a sound lif
 
 **Padre Proof Ceremonial Añejo**, a rich, reverent pour formulated specifically for promises made past midnight.
 
-> *"I bless this mess."*
 >
 > *"Your sins are between you, the lime, and the receipt."*

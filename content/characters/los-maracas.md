@@ -6,6 +6,7 @@ accent: "green"
 card_bio: "Keep time. Because the night is eternal."
 prop: "Gourd Maracas"
 prop_desc: "Hand-carved gourds that drive syncopated swing through the floorboards."
+prop_line: "They keep a count no clock can hold. Nobody has heard them stop."
 prop_icon: "maracas"
 pour_title: "RIP Blanco"
 pour_desc: "Unaged, vibrant, and poured cold to keep the crowd dancing."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/blanco-transparent.png"
 location_image: "images/cantina/the-moonlit-patio.webp"
 icon: "maracas"
 line: "Shake now. Explain later."
+lead: "Two skeletal maestros with one shared mission: make certain this room never falls into somber decorum."
 highlights:
   - title: "Skeletal Swing"
     text: "Two maestros of tempo driving pure, unadulterated joy."
@@ -57,5 +59,4 @@ They do not take song requests, they do not understand the concept of an intermi
 
 **Los Maracas Blanco Infusion**, the high-energy party pack edition. Uncapped, served cold, and consumed while moving.
 
-> *"Shake now. Explain later."*
 

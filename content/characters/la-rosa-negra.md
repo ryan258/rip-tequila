@@ -6,6 +6,7 @@ accent: "red"
 card_bio: "Voice like velvet. Songs that still hurt."
 prop: "Black Rose"
 prop_desc: "Pinned to her lapel, it remains fresh despite decades in the dark."
+prop_line: "She never works the bar. She takes the stage, and the room goes quiet on its own."
 prop_icon: "rose"
 pour_title: "RIP Reposado"
 pour_desc: "Warm pale gold, smooth with notes of vanilla and dried flowers, poured just before midnight."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/reposado-transparent.png"
 location_image: "images/cantina/the-crimson-stage.webp"
 icon: "microphone"
 line: "The dead still dance."
+lead: "The undisputed voice of the afterlife. Boleros of doomed romance and 3:00 AM epiphanies, delivered with surgical precision."
 highlights:
   - title: "Midnight Boleros"
     text: "Sings of doomed romance and glorious mistakes."
@@ -51,11 +53,9 @@ She is the undisputed voice of the afterlife. She sings boleros of doomed romanc
 
 Her setlist has never been written down. Some evenings she delivers a smoldering torch ballad that reduces tough guys to tears; other nights she unleashes a high-tempo ranchera that has the entire room stomping on the hardwood. There are no recordings, no live streams, and no encore negotiations.
 
-> *"The dead still dance."*
 
 ## What she pours
 
 **Rosa Reposado**, an exclusive special edition poured just before her midnight set. Sip it slowly. Never ask for requests.
 
-> *"Every heartbreak deserves a chorus."*
 

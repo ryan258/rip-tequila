@@ -6,6 +6,7 @@ accent: "red"
 card_bio: "Rings once. The final round. Always."
 prop: "Brass Bell"
 prop_desc: "Tuned to a frequency that turns ordinary evenings into permanent folklore."
+prop_line: "She rings it once. After that, the night belongs to the cantina."
 prop_icon: "bell"
 pour_title: "RIP Reposado"
 pour_desc: "Balanced and warm, poured the exact second the chime tolls through the room."
@@ -15,6 +16,7 @@ pour_image: "images/bottles/reposado-transparent.png"
 location_image: "images/cantina/the-red-ribboned-bell.webp"
 icon: "bell"
 line: "The bell rang. You're in."
+lead: "One hand near the cord, all night. She is not deciding whether the bell rings — only when."
 highlights:
   - title: "Portal Guardian"
     text: "Watches the room from the heavy timber entrance."
@@ -57,5 +59,4 @@ The chime that rings out doesn't signal closing time. It signals transition: the
 
 **RIP Reposado.** The house staple, smooth and amber, poured the split second the bell tolls. For exclusive runs, **Red Bell Reposado.**
 
-> *"The bell rang. You're in."*
 
