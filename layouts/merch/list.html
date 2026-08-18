@@ -121,14 +121,14 @@
       </div>
 
       {{/* Product Cards Grid */}}
-      <div class="merch-grid" role="list" aria-label="RIP Tequila merchandise items">
+      <ul class="merch-grid" role="list" aria-label="RIP Tequila merchandise items">
         {{ range .Pages.ByWeight }}
           {{ $categoryKey := .Params.category | lower }}
-          <article class="merch-product-card" role="listitem" data-category="{{ $categoryKey }}">
+          <li class="merch-product-card" data-category="{{ $categoryKey }}">
             <a class="merch-product-card__link-wrap" href="{{ .RelPermalink }}">
               <div class="merch-product-card__media">
                 {{ if .Params.image }}
-                  {{ partial "image.html" (dict "src" (.Params.image) "alt" (.Title) "class" "merch-product-card__img" "loading" "lazy" "decoding" "async") }}
+                  {{ partial "image.html" (dict "src" (.Params.image) "alt" (.Title) "class" "merch-product-card__img" "sizes" "(max-width: 700px) 45vw, 240px" "loading" "lazy" "decoding" "async") }}
                 {{ else }}
                   {{ partial "glyph.html" (dict "name" .Params.icon "class" "merch-product-card__glyph") }}
                 {{ end }}
@@ -146,9 +146,9 @@
                 </div>
               </div>
             </a>
-          </article>
+          </li>
         {{ end }}
-      </div>
+      </ul>
 
       <div class="merch-catalog__all-row">
         <button type="button" class="button button--outline merch-catalog__all-btn" id="merch-view-all-btn">

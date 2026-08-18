@@ -787,6 +787,9 @@
 
 .evidence-preview__grid {
   display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1rem, 2vw, 1.5rem);
 
@@ -947,7 +950,8 @@
   @include eyebrow;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
-  color: $color-red;
+  // $color-red fails AA at this size on the black banner.
+  color: $color-red-light;
   margin-top: 0.25rem;
 }
 

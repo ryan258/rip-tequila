@@ -345,6 +345,8 @@
 // 5-Column Merch Grid
 .merch-grid {
   display: grid;
+  padding: 0;
+  list-style: none;
   grid-template-columns: repeat(5, 1fr);
   gap: clamp(1rem, 1.8vw, 1.5rem);
   margin-bottom: clamp(2rem, 3.5vw, 3rem);
