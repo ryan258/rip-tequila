@@ -1,0 +1,4 @@
+{{- /* Spell a small count so headline copy can't drift from the content.
+       Pass an int; returns "eight" etc., or the numeral above ten. */ -}}
+{{- $words := slice "zero" "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten" -}}
+{{- if and (ge . 0) (le . 10) }}{{ index $words . }}{{ else }}{{ . }}{{ end -}}

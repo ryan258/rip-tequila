@@ -1,0 +1,20 @@
+{{- /* <img> with intrinsic width/height so the browser can reserve space before
+       the file loads. Images live in assets/ rather than static/ precisely so
+       Hugo can read their real dimensions here.
+
+       dict keys: src (required, e.g. "images/cast/don-muerte.webp"), alt
+       (required, "" for decorative), class, loading (default "lazy"),
+       decoding (default "async").
+
+       A missing file falls back to a plain tag rather than failing the build —
+       front matter can point at art that hasn't landed yet. */ -}}
+{{- $src := .src -}}
+{{- $res := resources.Get $src -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $decoding := .decoding | default "async" -}}
+{{- if $res -}}
+<img src="{{ $res.RelPermalink }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }} width="{{ $res.Width }}" height="{{ $res.Height }}" loading="{{ $loading }}" decoding="{{ $decoding }}">
+{{- else -}}
+{{- warnf "partial image.html: no asset at %q" $src -}}
+<img src="{{ $src | relURL }}" alt="{{ .alt }}"{{ with .class }} class="{{ . }}"{{ end }} loading="{{ $loading }}" decoding="{{ $decoding }}">
+{{- end -}}
