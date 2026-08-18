@@ -13,21 +13,27 @@
       </div>
     </div>
 
-    {{/* Right: Copy & Form */}}
+    {{/* Right: Copy & enrollment state */}}
     <div class="social-club-banner__content">
-      <h2 class="social-club-banner__title" id="social-club-title">Membership Expires Never.</h2>
+      <h2 class="social-club-banner__title" id="social-club-title">The Roster Opens Soon.</h2>
       <p class="social-club-banner__desc">
-        Join the ranks. Get rare drops, secret stories, and the kind of invites that don't make sense until you get them.
+        The charter is drafted and the credential is waiting. Enrollment begins only when the first real drop is ready and the manifest can retain what it receives.
       </p>
-      
+
+      {{ if site.Params.features.social_club_enrollment }}
       <form class="social-club-banner__form signup-form" data-signup-form>
         <label class="sr-only" for="banner-email">Your email</label>
         <input id="banner-email" name="email" type="email" placeholder="Your email" autocomplete="email" required data-signup-email>
         <button class="button button--primary" type="submit">Join the Club</button>
         <p class="signup-form__message" data-signup-message role="status"></p>
       </form>
-      
       <p class="social-club-banner__note">No spam. Just spirits.</p>
+      {{ else }}
+      <div class="social-club-banner__status">
+        <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Preview the Club</a>
+        <p class="social-club-banner__note">No email is being collected yet.</p>
+      </div>
+      {{ end }}
     </div>
 
   </div>

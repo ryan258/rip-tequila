@@ -121,6 +121,21 @@
   border-color: $color-red;
 }
 
+.site-footer__club-status {
+  display: grid;
+  gap: $space-sm;
+
+  .button {
+    justify-self: start;
+  }
+
+  p {
+    @include body-copy(0.85rem);
+    color: rgba($color-cream, 0.72);
+    margin: 0;
+  }
+}
+
 .site-footer__bottom {
   padding: $space-lg var(--page-gutter);
   border-top: 1px solid rgba($color-cream, 0.14);

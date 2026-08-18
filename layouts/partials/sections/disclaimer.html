@@ -6,6 +6,6 @@
       </span>
       <h2 class="parody-disclaimer__title" id="parody-disclaimer-title">No Actual Spirits. All the Spirit.</h2>
     </div>
-    <p class="parody-disclaimer__body">No actual spirits are sold here. The bottles are concepts. The merch can ship. Drink responsibly. Haunt responsibly.</p>
+    <p class="parody-disclaimer__body">No actual spirits are sold here. The bottles are concepts. {{ if site.Params.features.commerce }}The merch can ship.{{ else }}The merch is concept work; nothing is for sale.{{ end }} Drink responsibly. Haunt responsibly.</p>
   </div>
 </section>

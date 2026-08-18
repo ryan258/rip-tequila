@@ -1024,3 +1024,14 @@
   color: rgba($color-cream, 0.6);
   margin: 0;
 }
+
+.social-club-banner__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-md;
+
+  @media (max-width: $breakpoint-md) {
+    justify-content: center;
+  }
+}

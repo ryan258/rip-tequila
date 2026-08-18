@@ -88,6 +88,22 @@
     color: rgba($color-cream, 0.7);
     margin: 0 0 $space-md 0;
   }
+
+  &__notice {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba($color-cream, 0.88);
+    margin: 0 0 $space-md 0;
+    max-width: 58ch;
+  }
+
+  &__link {
+    display: inline-flex;
+    border-color: $color-gold;
+    color: $color-gold;
+    margin-bottom: $space-sm;
+  }
 }
 
 .social-club-form {
