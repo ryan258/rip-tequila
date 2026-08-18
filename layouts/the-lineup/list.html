@@ -1,14 +1,18 @@
 {{ define "main" }}
 <article class="lineup-catalog-page">
-  <section class="lineup-hero">
+
+  {{/* 1. HERO SECTION */}}
+  <section class="lineup-hero" aria-labelledby="lineup-hero-title">
     <div class="lineup-hero__backdrop" aria-hidden="true">
       {{ partial "image.html" (dict "src" ("images/lineup-hero-bg.webp") "alt" "" "loading" "eager" "decoding" "async") }}
     </div>
     <div class="lineup-hero__inner">
       <div class="lineup-hero__copy">
-        <p class="lineup-hero__eyebrow">⤛ {{ .Params.eyebrow }} ⤜</p>
-        <h1 class="lineup-hero__title">{{ .Params.headline | default .Title }}</h1>
-        {{ with .Description }}<p class="lineup-hero__body">{{ . }}</p>{{ end }}
+        <p class="lineup-hero__eyebrow">· {{ .Params.eyebrow | default "The Lineup for Legends" }} ·</p>
+        <h1 class="lineup-hero__title" id="lineup-hero-title">{{ .Params.headline | default "Born in Agave. Buried in Legend." }}</h1>
+        {{ with .Description }}
+          <p class="lineup-hero__body">{{ . }}</p>
+        {{ end }}
         <div class="lineup-hero__actions">
           <a class="button button--primary" href="#bottles-catalog">Explore the Expressions</a>
           <a class="button button--outline" href="{{ "characters/" | relURL }}">Meet the Custodians</a>
@@ -16,12 +20,13 @@
       </div>
     </div>
 
+    {{/* Process Strip */}}
     {{ with .Params.process }}
     <div class="lineup-process-container">
       <div class="lineup-process-strip" aria-label="Distillery standards">
         {{ range . }}
         <div class="lineup-process-item">
-          <span class="lineup-process-item__icon">
+          <span class="lineup-process-item__icon" aria-hidden="true">
             {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md rip-glyph--red") }}
           </span>
           <div class="lineup-process-item__details">
@@ -35,28 +40,38 @@
     {{ end }}
   </section>
 
+  {{/* 2. CATALOG SECTION - BOTTLED FOR THE OTHER SIDE */}}
   <section class="lineup-catalog-section" id="bottles-catalog" aria-label="RIP Tequila product catalog">
     <div class="lineup-catalog-container">
+      
       <div class="lineup-catalog-header">
-        <p class="lineup-catalog-header__eyebrow">{{ .Params.catalog_eyebrow }}</p>
-        <h2 class="lineup-catalog-header__title">{{ .Params.catalog_title }}</h2>
-        <p class="lineup-catalog-header__desc">{{ .Params.catalog_desc }}</p>
+        <p class="lineup-catalog-header__eyebrow">· {{ .Params.catalog_eyebrow | default "Five Expressions. One Destiny." }} ·</p>
+        <div class="lineup-catalog-header__title-wrap">
+          <span class="lineup-ornament lineup-ornament--left" aria-hidden="true">
+            <svg viewBox="0 0 40 16" fill="currentColor"><path d="M0 8L16 0L24 8L16 16L0 8ZM24 8L32 3L40 8L32 13L24 8Z"/></svg>
+          </span>
+          <h2 class="lineup-catalog-header__title">{{ .Params.catalog_title | default "Bottled for the Other Side" }}</h2>
+          <span class="lineup-ornament lineup-ornament--right" aria-hidden="true">
+            <svg viewBox="0 0 40 16" fill="currentColor"><path d="M40 8L24 0L16 8L24 16L40 8ZM16 8L8 3L0 8L8 13L16 8Z"/></svg>
+          </span>
+        </div>
       </div>
 
       <div class="lineup-bottles-grid">
         {{ range .Pages.ByWeight }}
+          {{ $castSlug := replace (replace .Params.character_href "/characters/" "") "/" "" }}
+          {{ $avatarPath := printf "images/cast/%s.webp" $castSlug }}
           <article class="lineup-card" data-accent="{{ .Params.accent }}">
+            
             <div class="lineup-card__badge-row">
               <span class="lineup-card__variant-badge">{{ .Params.variant | upper }}</span>
               <span class="lineup-card__abv-badge">{{ .Params.abv }}</span>
             </div>
 
-            {{/* Decorative duplicate of the title link below; hidden so the card
-                 announces one link per destination rather than three. */}}
             <div class="lineup-card__visual">
-              <a href="{{ .RelPermalink }}" class="lineup-card__visual-link" tabindex="-1" aria-hidden="true">
+              <a href="{{ .RelPermalink }}" class="lineup-card__visual-link" aria-label="View {{ .Title }} details">
                 {{ if .Params.image }}
-                  {{ partial "image.html" (dict "src" (.Params.image) "alt" "" "class" "lineup-card__bottle-img" "loading" "lazy" "decoding" "async") }}
+                  {{ partial "image.html" (dict "src" (.Params.image) "alt" .Title "class" "lineup-card__bottle-img" "loading" "lazy" "decoding" "async") }}
                 {{ else }}
                   {{ partial "glyph.html" (dict "name" .Params.icon "class" "lineup-card__glyph rip-glyph--2xl") }}
                 {{ end }}
@@ -72,10 +87,16 @@
               <p class="lineup-card__descriptor">{{ .Params.descriptor }}</p>
 
               <div class="lineup-card__custodian">
-                <span class="lineup-card__custodian-label">POURED BY:</span>
-                <a href="{{ strings.TrimPrefix "/" .Params.character_href | relURL }}" class="lineup-card__custodian-link">
-                  <strong>{{ .Params.character_name }}</strong> ({{ .Params.character_role }})
-                </a>
+                <div class="lineup-card__custodian-avatar">
+                  {{ partial "image.html" (dict "src" $avatarPath "alt" .Params.character_name "class" "lineup-card__avatar-img" "loading" "lazy") }}
+                </div>
+                <div class="lineup-card__custodian-info">
+                  <span class="lineup-card__custodian-label">POURED BY:</span>
+                  <a href="{{ strings.TrimPrefix "/" .Params.character_href | relURL }}" class="lineup-card__custodian-link">
+                    <strong>{{ .Params.character_name }}</strong>
+                    <span class="lineup-card__custodian-role">({{ .Params.character_role }})</span>
+                  </a>
+                </div>
               </div>
 
               <div class="lineup-card__footer">
@@ -84,31 +105,144 @@
                 </a>
               </div>
             </div>
+
           </article>
         {{ end }}
+      </div>
+
+    </div>
+  </section>
+
+  {{/* 3. DUAL EDITORIAL FEATURE SECTION: TASTING NOTES & THE HOURS DON'T LIE */}}
+  <section class="lineup-features-section" aria-label="Lineup Tasting Notes and Night Timeline">
+    <div class="lineup-features-container">
+      <div class="lineup-dual-grid">
+
+        {{/* Box 1: Tasting Notes */}}
+        {{ with hugo.Data.lineup.tasting_notes }}
+        <div class="lineup-feature-box lineup-feature-box--notes">
+          <div class="lineup-feature-box__border-frame">
+            <div class="lineup-feature-box__header">
+              <p class="lineup-feature-box__eyebrow">· {{ .eyebrow }} ·</p>
+              <h2 class="lineup-feature-box__title">{{ .title }}</h2>
+            </div>
+
+            <div class="lineup-notes-grid">
+              {{ range .items }}
+              <div class="lineup-note-col">
+                <div class="lineup-note-col__icon" aria-hidden="true">
+                  {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md") }}
+                </div>
+                <h3 class="lineup-note-col__title">{{ .variant }}</h3>
+                <p class="lineup-note-col__text">{{ .notes }}</p>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+
+        {{/* Box 2: The Hours Don't Lie Timeline */}}
+        {{ with hugo.Data.lineup.timeline }}
+        <div class="lineup-feature-box lineup-feature-box--timeline">
+          <div class="lineup-feature-box__border-frame">
+            <div class="lineup-feature-box__header">
+              <p class="lineup-feature-box__eyebrow">· {{ .eyebrow }} ·</p>
+              <h2 class="lineup-feature-box__title">{{ .title }}</h2>
+            </div>
+
+            <div class="lineup-timeline-track">
+              <div class="lineup-timeline-line" aria-hidden="true"></div>
+              <div class="lineup-timeline-items">
+                {{ range .items }}
+                <div class="lineup-timeline-node">
+                  <span class="lineup-timeline-node__time">{{ .time }}</span>
+                  <div class="lineup-timeline-node__icon" aria-hidden="true">
+                    {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm") }}
+                  </div>
+                  <span class="lineup-timeline-node__sub">{{ .subtitle }}</span>
+                  <strong class="lineup-timeline-node__bottle">{{ .bottle }}</strong>
+                  <p class="lineup-timeline-node__desc">{{ .desc }}</p>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+
       </div>
     </div>
   </section>
 
+  {{/* 4. OBSIDIAN DON MUERTE SLOGAN BANNER */}}
+  {{ with hugo.Data.lineup.banner }}
+  <section class="lineup-quote-banner" aria-label="Don Muerte Afterlife Quote">
+    <div class="lineup-quote-banner__inner">
+
+      <div class="lineup-quote-banner__portrait">
+        <div class="lineup-quote-banner__avatar-frame">
+          {{ partial "image.html" (dict "src" .portrait "alt" "Don Muerte" "class" "lineup-quote-banner__img" "loading" "lazy") }}
+        </div>
+        <span class="lineup-quote-banner__label">· {{ .label }} ·</span>
+      </div>
+
+      <div class="lineup-quote-banner__content">
+        <blockquote class="lineup-quote-banner__quote">
+          {{ .quote }}
+        </blockquote>
+        <cite class="lineup-quote-banner__author">— {{ .author }}</cite>
+      </div>
+
+      <div class="lineup-quote-banner__stamp" aria-hidden="true">
+        <svg viewBox="0 0 140 140" class="lineup-stamp__svg">
+          <defs>
+            <path id="stamp-top-arc" d="M 20,70 A 50,50 0 0,1 120,70" />
+            <path id="stamp-bottom-arc" d="M 120,70 A 50,50 0 0,1 20,70" />
+          </defs>
+          <circle cx="70" cy="70" r="64" class="lineup-stamp__outer" />
+          <circle cx="70" cy="70" r="58" class="lineup-stamp__inner" />
+          <text class="lineup-stamp__text">
+            <textPath href="#stamp-top-arc" startOffset="50%" text-anchor="middle">
+              ★ REST IN PROOF ★
+            </textPath>
+          </text>
+          <text class="lineup-stamp__text">
+            <textPath href="#stamp-bottom-arc" startOffset="50%" text-anchor="middle">
+              REST IN PROOF
+            </textPath>
+          </text>
+          <text x="70" y="78" text-anchor="middle" class="lineup-stamp__center-text">RIP</text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* 5. THE SOLERA OF THE AFTERLIFE (STANDARDS CARD) */}}
   {{ with .Params.standards }}
-  <section class="lineup-standards-section">
+  <section class="lineup-standards-section" aria-label="Solera Standards">
     <div class="lineup-standards-container">
       <div class="lineup-standards-card">
-        <div class="lineup-standards-card__icon">
-          {{ partial "glyph.html" (dict "name" "monument" "class" "rip-glyph--xl rip-glyph--gold") }}
-        </div>
-        <div class="lineup-standards-card__copy">
-          <h2 class="lineup-standards-card__title">{{ .title }}</h2>
-          <p class="lineup-standards-card__text">{{ .text }}</p>
-        </div>
-        <div class="lineup-standards-card__action">
-          <a class="button button--outline" href="{{ strings.TrimPrefix "/" .href | relURL }}">{{ .cta }}</a>
+        <div class="lineup-standards-card__inner">
+          <div class="lineup-standards-card__icon" aria-hidden="true">
+            {{ partial "glyph.html" (dict "name" "monument" "class" "rip-glyph--xl rip-glyph--gold") }}
+          </div>
+          <div class="lineup-standards-card__copy">
+            <h2 class="lineup-standards-card__title">{{ .title }}</h2>
+            <p class="lineup-standards-card__text">{{ .text }}</p>
+          </div>
+          <div class="lineup-standards-card__action">
+            <a class="button button--outline" href="{{ strings.TrimPrefix "/" .href | relURL }}">{{ .cta }}</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
   {{ end }}
 
+  {{/* 6. PARODY DISCLAIMER & FOOTER RIBBON */}}
   {{ partial "sections/disclaimer.html" . }}
 
   {{ with .Params.ribbon }}
@@ -116,5 +250,6 @@
     <p class="rip-ribbon__text">{{ . }}</p>
   </section>
   {{ end }}
+
 </article>
 {{ end }}

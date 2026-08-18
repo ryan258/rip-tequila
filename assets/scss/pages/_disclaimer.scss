@@ -210,3 +210,55 @@
   gap: $space-md;
   flex-wrap: wrap;
 }
+
+// -------------------------------------------------------------
+// 3. Compact Global Parody Disclaimer Banner Strip
+// -------------------------------------------------------------
+.parody-disclaimer {
+  padding: clamp(1.25rem, 2.5vw, 1.8rem) var(--page-gutter);
+  background: transparent;
+
+  &__inner {
+    @include container($container-max);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem 1.25rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  &__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-red;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: $color-black;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  &__body {
+    font-family: $font-body;
+    font-size: 0.78rem;
+    color: rgba($color-black, 0.65);
+    line-height: 1.35;
+    margin: 0;
+  }
+}

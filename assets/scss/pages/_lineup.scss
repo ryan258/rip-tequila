@@ -175,38 +175,72 @@
   &__eyebrow {
     @include eyebrow;
     color: $color-red;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
     margin: 0 0 $space-xs 0;
   }
 
-  &__title {
-    @include poster-title(2.4rem, 5vw, 4.2rem);
-    margin: $space-xs 0;
-    text-transform: uppercase;
+  &__title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-md;
   }
 
-  &__desc {
-    @include body-copy;
-    color: rgba($color-black, 0.75);
+  &__title {
+    @include poster-title(2.4rem, 4.5vw, 3.8rem);
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+}
+
+.lineup-ornament {
+  display: inline-flex;
+  align-items: center;
+  color: $color-red;
+  width: 32px;
+  height: 14px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    display: none;
   }
 }
 
 .lineup-bottles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: $space-xl;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.4vw, 1.4rem);
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .lineup-card {
-  @include paper-card(10px);
+  @include paper-card(8px);
   display: flex;
   flex-direction: column;
   position: relative;
   transition: transform $transition-base, box-shadow $transition-base;
+  background: $color-cream;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 14px 14px 0 rgba($color-black, 0.18);
+    box-shadow: 8px 8px 0 rgba($color-black, 0.18);
   }
 }
 
@@ -214,40 +248,54 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $space-sm $space-md;
+  padding: 0.4rem 0.65rem;
   background: $color-cream;
-  border-bottom: 2px solid $color-black;
+  border-bottom: 1.5px solid rgba($color-black, 0.3);
 }
 
 .lineup-card__variant-badge {
   font-family: $font-accent;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--card-accent);
+  letter-spacing: 0.06em;
+  color: $color-black;
+  text-transform: uppercase;
 }
 
 .lineup-card__abv-badge {
   font-family: $font-body;
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  color: rgba($color-black, 0.7);
+  color: rgba($color-black, 0.65);
 }
 
 .lineup-card__visual {
-  background: radial-gradient(circle at center, rgba($color-gold, 0.18) 0%, rgba($color-cream, 0.5) 70%);
-  padding: $space-xl $space-md;
+  background: radial-gradient(circle at 50% 60%, rgba($color-gold, 0.18) 0%, rgba(#ebe3cf, 0.9) 70%);
+  padding: 1.25rem 0.5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 280px;
-  border-bottom: 2px solid $color-black;
+  align-items: flex-end;
+  min-height: 210px;
+  border-bottom: 1.5px solid rgba($color-black, 0.3);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px dashed rgba($color-black, 0.15);
+    border-radius: 40px 40px 0 0;
+    pointer-events: none;
+  }
 }
 
 .lineup-card__visual-link {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
 
   &:focus-visible {
     @include focus-ring;
@@ -259,43 +307,47 @@
 }
 
 .lineup-card__bottle-img {
-  height: 240px;
+  height: 175px;
+  max-width: 90px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(4px 4px 12px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.25));
   transition: transform $transition-base;
 
   .lineup-card:hover & {
-    transform: scale(1.05);
+    transform: translateY(-4px) scale(1.04);
   }
 }
 
 .lineup-card__body {
-  padding: $space-lg $space-md;
+  padding: 0.85rem 0.75rem;
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: $space-xs;
+  gap: 0.25rem;
 }
 
 .lineup-card__aging {
   font-family: $font-accent;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: rgba($color-black, 0.6);
+  letter-spacing: 0.05em;
+  color: rgba($color-black, 0.55);
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .lineup-card__title {
   font-family: $font-display;
-  font-size: 2.2rem;
+  font-size: 1.55rem;
   line-height: 0.95;
-  margin: 0;
+  margin: 0.1rem 0 0 0;
   text-transform: uppercase;
 
   a {
     color: inherit;
     text-decoration: none;
+    transition: color $transition-fast;
 
     &:hover {
       color: $color-red;
@@ -309,38 +361,70 @@
 
 .lineup-card__line {
   font-family: $font-accent;
-  font-size: 1.05rem;
+  font-size: 0.82rem;
   font-style: italic;
   font-weight: 700;
-  color: var(--card-accent);
-  margin: $space-xs 0;
+  color: $color-red;
+  margin: 0.15rem 0;
+  line-height: 1.25;
 }
 
 .lineup-card__descriptor {
   font-family: $font-body;
-  font-size: 0.88rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: rgba($color-black, 0.75);
-  margin: 0 0 $space-sm 0;
-  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.35;
 }
 
 .lineup-card__custodian {
   margin-top: auto;
-  padding-top: $space-sm;
-  border-top: 1px dashed rgba($color-black, 0.15);
-  font-size: 0.78rem;
-  font-family: $font-body;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba($color-black, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid $color-black;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #ebe3cf;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.68rem;
+    line-height: 1.2;
+  }
 
   &-label {
+    font-family: $font-accent;
+    font-size: 0.6rem;
     font-weight: 700;
     color: rgba($color-black, 0.5);
-    margin-right: 4px;
+    letter-spacing: 0.05em;
   }
 
   &-link {
     color: $color-black;
     text-decoration: none;
+    transition: color $transition-fast;
+
+    strong {
+      font-weight: 700;
+    }
 
     &:hover {
       color: $color-red;
@@ -350,22 +434,352 @@
       @include focus-ring;
     }
   }
+
+  &-role {
+    color: rgba($color-black, 0.65);
+    font-size: 0.64rem;
+  }
 }
 
 .lineup-card__footer {
-  margin-top: $space-md;
+  margin-top: 0.65rem;
 }
 
 .lineup-card__btn {
   width: 100%;
   text-align: center;
   justify-content: center;
+  padding-block: 0.55rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
 }
 
-// Standards Card
-.lineup-standards-section {
-  @include section-padding;
+// 3. DUAL EDITORIAL FEATURE SECTION (TASTING NOTES & NIGHT TIMELINE)
+.lineup-features-section {
+  @include section-padding(clamp(2.5rem, 5vw, 4.5rem));
   background: $color-cream;
+}
+
+.lineup-features-container {
+  @include container;
+}
+
+.lineup-dual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lineup-feature-box {
+  @include paper-card(8px);
+  background: #f7f3ea;
+  border: 1.5px solid rgba($color-black, 0.35);
+  box-shadow: 6px 6px 0 rgba($color-black, 0.12);
+  padding: 6px;
+
+  &__border-frame {
+    border: 1px solid rgba($color-black, 0.2);
+    padding: clamp(1.2rem, 2.5vw, 1.8rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $space-lg;
+  }
+
+  &__eyebrow {
+    @include eyebrow;
+    color: $color-red;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    margin: 0 0 0.2rem 0;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $color-black;
+    margin: 0;
+  }
+}
+
+// Tasting Notes Grid
+.lineup-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: auto;
+
+  @media (max-width: 540px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+.lineup-note-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+
+  &__icon {
+    color: $color-gold;
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+  }
+
+  &__title {
+    font-family: $font-accent;
+    font-weight: 700;
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-red;
+    margin: 0;
+  }
+
+  &__text {
+    font-family: $font-body;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    color: #333333;
+    margin: 0;
+  }
+}
+
+// Night Timeline Track
+.lineup-timeline-track {
+  position: relative;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.lineup-timeline-line {
+  position: absolute;
+  top: 36px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: rgba($color-black, 0.25);
+  z-index: 1;
+
+  @media (max-width: 540px) {
+    display: none;
+  }
+}
+
+.lineup-timeline-items {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.lineup-timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.2rem;
+
+  &__time {
+    font-family: $font-accent;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: $color-black;
+    letter-spacing: 0.05em;
+  }
+
+  &__icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: $color-cream;
+    border: 2px solid $color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-black;
+    margin: 0.15rem 0 0.3rem 0;
+  }
+
+  &__sub {
+    font-family: $font-accent;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: rgba($color-black, 0.55);
+    text-transform: uppercase;
+  }
+
+  &__bottle {
+    font-family: $font-accent;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: $color-red;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  &__desc {
+    font-family: $font-body;
+    font-size: 0.66rem;
+    line-height: 1.3;
+    color: #444444;
+    margin: 0;
+  }
+}
+
+// 4. OBSIDIAN DON MUERTE SLOGAN BANNER
+.lineup-quote-banner {
+  @include paper-texture(0.08);
+  background: $color-black;
+  color: $color-cream;
+  border-top: 2px solid $color-black;
+  border-bottom: 2px solid $color-black;
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+  position: relative;
+  overflow: hidden;
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: center;
+
+    @media (max-width: 860px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      justify-items: center;
+    }
+  }
+
+  &__portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &__avatar-frame {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid $color-gold;
+    overflow: hidden;
+    box-shadow: 0 0 16px rgba($color-gold, 0.25);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__label {
+    font-family: $font-accent;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: $color-gold;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__quote {
+    font-family: $font-display;
+    font-size: clamp(1.4rem, 2.5vw, 2.3rem);
+    line-height: 1.1;
+    color: $color-gold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__author {
+    font-family: $font-accent;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    color: $color-red;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+}
+
+.lineup-stamp {
+  width: 110px;
+  height: 110px;
+  color: $color-gold;
+  opacity: 0.85;
+  transform: rotate(8deg);
+  flex-shrink: 0;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__outer {
+    stroke: currentColor;
+    stroke-width: 2.5;
+    fill: none;
+  }
+
+  &__inner {
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-dasharray: 4 2;
+    fill: none;
+  }
+
+  &__text {
+    font-family: $font-accent;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    fill: currentColor;
+    text-transform: uppercase;
+  }
+
+  &__center-text {
+    font-family: $font-display;
+    font-size: 28px;
+    font-weight: 900;
+    fill: currentColor;
+    letter-spacing: 2px;
+  }
+}
+
+// 5. Standards Card (The Solera of the Afterlife)
+.lineup-standards-section {
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+  background: transparent;
 }
 
 .lineup-standards-container {
@@ -373,32 +787,79 @@
 }
 
 .lineup-standards-card {
-  @include paper-card(12px, 3px);
-  padding: $space-xl $space-lg;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: $space-xl;
-  align-items: center;
+  @include paper-card(8px);
+  background: #f7f3ea;
+  border: 1.5px solid rgba($color-black, 0.35);
+  box-shadow: 6px 6px 0 rgba($color-black, 0.12);
+  padding: 6px;
 
-  @media (max-width: $breakpoint-md) {
-    grid-template-columns: 1fr;
-    text-align: center;
+  &__inner {
+    border: 1px solid rgba($color-black, 0.2);
+    padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1.25rem, 3vw, 2.25rem);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: clamp(1rem, 2.5vw, 2rem);
+    align-items: center;
+
+    @media (max-width: 860px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      justify-items: center;
+    }
   }
-}
 
-.lineup-standards-card__title {
-  font-family: $font-display;
-  font-size: 2rem;
-  margin: 0 0 $space-xs 0;
-  text-transform: uppercase;
-}
+  &__icon {
+    font-size: 2.4rem;
+    color: $color-gold;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.lineup-standards-card__text {
-  font-family: $font-body;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: rgba($color-black, 0.8);
-  margin: 0;
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $color-black;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  &__text {
+    font-family: $font-body;
+    font-size: clamp(0.82rem, 0.9vw, 0.9rem);
+    line-height: 1.45;
+    color: #333333;
+    margin: 0;
+    max-width: 65ch;
+  }
+
+  &__action {
+    flex-shrink: 0;
+
+    .button--outline {
+      white-space: nowrap;
+      border-color: $color-red;
+      color: $color-red;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      padding: 0.65rem 1.25rem;
+
+      &:hover,
+      &:focus-visible {
+        background: $color-red;
+        color: $color-cream;
+      }
+    }
+  }
 }
 
 // --- 2. Bottle Detail Dossier Page ---
