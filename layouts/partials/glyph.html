@@ -44,7 +44,7 @@
   {{ $name = "hat" }}
 {{ else if or (eq $name "shirt") (eq $name "tee") }}
   {{ $name = "shirt" }}
-{{ else if or (eq $name "id-card") (eq $name "id-badge") (eq $name "badge") }}
+{{ else if or (eq $name "id-card") (eq $name "id-badge") (eq $name "badge") (eq $name "certificate") }}
   {{ $name = "card" }}
 {{ else if or (eq $name "icons") (eq $name "stickers") }}
   {{ $name = "stickers" }}
@@ -54,7 +54,7 @@
   {{ $name = "scale" }}
 {{ else if or (eq $name "location-dot") (eq $name "location") }}
   {{ $name = "location" }}
-{{ else if or (eq $name "circle-exclamation") (eq $name "warning") }}
+{{ else if or (eq $name "circle-exclamation") (eq $name "warning") (eq $name "ban") }}
   {{ $name = "warning" }}
 {{ else if or (eq $name "book-open") (eq $name "book") }}
   {{ $name = "book" }}

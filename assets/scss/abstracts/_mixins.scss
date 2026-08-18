@@ -55,3 +55,42 @@
   outline: 3px solid $color;
   outline-offset: 4px;
 }
+
+// The house card: white stock, hard black rule, offset drop shadow.
+// $offset drives the shadow distance; shadow opacity scales with it.
+@mixin paper-card($offset: 8px, $border: 2px) {
+  background: $color-white;
+  border: $border solid $color-black;
+  box-shadow: #{$offset} #{$offset} 0 rgba($color-black, 0.12);
+}
+
+// Centered page-hero copy stack: eyebrow / title / description.
+// Pass the poster-title clamp bounds; everything else is fixed by the system.
+@mixin hero-stack($min: 2.8rem, $preferred: 6vw, $max: 5.5rem, $accent: $color-red) {
+  @include section-padding;
+  text-align: center;
+  border-bottom: 2px solid rgba($color-black, 0.15);
+
+  &__inner {
+    @include container;
+    max-width: 800px;
+  }
+
+  &__eyebrow {
+    @include eyebrow;
+    color: $accent;
+    margin: 0 0 $space-xs 0;
+  }
+
+  &__title {
+    @include poster-title($min, $preferred, $max);
+    margin: $space-xs 0;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    @include body-copy(1.15rem);
+    color: rgba($color-black, 0.8);
+    margin: 0;
+  }
+}

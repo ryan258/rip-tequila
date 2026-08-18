@@ -115,7 +115,7 @@
             <h4 class="char-detail-pour-title">{{ .Params.pour_title }}</h4>
             <p class="char-detail-pour-desc">{{ .Params.pour_desc }}</p>
             <p class="char-detail-pour-slogan">“{{ .Params.pour_line }}”</p>
-            <a class="button button--primary" href="{{ .Params.pour_href | relURL }}">Explore {{ .Params.pour_title }}</a>
+            <a class="button button--primary" href="{{ strings.TrimPrefix "/" .Params.pour_href | relURL }}">Explore {{ .Params.pour_title }}</a>
           </div>
           <div class="char-detail-pour-visual">
             <img src="{{ .Params.pour_image | relURL }}" alt="{{ .Params.pour_title }}" class="char-detail-pour-bottle-img">

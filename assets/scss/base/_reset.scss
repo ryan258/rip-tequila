@@ -14,6 +14,20 @@ html {
   }
 }
 
+// ponytail: one global brake instead of gating every page's hover rules.
+// Covers new pages by default; add a no-preference guard locally only if a
+// transform needs to disappear entirely, not just stop animating.
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -51,8 +65,7 @@ ol {
   padding: 0;
 }
 
-.editorial-section__inner,
-.detail-page__body {
+.editorial-section__inner {
   ul,
   ol {
     padding-inline-start: 1.2em;

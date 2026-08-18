@@ -1,4 +1,3 @@
-.product-card,
 .character-card,
 .merch-card {
   display: grid;
@@ -12,8 +11,6 @@
     background-color $transition-fast;
 }
 
-.product-card:hover,
-.product-card:focus-visible,
 .character-card:hover,
 .character-card:focus-visible,
 .merch-card:hover,
@@ -21,80 +18,11 @@
   border-color: var(--card-accent);
 }
 
-.product-card:focus-visible,
 .character-card:focus-visible,
 .merch-card:focus-visible {
   @include focus-ring;
 }
 
-.product-card {
-  grid-template-rows: auto 1fr auto auto auto auto auto;
-  gap: $space-sm;
-  padding: $space-md;
-  min-height: 520px;
-  text-align: center;
-}
-
-.product-card__stripe {
-  display: block;
-  height: 8px;
-  background: var(--card-accent);
-  transform-origin: left;
-  transform: scaleX(0.55);
-}
-
-.product-card__bottle {
-  align-self: end;
-  display: grid;
-  justify-items: center;
-  align-content: end;
-  min-height: 245px;
-  padding-top: $space-sm;
-}
-
-.product-card__neck {
-  width: 46px;
-  height: 64px;
-  background: var(--card-accent);
-  border: 2px solid $color-black;
-  border-bottom: 0;
-}
-
-.product-card__body {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  max-width: 148px;
-  height: 190px;
-  background: $color-black;
-  border: 2px solid $color-black;
-  border-radius: 18px 18px 6px 6px;
-}
-
-.product-card__label {
-  display: grid;
-  place-items: center;
-  gap: $space-xs;
-  width: 74%;
-  min-height: 118px;
-  padding: $space-sm;
-  background: $color-cream;
-  border: 2px solid var(--card-accent);
-}
-
-.product-card__label strong {
-  font-family: $font-display;
-  font-size: 2.2rem;
-  line-height: 0.9;
-}
-
-.product-card__label-glyph,
-.product-card__label i {
-  color: var(--card-accent);
-  --glyph-size: 2.2rem;
-}
-
-.product-card__kicker,
 .character-card__role,
 .character-card__prop,
 .merch-card__category,
@@ -103,7 +31,6 @@
   color: var(--card-accent);
 }
 
-.product-card__name,
 .character-card__name,
 .merch-card__name {
   font-family: $font-display;
@@ -113,24 +40,10 @@
   text-transform: uppercase;
 }
 
-.product-card__glyph {
-  display: grid;
-  place-items: center;
-  color: var(--card-accent);
-  --glyph-size: 2.2rem;
-}
-
-.product-card__line,
 .character-card__line,
 .merch-card__line {
   font-weight: 800;
   line-height: 1.25;
-}
-
-.product-card__descriptor {
-  color: rgba($color-black, 0.72);
-  font-size: 0.875rem;
-  line-height: 1.35;
 }
 
 .character-card {
@@ -213,18 +126,7 @@
   gap: $space-sm;
 }
 
-@media (max-width: $breakpoint-sm) {
-  .product-card {
-    min-height: 470px;
-  }
-
-  .product-card__descriptor {
-    display: none;
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .product-card,
   .character-card,
   .merch-card {
     transition:
@@ -233,28 +135,11 @@
       background-color $transition-fast;
   }
 
-  .product-card:hover,
-  .product-card:focus-visible,
   .character-card:hover,
   .character-card:focus-visible,
   .merch-card:hover,
   .merch-card:focus-visible {
     transform: translateY(-4px);
-  }
-
-  .product-card__stripe,
-  .product-card__body {
-    transition: transform $transition-base;
-  }
-
-  .product-card:hover .product-card__stripe,
-  .product-card:focus-visible .product-card__stripe {
-    transform: scaleX(1);
-  }
-
-  .product-card:hover .product-card__body,
-  .product-card:focus-visible .product-card__body {
-    transform: scale(1.02);
   }
 
   .character-card__figure {

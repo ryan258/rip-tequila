@@ -1,17 +1,23 @@
 {{ define "main" }}
-<article class="detail-page">
-  <header class="detail-hero">
-    <div class="detail-hero__copy">
-      <p class="section-heading__eyebrow">{{ .Params.eyebrow | default .Section }}</p>
-      <h1>{{ .Params.headline | default .Params.detail_headline | default .Title }}</h1>
-      <p>{{ .Description | default .Params.line }}</p>
-    </div>
-    <div class="detail-hero__icon" aria-hidden="true">
-      {{ partial "glyph.html" (dict "name" (.Params.icon | default "skull") "class" "detail-hero__glyph-mark rip-glyph--hero rip-glyph--animated") }}
+<article class="standard-doc-page">
+  <header class="standard-doc-hero">
+    <div class="standard-doc-container">
+      <p class="standard-doc-hero__eyebrow">⤛ {{ .Params.eyebrow | default .Section | default "RIP Tequila" }} ⤜</p>
+      <h1 class="standard-doc-hero__title">{{ .Params.headline | default .Params.detail_headline | default .Title }}</h1>
+      {{ with .Description }}
+        <p class="standard-doc-hero__desc">{{ . }}</p>
+      {{ end }}
     </div>
   </header>
-  <div class="detail-page__body">
-    {{ .Content }}
-  </div>
+
+  {{ if .Content }}
+  <section class="standard-doc-content-section">
+    <div class="standard-doc-container">
+      <div class="standard-doc-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
 </article>
 {{ end }}

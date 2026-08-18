@@ -1,11 +1,26 @@
 {{ define "main" }}
-{{ partial "page-hero.html" . }}
+<article class="standard-doc-page">
+  <header class="standard-doc-hero">
+    <div class="standard-doc-container">
+      <p class="standard-doc-hero__eyebrow">⤛ {{ .Params.eyebrow | default "RIP Tequila" }} ⤜</p>
+      <h1 class="standard-doc-hero__title">{{ .Params.headline | default .Title }}</h1>
+      {{ with .Description }}
+        <p class="standard-doc-hero__desc">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.cta_label }}
+        <a class="button button--primary" href="{{ strings.TrimPrefix "/" ($.Params.cta_href | default "") | relURL }}">{{ . }}</a>
+      {{ end }}
+    </div>
+  </header>
 
-{{ if .Content }}
-<section class="editorial-section">
-  <div class="editorial-section__inner">
-    {{ .Content }}
-  </div>
-</section>
-{{ end }}
+  {{ if .Content }}
+  <section class="standard-doc-content-section">
+    <div class="standard-doc-container">
+      <div class="standard-doc-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+</article>
 {{ end }}

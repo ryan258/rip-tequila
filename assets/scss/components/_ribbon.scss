@@ -1,0 +1,23 @@
+// Shared slogan ribbon: black band, accent rules, gold display type.
+// Used by the lineup catalog, bottle detail, and social club pages.
+.rip-ribbon {
+  @include paper-texture($texture-opacity-light);
+  background: $color-black;
+  border-top: 3px solid var(--ribbon-accent, #{$color-red});
+  border-bottom: 3px solid var(--ribbon-accent, #{$color-red});
+  padding: $space-lg $space-md;
+  text-align: center;
+
+  &--gold {
+    --ribbon-accent: #{$color-gold};
+  }
+
+  &__text {
+    font-family: $font-display;
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: $color-gold;
+    margin: 0;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
