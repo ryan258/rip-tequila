@@ -329,6 +329,16 @@
   align-items: center;
   text-align: center;
   gap: 0.35rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform $transition-fast;
+
+  &:focus-visible {
+    outline: 2px solid $color-red;
+    outline-offset: 4px;
+  }
 
   .cast-card__media {
     border: 1.5px solid rgba($color-black, 0.35);
@@ -349,7 +359,8 @@
     }
   }
 
-  &:hover .cast-card__media {
+  &:hover .cast-card__media,
+  &:focus-visible .cast-card__media {
     transform: translateY(-3px);
     box-shadow: 4px 4px 0 rgba($color-black, 0.16);
     border-color: $color-black;
@@ -365,6 +376,12 @@
     margin: 0;
     line-height: 1.2;
     text-align: center;
+    transition: color $transition-fast;
+  }
+
+  &:hover .cast-card__name,
+  &:focus-visible .cast-card__name {
+    color: $color-red;
   }
 
   .cast-card__desc {
@@ -396,6 +413,16 @@
   align-items: center;
   text-align: center;
   gap: $space-md;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform $transition-fast;
+
+  &:focus-visible {
+    outline: 2px solid $color-red;
+    outline-offset: 4px;
+  }
 
   .bottle-col__media {
     height: clamp(100px, 12vw, 138px);
@@ -415,8 +442,9 @@
     transition: transform $transition-base;
   }
 
-  &:hover .bottle-col__img {
-    transform: translateY(-4px) scale(1.03);
+  &:hover .bottle-col__img,
+  &:focus-visible .bottle-col__img {
+    transform: translateY(-5px) scale(1.04);
   }
 
   .bottle-col__info {
@@ -431,6 +459,12 @@
     color: $color-black;
     font-size: 1.35rem;
     margin-bottom: 2px;
+    transition: color $transition-fast;
+  }
+
+  &:hover .bottle-col__icon,
+  &:focus-visible .bottle-col__icon {
+    color: $color-red;
   }
 
   .bottle-col__title {
@@ -442,6 +476,12 @@
     color: $color-black;
     margin: 0;
     line-height: 1.2;
+    transition: color $transition-fast;
+  }
+
+  &:hover .bottle-col__title,
+  &:focus-visible .bottle-col__title {
+    color: $color-red;
   }
 
   .bottle-col__desc {
