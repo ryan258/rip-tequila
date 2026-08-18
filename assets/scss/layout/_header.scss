@@ -147,13 +147,16 @@
   transform: translateY(-100%);
   visibility: hidden;
   pointer-events: none;
-  transition: transform $transition-base, visibility $transition-base;
+  // Hide only after the slide-out finishes; on open, visibility flips in the
+  // same frame so the script can focus the first link immediately.
+  transition: transform $transition-base, visibility 0s linear 240ms;
 }
 
 .mobile-menu.is-open {
   transform: translateY(0);
   visibility: visible;
   pointer-events: auto;
+  transition: transform $transition-base, visibility 0s;
 }
 
 .mobile-menu__nav {

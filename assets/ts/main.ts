@@ -58,7 +58,13 @@ function initMobileMenu(): void {
     }
   });
 
-  menu.addEventListener('keydown', (event) => {
+  // On the document, not the menu: the toggle sits outside the dialog, so a
+  // menu-scoped listener misses Escape and Tab whenever focus starts there.
+  document.addEventListener('keydown', (event) => {
+    if (!menu.classList.contains('is-open')) {
+      return;
+    }
+
     if (event.key === 'Escape') {
       closeMenu();
       return;
@@ -68,7 +74,8 @@ function initMobileMenu(): void {
       return;
     }
 
-    const focusable = getFocusable(menu);
+    // The toggle is the close control, so it stays in the cycle.
+    const focusable = [toggle, ...getFocusable(menu)];
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
 
