@@ -1,0 +1,367 @@
+/* ==========================================================================
+   Don Muerte Social Club & Member Benefits Styles
+   ========================================================================== */
+
+.social-club-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  overflow: hidden;
+}
+
+// 1. VIP Portal Hero
+.social-club-hero {
+  @include section-padding;
+  background: $color-black;
+  color: $color-cream;
+  position: relative;
+  border-bottom: 3px solid $color-gold;
+}
+
+.social-club-hero__inner {
+  @include container;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp($space-xl, 6vw, $space-3xl);
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.social-club-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.social-club-hero__eyebrow {
+  @include eyebrow;
+  color: $color-gold;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.social-club-hero__title {
+  @include poster-title(3.2rem, 7vw, 6rem);
+  line-height: 0.92;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.social-club-hero__tagline {
+  font-family: $font-accent;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 700;
+  color: $color-gold;
+  margin: 0;
+}
+
+.social-club-hero__desc {
+  @include body-copy(1.1rem);
+  font-weight: 500;
+  color: rgba($color-cream, 0.85);
+  margin: $space-xs 0 $space-md 0;
+}
+
+// Enrollment Card
+.social-club-enrollment-card {
+  background: rgba($color-cream, 0.06);
+  border: 2px solid $color-gold;
+  padding: $space-lg;
+  box-shadow: 6px 6px 0 rgba($color-black, 0.5);
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-gold;
+    margin: 0 0 2px 0;
+  }
+
+  &__sub {
+    font-family: $font-body;
+    font-size: 0.82rem;
+    color: rgba($color-cream, 0.7);
+    margin: 0 0 $space-md 0;
+  }
+}
+
+.social-club-form {
+  &__row {
+    display: flex;
+    gap: $space-sm;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    background: $color-cream;
+    border: 2px solid $color-black;
+    padding: $space-sm $space-md;
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: $color-black;
+  }
+
+  &__btn {
+    white-space: nowrap;
+  }
+
+  &__disclaimer {
+    display: block;
+    font-family: $font-body;
+    font-size: 0.72rem;
+    color: rgba($color-cream, 0.5);
+    margin-top: $space-xs;
+  }
+}
+
+// 3D-Styled VIP Card Graphic
+.social-club-hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.social-club-vip-card {
+  width: 100%;
+  max-width: 380px;
+  min-height: 230px;
+  background: linear-gradient(135deg, #1f1f1f 0%, #0d0d0d 100%);
+  border: 2px solid $color-gold;
+  box-shadow: 12px 12px 0 rgba($color-black, 0.6), 0 0 24px rgba($color-gold, 0.2);
+  padding: $space-lg;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed rgba($color-gold, 0.4);
+    padding-bottom: $space-xs;
+  }
+
+  &__brand {
+    font-family: $font-display;
+    font-size: 1.4rem;
+    color: $color-gold;
+    letter-spacing: 0.05em;
+  }
+
+  &__type {
+    font-family: $font-accent;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba($color-cream, 0.6);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-block: $space-md;
+  }
+
+  &__name {
+    font-family: $font-accent;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $color-cream;
+    letter-spacing: 0.06em;
+    margin: $space-xs 0 2px 0;
+  }
+
+  &__role {
+    font-family: $font-body;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: $color-gold;
+    letter-spacing: 0.1em;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px dashed rgba($color-gold, 0.4);
+    padding-top: $space-xs;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-family: $font-accent;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: rgba($color-cream, 0.5);
+  }
+
+  &__val {
+    font-family: $font-display;
+    font-size: 1rem;
+    color: $color-gold;
+    letter-spacing: 0.05em;
+  }
+
+}
+
+// 2. Perks Grid
+.social-club-perks-section {
+  @include section-padding;
+  background: $color-cream;
+  border-bottom: 2px solid rgba($color-black, 0.15);
+}
+
+.social-club-container {
+  @include container;
+}
+
+.social-club-perks-header {
+  text-align: center;
+  margin-bottom: $space-2xl;
+
+  &__eyebrow {
+    @include eyebrow;
+    color: $color-gold;
+    margin: 0 0 $space-xs 0;
+  }
+
+  &__title {
+    @include poster-title(2.2rem, 4.5vw, 4rem);
+    margin: $space-xs 0;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    @include body-copy;
+    color: rgba($color-black, 0.75);
+    margin: 0;
+  }
+}
+
+.social-club-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: $space-lg;
+}
+
+.social-club-perk-card {
+  @include paper-card(8px);
+  padding: $space-xl $space-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__text {
+    font-family: $font-body;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: rgba($color-black, 0.75);
+    margin: 0;
+  }
+}
+
+// 3. Charter Rules Section
+.social-club-charter-section {
+  @include section-padding;
+  background: $color-cream;
+}
+
+.social-club-charter-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-xl;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.social-club-charter-card {
+  @include paper-card(10px);
+  padding: $space-xl $space-lg;
+
+  &--dark {
+    background: $color-black;
+    color: $color-cream;
+    border-color: $color-gold;
+
+    .social-club-charter-card__title {
+      color: $color-gold;
+    }
+
+    .social-club-charter-list li {
+      border-color: rgba($color-cream, 0.12);
+      color: rgba($color-cream, 0.85);
+
+      strong {
+        color: $color-gold;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: $color-red;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 $space-lg 0;
+  }
+}
+
+.social-club-charter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  li {
+    font-family: $font-body;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    padding-bottom: $space-sm;
+    border-bottom: 1px solid rgba($color-black, 0.08);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    strong {
+      color: $color-black;
+    }
+  }
+}
+
+.social-club-actions-row {
+  display: flex;
+  justify-content: center;
+  gap: $space-md;
+  margin-top: $space-2xl;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,114 @@
+{{ define "main" }}
+<article class="social-club-page">
+  <section class="social-club-hero">
+    <div class="social-club-hero__inner">
+      <div class="social-club-hero__copy">
+        <p class="social-club-hero__eyebrow">⤛ {{ .Params.eyebrow }} ⤜</p>
+        <h1 class="social-club-hero__title">{{ .Params.headline | default .Title }}</h1>
+        {{ with .Params.tagline }}<p class="social-club-hero__tagline">{{ . }}</p>{{ end }}
+        {{ with .Params.intro }}<p class="social-club-hero__desc">{{ . }}</p>{{ end }}
+
+        {{ with .Params.enrollment }}
+        <div class="social-club-enrollment-card">
+          <h2 class="social-club-enrollment-card__title">{{ .title }}</h2>
+          <p class="social-club-enrollment-card__sub">{{ .sub }}</p>
+
+          <form class="social-club-form signup-form" data-signup-form>
+            <div class="social-club-form__row">
+              <label class="sr-only" for="club-email">Your email</label>
+              <input id="club-email" type="email" name="email" class="social-club-form__input" placeholder="Enter your email address" autocomplete="email" required data-signup-email>
+              <button type="submit" class="button button--primary social-club-form__btn">{{ .button }}</button>
+            </div>
+            <p class="signup-form__message" data-signup-message role="status"></p>
+          </form>
+          <span class="social-club-form__disclaimer">{{ .disclaimer }}</span>
+        </div>
+        {{ end }}
+      </div>
+
+      {{ with .Params.credential }}
+      <div class="social-club-hero__visual">
+        <div class="social-club-vip-card" role="img" aria-label="Don Muerte Social Club VIP membership credential, roster number {{ .roster }}, expires {{ .expires }}">
+          <div class="social-club-vip-card__inner" aria-hidden="true">
+            <div class="social-club-vip-card__header">
+              <span class="social-club-vip-card__brand">RIP TEQUILA</span>
+              <span class="social-club-vip-card__type">VIP CREDENTIAL</span>
+            </div>
+
+            <div class="social-club-vip-card__body">
+              <div class="social-club-vip-card__emblem">
+                {{ partial "glyph.html" (dict "name" "skull" "class" "rip-glyph--xl rip-glyph--gold") }}
+              </div>
+              <span class="social-club-vip-card__name">DON MUERTE SOCIAL CLUB</span>
+              <span class="social-club-vip-card__role">{{ .role }}</span>
+            </div>
+
+            <div class="social-club-vip-card__footer">
+              <div class="social-club-vip-card__field">
+                <span class="social-club-vip-card__label">ROSTER #</span>
+                <strong class="social-club-vip-card__val">{{ .roster }}</strong>
+              </div>
+              <div class="social-club-vip-card__field">
+                <span class="social-club-vip-card__label">EXPIRES</span>
+                <strong class="social-club-vip-card__val">{{ .expires }}</strong>
+              </div>
+              <div class="social-club-vip-card__seal">
+                {{ partial "glyph.html" (dict "name" "star-burst" "class" "rip-glyph--md rip-glyph--gold") }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="social-club-perks-section">
+    <div class="social-club-container">
+      <div class="social-club-perks-header">
+        <p class="social-club-perks-header__eyebrow">{{ .Params.perks_eyebrow }}</p>
+        <h2 class="social-club-perks-header__title">{{ .Params.perks_title }}</h2>
+        <p class="social-club-perks-header__desc">{{ .Params.perks_desc }}</p>
+      </div>
+
+      <div class="social-club-perks-grid" role="list">
+        {{ range .Params.perks }}
+        <div class="social-club-perk-card" role="listitem">
+          <div class="social-club-perk-card__icon">
+            {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--lg rip-glyph--gold") }}
+          </div>
+          <h3 class="social-club-perk-card__title">{{ .title }}</h3>
+          <p class="social-club-perk-card__text">{{ .text }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="social-club-charter-section">
+    <div class="social-club-container">
+      <div class="social-club-charter-row">
+        {{ range .Params.charter }}
+        <div class="social-club-charter-card{{ if .dark }} social-club-charter-card--dark{{ end }}">
+          <h2 class="social-club-charter-card__title">⤛ {{ .title }} ⤜</h2>
+          <ul class="social-club-charter-list">
+            {{ range .items }}<li>{{ . | markdownify }}</li>{{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="social-club-actions-row">
+        <a class="button button--primary" href="{{ "merch/" | relURL }}">Browse Current Artifacts</a>
+        <a class="button button--outline" href="{{ "member-benefits/" | relURL }}">Review Detailed Benefits &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  {{ with .Params.ribbon }}
+  <section class="rip-ribbon rip-ribbon--gold">
+    <p class="rip-ribbon__text">{{ . }}</p>
+  </section>
+  {{ end }}
+</article>
+{{ end }}

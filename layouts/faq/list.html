@@ -1,0 +1,54 @@
+{{ define "main" }}
+<article class="faq-page">
+  <header class="faq-hero">
+    <div class="faq-hero__inner">
+      <p class="faq-hero__eyebrow">⤛ {{ .Params.eyebrow }} ⤜</p>
+      <h1 class="faq-hero__title">{{ .Params.headline | default .Title }}</h1>
+      {{ with .Description }}<p class="faq-hero__desc">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+
+  <section class="faq-content-section">
+    <div class="faq-container">
+      <div class="faq-accordion-group">
+        {{ range .Params.faqs }}
+          <details class="faq-item"{{ if .open }} open{{ end }}>
+            <summary class="faq-item__summary">
+              <span class="faq-item__icon">
+                {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--md rip-glyph--red") }}
+              </span>
+              <h2 class="faq-item__question">{{ .q }}</h2>
+              <span class="faq-item__toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__content">
+              {{/* Front-matter answers can't run shortcodes, so rebase their root-relative links onto baseURL. */}}
+              {{ replace .a "](/" (printf "](%s" ("" | relURL)) | markdownify }}
+              {{/* The cast and their roles come from the dossiers, never a second copy. */}}
+              {{ if .cast_roster }}
+                {{ $cast := slice }}
+                {{ range (site.GetPage "characters").Pages.ByWeight }}
+                  {{ $cast = $cast | append (printf "**%s** (%s)" .Title .Params.role) }}
+                {{ end }}
+                {{ printf "%s. Full bios and dossiers are on the [Characters](%s) page." (delimit $cast ", " ", and ") ("characters/" | relURL) | markdownify }}
+              {{ end }}
+            </div>
+          </details>
+        {{ end }}
+      </div>
+
+      {{ with .Params.help_card }}
+      <div class="faq-help-card">
+        <div class="faq-help-card__copy">
+          <h2 class="faq-help-card__title">{{ .title }}</h2>
+          <p class="faq-help-card__text">{{ .text }}</p>
+        </div>
+        <div class="faq-help-card__actions">
+          <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Join the Club</a>
+          <a class="button button--outline" href="{{ "parody-disclaimer/" | relURL }}">Read Disclaimer</a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</article>
+{{ end }}

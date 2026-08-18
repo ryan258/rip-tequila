@@ -1,0 +1,56 @@
+{{ define "main" }}
+<article class="benefits-page">
+  <header class="benefits-hero">
+    <div class="benefits-hero__inner">
+      <p class="benefits-hero__eyebrow">⤛ {{ .Params.eyebrow }} ⤜</p>
+      <h1 class="benefits-hero__title">{{ .Params.headline | default .Title }}</h1>
+      {{ with .Description }}<p class="benefits-hero__desc">{{ . }}</p>{{ end }}
+      <div class="benefits-hero__actions">
+        <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Join the Club for Free</a>
+        <a class="button button--outline" href="{{ "merch/" | relURL }}">View Current Drops</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="benefits-content-section">
+    <div class="benefits-container">
+      {{ with .Content }}
+      <div class="benefits-intro">{{ . }}</div>
+      {{ end }}
+
+      {{ range $i, $group := .Params.benefit_groups }}
+      <div class="benefits-section-block">
+        <div class="benefits-section-header">
+          <span class="benefits-section-number" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+          <h2 class="benefits-section-heading">{{ $group.heading }}</h2>
+        </div>
+        <div class="benefits-cards-grid">
+          {{ range $group.items }}
+          <div class="benefits-card">
+            <h3 class="benefits-card__title">{{ .title }}</h3>
+            <p class="benefits-card__text">{{ .text }}</p>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+      {{ with .Params.exclusions }}
+      <div class="benefits-exclusion-box">
+        <div class="benefits-exclusion-box__header">
+          {{ partial "glyph.html" (dict "name" "warning" "class" "rip-glyph--md rip-glyph--red") }}
+          <h2 class="benefits-exclusion-box__title">{{ $.Params.exclusions_title }}</h2>
+        </div>
+        <ul class="benefits-exclusion-list">
+          {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      <div class="benefits-cta-row">
+        <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Inscribe Your Name Now</a>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

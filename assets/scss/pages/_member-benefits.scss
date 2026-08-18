@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Member Benefits Page Styles
+   ========================================================================== */
+
+.benefits-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  overflow: hidden;
+}
+
+.benefits-hero {
+  @include hero-stack(2.8rem, 6vw, 5rem, $color-gold);
+
+  &__desc {
+    margin-bottom: $space-lg;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: $space-md;
+    flex-wrap: wrap;
+  }
+}
+
+.benefits-content-section {
+  @include section-padding;
+}
+
+.benefits-container {
+  @include container;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2xl;
+}
+
+.benefits-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.benefits-section-header {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  border-bottom: 2px solid $color-black;
+  padding-bottom: $space-xs;
+}
+
+.benefits-section-number {
+  font-family: $font-display;
+  font-size: 1.8rem;
+  color: $color-red;
+}
+
+.benefits-section-heading {
+  font-family: $font-accent;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.benefits-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: $space-md;
+}
+
+.benefits-card {
+  @include paper-card(6px);
+  padding: $space-lg;
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $color-red;
+    text-transform: uppercase;
+    margin: 0 0 $space-xs 0;
+  }
+
+  &__text {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: rgba($color-black, 0.75);
+    margin: 0;
+  }
+}
+
+.benefits-exclusion-box {
+  background: rgba($color-red, 0.06);
+  border: 2px dashed $color-red;
+  padding: $space-xl;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    margin-bottom: $space-md;
+  }
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-red;
+    margin: 0;
+  }
+}
+
+.benefits-exclusion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  li {
+    font-family: $font-body;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+}
+
+.benefits-cta-row {
+  display: flex;
+  justify-content: center;
+  margin-top: $space-md;
+}

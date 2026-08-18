@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Interactive FAQ Page Styles
+   ========================================================================== */
+
+.faq-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  overflow: hidden;
+}
+
+.faq-hero {
+  @include hero-stack(2.8rem, 6vw, 5.5rem);
+}
+
+.faq-content-section {
+  @include section-padding;
+}
+
+.faq-container {
+  @include container;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2xl;
+}
+
+.faq-accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.faq-item {
+  @include paper-card(6px);
+  transition: box-shadow $transition-base;
+
+  &[open] {
+    box-shadow: 8px 8px 0 rgba($color-black, 0.16);
+
+    .faq-item__toggle::after {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+
+    .faq-item__summary {
+      border-bottom: 1.5px solid rgba($color-black, 0.12);
+    }
+  }
+
+  &__summary {
+    list-style: none;
+    cursor: pointer;
+    padding: $space-lg $space-md;
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background: rgba($color-cream, 0.5);
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+  }
+
+  &__question {
+    font-family: $font-accent;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+    line-height: 1.25;
+    color: $color-black;
+  }
+
+  &__toggle {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background: $color-red;
+      transition: transform $transition-base, opacity $transition-base;
+    }
+
+    &::before {
+      top: 8px;
+      left: 0;
+      width: 18px;
+      height: 2px;
+    }
+
+    &::after {
+      top: 0;
+      left: 8px;
+      width: 2px;
+      height: 18px;
+    }
+  }
+
+  &__content {
+    // Single-paragraph answers come back from markdownify as bare inline HTML,
+    // so the body type lives on the container rather than on `p`.
+    @include body-copy;
+    padding: $space-lg $space-md;
+    background: $color-cream;
+
+    p {
+      margin: 0 0 $space-sm 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $color-red;
+      font-weight: 700;
+    }
+  }
+}
+
+.faq-help-card {
+  @include paper-card(10px, 3px);
+  padding: $space-xl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $space-xl;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: 1.8rem;
+    margin: 0 0 $space-xs 0;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: rgba($color-black, 0.75);
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-sm;
+    flex-shrink: 0;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

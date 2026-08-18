@@ -1,0 +1,63 @@
+{{ define "main" }}
+<article class="disclaimer-dossier-page">
+  <header class="disclaimer-dossier-hero">
+    <div class="disclaimer-dossier-container">
+      <div class="disclaimer-folder-tab">
+        <span class="disclaimer-folder-tab__id">{{ .Params.case_id }}</span>
+        <span class="disclaimer-folder-tab__stamp">{{ .Params.case_stamp }}</span>
+      </div>
+
+      <div class="disclaimer-dossier-hero__card">
+        {{ with .Params.stamp_text }}
+        <div class="disclaimer-stamp-box" aria-hidden="true">
+          <span class="disclaimer-stamp-box__text">{{ . }}</span>
+        </div>
+        {{ end }}
+
+        <p class="disclaimer-dossier-hero__eyebrow">⤛ {{ .Params.eyebrow }} ⤜</p>
+        <h1 class="disclaimer-dossier-hero__title">{{ .Params.headline | default .Title }}</h1>
+        <p class="disclaimer-dossier-hero__lead">{{ .Params.lead }}</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="disclaimer-content-section">
+    <div class="disclaimer-dossier-container">
+      <h2 class="disclaimer-section-heading">⤛ {{ .Params.breakdown_title }} ⤜</h2>
+
+      <div class="disclaimer-breakdown-grid">
+        {{ range .Params.points }}
+        <div class="disclaimer-point-card">
+          <div class="disclaimer-point-card__icon">
+            {{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--lg rip-glyph--red") }}
+          </div>
+          <h3 class="disclaimer-point-card__title">{{ .title }}</h3>
+          <p class="disclaimer-point-card__text">{{ .text }}</p>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="disclaimer-safety-box">
+        <div class="disclaimer-safety-box__header">
+          {{ partial "glyph.html" (dict "name" "monument" "class" "rip-glyph--md rip-glyph--red") }}
+          <h2 class="disclaimer-safety-box__title">{{ .Params.safety_title }}</h2>
+        </div>
+        <p class="disclaimer-safety-box__desc">{{ .Params.safety_desc }}</p>
+        <div class="disclaimer-safety-rules">
+          {{ range .Params.safety_rules }}
+          <div class="disclaimer-safety-rule">{{ . | markdownify }}</div>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="disclaimer-quote-row">
+        <p class="disclaimer-quote-row__text">{{ .Params.closing_quote }}</p>
+        <div class="disclaimer-actions">
+          <a class="button button--primary" href="{{ "characters/" | relURL }}">Meet the Cantina Cast</a>
+          <a class="button button--outline" href="{{ "responsible-language/" | relURL }}">Responsible Language Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

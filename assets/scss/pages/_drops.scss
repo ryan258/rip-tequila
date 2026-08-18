@@ -1,0 +1,237 @@
+/* ==========================================================================
+   Drops Archive Page Styles
+   ========================================================================== */
+
+.drops-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  overflow: hidden;
+}
+
+.drops-hero {
+  @include hero-stack(2.8rem, 6vw, 5.5rem);
+
+  &__desc {
+    margin-bottom: $space-lg;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: $space-md;
+    flex-wrap: wrap;
+  }
+}
+
+.drops-content-section {
+  @include section-padding;
+}
+
+.drops-container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2xl;
+}
+
+.drops-header {
+  text-align: center;
+
+  &__title {
+    @include poster-title(2.2rem, 4.5vw, 3.8rem);
+    margin: 0 0 $space-xs 0;
+    text-transform: uppercase;
+  }
+
+  &__sub {
+    @include body-copy;
+    color: rgba($color-black, 0.7);
+    margin: 0;
+  }
+}
+
+.drops-intro {
+  max-width: 68ch;
+  margin-inline: auto;
+  text-align: center;
+
+  p {
+    @include body-copy;
+    color: rgba($color-black, 0.78);
+    margin: 0 0 $space-md 0;
+  }
+
+  blockquote {
+    font-family: $font-accent;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 700;
+    color: $color-red;
+    margin: $space-lg 0 0 0;
+
+    p {
+      color: inherit;
+      font: inherit;
+      margin: 0;
+    }
+  }
+}
+
+.drops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-xl;
+}
+
+.drop-card {
+  @include paper-card(10px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  // Vaulted drops are archive records with nothing to click, so only cards
+  // that actually contain a link advertise themselves as interactive.
+  &:has(a):hover {
+    transform: translateY(-4px);
+    box-shadow: 14px 14px 0 rgba($color-black, 0.16);
+  }
+
+  &__badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-sm $space-md;
+    background: $color-cream;
+    border-bottom: 2px solid $color-black;
+  }
+
+  &__status {
+    font-family: $font-accent;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border: 1px solid currentColor;
+
+    &--vaulted {
+      color: $color-red;
+      border-color: $color-red;
+    }
+
+    &--live {
+      color: $color-green;
+      border-color: $color-green;
+    }
+  }
+
+  &__edition {
+    font-family: $font-body;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: rgba($color-black, 0.6);
+  }
+
+  &__icon {
+    padding: $space-xl $space-md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, rgba($color-gold, 0.15) 0%, transparent 70%);
+    border-bottom: 1.5px solid rgba($color-black, 0.1);
+  }
+
+  &__body {
+    padding: $space-lg $space-md;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: $space-xs;
+  }
+
+  &__category {
+    font-family: $font-accent;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba($color-black, 0.5);
+    letter-spacing: 0.05em;
+  }
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  &__desc {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    color: rgba($color-black, 0.75);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: $space-md;
+    border-top: 1px dashed rgba($color-black, 0.15);
+    font-family: $font-body;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  &__date {
+    color: rgba($color-black, 0.6);
+  }
+
+  &__price {
+    color: $color-red;
+  }
+
+  &__action {
+    margin-top: $space-sm;
+  }
+
+  &__btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.drops-club-callout {
+  background: $color-black;
+  color: $color-cream;
+  border: 3px solid $color-gold;
+  box-shadow: 12px 12px 0 rgba($color-black, 0.5);
+  padding: $space-xl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $space-xl;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: 1.8rem;
+    color: $color-gold;
+    margin: 0 0 $space-xs 0;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: rgba($color-cream, 0.8);
+    margin: 0;
+  }
+}

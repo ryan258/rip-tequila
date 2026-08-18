@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Default layout styles — layouts/_default/{list,single}.html
+
+   These back every page without a dedicated layout (privacy, terms,
+   responsible-language, and anything added later), so they live on their own
+   rather than inside a page-specific partial.
+   ========================================================================== */
+
+.standard-doc-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  overflow: hidden;
+}
+
+.standard-doc-hero {
+  @include hero-stack(2.8rem, 6vw, 5rem);
+}
+
+.standard-doc-container {
+  @include container;
+  max-width: 820px;
+}
+
+.standard-doc-content-section {
+  @include section-padding;
+}
+
+.standard-doc-body {
+  @include paper-card(10px);
+  padding: clamp($space-lg, 5vw, $space-2xl);
+
+  p {
+    @include body-copy;
+    margin-bottom: $space-md;
+  }
+
+  h2 {
+    font-family: $font-accent;
+    font-size: 1.45rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: $space-xl;
+    margin-bottom: $space-xs;
+    border-bottom: 1.5px solid rgba($color-black, 0.12);
+    padding-bottom: 4px;
+  }
+
+  h3 {
+    font-family: $font-accent;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: $space-lg;
+    margin-bottom: $space-xs;
+  }
+
+  ul, ol {
+    margin-bottom: $space-md;
+    padding-left: $space-lg;
+
+    li {
+      font-family: $font-body;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: $space-xs;
+    }
+  }
+
+  a {
+    color: $color-red;
+    font-weight: 700;
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid $color-red;
+    background: rgba($color-cream, 0.5);
+    padding: $space-md;
+    margin: $space-lg 0;
+    font-style: italic;
+    font-family: $font-accent;
+    font-weight: 700;
+  }
+}
