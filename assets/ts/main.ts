@@ -150,8 +150,45 @@ function initMerchFilters(): void {
   });
 }
 
+function initHeroMotion(): void {
+  const image = document.querySelector<HTMLImageElement>('[data-hero-motion-image]');
+  const toggle = document.querySelector<HTMLButtonElement>('[data-hero-motion-toggle]');
+
+  if (!image || !toggle) {
+    return;
+  }
+
+  const motionSrc = image.dataset.motionSrc;
+  const stillSrc = image.dataset.stillSrc;
+
+  if (!motionSrc || !stillSrc) {
+    return;
+  }
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  const setPaused = (paused: boolean): void => {
+    image.src = paused ? stillSrc : motionSrc;
+    toggle.setAttribute('aria-pressed', String(paused));
+    toggle.textContent = paused ? 'Play poster motion' : 'Pause poster motion';
+  };
+
+  const syncPreference = (): void => {
+    const shouldReduce = reducedMotion.matches;
+    setPaused(shouldReduce);
+    toggle.hidden = shouldReduce;
+  };
+
+  toggle.addEventListener('click', () => {
+    setPaused(toggle.getAttribute('aria-pressed') !== 'true');
+  });
+  reducedMotion.addEventListener('change', syncPreference);
+  syncPreference();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSignupForms();
   initMerchFilters();
+  initHeroMotion();
 });

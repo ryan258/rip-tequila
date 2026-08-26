@@ -51,15 +51,16 @@ Every visual mark on the site is an authentic, chiseled vector glyph engineered 
 
 ## Visual system assets
 
-- **Hero poster** (`/static/images/hero-poster-bg.webp`): woodblock desert backdrop under a stylized blood-red sun with silhouette agaves.
-- **Cantina archway** (`/static/images/cantina-archway-bg.webp`): linocut illustration of the afterlife cantina entrance with warm lantern glow for the Brand Intro.
-- **Social Club texture** (`/static/images/social-club-bg.webp`): dark engraved woodcut relief pattern of bells, skulls, and agaves in antique gold and midnight black.
+- **Homepage motion poster** (`/assets/images/home-hero-poster-motion.webp`): a subtle looping WebP with wind-swept agaves and pulsing supernatural desert radiance. Its matching static reduced-motion frame is `/assets/images/home-hero-poster-motion-still.webp`.
+- **Hero poster backdrop** (`/assets/images/hero-poster-bg.webp`): woodblock desert backdrop under a stylized blood-red sun with silhouette agaves.
+- **Cantina archway** (`/assets/images/cantina-archway-bg.webp`): linocut illustration of the afterlife cantina entrance with warm lantern glow for the Brand Intro.
+- **Social Club texture** (`/assets/images/social-club-bg.webp`): dark engraved woodcut relief pattern of bells, skulls, and agaves in antique gold and midnight black.
 - **Paper grain** (`/static/images/paper-grain-bg.webp`): subtle letterpress paper texture layered across section backgrounds via `@mixin paper-texture`.
-- **The Lineup hero backdrop** (`/static/images/lineup-hero-bg.webp`): linocut tequila distillery and desert agave fields under a blazing sun.
-- **Characters hero backdrop** (`/static/images/characters-hero-bg.webp`): linocut cantina porch under lanterns and stars.
-- **Merch hero backdrop** (`/static/images/merch-hero-bg.webp`): afterlife trading post linocut artwork.
-- **Cantina Story hero backdrop** (`/static/images/cantina-story-bg.webp`): canyon ridge afterlife cantina landscape.
-- **404 Desert Crossroads backdrop** (`/static/images/404-bg.webp`): midnight desert signpost under a red crescent moon.
+- **The Lineup hero backdrop** (`/assets/images/lineup-hero-bg.webp`): linocut tequila distillery and desert agave fields under a blazing sun.
+- **Characters hero backdrop** (`/assets/images/characters-hero-bg.webp`): linocut cantina porch under lanterns and stars.
+- **Merch hero backdrop** (`/assets/images/merch-hero-bg.webp`): afterlife trading post linocut artwork.
+- **Cantina Story hero backdrop** (`/assets/images/cantina-story-bg.webp`): canyon ridge afterlife cantina landscape.
+- **404 Desert Crossroads backdrop** (`/assets/images/404-bg.webp`): midnight desert signpost under a red crescent moon.
 
 ## Related
 

@@ -45,10 +45,31 @@
       </div>
     </div>
 
-    <div class="hero-poster" aria-hidden="true">
+    <div class="hero-poster">
       <div class="hero-poster__frame">
-        {{ partial "image.html" (dict "src" ("images/home-hero-poster.webp") "alt" "RIP Tequila - Born in Agave, Buried in Legend" "class" "hero-poster__img" "loading" "eager" "decoding" "async") }}
+        {{ $heroMotion := resources.Get "images/home-hero-poster-motion.webp" }}
+        {{ $heroStill := resources.Get "images/home-hero-poster-motion-still.webp" }}
+        <img
+          src="{{ $heroStill.RelPermalink }}"
+          data-hero-motion-image
+          data-motion-src="{{ $heroMotion.RelPermalink }}"
+          data-still-src="{{ $heroStill.RelPermalink }}"
+          alt="RIP Tequila - Born in Agave, Buried in Legend"
+          class="hero-poster__img"
+          width="{{ $heroStill.Width }}"
+          height="{{ $heroStill.Height }}"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high">
       </div>
+      <button
+        class="hero-poster__motion-control"
+        type="button"
+        data-hero-motion-toggle
+        aria-pressed="false"
+        hidden>
+        Pause poster motion
+      </button>
     </div>
   </div>
 </section>
