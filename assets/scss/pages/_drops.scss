@@ -114,6 +114,11 @@
     padding: 2px 8px;
     border: 1px solid currentColor;
 
+    &--live {
+      color: $color-green;
+      border-color: $color-green;
+    }
+
     &--vaulted {
       color: $color-red;
       border-color: $color-red;

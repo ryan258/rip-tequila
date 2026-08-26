@@ -30,7 +30,7 @@ catalog_desc: "The bottles do not form a ladder. They form a timeline."
 
 standards:
   title: "The Solera of the Afterlife"
-  text: "Real tequila answers to terrestrial laws, chemistry, and municipal tax stamps. These five concept expressions answer to a priest, a candle, and an internal claims department with no forwarding address."
+  text: "Real tequila answers to terrestrial laws, chemistry, and municipal tax stamps. These five expressions answer to a priest, a candle, and an internal claims department with no forwarding address."
   cta: "Read the Legal Reality"
   href: "/parody-disclaimer/"
 

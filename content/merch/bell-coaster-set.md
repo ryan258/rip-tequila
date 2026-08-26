@@ -16,7 +16,7 @@ provenance:
   origin: "Beneath the red-ribboned brass bell"
   expression: "RIP Reposado"
   expression_href: "/the-lineup/rip-reposado/"
-  record: "Four landing places for the round that begins when the bell ends the argument."
+  record: "Salvaged from the Mahogany Bar after Los Maracas shook the building; still bearing water rings from 1894."
 built_for:
   - icon: "glass"
     text: "Providing a dignified landing pad for oversized pours of Añejo."

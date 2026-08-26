@@ -6,8 +6,8 @@
       <h1 class="drops-hero__title">{{ .Params.headline | default .Title }}</h1>
       {{ with .Description }}<p class="drops-hero__desc">{{ . }}</p>{{ end }}
       <div class="drops-hero__actions">
-        <a class="button button--primary" href="{{ "merch/" | relURL }}">Explore Artifact Concepts</a>
-        <a class="button button--outline" href="{{ "don-muerte-social-club/" | relURL }}">Preview the Drop List</a>
+        <a class="button button--primary" href="{{ "merch/" | relURL }}">See the Artifacts</a>
+        <a class="button button--outline" href="{{ "don-muerte-social-club/" | relURL }}">Join the Drop List</a>
       </div>
     </div>
   </header>
@@ -27,7 +27,7 @@
         {{ range .Params.drops }}
           <article class="drop-card">
             <div class="drop-card__badge-row">
-              <span class="drop-card__status drop-card__status--vaulted">{{ .status }}</span>
+              <span class="drop-card__status drop-card__status--{{ cond .live "live" "vaulted" }}">{{ .status }}</span>
               <span class="drop-card__edition">{{ .edition }}</span>
             </div>
             <div class="drop-card__icon">
@@ -58,7 +58,7 @@
           <p class="drops-club-callout__desc">{{ .desc }}</p>
         </div>
         <div class="drops-club-callout__action">
-          <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Preview the Club</a>
+          <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Join the Club</a>
         </div>
       </div>
       {{ end }}

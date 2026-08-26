@@ -2,7 +2,7 @@
 title: "Disclaimer"
 eyebrow: "Legal Reality & Fictional Brand Notice"
 headline: "No Actual Spirits. All the Spirit."
-description: "No physical spirits are distilled or sold here. The bottles are storytelling artifacts. The merchandise shown is prototype concept work. The disclaimers are serious."
+description: "No physical spirits are distilled or sold here. The bottles are storytelling artifacts. The merchandise is real. The disclaimers are serious."
 seo_title: "Parody Disclaimer — Fictional Brand Notice | RIP Tequila"
 seo_description: "RIP Tequila is a fictional parody brand created for storytelling, design, and merch. No actual spirits are sold here. Drink responsibly. Haunt responsibly."
 cta_label: "Responsible Language"
@@ -12,7 +12,7 @@ icon: "warning"
 case_id: "CASE FILE #RIP-001"
 case_stamp: "OFFICIAL NOTICE"
 stamp_text: "CLASSIFIED PARODY"
-lead: "RIP Tequila is a fictional parody art project created for storytelling, world-building, and high-concept design. No actual spirits are distilled, bottled, or sold here, and no merchandise is currently offered for purchase."
+lead: "RIP Tequila is a fictional parody art project created for storytelling, world-building, high-concept design, and limited physical merchandise. No actual spirits are distilled, bottled, or sold here."
 
 breakdown_title: "The Plain-English Breakdown"
 points:
@@ -23,8 +23,8 @@ points:
     title: "Zero Real Certifications"
     text: "All medals, NOM numbers, batch stamps, and awards from fictitious afterlife tasting panels are comedic storytelling devices. We are not a licensed commercial distillery."
   - icon: "shirt"
-    title: "Prototype Artifact Concepts"
-    text: "The posters, tees, coaster sets, hats, cards, and sticker sheets shown on this prototype are design concepts. They are not current inventory, and no ordering or worldwide-shipping claim is being made."
+    title: "100% Genuine Merchandise"
+    text: "Our limited screen-printed posters, heavyweight cotton tees, barware coaster sets, strapback hats, and die-cut vinyl sticker sheets are real physical products shipped worldwide."
 
 safety_title: "If You Toast in the Real World"
 safety_desc: "If you choose to enjoy genuine tequila in the terrestrial world, please treat it with respect:"

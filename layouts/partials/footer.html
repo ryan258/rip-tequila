@@ -13,7 +13,7 @@
       </a>
       <p>Rest In Proof</p>
       <p>Born in Agave. Buried in Legend.</p>
-      <p class="site-footer__disclaimer">No actual spirits are sold here. The bottles are concepts. {{ if site.Params.features.commerce }}The merch can ship.{{ else }}The merch is concept work; nothing is for sale.{{ end }} Drink responsibly. Haunt responsibly.</p>
+      <p class="site-footer__disclaimer">No actual spirits are sold here. The bottles are storytelling artifacts. The merchandise is real. The disclaimers are serious. Drink responsibly. Haunt responsibly.</p>
     </div>
 
     <nav class="site-footer__nav" aria-label="Footer navigation">
@@ -36,19 +36,12 @@
           <a href="{{ .href }}" aria-label="{{ .label }}">{{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm") }}</a>
         {{ end }}
       </div>
-      {{ if site.Params.features.social_club_enrollment }}
       <form class="footer-signup signup-form" data-signup-form>
         <label class="sr-only" for="footer-email">Your email</label>
         <input id="footer-email" name="email" type="email" placeholder="Your email" autocomplete="email" required data-signup-email>
         <button class="button button--primary" type="submit">Join</button>
         <p class="signup-form__message" data-signup-message role="status">Drops, posters, merch, and afterlife dispatches.</p>
       </form>
-      {{ else }}
-      <div class="site-footer__club-status">
-        <a class="button button--primary" href="{{ "don-muerte-social-club/" | relURL }}">Preview the Club</a>
-        <p>The roster is forthcoming. No email is being collected yet.</p>
-      </div>
-      {{ end }}
     </div>
   </div>
 

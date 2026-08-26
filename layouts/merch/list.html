@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $commerceOpen := site.Params.features.commerce }}
 <article class="merch-page">
 
   {{/* 1. HERO SECTION */}}
@@ -29,18 +28,18 @@
 
         <div class="merch-hero__cta-row">
           <a class="button button--primary merch-hero__btn" href="#featured-artifacts">
-            {{ if $commerceOpen }}Shop the Drop{{ else }}Explore the Concepts{{ end }}
+            See the Drop
           </a>
           <a class="button button--outline merch-hero__btn" href="{{ strings.TrimPrefix "/" (.Params.cta_href | default "/don-muerte-social-club/") | relURL }}">
-            {{ .Params.cta_label | default "Preview the Club" }}
+            {{ .Params.cta_label | default "Join the Club" }}
           </a>
         </div>
 
         {{/* Hero Feature Badges */}}
         <div class="merch-hero__badges" role="list" aria-label="Merch standards">
           {{ range (slice
-            (dict "icon" "box-open" "title" "PROPOSED RUNS" "sub" "Production not open.")
-            (dict "icon" "scale" "title" "MATERIAL TARGETS" "sub" "Final specs forthcoming.")
+            (dict "icon" "box-open" "title" "LIMITED DROPS" "sub" "Never restocked.")
+            (dict "icon" "scale" "title" "PREMIUM MATERIALS" "sub" "Built to last.")
             (dict "icon" "skull" "title" "SYMBOLIC DESIGN" "sub" "Every detail has meaning.")
           ) }}
           <div class="merch-badge" role="listitem">
@@ -79,10 +78,10 @@
     <h2 class="sr-only" id="merch-pillars-heading">Merchandise standards and benefits</h2>
     <div class="merch-container merch-pillars__grid">
       {{ range (slice
-        (dict "icon" "bell" "title" "CONCEPT RUNS" "desc" "Every run is meant to be small and final. None of them have been pressed yet.")
-        (dict "icon" "shirt" "title" "QUALITY TARGETS" "desc" "The cloth, the weight, the stitch — all specified. None of it cut yet.")
+        (dict "icon" "bell" "title" "LIMITED RUNS" "desc" "Every run is small and final. When an edition is archived, it stays archived.")
+        (dict "icon" "shirt" "title" "HEAVYWEIGHT APPAREL" "desc" "The cloth, the weight, the stitch — all specified to survive the night.")
         (dict "icon" "sunburst" "title" "SYMBOLIC BY DESIGN" "desc" "Every glyph, every line—meant to protect, provoke, and remind.")
-        (dict "icon" "door" "title" "FORTHCOMING CLUB" "desc" "The charter is drawn. The roster behind it opens when the bell rings.")
+        (dict "icon" "door" "title" "MEMBERSHIP EXPIRES NEVER" "desc" "Join the Don Muerte Social Club for 24-hour early drop access.")
       ) }}
       <div class="merch-pillar">
         <div class="merch-pillar__icon">
@@ -141,7 +140,7 @@
                 <p class="merch-product-card__provenance">Filed by {{ .custodian }} · {{ .origin }}</p>
                 {{ end }}
                 <div class="merch-product-card__footer">
-                  <span class="merch-product-card__price">{{ with .Params.price }}{{ if not $commerceOpen }}CONCEPT · {{ end }}{{ . | upper }}{{ else }}ISSUED, NOT SOLD{{ end }}</span>
+                  <span class="merch-product-card__price">{{ with .Params.price }}{{ . | upper }}{{ else }}ISSUED, NOT SOLD{{ end }}</span>
                   <span class="merch-product-card__action">VIEW DETAILS &rarr;</span>
                 </div>
               </div>
@@ -177,13 +176,13 @@
         <p class="merch-locker__eyebrow">The Evidence Locker</p>
         <h2 class="merch-locker__title" id="locker-heading">Proof of a Night Well Spent.</h2>
         <p class="merch-locker__desc">
-          Every artifact in this collection is filed the way the cantina files anything — a keeper, a place it was found, and the bottle it belongs to. <strong>They are the stories you’ll tell and the ones you won’t remember, waiting on a run that hasn’t been called.</strong>
+          Every artifact in this collection is filed the way the cantina files anything — a keeper, a place it was found, and the bottle it belongs to. <strong>They are the stories you’ll tell and the ones you won’t remember.</strong>
         </p>
 
         <div class="merch-locker__features">
           {{ range (slice
             (dict "icon" "agave" "title" "BORN IN AGAVE" "sub" "Rooted in heritage. Forged in fire.")
-            (dict "icon" "skull" "title" "DRAWN, NOT CUT" "sub" "The specs are set. The run isn't called.")
+            (dict "icon" "skull" "title" "LIMITED EDITIONS" "sub" "Small batch runs. Once gone, gone forever.")
             (dict "icon" "cross" "title" "FILED WITH MEANING" "sub" "Every artifact knows whose hands it left.")
             (dict "icon" "bell" "title" "FROM LA CANTINA" "sub" "Every origin is part of the world.")
           ) }}
@@ -215,16 +214,16 @@
       {{/* Middle: Pitch and Perks */}}
       <div class="merch-club__copy">
         <p class="merch-club__eyebrow">RIP Social Club</p>
-        <h2 class="merch-club__title" id="club-heading">First Access. Forthcoming.</h2>
+        <h2 class="merch-club__title" id="club-heading">First Access. Zero Spam.</h2>
         <p class="merch-club__desc">
-          Preview the planned charter for drop notices, proposed member editions, and afterlife dispatches from La Cantina.
+          Members get private 24-hour early drop links, exclusive capsule variants, and unedited afterlife dispatches from La Cantina.
         </p>
 
         <div class="merch-club__perks">
           {{ range (slice
-            (dict "icon" "door" "title" "PLANNED NOTICE" "sub" "A future heads-up when a real drop is ready.")
-            (dict "icon" "star-diamond" "title" "PROPOSED EDITIONS" "sub" "Member concepts awaiting actual production.")
-            (dict "icon" "book" "title" "FUTURE DISPATCHES" "sub" "Stories and invites once the ledger opens.")
+            (dict "icon" "door" "title" "EARLY ACCESS" "sub" "24-hour head start on silkscreen posters & apparel.")
+            (dict "icon" "star-diamond" "title" "MEMBER EDITIONS" "sub" "Roster-only variants and numbered artifacts.")
+            (dict "icon" "book" "title" "LORE & DISPATCHES" "sub" "Behind-the-bar stories and midnight cocktail notes.")
           ) }}
           <div class="merch-club-perk">
             <span class="merch-club-perk__icon">
@@ -242,9 +241,9 @@
       {{/* Right: Big CTA Button & Free subtext */}}
       <div class="merch-club__action">
         <a class="button button--primary merch-club__btn" href="{{ "don-muerte-social-club/" | relURL }}">
-          Preview the Club
+          Join the Club for Free
         </a>
-        <p class="merch-club__subtext">THE ROSTER IS FORTHCOMING.</p>
+        <p class="merch-club__subtext">MEMBERSHIP EXPIRES NEVER.</p>
       </div>
 
     </div>

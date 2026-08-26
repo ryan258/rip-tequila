@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $commerceOpen := site.Params.features.commerce }}
 <article class="merch-detail" data-accent="{{ .Params.accent | default "black" }}">
 
   {{/* Top Rubber Stamp Badge */}}
@@ -153,22 +152,15 @@
       <div class="merch-detail__purchase-col">
         {{ with .Params.price }}
           <div class="merch-detail__price-row">
-            <span class="merch-detail__price-label">{{ if $commerceOpen }}PRICE{{ else }}CONCEPT PRICE{{ end }}:</span>
+            <span class="merch-detail__price-label">CONCEPT PRICE:</span>
             <span class="merch-detail__price-value">{{ . }}</span>
           </div>
         {{ end }}
 
-        {{ if $commerceOpen }}
-        <a href="{{ "don-muerte-social-club/" | relURL }}" class="merch-detail__drop-banner">
-          <span class="merch-detail__drop-star">★</span>
-          <span class="merch-detail__drop-text">DROPS OPEN THROUGH THE DON MUERTE SOCIAL CLUB.</span>
-        </a>
-        {{ else }}
         <div class="merch-detail__drop-banner">
           <span class="merch-detail__drop-star">★</span>
           <span class="merch-detail__drop-text">CONCEPT ARTIFACT — NOT FOR SALE. NO ORDERS ARE BEING TAKEN.</span>
         </div>
-        {{ end }}
 
         {{ with .Params.secondary_image }}
           <div class="merch-detail__secondary-media">

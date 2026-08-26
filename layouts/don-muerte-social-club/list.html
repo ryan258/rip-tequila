@@ -13,7 +13,6 @@
           <h2 class="social-club-enrollment-card__title">{{ .title }}</h2>
           <p class="social-club-enrollment-card__sub">{{ .sub }}</p>
 
-          {{ if site.Params.features.social_club_enrollment }}
           <form class="social-club-form signup-form" data-signup-form>
             <div class="social-club-form__row">
               <label class="sr-only" for="club-email">Your email</label>
@@ -22,10 +21,6 @@
             </div>
             <p class="signup-form__message" data-signup-message role="status"></p>
           </form>
-          {{ else }}
-          <p class="social-club-enrollment-card__notice">{{ .notice }}</p>
-          <a class="button button--outline social-club-enrollment-card__link" href="{{ "member-benefits/" | relURL }}">Preview the Proposed Charter</a>
-          {{ end }}
           <span class="social-club-form__disclaimer">{{ .disclaimer }}</span>
         </div>
         {{ end }}
@@ -33,11 +28,11 @@
 
       {{ with .Params.credential }}
       <div class="social-club-hero__visual">
-        <div class="social-club-vip-card" role="img" aria-label="Don Muerte Social Club {{ .type | default "VIP membership credential" }}, roster field {{ .roster }}, expires {{ .expires }}">
+        <div class="social-club-vip-card" role="img" aria-label="Don Muerte Social Club VIP membership credential, roster number {{ .roster }}, expires {{ .expires }}">
           <div class="social-club-vip-card__inner" aria-hidden="true">
             <div class="social-club-vip-card__header">
               <span class="social-club-vip-card__brand">RIP TEQUILA</span>
-              <span class="social-club-vip-card__type">{{ .type | default "VIP CREDENTIAL" }}</span>
+              <span class="social-club-vip-card__type">VIP CREDENTIAL</span>
             </div>
 
             <div class="social-club-vip-card__body">

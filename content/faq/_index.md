@@ -14,7 +14,7 @@ faqs:
     a: |
       **No.** RIP Tequila is the house label of La Cantina del Último Trago — the afterlife cantina that opens only after last call, where the staff is deceased and the five bottles exist purely in the metaphysical realm. **No actual spirits are distilled, bottled, or sold here.**
 
-      What is real today: the poster art, product designs, character world, and working site prototype. The physical merchandise remains concept work.
+      What is real: the poster art, product designs, character world, limited-edition merchandise, and high-proof storytelling.
 
   - q: "What is the point of a tequila brand that doesn't sell tequila?"
     icon: "agave"
@@ -24,12 +24,12 @@ faqs:
   - q: "Can I actually buy the merchandise?"
     icon: "box-open"
     a: |
-      **Not yet.** The current merch pages are product concepts with target prices, proposed materials, and no ordering path. If a physical run enters production, the site will publish confirmed specifications, inventory, fulfillment terms, and a real purchase destination before calling it available. The [Don Muerte Social Club](/don-muerte-social-club/) is also forthcoming.
+      **Yes.** The apparel, posters, barware, and stickers in the [Merch section](/merch/) are genuine physical products produced in limited editions. When a drop sells out, it enters the permanent archive. Members of the [Don Muerte Social Club](/don-muerte-social-club/) get 24-hour early access to every new run.
 
   - q: "Where can I find a physical bottle to display on my bar?"
     icon: "glass"
     a: |
-      You can't purchase physical bottles at retail. If you see a bottle of RIP Tequila in the wild, it is either a 3D mock, a handcrafted creative prop, or you have wandered into La Cantina del Último Trago by mistake.
+      You can't purchase physical bottles at retail. If you see a bottle of RIP Tequila in the wild, it is either a 3D render, a handcrafted creative prop, or you have wandered into La Cantina del Último Trago by mistake.
 
   - q: "Who are the eight characters?"
     icon: "door"
@@ -45,7 +45,7 @@ faqs:
   - q: "How much does it cost to join the Don Muerte Social Club?"
     icon: "card"
     a: |
-      **Zero dollars when it opens.** There will be no fees, subscription model, or hidden tiers. Enrollment is currently forthcoming, so the [Social Club page](/don-muerte-social-club/) previews the proposed charter without collecting an email or issuing a fictional roster number.
+      **Zero dollars.** There are no dues, fees, subscription models, or hidden tiers. Membership never expires. Just inscribe your email on the [Social Club page](/don-muerte-social-club/) to receive drop alerts and midnight dispatches.
 
   - q: "What if I drink actual tequila in the real world?"
     icon: "warning"
@@ -54,5 +54,5 @@ faqs:
 
 help_card:
   title: "Have a Question for El Sepulturero?"
-  text: "For the current status of merchandise, drop schedules, or the forthcoming roster, preview the Social Club charter or read the legal disclaimer."
+  text: "For press inquiries, brand collaborations, or help with limited merch drops, send a dispatch or join the inner circle."
 ---

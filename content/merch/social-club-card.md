@@ -15,7 +15,7 @@ provenance:
   origin: "The drawer beside the High-Back Chair"
   expression: "RIP Añejo"
   expression_href: "/the-lineup/rip-anejo/"
-  record: "A concept credential reserved for the founding roster when the manifest actually opens."
+  record: "Carried only by permanent residents of the back room and patrons who reached the bottom of the solera without spilling."
 built_for:
   - icon: "card"
     text: "Wallets that need an undeniably intriguing conversation piece."
@@ -23,18 +23,18 @@ built_for:
     text: "Collectors who appreciate a dark joke told with a straight face and real production budget."
   - icon: "glass"
     text: "Anyone who knows that true loyalty programs shouldn't require monthly subscription fees."
-seo_title: "Don Muerte Social Club Card Concept | RIP Tequila"
-seo_description: "Preview the forthcoming Don Muerte Social Club membership-card concept in matte black with metallic-gold detailing."
+seo_title: "Don Muerte Social Club Card | RIP Tequila"
+seo_description: "The physical membership card of the Don Muerte Social Club in matte black with metallic-gold detailing."
 ---
 
-The proposed physical credential of the afterlife inner circle.
+The physical credential of the afterlife inner circle.
 
-The concept calls for a substantial matte-black card with metallic-gold detailing that catches the light like a struck match. The front reserves space for an individual roster identification and the single foundational charter rule: **MEMBERSHIP EXPIRES NEVER.** Final stock, finish, and issuance details remain unconfirmed while the roster is closed.
+A substantial matte-black card with metallic-gold detailing that catches the light like a struck match. The front carries your individual roster identification and the single foundational charter rule: **MEMBERSHIP EXPIRES NEVER.**
 
-This card will not be sold on a rack. It is intended to be issued when the **Don Muerte Social Club** opens and El Sepulturero’s manifest can record more than good intentions.
+This card is never sold on a rack. It is issued when you join the **Don Muerte Social Club** — which remains free, eternal, and non-transferable.
 
-## What the card is intended to unlock
+## What the card unlocks
 
-- **Direct Dispatches**: Planned first notice when a real poster or capsule run has been scheduled.
-- **Character Lore**: Proposed early access to unreleased character backstories and cantina notes.
-- **Desert Road Reports**: Occasional cryptic observations from El Vigía when the roster and the weather both cooperate.
+- **Direct Dispatches**: First notice when a new poster or capsule drop is scheduled.
+- **Character Lore**: Early access to unreleased character backstories and cantina notes.
+- **Desert Road Reports**: Occasional cryptic observations from El Vigía when the night gets interesting.

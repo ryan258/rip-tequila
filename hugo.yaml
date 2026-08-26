@@ -37,12 +37,6 @@ params:
   description: "A premium parody tequila brand from La Cantina del Último Trago — the afterlife cantina behind RIP Tequila."
   tagline: "Rest In Proof"
   copyright: "RIP Tequila. La Cantina del Último Trago."
-  # Prototype gates. Keep the dormant form and commerce presentation in the
-  # templates so each capability can be enabled only after its real external
-  # pipeline exists.
-  features:
-    commerce: false
-    social_club_enrollment: false
   googleFonts: "https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap"
   # Default share card. Any page can override with `image:` in its front matter.
   ogImage: "images/home-hero-poster.webp"

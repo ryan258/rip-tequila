@@ -280,18 +280,18 @@ validation beyond Hugo's own build failing on broken template syntax.
   without an equivalent replacement — both have silently regressed before
   during a redesign; treat their presence as testable, not just reviewable.
 
-### Prototype feature gates
+### Capability claims
 
-`hugo.yaml` owns the current capability state under `params.features`:
+The `params.features` gates (`commerce`, `social_club_enrollment`) have been
+removed from `hugo.yaml`. Capability is now asserted directly by copy, which
+means nothing mechanical stops a template from promising something the site
+cannot do — the bar below is enforced by review, not config.
 
-- `commerce: false` labels merchandise and drop records as concepts, changes
-  prices to concept prices, and prevents the UI from implying orders are open.
-- `social_club_enrollment: false` removes email inputs from rendered pages and
-  presents the charter and credential as forthcoming. The dormant form and
-  TypeScript handler remain in source for a later real integration.
+Copy may claim commerce only with a confirmed external purchase path,
+inventory/fulfillment truth, and updated terms.
 
-Changing either flag is not sufficient release evidence by itself. Commerce
-requires a confirmed external purchase path, inventory/fulfillment truth, and
-updated terms. Enrollment requires a real provider, successful persistence,
+Copy may claim enrollment only with a real provider, successful persistence,
 privacy/retention terms, unsubscribe and deletion paths, and an end-to-end
-submission test before the flag can be enabled.
+submission test. Until then, signup responses must not imply an address was
+recorded, and `content/privacy/_index.md` must not describe collection,
+unsubscribe, or deletion practices that no provider backs.
