@@ -17,6 +17,7 @@ location_image: "images/cantina/the-long-mahogany-bar.webp"
 icon: "glass"
 line: "Last round, first legend."
 lead: "Behind the wood since the doors opened. He remembers what you drank last October and has never once mentioned it."
+party_duty: "Pour the room. Keep the first version of everyone's tab."
 connections:
   - name: "Los Maracas"
     href: "/characters/los-maracas/"

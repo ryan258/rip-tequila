@@ -1,3 +1,7 @@
 {{ $jsOptions := dict "target" "es2022" "minify" (not hugo.IsDevelopment) }}
 {{ $script := resources.Get "ts/main.ts" | js.Build $jsOptions | fingerprint }}
 <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{ if eq .Section "party" }}
+{{ $party := resources.Get "ts/party.ts" | js.Build $jsOptions | fingerprint }}
+<script src="{{ $party.RelPermalink }}" integrity="{{ $party.Data.Integrity }}" defer></script>
+{{ end }}

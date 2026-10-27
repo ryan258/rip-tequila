@@ -65,16 +65,5 @@ footer:
         href: "/privacy/"
       - label: "Terms"
         href: "/terms/"
-
-social:
-  label: "Follow the Legends"
-  links:
-    - label: "Instagram"
-      href: "https://instagram.com/riptequila"
-      icon: "social-instagram"
-    - label: "TikTok"
-      href: "https://tiktok.com/@riptequila"
-      icon: "social-tiktok"
-    - label: "YouTube"
-      href: "https://youtube.com/@riptequila"
-      icon: "social-youtube"
+      - label: "Party Kit"
+        href: "/party/"

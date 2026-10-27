@@ -17,6 +17,7 @@ location_image: "images/cantina/the-moonlit-patio.webp"
 icon: "maracas"
 line: "Shake now. Explain later."
 lead: "Two skeletal maestros with one shared mission: make certain this room never falls into somber decorum."
+party_duty: "Run the playlist. Nobody sits until the boots give out."
 connections:
   - name: "La Rosa Negra"
     href: "/characters/la-rosa-negra/"

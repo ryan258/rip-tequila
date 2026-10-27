@@ -17,6 +17,7 @@ location_image: "images/cantina/the-crimson-stage.webp"
 icon: "microphone"
 line: "The dead still dance."
 lead: "The undisputed voice of the afterlife. Boleros of doomed romance and 3:00 AM epiphanies, delivered with surgical precision."
+party_duty: "Take the first note after the toast. Choose the heartbreak."
 connections:
   - name: "Don Muerte"
     href: "/characters/don-muerte/"

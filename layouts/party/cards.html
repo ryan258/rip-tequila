@@ -1,0 +1,40 @@
+{{ define "main" }}
+<article class="party-page">
+  {{ partial "party-hero.html" . }}
+
+  <section class="party-section">
+    <div class="party-container party-controls">
+      <button type="button" class="button button--primary" data-print>Print the Cards</button>
+      <a class="button button--outline" href="{{ "party/" | relURL }}">Edit the Guest List</a>
+      <p class="party-controls__hint">US Letter, 100% scale. Cardstock works best. Names come from the guest list; blank cards are for late arrivals.</p>
+    </div>
+
+    <div class="party-stage" tabindex="0" role="region" aria-label="Card sheet preview" data-party-cards></div>
+    <noscript><p class="party-note">The cards are built in your browser and need JavaScript.</p></noscript>
+  </section>
+
+  <template id="party-card-tpl">
+    <div class="party-card">
+      <div class="party-card__top">
+        <span class="party-card__brand">RIP TEQUILA</span>
+        <span class="party-card__type">VIP CREDENTIAL</span>
+      </div>
+      <div class="party-card__body">
+        <span class="party-card__emblem" aria-hidden="true">{{ partial "glyph.html" (dict "name" "skull") }}</span>
+        <div class="party-card__id">
+          <span class="party-card__label">Member</span>
+          <strong class="party-card__name" data-card-name></strong>
+          <span class="party-card__role" data-card-role></span>
+        </div>
+      </div>
+      <div class="party-card__foot">
+        <span>Roster <b data-card-roster></b></span>
+        <span>Expires <b>Never</b></span>
+      </div>
+      <p class="party-card__fine">Membership expires never. Benefits are questionable.</p>
+    </div>
+  </template>
+
+  {{ partial "party-cast-data.html" . }}
+</article>
+{{ end }}

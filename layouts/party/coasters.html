@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{- /* Slogans are the house lines already used across the site. Arc text is
+       kept under ~23 characters so it fits a half circle at this size. */ -}}
+{{ $coasters := slice
+  (dict "glyph" "bell" "top" "The Bell Rang" "bottom" "You're In")
+  (dict "glyph" "skull" "top" "Rest In Proof" "bottom" "Proof You Lived")
+  (dict "glyph" "agave" "top" "Born in Agave" "bottom" "Buried in Legend")
+  (dict "glyph" "moon" "top" "No Actual Spirits" "bottom" "All the Spirit")
+  (dict "glyph" "glass" "top" "Save Water" "bottom" "Drink Tequila")
+  (dict "glyph" "monument" "top" "Here Lies Your Judgment" "bottom" "Haunt Responsibly")
+}}
+<article class="party-page">
+  {{ partial "party-hero.html" . }}
+
+  <section class="party-section">
+    <div class="party-container party-controls">
+      <button type="button" class="button button--primary" data-print>Print the Coasters</button>
+      <a class="button button--outline" href="{{ "party/" | relURL }}">Back to the Kit</a>
+      <p class="party-controls__hint">US Letter, 100% scale. Thick cardstock, or sticker paper stuck to cork or cardboard blanks.</p>
+    </div>
+
+    <div class="party-stage" tabindex="0" role="region" aria-label="Coaster sheet preview">
+      <div class="party-paper">
+        <div class="party-coasters">
+          {{ range $i, $c := $coasters }}
+          <div class="coaster">
+            <svg class="coaster__svg" viewBox="0 0 140 140" role="img" aria-label="{{ $c.top }} — {{ $c.bottom }}">
+              <defs>
+                <path id="coaster-top-{{ $i }}" d="M 25.5,70 A 44.5,44.5 0 0,1 114.5,70" />
+                <path id="coaster-bottom-{{ $i }}" d="M 19.5,70 A 50.5,50.5 0 0,0 120.5,70" />
+              </defs>
+              <circle class="coaster__cut" cx="70" cy="70" r="69.4" />
+              <circle class="coaster__ring coaster__ring--outer" cx="70" cy="70" r="65" />
+              <circle class="coaster__ring" cx="70" cy="70" r="59" />
+              <circle class="coaster__ring" cx="70" cy="70" r="36" />
+              <text class="coaster__text"><textPath href="#coaster-top-{{ $i }}" startOffset="50%" text-anchor="middle">{{ $c.top | upper }}</textPath></text>
+              <text class="coaster__text"><textPath href="#coaster-bottom-{{ $i }}" startOffset="50%" text-anchor="middle">{{ $c.bottom | upper }}</textPath></text>
+            </svg>
+            <span class="coaster__glyph" aria-hidden="true">{{ partial "glyph.html" (dict "name" $c.glyph) }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

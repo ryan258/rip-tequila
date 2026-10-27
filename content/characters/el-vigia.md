@@ -17,6 +17,7 @@ location_image: "images/cantina/el-vigia-desert.webp"
 icon: "eye"
 line: "Follow the agave after midnight."
 lead: "Posted where the asphalt ends and the agave begins, watching the headlights of everyone still looking for the door."
+party_duty: "Work the door. Nod silently at every late arrival."
 connections:
   - name: "El Sepulturero"
     href: "/characters/el-sepulturero/"

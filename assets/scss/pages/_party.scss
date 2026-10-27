@@ -1,0 +1,521 @@
+/* ==========================================================================
+   Party kit — layouts/party/*.html
+
+   Every printable sheet is drawn at real paper size (CSS inches) on US Letter
+   with 0.5in margins, so the on-screen preview *is* the print layout. Row and
+   column totals are kept under 7.5in x 10in on purpose: exactly 10in tall
+   tips a blank page onto the end of the print job.
+   ========================================================================== */
+
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+.party-page {
+  background: $color-cream;
+  color: $color-black;
+}
+
+.party-hero {
+  @include hero-stack(2.4rem, 5vw, 4.5rem);
+}
+
+.party-container {
+  @include container;
+  max-width: 1100px;
+}
+
+.party-section {
+  @include section-padding(clamp(40px, 6vw, 80px));
+}
+
+/* --- Hub ---------------------------------------------------------------- */
+
+.party-grid {
+  display: grid;
+  // Interpolated: libsass would evaluate min() as a Sass function and choke on % vs px.
+  grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 340px)"}, 1fr));
+  gap: $space-xl;
+  margin-bottom: $space-2xl;
+}
+
+.party-panel {
+  @include paper-card(8px);
+  padding: $space-lg;
+}
+
+.party-panel__title {
+  margin: 0 0 $space-xs;
+  font-family: $font-accent;
+  font-size: 1.45rem;
+  text-transform: uppercase;
+}
+
+.party-panel__hint {
+  @include body-copy(0.95rem);
+  margin: 0 0 $space-md;
+  color: rgba($color-black, 0.7);
+}
+
+.party-textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: $space-md;
+  border: 2px solid $color-black;
+  border-radius: 0;
+  background: $color-cream;
+  color: $color-black;
+  font: 700 1rem/1.5 $font-body;
+  resize: vertical;
+
+  &:focus-visible {
+    @include focus-ring($color-gold);
+  }
+}
+
+.party-actions {
+  margin-top: $space-md;
+}
+
+.party-roster {
+  @include body-copy(1rem);
+  margin: 0;
+  padding-left: $space-lg;
+
+  li {
+    margin-bottom: $space-xs;
+  }
+}
+
+.party-note {
+  @include body-copy(0.95rem);
+  margin-top: $space-md;
+}
+
+.party-kit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 280px)"}, 1fr));
+  gap: $space-lg;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.party-kit__link {
+  @include paper-card(6px);
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-lg;
+  color: inherit;
+  text-decoration: none;
+  transition: transform $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-3px);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.party-kit__icon {
+  color: $color-red;
+}
+
+.party-kit__copy {
+  display: grid;
+  gap: $space-2xs;
+}
+
+.party-kit__title {
+  font-family: $font-display;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.party-kit__desc {
+  @include body-copy(0.9rem);
+  color: rgba($color-black, 0.75);
+}
+
+/* --- Print pages: controls and paper ------------------------------------- */
+
+.party-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-md;
+  margin-bottom: $space-xl;
+}
+
+.party-controls__hint {
+  @include body-copy(0.9rem);
+  flex-basis: 100%;
+  margin: 0;
+  color: rgba($color-black, 0.7);
+}
+
+// Paper is wider than a phone; scroll the preview, not the page.
+.party-stage {
+  overflow-x: auto;
+  padding: $space-md var(--page-gutter) $space-xl;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.party-paper {
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto $space-lg;
+  padding: 0.5in;
+  background: $color-white;
+  box-shadow: 0 6px 24px rgba($color-black, 0.18);
+}
+
+/* --- Social Club cards: 3.5in x 1.9in, 2 across, 5 down ------------------ */
+
+.party-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 3.5in);
+  grid-auto-rows: 1.9in;
+  justify-content: center;
+}
+
+.party-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 3.5in;
+  height: 1.9in;
+  padding: 0.14in 0.18in;
+  overflow: hidden;
+  border: 1px dashed rgba($color-black, 0.45);
+  background: $color-cream;
+  color: $color-black;
+  break-inside: avoid;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0.06in;
+    border: 1.5px solid $color-black;
+    pointer-events: none;
+  }
+}
+
+.party-card__top,
+.party-card__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: $font-accent;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.party-card__brand {
+  color: $color-red;
+  font-family: $font-display;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.party-card__body {
+  display: flex;
+  align-items: center;
+  gap: 0.14in;
+}
+
+.party-card__emblem .rip-glyph {
+  --glyph-size: 0.6in;
+}
+
+.party-card__id {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+  flex: 1;
+}
+
+.party-card__label {
+  color: rgba($color-black, 0.6);
+  font-family: $font-accent;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.party-card__name {
+  min-height: 1.4rem;
+  font-family: $font-display;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+
+  &[data-long] {
+    font-size: 1rem;
+  }
+
+  // Blank cards get a write-in line.
+  &:empty {
+    border-bottom: 1px solid $color-black;
+  }
+}
+
+.party-card__role {
+  color: $color-red;
+  font-family: $font-accent;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.party-card__foot b {
+  color: $color-red;
+}
+
+.party-card__fine {
+  margin: 0;
+  color: rgba($color-black, 0.6);
+  font-family: $font-body;
+  font-size: 0.45rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* --- Bell coasters: 3.2in rounds, 2 across, 3 down ----------------------- */
+
+.party-coasters {
+  display: grid;
+  grid-template-columns: repeat(2, 3.2in);
+  grid-auto-rows: 3.2in;
+  gap: 0.1in;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+.coaster {
+  position: relative;
+  width: 3.2in;
+  height: 3.2in;
+}
+
+.coaster__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.coaster__cut {
+  fill: $color-white;
+  stroke: rgba($color-black, 0.5);
+  stroke-width: 0.4;
+  stroke-dasharray: 2 2;
+}
+
+.coaster__ring {
+  fill: none;
+  stroke: $color-black;
+  stroke-width: 1.2;
+
+  &--outer {
+    stroke-width: 3.5;
+  }
+}
+
+.coaster__text {
+  fill: $color-black;
+  font-family: $font-display;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.coaster__glyph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: $color-red;
+  pointer-events: none;
+
+  .rip-glyph {
+    --glyph-size: 1in;
+  }
+}
+
+/* --- Cast placards: 3.7in x 2.4in, 2 across, 4 down ---------------------- */
+
+.party-placards {
+  display: grid;
+  grid-template-columns: repeat(2, 3.7in);
+  grid-auto-rows: 2.4in;
+  justify-content: center;
+}
+
+.placard {
+  display: grid;
+  grid-template-columns: 1.3in minmax(0, 1fr);
+  gap: 0.12in;
+  padding: 0.12in 0.12in 0.12in 0.16in;
+  overflow: hidden;
+  border: 1px dashed rgba($color-black, 0.45);
+  border-left: 0.08in solid var(--card-accent);
+  background: $color-white;
+  color: $color-black;
+  break-inside: avoid;
+}
+
+.placard__portrait {
+  align-self: start;
+  border: 2px solid $color-black;
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.placard__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.placard__role {
+  margin: 0;
+  color: $color-red;
+  font-family: $font-accent;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.placard__name {
+  margin: 2px 0 4px;
+  font-family: $font-display;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.placard__line {
+  margin: 0 0 4px;
+  font-family: $font-body;
+  font-size: 0.62rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.placard__duty {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 0.62rem;
+  font-weight: 500;
+  line-height: 1.25;
+
+  b {
+    font-family: $font-accent;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.placard__player {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: auto 0 0;
+  font-family: $font-accent;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  span {
+    white-space: nowrap;
+  }
+
+  strong {
+    flex: 1;
+    min-height: 1.1rem;
+    border-bottom: 1px solid $color-black;
+    font-family: $font-display;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* --- Print ---------------------------------------------------------------- */
+
+@media print {
+  .site-header,
+  .site-footer,
+  .mobile-menu,
+  .skip-link,
+  .party-hero,
+  .party-controls,
+  .party-note {
+    display: none !important;
+  }
+
+  html,
+  body,
+  .party-page {
+    min-height: 0;
+    background: $color-white;
+  }
+
+  .party-section {
+    padding: 0;
+  }
+
+  .party-stage {
+    overflow: visible;
+    padding: 0;
+  }
+
+  .party-paper {
+    width: 7.5in;
+    height: 9.9in; // a hair under the 10in text area, so rounding can't spill a blank page
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    break-after: page;
+    break-inside: avoid;
+
+    &:last-child {
+      break-after: auto;
+    }
+  }
+
+  // Cream cards, accent bars, and red type are the point; ask browsers to
+  // keep them instead of stripping "background graphics".
+  .party-card,
+  .placard,
+  .coaster {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

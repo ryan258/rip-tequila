@@ -17,6 +17,7 @@ location_image: "images/cantina/the-high-back-chair.webp"
 icon: "skull"
 line: "Life's short. Toast accordingly."
 lead: "Master of ceremonies, arbiter of taste, and the only voice in the building that can stop a brass section mid-crescendo."
+party_duty: "Give exactly one toast. Never drain the glass."
 connections:
   - name: "Campana Roja"
     href: "/characters/campana-roja/"

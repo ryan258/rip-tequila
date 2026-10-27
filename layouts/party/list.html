@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="party-page">
+  {{ partial "party-hero.html" . }}
+
+  <section class="party-section">
+    <div class="party-container party-grid">
+      <div class="party-panel">
+        <h2 class="party-panel__title">The Guest List</h2>
+        <p class="party-panel__hint">One name per line. It stays in this browser and goes nowhere else.</p>
+        <label class="sr-only" for="party-guests">Guest names, one per line</label>
+        <textarea id="party-guests" class="party-textarea" rows="10" placeholder="Don Draper&#10;Aunt Linda&#10;Your Cousin Who Is Always Late" data-party-guests></textarea>
+        <div class="party-actions">
+          <button type="button" class="button button--primary" data-party-decide>Let the Bell Decide</button>
+        </div>
+      </div>
+
+      <div class="party-panel">
+        <h2 class="party-panel__title">Who Plays Whom</h2>
+        <p class="party-panel__hint" data-party-status role="status">Nobody is on the roster yet.</p>
+        <ol class="party-roster" data-party-roster></ol>
+      </div>
+    </div>
+
+    <div class="party-container">
+      <ul class="party-kit" role="list">
+        {{ range .Pages.ByWeight }}
+        <li class="party-kit__item">
+          <a class="party-kit__link" href="{{ .RelPermalink }}">
+            <span class="party-kit__icon" aria-hidden="true">{{ partial "glyph.html" (dict "name" .Params.icon "class" "rip-glyph--lg") }}</span>
+            <span class="party-kit__copy">
+              <strong class="party-kit__title">{{ .Title }}</strong>
+              <span class="party-kit__desc">{{ .Description }}</span>
+            </span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+      <noscript><p class="party-note">The guest list and the printable sheets need JavaScript.</p></noscript>
+    </div>
+  </section>
+
+  {{ partial "party-cast-data.html" . }}
+</article>
+{{ end }}

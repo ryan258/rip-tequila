@@ -17,6 +17,7 @@ location_image: "images/cantina/the-absolution-booth.webp"
 icon: "cross"
 line: "I bless this mess."
 lead: "Resident spiritual advisor to anyone whose judgment thins out after 11:00 PM. Absolution is immediate and unbureaucratic."
+party_duty: "Hear confessions in the corner. Certify every version of the story."
 connections:
   - name: "Cantina Jack"
     href: "/characters/cantina-jack/"

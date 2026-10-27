@@ -17,6 +17,7 @@ location_image: "images/cantina/the-back-office.webp"
 icon: "shovel"
 line: "Here lies your judgment."
 lead: "He works the quiet hours between closing time and whatever comes next — spade in one hand, Manifest in the other."
+party_duty: "Close the night. Bury the empties, the arguments, and any lost dignity."
 connections:
   - name: "Padre Proof"
     href: "/characters/padre-proof/"

@@ -1,0 +1,6 @@
+{{- /* The eight, straight from the dossiers, for party.ts. */ -}}
+{{- $cast := slice -}}
+{{- range (site.GetPage "characters").Pages.ByWeight -}}
+  {{- $cast = $cast | append (dict "slug" .File.TranslationBaseName "name" .Title "role" .Params.role) -}}
+{{- end -}}
+<script type="application/json" id="party-cast">{{ $cast | jsonify | safeJS }}</script>

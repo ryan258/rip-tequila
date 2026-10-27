@@ -17,6 +17,7 @@ location_image: "images/cantina/the-red-ribboned-bell.webp"
 icon: "bell"
 line: "The bell rang. You're in."
 lead: "One hand near the cord, all night. She is not deciding whether the bell rings — only when."
+party_duty: "Ring the bell when the toast lands. Admissions are undocumented."
 connections:
   - name: "El Vigía"
     href: "/characters/el-vigia/"

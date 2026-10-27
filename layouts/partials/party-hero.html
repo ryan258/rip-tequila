@@ -1,0 +1,7 @@
+<header class="party-hero">
+  <div class="party-hero__inner">
+    <p class="party-hero__eyebrow">⤛ {{ .Params.eyebrow }} ⤜</p>
+    <h1 class="party-hero__title">{{ .Params.headline | default .Title }}</h1>
+    {{ with .Description }}<p class="party-hero__desc">{{ . }}</p>{{ end }}
+  </div>
+</header>

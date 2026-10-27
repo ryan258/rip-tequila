@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article class="party-page">
+  {{ partial "party-hero.html" . }}
+
+  <section class="party-section">
+    <div class="party-container party-controls">
+      <button type="button" class="button button--primary" data-print>Print the Placards</button>
+      <a class="button button--outline" href="{{ "party/" | relURL }}">Edit the Guest List</a>
+      <p class="party-controls__hint">US Letter, 100% scale. Eight to a sheet. Names come from the guest list; unassigned placards get a write-in line.</p>
+    </div>
+
+    <div class="party-stage" tabindex="0" role="region" aria-label="Placard sheet preview">
+      <div class="party-paper">
+        <div class="party-placards">
+          {{ range (site.GetPage "characters").Pages.ByWeight }}
+          {{ $slug := .File.TranslationBaseName }}
+          <article class="placard" data-slug="{{ $slug }}" data-accent="{{ .Params.accent | default "red" }}">
+            <div class="placard__portrait">
+              {{ partial "image.html" (dict "src" (printf "images/cast/%s.webp" $slug) "alt" "" "loading" "eager") }}
+            </div>
+            <div class="placard__body">
+              <p class="placard__role">{{ .Params.role }}</p>
+              <h2 class="placard__name">{{ .Title }}</h2>
+              <p class="placard__line">“{{ .Params.line }}”</p>
+              <p class="placard__duty"><b>Tonight:</b> {{ .Params.party_duty }}</p>
+              <p class="placard__player"><span>Played by</span> <strong data-placard-player></strong></p>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <noscript><p class="party-note">Names are filled in by your browser and need JavaScript.</p></noscript>
+  </section>
+</article>
+{{ end }}
