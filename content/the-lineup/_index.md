@@ -39,6 +39,6 @@ ribbon: "SAVE WATER, DRINK TEQUILA! • REST IN PROOF • BORN IN AGAVE"
 
 Welcome to the tasting flight that defies standard municipal zoning laws, conventional product segmentation, and basic common sense.
 
-Each expression in the **RIP Tequila** collection is crafted from 100% Blue Weber Agave, harvested by jimadores who refuse to answer direct questions, and bottled in heavy flint glass designed to double as a conversational centerpiece or an impromptu paperweight for your legal disclaimers.
+Each expression in the **RIP Tequila** collection is crafted from Blue Weber Agave of undisclosed purity, harvested by jimadores who refuse to answer direct questions, and bottled in heavy flint glass designed to double as a conversational centerpiece or an impromptu paperweight for your legal disclaimers.
 
 > *"Born in Agave. Buried in Legend. Remember to hydrate."*

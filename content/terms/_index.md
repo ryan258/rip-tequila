@@ -2,13 +2,13 @@
 title: "Terms"
 eyebrow: "Info"
 headline: "Terms"
-description: "Site use, brand world, and merch terms for RIP Tequila."
+description: "Site use, brand world, and prototype merch-concept terms for RIP Tequila."
 seo_title: "Terms — Site Use Notice | RIP Tequila"
 seo_description: "Site use and brand-world terms for RIP Tequila — a fictional parody brand and design project from La Cantina del Último Trago."
 icon: "lock"
 ---
 
-These terms cover use of the RIP Tequila site, the brand world, and the merch that ships from it.
+These terms cover use of the RIP Tequila site, the brand world, and the merchandise concepts shown in this prototype. No merchandise currently ships from it.
 
 ## Use of the site
 
@@ -19,6 +19,7 @@ These terms cover use of the RIP Tequila site, the brand world, and the merch th
 
 - Not an alcohol retailer, distillery, spirits marketplace, or regulated alcohol commerce platform.
 - Not a real spirits brand.
+- Not a live merchandise store; displayed prices, editions, materials, and provenance belong to prototype artifact concepts unless explicitly replaced by confirmed production details.
 
 ## Disclaimers
 
