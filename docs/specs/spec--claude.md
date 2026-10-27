@@ -69,12 +69,13 @@ out loud.
 | `/drops/` | Limited-release listing |
 | `/faq/` | Deadpan Q&A, including the one page allowed to say plainly what the brand is |
 | `/parody-disclaimer/`, `/responsible-language/`, `/privacy/`, `/terms/` | Legal/meta cluster — see voice rules |
+| `/party/` + 3 single pages | The Party Kit: hub (`/party/`), Social Club cards (`/party/cards/`), coasters (`/party/coasters/`), and cast placards (`/party/cast/`) |
 | `/404/` | Desert-crossroads themed error page |
 
 Main nav (weighted, `hugo.yaml`): Our Story → The Lineup → Characters →
 Merch → The Cantina → Find Us. Footer nav (`data/navigation.yaml`) adds five
-columns: The Brand, The Lineup, Characters, Merch, Club/Info, plus a social
-links block (Instagram/TikTok/YouTube).
+columns: The Brand, The Lineup, Characters, Merch, Club/Info (including Party
+Kit), plus a social links block (Instagram/TikTok/YouTube).
 
 One character and one bottle cross-reference each other in content (Don
 Muerte ↔ RIP Añejo is the shipped example) so "meet the host, buy what he
@@ -96,12 +97,19 @@ below its hero must render `.Content`, or that copy silently disappears.
 **Lineup products** (`content/the-lineup/*.md`): `weight`, `variant`,
 `accent` (color token name), `icon`, `line` (tagline), `descriptor`,
 `detail_headline`, plus SEO fields. Body includes a `## Concept tasting
-notes` section (Aroma/Palate/Finish/Pairing) — parody tasting-note copy,
-never real ABV or production claims.
+notes` section (Aroma/Palate/Finish/Pairing) — parody tasting-note copy. The
+technical-manifest fields (`abv`, `aging`, `agave`, `distillation`, `oven`,
+`extraction`, `fermentation`, `water`, `additives`) follow the claim rules in
+§9: `abv` and `agave` hold jokes, never numbers or percentages.
 
 **Characters** (`content/characters/*.md`): `weight`, `role`, `accent`,
-`prop` (signature object), `icon`, `line` (catchphrase), plus SEO fields.
+`prop` (signature object), `icon`, `line` (catchphrase), `party_duty` (assigned
+ritual for the party kit cast placards), plus SEO fields.
 Body ends with a "what he/she pours" callout linking to their bottle.
+
+**Party kit pages** (`content/party/*.md`): `weight`, `layout` (`cards`,
+`coasters`, `cast`), `eyebrow`, `headline`, `description`, `icon`, plus SEO
+fields.
 
 **Merch products** (`content/merch/*.md`): `weight`, `category`, `accent`,
 `icon`, `image`, `line`, `price`, `deckle_icon`, `deckle_quote`, `quote`,
@@ -188,6 +196,7 @@ layouts/
 ├── characters/{list,single}.html
 ├── the-lineup/{list,single}.html
 ├── merch/{list,single}.html
+├── party/{list,cards,cast,coasters}.html
 ├── the-cantina/list.html
 ├── our-story/list.html
 ├── find-us/list.html
@@ -195,6 +204,7 @@ layouts/
     ├── head.html, header.html, footer.html
     ├── glyph.html                        # the SVG glyph engine
     ├── page-hero.html                    # shared hero for simple content pages
+    ├── party-hero.html, party-cast-data.html
     ├── character-card.html, product-card.html
     ├── json-ld.html, social-meta.html
     ├── scripts.html
@@ -219,12 +229,19 @@ sitewide footer disclaimer alone.
 - **Hugo** static site generator (extended, for SCSS pipeline).
 - **SCSS**, compiled via Hugo's `css.Sass` (libsass under the hood — see the
   `@import` note below).
-- **TypeScript** → vanilla JS for: mobile nav toggle (`aria-expanded`/
-  `aria-hidden` + focus trap), newsletter/email-capture submit handler
-  (returns in-world copy, e.g. "The manifest opens on the next round. Watch
-  the road for the bell." — never a generic "Thanks for subscribing!"), and
-  the merch category filter (toggles `is-active`, shows/hides
-  `.merch-product-card` by `data-category`).
+- **TypeScript** → vanilla JS:
+  - `assets/ts/main.ts`: mobile nav toggle (`aria-expanded`/`aria-hidden` +
+    focus trap), newsletter/email-capture submit handler (returns in-world
+    copy, e.g. "The manifest opens on the next round. Watch the road for the
+    bell." — never a generic "Thanks for subscribing!"), merch category filter
+    (toggles `is-active`, shows/hides `.merch-product-card` by
+    `data-category`), and hero motion poster deferral under `saveData` /
+    `prefers-reduced-motion`.
+  - `assets/ts/party.ts`: client-side Halloween party kit managing offline
+    guest lists, randomized character role assignments across the cast, card
+    and placard data synchronization via `localStorage`, and print triggers.
+- Targeted tests: Node test runner (`node --test tests/party-storage.test.cjs`)
+  validating browser storage fallbacks and visible warning cues.
 - No JS framework, no CSS framework, no icon library, no CMS.
 
 \`\`\`json
@@ -271,8 +288,18 @@ validation beyond Hugo's own build failing on broken template syntax.
 
 - No on-site e-commerce: a future live merch state may link to a real external
   purchase destination, but it must not take payment on-site.
-- No real alcohol claims: no ABV, no production/distillation claims, no
-  claims that would need real alcohol-marketing legal review.
+- Alcohol claims have a bright line:
+  - Strength and purity are never stated as a number. `abv` ("Proof Enough to
+    Start It") and `agave` ("Blue Weber Highland, Purity Rumored") are jokes —
+    they are the two claims with real label standards.
+  - The other manifest rows (aging, distillation, oven, batch) may sound like
+    premium-spirits marketing, but only inside the "Officially Unverifiable
+    Technical Manifest" frame, on pages that render `sections/disclaimer.html`.
+  - Never: real regulatory identifiers (NOM numbers, TTB/COLA IDs), real
+    distillery names, real appellations, real third-party awards or panels,
+    health or effects claims.
+  - Standing check, must print nothing:
+    `grep -rnE '[0-9]+ ?% ?ABV|[0-9]+ Proof|100% [A-Za-z ]*[Aa]gave' content layouts data`
 - No photography, no stock icons, no 3D/AI-rendered "photoreal" scenes —
   breaks the linocut aesthetic and the parody's premise in one move.
 - No copy that explains the joke outside the legal/meta cluster (§2).
@@ -280,18 +307,18 @@ validation beyond Hugo's own build failing on broken template syntax.
   without an equivalent replacement — both have silently regressed before
   during a redesign; treat their presence as testable, not just reviewable.
 
-### Capability claims
+### Prototype feature gates
 
-The `params.features` gates (`commerce`, `social_club_enrollment`) have been
-removed from `hugo.yaml`. Capability is now asserted directly by copy, which
-means nothing mechanical stops a template from promising something the site
-cannot do — the bar below is enforced by review, not config.
+`hugo.yaml` owns the current capability state under `params.features`:
 
-Copy may claim commerce only with a confirmed external purchase path,
-inventory/fulfillment truth, and updated terms.
+- `commerce: false` labels merchandise and drop records as concepts, changes
+  prices to concept prices, and prevents the UI from implying orders are open.
+- `social_club_enrollment: false` removes email inputs from rendered pages and
+  presents the charter and credential as forthcoming. The dormant form and
+  TypeScript handler remain in source for a later real integration.
 
-Copy may claim enrollment only with a real provider, successful persistence,
+Changing either flag is not sufficient release evidence by itself. Commerce
+requires a confirmed external purchase path, inventory/fulfillment truth, and
+updated terms. Enrollment requires a real provider, successful persistence,
 privacy/retention terms, unsubscribe and deletion paths, and an end-to-end
-submission test. Until then, signup responses must not imply an address was
-recorded, and `content/privacy/_index.md` must not describe collection,
-unsubscribe, or deletion practices that no provider backs.
+submission test before the flag can be enabled.

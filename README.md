@@ -26,11 +26,27 @@ Set the production base URL when building for deployment so canonical URLs, site
 hugo --gc --minify --baseURL "https://example.com/"
 ```
 
+## Verification & Tests
+
+Run the targeted client unit test suite (validates party roster and storage fallback warning):
+
+```sh
+npm run build
+RIP_PARTY_JS=$(ls -t public/ts/party.*.js | head -n 1) node --test tests/party-storage.test.cjs
+```
+
+Verify compliance with the standing alcohol-claims rule (must return no matches):
+
+```sh
+grep -rnE '[0-9]+ ?% ?ABV|[0-9]+ Proof|100% [A-Za-z ]*[Aa]gave' content layouts data
+```
+
 ## Structure
 
 - `content/the-lineup/` product family and product detail pages
 - `content/characters/` cast index and character detail pages
 - `content/merch/` merch index and merch detail pages
+- `content/party/` + `layouts/party/` + `assets/ts/party.ts` the printable Halloween party kit (guest list, Social Club cards, bell coasters, cast placards); US Letter, drawn at real paper size
 - `layouts/partials/sections/` reusable homepage sections
 - `layouts/partials/image.html` the only way to emit an `<img>` — see below
 - `layouts/partials/glyph.html` the inline SVG glyph set
