@@ -173,9 +173,13 @@ function initHeroMotion(): void {
     toggle.textContent = paused ? 'Play poster motion' : 'Pause poster motion';
   };
 
+  // ponytail: the still ships in the HTML. The 2.4 MB motion file is only
+  // fetched once the page has finished loading, and never under data-saver.
+  const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
+
   const syncPreference = (): void => {
     const shouldReduce = reducedMotion.matches;
-    setPaused(shouldReduce);
+    setPaused(shouldReduce || saveData);
     toggle.hidden = shouldReduce;
   };
 
@@ -183,7 +187,11 @@ function initHeroMotion(): void {
     setPaused(toggle.getAttribute('aria-pressed') !== 'true');
   });
   reducedMotion.addEventListener('change', syncPreference);
-  syncPreference();
+  if (document.readyState === 'complete') {
+    syncPreference();
+  } else {
+    window.addEventListener('load', syncPreference, { once: true });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
