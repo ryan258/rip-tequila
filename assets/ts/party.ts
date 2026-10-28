@@ -6,6 +6,7 @@ type Guest = { name: string; slug: string };
 
 const STORAGE_KEY = 'rip-party';
 const CARDS_PER_PAGE = 10;
+let guestStorageProblem: 'unavailable' | 'recovery' | null = null;
 
 function readCast(): Cast[] {
   const raw = document.getElementById('party-cast')?.textContent;
@@ -17,17 +18,23 @@ function readCast(): Cast[] {
 }
 
 function loadGuests(): Guest[] {
+  let raw: string | null = null;
+  guestStorageProblem = null;
   try {
-    const parsed: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '[]');
-    return Array.isArray(parsed)
-      ? parsed.filter((g): g is Guest => typeof g?.name === 'string' && typeof g?.slug === 'string')
-      : [];
+    raw = localStorage.getItem(STORAGE_KEY);
+    const parsed: unknown = JSON.parse(raw ?? '[]');
+    if (!Array.isArray(parsed) || parsed.some((g) => typeof g?.name !== 'string' || typeof g?.slug !== 'string')) {
+      throw new Error('Saved guest data is invalid');
+    }
+    return parsed;
   } catch {
+    guestStorageProblem = raw === null ? 'unavailable' : 'recovery';
     return [];
   }
 }
 
 function saveGuests(guests: Guest[]): boolean {
+  if (guestStorageProblem) return false;
   try {
     const encoded = JSON.stringify(guests);
     localStorage.setItem(STORAGE_KEY, encoded);
@@ -58,10 +65,15 @@ function initHub(): void {
 
   const cast = readCast();
   let guests = loadGuests();
-  let saved = true;
-  const storageNotice = (): string => saved
-    ? ''
-    : ' Names and roles are only on this page: browser storage is unavailable. Keep this tab open and copy the roster before leaving; print pages may show an older or blank list.';
+  let saved = guestStorageProblem === null;
+  const storageNotice = (): string => {
+    if (guestStorageProblem === 'recovery') {
+      return ' Saved guest data could not be read and was kept. Changes stay only on this page. Keep this tab open and copy the roster before leaving; print pages may show an older or blank list.';
+    }
+    return saved
+      ? ''
+      : ' Names and roles are only on this page: browser storage is unavailable. Keep this tab open and copy the roster before leaving; print pages may show an older or blank list.';
+  };
   box.value = guests.map((g) => g.name).join('\n');
 
   const names = (): string[] =>

@@ -8,7 +8,7 @@ const vm = require('node:vm');
 assert(process.env.RIP_PARTY_JS, 'Set RIP_PARTY_JS to the freshly built ts/party.*.js bundle.');
 const bundle = fs.readFileSync(process.env.RIP_PARTY_JS, 'utf8');
 
-function fixture({ failWrite = false, dropWrite = false } = {}) {
+function fixture({ failWrite = false, dropWrite = false, failRead = false, stored } = {}) {
   const callbacks = {};
   const node = () => ({ value: '', textContent: '', events: {}, children: [],
     addEventListener(event, callback) { this.events[event] = callback; },
@@ -16,10 +16,11 @@ function fixture({ failWrite = false, dropWrite = false } = {}) {
   const box = node(), decide = node(), roster = node(), status = node();
   const elements = { '[data-party-guests]': box, '[data-party-decide]': decide,
     '[data-party-roster]': roster, '[data-party-status]': status };
-  const values = new Map();
+  const values = new Map(stored === undefined ? [] : [['rip-party', stored]]);
+  const writes = [];
   const storage = {
-    getItem(key) { return values.get(key) ?? null; },
-    setItem(key, value) { if (failWrite) throw new Error('blocked storage'); if (!dropWrite) values.set(key, value); },
+    getItem(key) { if (failRead) throw new Error('blocked read'); return values.get(key) ?? null; },
+    setItem(key, value) { writes.push([key, value]); if (failWrite) throw new Error('blocked storage'); if (!dropWrite) values.set(key, value); },
   };
   const document = {
     getElementById(id) { return id === 'party-cast' ? { textContent: JSON.stringify([
@@ -33,7 +34,7 @@ function fixture({ failWrite = false, dropWrite = false } = {}) {
   };
   vm.runInNewContext(bundle, { document, localStorage: storage, HTMLTemplateElement: class {}, window: { print() { throw new Error('No printing in fixture'); } } });
   callbacks.DOMContentLoaded();
-  return { box, decide, roster, status, values };
+  return { box, decide, roster, status, values, writes };
 }
 
 test('names and assigned roles persist when storage works', () => {
@@ -57,3 +58,36 @@ for (const mode of ['failWrite', 'dropWrite']) {
     assert.equal(f.values.has('rip-party'), false);
   });
 }
+
+
+test('unreadable saved guest data is preserved while a temporary roster stays usable', () => {
+  for (const raw of ['{broken synthetic roster', '{}', '[{"name":"Old fixture","slug":"one"},null]', '[{"name":"Old fixture"}]']) {
+    const f = fixture({ stored: raw });
+    f.box.value = 'Temporary fixture'; f.box.events.input(); f.decide.events.click();
+    assert.equal(f.values.get('rip-party'), raw, 'ordinary input must not erase unreadable saved names');
+    assert.equal(f.writes.length, 0);
+    assert.equal(f.roster.children.length, 1);
+    assert.match(f.status.textContent, /saved.*kept|recovery/i);
+  }
+});
+
+test('blocked storage reads warn at startup and never overwrite an unseen roster', () => {
+  const raw = JSON.stringify([{ name: 'Unseen fixture', slug: 'one' }]);
+  const f = fixture({ stored: raw, failRead: true });
+  assert.match(f.status.textContent, /storage is unavailable/i);
+  f.box.value = 'Temporary fixture'; f.box.events.input(); f.decide.events.click();
+  assert.equal(f.values.get('rip-party'), raw);
+  assert.equal(f.writes.length, 0);
+  assert.match(f.status.textContent, /copy the roster/);
+});
+
+test('valid saved guest roles load without rewriting and remain editable', () => {
+  const raw = JSON.stringify([{ name: 'Synthetic Guest', slug: 'one' }]);
+  const f = fixture({ stored: raw });
+  assert.equal(f.box.value, 'Synthetic Guest');
+  assert.match(f.roster.children[0].textContent, /First Role/);
+  assert.equal(f.writes.length, 0);
+  f.box.value = 'Edited fixture'; f.box.events.input();
+  assert.equal(JSON.parse(f.values.get('rip-party'))[0].name, 'Edited fixture');
+  assert.doesNotMatch(f.status.textContent, /unavailable|could not be read/);
+});
