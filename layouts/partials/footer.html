@@ -30,14 +30,6 @@
     </nav>
 
     <div class="site-footer__signup">
-      {{ with hugo.Data.navigation.social }}
-      <p class="site-footer__social-label">{{ .label }}</p>
-      <div class="site-footer__social">
-        {{ range .links }}
-          <a href="{{ .href }}" aria-label="{{ .label }}">{{ partial "glyph.html" (dict "name" .icon "class" "rip-glyph--sm") }}</a>
-        {{ end }}
-      </div>
-      {{ end }}
       {{ if site.Params.features.social_club_enrollment }}
       <form class="footer-signup signup-form" data-signup-form>
         <label class="sr-only" for="footer-email">Your email</label>

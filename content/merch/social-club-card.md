@@ -20,7 +20,7 @@ built_for:
   - icon: "card"
     text: "Wallets that need an undeniably intriguing conversation piece."
   - icon: "skull"
-    text: "Collectors who appreciate a dark joke told with a straight face and real production budget."
+    text: "Collectors who appreciate a straight face and a real production budget."
   - icon: "glass"
     text: "Anyone who knows that true loyalty programs shouldn't require monthly subscription fees."
 seo_title: "Don Muerte Social Club Card Concept | RIP Tequila"

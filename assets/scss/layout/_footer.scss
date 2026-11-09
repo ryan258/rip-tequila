@@ -40,8 +40,7 @@
 }
 
 .site-footer__logo small,
-.site-footer__brand p,
-.site-footer__social-label {
+.site-footer__brand p {
   @include eyebrow;
 }
 
@@ -90,8 +89,7 @@
   color: $color-red-light;
 }
 
-.site-footer__column a:focus-visible,
-.site-footer__social a:focus-visible {
+.site-footer__column a:focus-visible {
   @include focus-ring;
 }
 
@@ -99,26 +97,6 @@
   display: grid;
   align-content: start;
   gap: $space-md;
-}
-
-.site-footer__social {
-  display: flex;
-  gap: $space-sm;
-}
-
-.site-footer__social a {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  color: $color-cream;
-  border: 2px solid rgba($color-cream, 0.34);
-  text-decoration: none;
-}
-
-.site-footer__social a:hover {
-  background: $color-red;
-  border-color: $color-red;
 }
 
 .site-footer__club-status {

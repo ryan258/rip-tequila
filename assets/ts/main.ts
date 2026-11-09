@@ -13,8 +13,6 @@ function initMobileMenu(): void {
     return;
   }
 
-  let lastFocused: HTMLElement | null = null;
-
   // The menu is a modal dialog, so the rest of the page has to leave the
   // accessibility tree while it is open — the focus trap alone doesn't stop a
   // screen reader from browsing straight past it.
@@ -32,11 +30,12 @@ function initMobileMenu(): void {
     toggle.setAttribute('aria-label', 'Open menu');
     document.body.classList.remove('has-open-menu');
     setBackgroundInert(false);
-    lastFocused?.focus();
+    // Always the toggle: the menu is only ever opened from it, and Safari does
+    // not focus a button on click, so activeElement at open time can be <body>.
+    toggle.focus();
   };
 
   const openMenu = (): void => {
-    lastFocused = document.activeElement instanceof HTMLElement ? document.activeElement : toggle;
     toggle.classList.add('is-open');
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('aria-label', 'Close menu');

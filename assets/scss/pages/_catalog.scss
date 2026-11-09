@@ -163,20 +163,6 @@
   margin-top: $space-sm;
 }
 
-// Custom Red Outline Button
-.button--outline {
-  border-color: $color-red;
-  color: $color-red;
-  background: transparent;
-  
-  &:hover,
-  &:focus-visible {
-    background: $color-red;
-    color: $color-cream;
-    border-color: $color-red;
-  }
-}
-
 // 2. Overlapping Features Container
 .char-features-container {
   @include container;

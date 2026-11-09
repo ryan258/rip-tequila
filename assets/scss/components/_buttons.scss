@@ -57,3 +57,16 @@
   background: $color-gold;
   border-color: $color-gold;
 }
+
+.button--outline {
+  border-color: $color-red;
+  color: $color-red;
+  background: transparent;
+}
+
+.button--outline:hover,
+.button--outline:focus-visible {
+  background: $color-red;
+  color: $color-cream;
+  border-color: $color-red;
+}

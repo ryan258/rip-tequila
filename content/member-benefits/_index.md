@@ -44,6 +44,6 @@ exclusions:
   - "**Corporate Customer Satisfaction Surveys:** We will never ask you \"how likely you are to recommend us on a scale of 1 to 10.\""
 ---
 
-The proposed charter of the **Don Muerte Social Club** is short, sharp, and designed for discerning individuals who appreciate a sharp dark joke and beautiful artifacts.
+The proposed charter of the **Don Muerte Social Club** is short, sharp, and designed for discerning individuals who appreciate a straight face and beautiful artifacts.
 
 Here is the full accounting of its intended benefits. None are active while the manifest remains closed.
