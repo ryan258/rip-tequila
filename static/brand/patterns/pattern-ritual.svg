@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pattern-ritual.svg">
+<rect width="400" height="400" fill="#F2EDE0"/>
+<g transform="translate(40 40) scale(1.33)" color="#0D0D0D"><path d="M6 5L8 16C8 18.2 9.8 20 12 20C14.2 20 16 18.2 16 16L18 5H6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<path d="M8 22H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path d="M16 3C18.2 3 20 4.8 20 7C20 8.1 19.6 9.1 18.8 9.8L15 6L16 3Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+<path d="M7 10H17" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/></g>
+<g transform="translate(160 40) scale(1.33)" color="#0D0D0D"><path d="M3 19C3 8.5 11.5 3 22 3V19H3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<path d="M8 15C8 10 12 7 17 7V15H8Z" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.3"/>
+<path d="M17 15L12 10" stroke="currentColor" stroke-width="1.5"/></g>
+<g transform="translate(280 40) scale(1.33)" color="#0D0D0D"><path d="M10 2H14V5H10V2Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+<path d="M9 5H15L17 8V21C17 21.6 16.6 22 16 22H8C7.4 22 7 21.6 7 21V8L9 5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<rect x="9" y="10" width="6" height="7" stroke="currentColor" stroke-width="1.5" fill="currentColor"/></g>
+<g transform="translate(40 160) scale(1.33)" color="#0D0D0D"><path d="M12 2L14 10L12 22L10 10L12 2Z" stroke="currentColor" stroke-width="1.8" fill="currentColor"/>
+<path d="M12 7L18 8L15 17L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.2"/>
+<path d="M12 7L6 8L9 17L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.2"/>
+<path d="M12 13L21 14L16 20L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+<path d="M12 13L3 14L8 20L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+<path d="M2 22H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+<g transform="translate(160 160) scale(1.33)" color="#0D0D0D"><path d="M6 5L8 16C8 18.2 9.8 20 12 20C14.2 20 16 18.2 16 16L18 5H6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<path d="M8 22H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path d="M16 3C18.2 3 20 4.8 20 7C20 8.1 19.6 9.1 18.8 9.8L15 6L16 3Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+<path d="M7 10H17" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/></g>
+<g transform="translate(280 160) scale(1.33)" color="#0D0D0D"><path d="M3 19C3 8.5 11.5 3 22 3V19H3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<path d="M8 15C8 10 12 7 17 7V15H8Z" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.3"/>
+<path d="M17 15L12 10" stroke="currentColor" stroke-width="1.5"/></g>
+<g transform="translate(40 280) scale(1.33)" color="#0D0D0D"><path d="M10 2H14V5H10V2Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+<path d="M9 5H15L17 8V21C17 21.6 16.6 22 16 22H8C7.4 22 7 21.6 7 21V8L9 5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<rect x="9" y="10" width="6" height="7" stroke="currentColor" stroke-width="1.5" fill="currentColor"/></g>
+<g transform="translate(160 280) scale(1.33)" color="#0D0D0D"><path d="M12 2L14 10L12 22L10 10L12 2Z" stroke="currentColor" stroke-width="1.8" fill="currentColor"/>
+<path d="M12 7L18 8L15 17L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.2"/>
+<path d="M12 7L6 8L9 17L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.2"/>
+<path d="M12 13L21 14L16 20L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+<path d="M12 13L3 14L8 20L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+<path d="M2 22H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+<g transform="translate(280 280) scale(1.33)" color="#0D0D0D"><path d="M6 5L8 16C8 18.2 9.8 20 12 20C14.2 20 16 18.2 16 16L18 5H6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<path d="M8 22H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path d="M16 3C18.2 3 20 4.8 20 7C20 8.1 19.6 9.1 18.8 9.8L15 6L16 3Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+<path d="M7 10H17" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/></g>
+</svg>

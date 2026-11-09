@@ -2,9 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ $description := or .Params.seo_description .Description site.Params.description }}
 <meta name="description" content="{{ $description }}">
+{{ if .Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
 <title>{{ with .Params.seo_title }}{{ . }}{{ else }}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}{{ end }}</title>
 
 <link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="{{ "brand/logo/rip-favicon.svg" | relURL }}" type="image/svg+xml">
 {{ partial "social-meta.html" . }}
 {{ partial "json-ld.html" . }}
 

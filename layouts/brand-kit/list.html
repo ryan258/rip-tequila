@@ -1,0 +1,309 @@
+{{ define "main" }}
+<article class="brand-kit-page">
+
+  {{/* HERO */}}
+  <header class="brand-kit-hero">
+    <div class="brand-kit-container brand-kit-hero__inner">
+      <p class="brand-kit-eyebrow">⤛ {{ .Params.eyebrow | default "Rest In Proof" }} ⤜</p>
+      <h1 class="brand-kit-title">{{ .Params.headline | default .Title }}</h1>
+      <p class="brand-kit-desc">{{ .Params.description }}</p>
+      {{ with .Params.cta_href }}
+      <div class="brand-kit-hero__cta">
+        <a class="button button--primary" href="{{ . | relURL }}">{{ $.Params.cta_label | default "Read more" }}</a>
+        <a class="button button--secondary" href="{{ "brand/logo/rip-primary.svg" | relURL }}">Download primary logo</a>
+      </div>
+      {{ end }}
+    </div>
+  </header>
+
+  {{ if .Content }}
+  <section class="brand-kit-intro">
+    <div class="brand-kit-container">
+      <div class="brand-kit-intro__body">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* 01 COLORS */}}
+  <section class="brand-kit-section" id="colors">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">01</span>
+        <h2>Color System</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-colors">
+        <div class="brand-kit-swatch" style="--swatch:#0D0D0D;--swatch-text:#F2EDE0">
+          <span class="brand-kit-swatch__name">Obsidian Black</span>
+          <span class="brand-kit-swatch__hex">#0D0D0D</span>
+          <span class="brand-kit-swatch__role">Primary text / rules / reverse bg</span>
+        </div>
+        <div class="brand-kit-swatch" style="--swatch:#F2EDE0;--swatch-text:#0D0D0D">
+          <span class="brand-kit-swatch__name">Bone Cream</span>
+          <span class="brand-kit-swatch__hex">#F2EDE0</span>
+          <span class="brand-kit-swatch__role">Primary bg / label stock</span>
+        </div>
+        <div class="brand-kit-swatch" style="--swatch:#B22222;--swatch-text:#F2EDE0">
+          <span class="brand-kit-swatch__name">Sangre Red</span>
+          <span class="brand-kit-swatch__hex">#B22222</span>
+          <span class="brand-kit-swatch__role">Primary accent / CTAs / bell</span>
+        </div>
+        <div class="brand-kit-swatch" style="--swatch:#2E7D4F;--swatch-text:#F2EDE0">
+          <span class="brand-kit-swatch__name">Agave Green</span>
+          <span class="brand-kit-swatch__hex">#2E7D4F</span>
+          <span class="brand-kit-swatch__role">Secondary accent</span>
+        </div>
+        <div class="brand-kit-swatch" style="--swatch:#C6A24A;--swatch-text:#0D0D0D">
+          <span class="brand-kit-swatch__name">Antique Gold</span>
+          <span class="brand-kit-swatch__hex">#C6A24A</span>
+          <span class="brand-kit-swatch__role">Premium / seals / reserve</span>
+        </div>
+        <div class="brand-kit-swatch" style="--swatch:#0F3D3E;--swatch-text:#F2EDE0">
+          <span class="brand-kit-swatch__name">Deep Green</span>
+          <span class="brand-kit-swatch__hex">#0F3D3E</span>
+          <span class="brand-kit-swatch__role">El Vigía / night desert</span>
+        </div>
+      </div>
+      <p class="brand-kit-note">Pairings: Black on Cream (default) · Cream on Black (dark) · Black + Red cross + Green agave (posters) · Black + Gold (limited). No purple, teal, neon, or gradients.</p>
+    </div>
+  </section>
+
+  {{/* 02 TYPE */}}
+  <section class="brand-kit-section brand-kit-section--alt" id="type">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">02</span>
+        <h2>Typography</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-type-grid">
+        <div class="brand-kit-type-card">
+          <p class="brand-kit-type-card__label">Display — Anton</p>
+          <p class="brand-kit-type-display">REST IN PROOF</p>
+          <p class="brand-kit-type-card__use">Headlines, poster titles, bottle names. Uppercase, tight line-height.</p>
+        </div>
+        <div class="brand-kit-type-card">
+          <p class="brand-kit-type-card__label">Accent — Oswald</p>
+          <p class="brand-kit-type-accent">BORN IN AGAVE</p>
+          <p class="brand-kit-type-card__use">Eyebrows, labels, small caps, seals. 0.14em tracking.</p>
+        </div>
+        <div class="brand-kit-type-card">
+          <p class="brand-kit-type-card__label">Body — Montserrat</p>
+          <p class="brand-kit-type-body">Poured for the living, remembered by the legendary. No actual spirits. All the spirit.</p>
+          <p class="brand-kit-type-card__use">Body copy, disclaimers, captions. Line-height 1.55.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{/* 03 LOGO */}}
+  <section class="brand-kit-section" id="logo">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">03</span>
+        <h2>Logo System</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-logo-grid">
+        {{ range $file := (slice "rip-primary.svg" "rip-primary-reverse.svg" "rip-primary-gold.svg" "rip-horizontal.svg" "rip-badge.svg" "rip-monogram.svg" "rip-neck-seal.svg" "rip-favicon.svg") }}
+        {{ $url := printf "brand/logo/%s" $file }}
+        <figure class="brand-kit-logo-card">
+          <img src="{{ $url | relURL }}" alt="RIP Tequila {{ $file }}" loading="lazy" decoding="async" width="320" height="240">
+          <figcaption>
+            <span>{{ $file }}</span>
+            <a href="{{ $url | relURL }}" download>Download SVG</a>
+          </figcaption>
+        </figure>
+        {{ end }}
+      </div>
+
+      <div class="brand-kit-rules">
+        <div class="brand-kit-rules__col">
+          <h3>Do</h3>
+          <ul>
+            <li>Use approved colors</li>
+            <li>Keep it bold and readable</li>
+            <li>Clear space = height of the I in RIP</li>
+            <li>Min: Primary 220px / 1.5" · Badge 96px / 0.75" · Monogram 48px / 0.4"</li>
+          </ul>
+        </div>
+        <div class="brand-kit-rules__col">
+          <h3>Don't</h3>
+          <ul>
+            <li>Stretch, add shadows, or gradients</li>
+            <li>Use random colors or busy photo backgrounds</li>
+            <li>Rotate unnecessarily or overcrowd with skulls</li>
+            <li>Make it ornate or horror</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{/* 04 GLYPH LIBRARY */}}
+  <section class="brand-kit-section brand-kit-section--alt" id="glyphs">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">04</span>
+        <h2>Glyph Library — 47</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-glyph-grid">
+        {{ range $name := (slice
+          "skull" "bell" "agave" "monument" "moon" "cross" "glass" "lemon" "cactus" "barrel"
+          "eye" "maracas" "microphone" "shovel" "hat" "shirt" "card" "stickers" "coasters" "scale"
+          "location" "warning" "book" "door" "crate" "lock" "question" "people" "bottle" "sun"
+          "wind" "star-burst" "star-diamond" "star-eight" "star-cross" "moon-star" "megaphone" "pencils" "map" "still"
+          "rose" "infinity" "star" "arrow-right" "social-instagram" "social-tiktok" "social-youtube"
+        ) }}
+        {{ $url := printf "brand/glyphs/%s.svg" $name }}
+        <a class="brand-kit-glyph-cell" href="{{ $url | relURL }}" download title="{{ $name }} — download SVG">
+          <span class="brand-kit-glyph-cell__icon">{{ partial "glyph.html" (dict "name" $name "class" "rip-glyph--lg") }}</span>
+          <span class="brand-kit-glyph-cell__name">{{ $name }}</span>
+        </a>
+        {{ end }}
+      </div>
+      <p class="brand-kit-note">24×24 grid, 2px strokes, <code>currentColor</code>. One hero glyph per layout. Never mix icon styles.</p>
+    </div>
+  </section>
+
+  {{/* 05 PATTERNS */}}
+  <section class="brand-kit-section" id="patterns">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">05</span>
+        <h2>Patterns</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-pattern-grid">
+        {{ range $p := (slice
+          (dict "file" "pattern-ritual.svg" "name" "The Ritual Repeat" "use" "Tissue, box interiors, bar mats, site backgrounds — glass, lemon, bottle, agave")
+          (dict "file" "pattern-afterlife.svg" "name" "The Afterlife Repeat" "use" "Stickers, limited drops, posters, matchbooks — skull, tombstone, cross, moon")
+          (dict "file" "pattern-cantina.svg" "name" "The Cantina Repeat" "use" "Character merch, party flyers, social — bell, mic, maracas, rose")
+          (dict "file" "pattern-desert.svg" "name" "The Desert Repeat" "use" "Side panels, apparel, sections — cactus, moon, sun, eye")
+        ) }}
+        {{ $url := printf "brand/patterns/%s" .file }}
+        <figure class="brand-kit-pattern-card">
+          <img src="{{ $url | relURL }}" alt="{{ .name }}" loading="lazy" decoding="async" width="320" height="320">
+          <figcaption>
+            <strong>{{ .name }}</strong>
+            <span>{{ .use }}</span>
+            <a href="{{ $url | relURL }}" download>Download SVG</a>
+          </figcaption>
+        </figure>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{/* 06 APPLICATIONS */}}
+  <section class="brand-kit-section brand-kit-section--alt" id="applications">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">06</span>
+        <h2>Applications</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-pattern-grid">
+        {{ range $a := (slice
+          (dict "file" "application-coaster.svg" "name" "Coaster" "use" "Badge + one phrase: Rest In Proof / Proof You Lived")
+          (dict "file" "application-tshirt.svg" "name" "T-Shirt" "use" "One hero glyph + one phrase, minimal text")
+          (dict "file" "application-bottle-label.svg" "name" "Bottle Label" "use" "Front hierarchy: cross → RIP TEQUILA → glyph → variant → REST IN PROOF")
+          (dict "file" "application-matchbook.svg" "name" "Matchbook" "use" "Candle + match + tiny mark: Light the candle. Ring the bell.")
+          (dict "file" "application-social-avatar.svg" "name" "Social Avatar" "use" "Monogram R†P simplified for 48px+")
+          (dict "file" "application-neck-seal.svg" "name" "Neck Seal" "use" "Collectible batch tag: REST IN PROOF · BATCH 013 · THE BELL RANG")
+          (dict "file" "application-sticker-sheet.svg" "name" "Sticker Sheet" "use" "Badge + phrase stickers, varied shapes")
+        ) }}
+        {{ $url := printf "brand/applications/%s" .file }}
+        <figure class="brand-kit-pattern-card">
+          <img src="{{ $url | relURL }}" alt="{{ .name }} template" loading="lazy" decoding="async" width="320" height="320">
+          <figcaption>
+            <strong>{{ .name }}</strong>
+            <span>{{ .use }}</span>
+            <a href="{{ $url | relURL }}" download>Download SVG</a>
+          </figcaption>
+        </figure>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{/* 07 VOICE */}}
+  <section class="brand-kit-section" id="voice">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">07</span>
+        <h2>Voice &amp; Copy</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-voice-grid">
+        <div class="brand-kit-voice-card">
+          <h3>Master lines</h3>
+          <ul>
+            <li>Rest In Proof</li>
+            <li>Proof You Lived</li>
+            <li>Born in Agave. Buried in Legend.</li>
+            <li>The Bell Rang. You’re In.</li>
+            <li>Here Lies Your Judgment.</li>
+            <li>No Actual Spirits. All the Spirit.</li>
+            <li>Save Water, Drink Tequila!</li>
+          </ul>
+        </div>
+        <div class="brand-kit-voice-card">
+          <h3>Gut-check</h3>
+          <p><strong>On target:</strong> fake tasting notes, mock founder claims, fake awards, parody of premium-spirits marketing.</p>
+          <p><strong>Off target:</strong> spooky skull for its own sake with no wink underneath.</p>
+        </div>
+        <div class="brand-kit-voice-card">
+          <h3>Responsible parody</h3>
+          <p>Fictional parody brand. Drink responsibly. Haunt responsibly.</p>
+          <p>Never: real ABV / proof / 100-percent agave claims, fake seals, binge copy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{/* 08 WORLD */}}
+  <section class="brand-kit-section brand-kit-section--alt" id="world">
+    <div class="brand-kit-container">
+      <div class="brand-kit-section__header">
+        <span class="brand-kit-section__num">08</span>
+        <h2>World &amp; Product</h2>
+        <span class="brand-kit-section__rule"></span>
+      </div>
+      <div class="brand-kit-world-grid">
+        {{ range $w := (slice
+          (dict "glyph" "skull" "name" "Don Muerte" "role" "Host · Añejo · Proof You Lived.")
+          (dict "glyph" "bottle" "name" "Cantina Jack" "role" "Bartender · Blanco · Last Round, First Legend.")
+          (dict "glyph" "bell" "name" "Campana Roja" "role" "Bell ringer · Reposado · The Bell Rang. You’re In.")
+          (dict "glyph" "rose" "name" "La Rosa Negra" "role" "Singer · Rosa Negra · The Dead Still Dance.")
+          (dict "glyph" "cross" "name" "Padre Proof" "role" "Absolution · Padre Proof LE · I Bless This Mess.")
+          (dict "glyph" "shovel" "name" "El Sepulturero" "role" "Gravedigger · Extra Añejo · Here Lies Your Judgment.")
+          (dict "glyph" "maracas" "name" "Los Maracas" "role" "Rhythm · Party Pack · Shake Now. Explain Later.")
+          (dict "glyph" "eye" "name" "El Vigía" "role" "Sentinel · Midnight Agave · Follow the Agave After Midnight.")
+        ) }}
+        <div class="brand-kit-world-card">
+          {{ partial "glyph.html" (dict "name" .glyph "class" "rip-glyph--xl") }}
+          <h3>{{ .name }}</h3>
+          <p>{{ .role }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <p class="brand-kit-note">Core lineup: Blanco · Reposado · Añejo · Extra Añejo · Midnight Agave Reserve. Hero: Añejo. Entry: Blanco. Collector: Extra Añejo.</p>
+    </div>
+  </section>
+
+  {{/* FOOTER STRIP */}}
+  <section class="brand-kit-footer-strip">
+    <div class="brand-kit-container">
+      <p class="brand-kit-footer-strip__text">Fictional parody brand. Drink responsibly. Haunt responsibly. — No actual spirits. All the spirit.</p>
+      <div class="brand-kit-footer-strip__actions">
+        <a class="button button--primary" href="{{ "the-cantina/" | relURL }}">Enter the Cantina</a>
+      </div>
+    </div>
+  </section>
+
+</article>
+{{ end }}

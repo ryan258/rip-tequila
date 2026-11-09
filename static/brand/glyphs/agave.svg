@@ -1,0 +1,8 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="agave">
+  <path d="M12 2L14 10L12 22L10 10L12 2Z" stroke="currentColor" stroke-width="1.8" fill="currentColor"/>
+<path d="M12 7L18 8L15 17L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.2"/>
+<path d="M12 7L6 8L9 17L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.2"/>
+<path d="M12 13L21 14L16 20L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+<path d="M12 13L3 14L8 20L12 22" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+<path d="M2 22H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="bell">
+  <path d="M10 2.5H14V4.5H10V2.5Z" stroke="currentColor" stroke-width="1.5" fill="currentColor"/>
+<path d="M5 17C5.5 11 6.5 5 12 5C17.5 5 18.5 11 19 17L21 19H3L5 17Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<path d="M10 19V20.5C10 21.6 10.9 22.5 12 22.5C13.1 22.5 14 21.6 14 20.5V19" stroke="currentColor" stroke-width="2"/>
+<circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+</svg>

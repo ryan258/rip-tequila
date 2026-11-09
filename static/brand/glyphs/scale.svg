@@ -1,0 +1,6 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="scale">
+  <path d="M12 2V21M6 21H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path d="M4 6L12 4L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path d="M4 6L2 12C2 13.5 3.5 14 5 14C6.5 14 8 13.5 8 12L6 6" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.2"/>
+<path d="M20 6L18 12C18 13.5 19.5 14 21 14C22.5 14 24 13.5 24 12L22 6" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity="0.2"/>
+</svg>

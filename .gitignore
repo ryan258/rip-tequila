@@ -1,5 +1,6 @@
 node_modules/
 public/
+.test-build/
 .hugo_cache/
 resources/_gen/
 .DS_Store

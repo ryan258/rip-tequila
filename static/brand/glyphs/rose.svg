@@ -1,0 +1,6 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="rose">
+  <circle cx="12" cy="9" r="6" stroke="currentColor" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+<path d="M12 5C10 7 10 11 12 13M12 5C14 7 14 11 12 13" stroke="currentColor" stroke-width="1.5"/>
+<path d="M8 9C10 9 14 9 16 9" stroke="currentColor" stroke-width="1.5"/>
+<path d="M12 15V22M12 18L15 16M12 19L9 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

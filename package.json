@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "hugo server --bind 127.0.0.1 --port 1313 --disableFastRender",
-    "build": "hugo --gc --minify"
+    "build": "hugo --gc --minify",
+    "check:claims": "! grep -rniE '[0-9]+ ?% ?(abv|alc)|[0-9]+[ -]?proof([^a-z]|$)|100 ?% [a-z ]*agave|ALC\\. ?VOL' content layouts data",
+    "check:tokens": "node scripts/check-tokens.cjs",
+    "check:brand": "D=$(mktemp -d) && node scripts/generate-brand-svgs.cjs \"$D\" > /dev/null && diff -r \"$D\" static/brand",
+    "test": "sh scripts/test.sh",
+    "check": "npm run check:claims && npm run check:tokens && npm run check:brand && npm test"
   },
   "devDependencies": {
-    "sass-embedded": "^1.99.0"
+    "opentype.js": "^2.0.0"
   }
 }

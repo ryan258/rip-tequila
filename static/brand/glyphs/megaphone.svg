@@ -1,0 +1,6 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="megaphone">
+  <path d="M4 14V10C4 9.45 4.45 9 5 9H8L15 4V20L8 15H5C4.45 15 4 14.55 4 14Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
+<path d="M6 15V19C6 19.55 6.45 20 7 20H8C8.55 20 9 19.55 9 19V15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M18 8.5C19.2 9.5 20 10.7 20 12C20 13.3 19.2 14.5 18 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M20.5 6C22.2 7.8 23 9.8 23 12C23 14.2 22.2 16.2 20.5 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

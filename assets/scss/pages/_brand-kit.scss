@@ -1,0 +1,442 @@
+/* ==========================================================================
+   Brand Kit board — layouts/brand-kit/list.html
+   Interactive style board. Source tokens from _tokens.scss.
+   ========================================================================== */
+
+.brand-kit-page {
+  @include paper-texture($texture-opacity-light);
+  background: $color-cream;
+  color: $color-black;
+  overflow: hidden;
+}
+
+.brand-kit-container {
+  @include container;
+  max-width: $content-max;
+}
+
+.brand-kit-hero {
+  @include section-padding;
+  text-align: center;
+  border-bottom: 2px solid rgba($color-black, 0.15);
+  background: $color-cream;
+}
+
+.brand-kit-hero__inner {
+  max-width: 860px;
+}
+
+.brand-kit-eyebrow {
+  @include eyebrow;
+  color: $color-red;
+  margin: 0 0 $space-xs 0;
+}
+
+.brand-kit-title {
+  @include poster-title(3rem, 8vw, 7rem);
+  margin: $space-xs 0;
+  text-transform: uppercase;
+}
+
+.brand-kit-desc {
+  @include body-copy(1.15rem);
+  color: rgba($color-black, 0.8);
+  max-width: 680px;
+  margin: $space-md auto 0;
+}
+
+.brand-kit-hero__cta {
+  display: flex;
+  gap: $space-sm;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: $space-lg;
+
+  .button {
+    font-family: $font-accent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    border: 2px solid $color-black;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .button--primary {
+    background: $color-black;
+    color: $color-cream;
+  }
+
+  .button--secondary {
+    background: $color-white;
+    color: $color-black;
+  }
+}
+
+.brand-kit-intro {
+  padding: $space-xl 0;
+  background: $color-cream;
+}
+
+.brand-kit-intro__body {
+  @include paper-card(10px);
+  padding: clamp($space-lg, 4vw, $space-2xl);
+
+  p {
+    @include body-copy;
+    margin-bottom: $space-md;
+  }
+
+  strong {
+    font-weight: 800;
+  }
+}
+
+.brand-kit-section {
+  padding-block: clamp(56px, 7vw, 96px);
+  background: $color-cream;
+
+  &--alt {
+    background: $color-white;
+    border-block: 2px solid $color-black;
+  }
+}
+
+.brand-kit-section__header {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  margin-bottom: $space-xl;
+
+  h2 {
+    font-family: $font-display;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin: 0;
+  }
+}
+
+.brand-kit-section__num {
+  font-family: $font-accent;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  background: $color-black;
+  color: $color-cream;
+  padding: 6px 10px;
+}
+
+.brand-kit-section__rule {
+  flex: 1;
+  height: 2px;
+  background: $color-black;
+  opacity: 0.15;
+}
+
+.brand-kit-colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: $space-md;
+}
+
+.brand-kit-swatch {
+  background: var(--swatch);
+  color: var(--swatch-text);
+  border: 2px solid $color-black;
+  min-height: 140px;
+  padding: $space-md;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+
+  &__name {
+    font-family: $font-accent;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  &__hex {
+    font-family: $font-accent;
+    font-size: 0.85rem;
+    opacity: 0.85;
+  }
+
+  &__role {
+    font-family: $font-body;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.75;
+  }
+}
+
+.brand-kit-note {
+  font-family: $font-body;
+  font-size: 0.9rem;
+  color: rgba($color-black, 0.7);
+  margin-top: $space-lg;
+}
+
+.brand-kit-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: $space-md;
+}
+
+.brand-kit-type-card {
+  @include paper-card(8px);
+  padding: $space-lg;
+
+  &__label {
+    @include eyebrow;
+    color: $color-red;
+    margin-bottom: $space-sm;
+  }
+
+  &__use {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    color: rgba($color-black, 0.7);
+    margin-top: $space-md;
+  }
+}
+
+.brand-kit-type-display {
+  font-family: $font-display;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.brand-kit-type-accent {
+  font-family: $font-accent;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.brand-kit-type-body {
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.brand-kit-logo-grid,
+.brand-kit-pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: $space-md;
+}
+
+.brand-kit-logo-card,
+.brand-kit-pattern-card {
+  @include paper-card(8px);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    background: $color-cream;
+    border-bottom: 2px solid $color-black;
+    padding: $space-sm;
+  }
+
+  figcaption {
+    padding: $space-sm $space-md;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    strong, span {
+      font-family: $font-accent;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    span {
+      font-family: $font-body;
+      text-transform: none;
+      color: rgba($color-black, 0.7);
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    a {
+      color: $color-red;
+      font-family: $font-accent;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: $space-xs;
+    }
+  }
+}
+
+.brand-kit-rules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: $space-md;
+  margin-top: $space-xl;
+}
+
+.brand-kit-rules__col {
+  border: 2px solid $color-black;
+  padding: $space-lg;
+  background: $color-white;
+
+  h3 {
+    font-family: $font-accent;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 $space-sm 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: $space-lg;
+    font-family: $font-body;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    li {
+      margin-bottom: $space-xs;
+    }
+  }
+}
+
+.brand-kit-glyph-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+  gap: 2px;
+  border: 2px solid $color-black;
+  background: $color-black;
+}
+
+.brand-kit-glyph-cell {
+  background: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: $space-md $space-xs;
+  text-decoration: none;
+  color: $color-black;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-cream;
+  }
+
+  &__name {
+    font-family: $font-accent;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.brand-kit-voice-grid,
+.brand-kit-world-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: $space-md;
+}
+
+.brand-kit-voice-card,
+.brand-kit-world-card {
+  @include paper-card(8px);
+  padding: $space-lg;
+
+  h3 {
+    font-family: $font-accent;
+    text-transform: uppercase;
+    margin: 0 0 $space-sm 0;
+  }
+
+  p, li {
+    font-family: $font-body;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: $space-lg;
+  }
+}
+
+.brand-kit-world-card {
+  text-align: center;
+
+  h3 {
+    margin-top: $space-sm;
+  }
+}
+
+.brand-kit-footer-strip {
+  background: $color-black;
+  color: $color-cream;
+  padding: $space-2xl 0;
+  text-align: center;
+}
+
+.brand-kit-footer-strip__text {
+  font-family: $font-accent;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 $space-lg 0;
+}
+
+.brand-kit-footer-strip__actions {
+  display: flex;
+  gap: $space-sm;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .button {
+    font-family: $font-accent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    border: 2px solid $color-cream;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .button--primary {
+    background: $color-cream;
+    color: $color-black;
+  }
+
+  .button--secondary {
+    background: transparent;
+    color: $color-cream;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-kit-glyph-grid {
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  }
+}
