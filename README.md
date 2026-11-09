@@ -28,18 +28,22 @@ hugo --gc --minify --baseURL "https://example.com/"
 
 ## Verification & Tests
 
-Run the targeted client unit test suite (validates party roster and storage fallback warning):
+Everything CI gates on, in one command:
 
 ```sh
-npm run build
-RIP_PARTY_JS=$(ls -t public/ts/party.*.js | head -n 1) node --test tests/party-storage.test.cjs
+npm run check
 ```
 
-Verify compliance with the standing alcohol-claims rule (must return no matches):
+Or individually:
 
 ```sh
-grep -rnE '[0-9]+ ?% ?ABV|[0-9]+ Proof|100% [A-Za-z ]*[Aa]gave' content layouts data
+npm run check:claims   # alcohol-claims rule; prints nothing and exits 0 when clean
+npm run check:tokens   # brand colors in the kit board, kit docs, and SVG generator match _tokens.scss
+npm run check:brand    # static/brand/ matches what scripts/generate-brand-svgs.cjs produces now
+npm test               # fresh build into .test-build/ (fails on a missing image or glyph), then the party tests
 ```
+
+The deploy workflow runs `npm run check` after the Hugo build, so a failure blocks the deploy. CI pins Hugo and Node; keep your local Hugo in step with `.github/workflows/deploy.yml`. If `check:brand` fails, run `node scripts/generate-brand-svgs.cjs` and commit the result.
 
 ## Structure
 
@@ -49,7 +53,8 @@ grep -rnE '[0-9]+ ?% ?ABV|[0-9]+ Proof|100% [A-Za-z ]*[Aa]gave' content layouts 
 - `content/party/` + `layouts/party/` + `assets/ts/party.ts` the printable Halloween party kit (guest list, Social Club cards, bell coasters, cast placards); US Letter, drawn at real paper size
 - `layouts/partials/sections/` reusable homepage sections
 - `layouts/partials/image.html` the only way to emit an `<img>` — see below
-- `layouts/partials/glyph.html` the inline SVG glyph set
+- `layouts/partials/glyph.html` the inline SVG glyph set; the single source for glyph geometry
+- `scripts/generate-brand-svgs.cjs` regenerates the downloadable SVGs in `static/brand/` (`npm install`, then `node scripts/generate-brand-svgs.cjs`; lettering is outlined with `scripts/fonts/`); `/brand-kit/` is an internal, unlisted board for them
 - `assets/scss/` SCSS design system tokens, components, layout, and page styles
 - `assets/ts/main.ts` mobile menu, merch category filter, signup placeholder
 - `data/navigation.yaml` global navigation and footer links

@@ -6,7 +6,7 @@ This document is the source of truth for how the RIP Tequila site looks. If some
 
 - All brand iconography uses a **bespoke inline SVG glyph language** rendered via `layouts/partials/glyph.html` (zero external icon CDNs).
 - Typography does the heavy lifting. Copy does the rest.
-- Background imagery and textures follow a strict vintage screenprint / linocut woodblock aesthetic adhering to the 5 brand colors (Midnight Black, Bone Cream, Blood Red, Agave Green, Grave Gold).
+- Background imagery and textures follow a strict vintage screenprint / linocut woodblock aesthetic adhering to the brand colors (Obsidian Black, Bone Cream, Sangre Red, Agave Green, Antique Gold, plus Deep Green for El Vigía — see `docs/brand-kit/01-tokens.md`).
 - We do not use photography, realistic 3D renders, or modern glossy visuals.
 
 ## Why
@@ -52,18 +52,14 @@ Every visual mark on the site is an authentic, chiseled vector glyph engineered 
 ## Visual system assets
 
 - **Homepage motion poster** (`/assets/images/home-hero-poster-motion.webp`): a subtle looping WebP with wind-swept agaves and pulsing supernatural desert radiance. Its matching static reduced-motion frame is `/assets/images/home-hero-poster-motion-still.webp`.
-- **Hero poster backdrop** (`/assets/images/hero-poster-bg.webp`): woodblock desert backdrop under a stylized blood-red sun with silhouette agaves.
 - **Cantina archway** (`/assets/images/cantina-archway-bg.webp`): linocut illustration of the afterlife cantina entrance with warm lantern glow for the Brand Intro.
-- **Social Club texture** (`/assets/images/social-club-bg.webp`): dark engraved woodcut relief pattern of bells, skulls, and agaves in antique gold and midnight black.
 - **Paper grain** (`/static/images/paper-grain-bg.webp`): subtle letterpress paper texture layered across section backgrounds via `@mixin paper-texture`.
 - **The Lineup hero backdrop** (`/assets/images/lineup-hero-bg.webp`): linocut tequila distillery and desert agave fields under a blazing sun.
 - **Characters hero backdrop** (`/assets/images/characters-hero-bg.webp`): linocut cantina porch under lanterns and stars.
-- **Merch hero backdrop** (`/assets/images/merch-hero-bg.webp`): afterlife trading post linocut artwork.
-- **Cantina Story hero backdrop** (`/assets/images/cantina-story-bg.webp`): canyon ridge afterlife cantina landscape.
 - **404 Desert Crossroads backdrop** (`/assets/images/404-bg.webp`): midnight desert signpost under a red crescent moon.
 
 ## Related
 
 - `layouts/partials/glyph.html` — the SVG glyph engine supporting all brand marks with automatic aliasing and accessible metadata.
 - `assets/scss/components/_glyphs.scss` — SCSS sizing, color modifiers, and hover micro-animations.
-- `data/slogans.yaml` — the glyph-bearing slogan strip.
+- `docs/brand-kit/03-glyph-library.md` — the full 47-glyph catalog (the list above is the original core set). Downloadable SVGs are generated from `glyph.html` by `scripts/generate-brand-svgs.cjs`.

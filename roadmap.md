@@ -22,21 +22,29 @@ RIP Tequila is a fully static Hugo site presenting a parody spirits brand center
 
 3. **Halloween Party Kit (`/party/`)**
    - Offline party preparation hub: in-browser guest list input and randomized character role shuffle.
+   - Resilient client storage: graceful warning cues when browser storage is blocked or volatile (`assets/ts/party.ts`).
+   - In-place roster editing that preserves assigned roles (`carryRoles`).
+   - Explicit reset action ("Start Over") with confirmation prompt to safely wipe browser state and recover from corrupt data.
    - Printable US Letter layouts with `@media print` stylesheets:
      - Don Muerte Social Club membership cards (10/sheet).
      - Bell coasters (6 designs/sheet).
      - Cast placards assigning guests to characters and duties.
-   - Resilient client storage: graceful warning cues when browser storage is blocked or volatile (`assets/ts/party.ts`).
-   - Targeted Node unit test suite (`tests/party-storage.test.cjs`).
+   - Targeted Node unit test suite (`tests/party-storage.test.cjs`, 12 tests).
 
 4. **Visual System & Motion Engine**
-   - Bespoke 27+ inline SVG glyph set rendered via `layouts/partials/glyph.html`.
+   - Bespoke 47-glyph inline SVG set rendered via `layouts/partials/glyph.html`.
    - Rich linocut and vintage screenprint textures.
    - Hero looping motion poster with automatic deferral under `saveData` and `prefers-reduced-motion` compliance.
 
-5. **Tooling & Code Intelligence**
+5. **Brand Kit & Vector Asset Pipeline (`/brand-kit/`)**
+   - Unlisted internal brand style board (`/brand-kit/`) presenting color tokens, typography, logo lockups, 47-glyph library, repeating patterns, and packaging/merch mockups.
+   - Standalone SVG generator (`scripts/generate-brand-svgs.cjs` via `opentype.js`) emitting vector-outlined assets to `static/brand/` without live font dependencies.
+   - Complete documentation suite under `docs/brand-kit/` (8 modules).
+   - Multi-stage verification gates (`npm run check`): regulatory claims grep, token drift check, SVG synchronization, and test-build verification.
+
+6. **Tooling & Code Intelligence**
    - GitNexus code intelligence index and skills (`.claude/skills/gitnexus-*/`).
-   - Pinned CI Hugo extended deployment workflow (`0.166.0`).
+   - Pinned CI Hugo extended deployment workflow (`0.168.0`) with Node 22 verification step.
 
 ---
 

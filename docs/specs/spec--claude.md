@@ -70,12 +70,13 @@ out loud.
 | `/faq/` | Deadpan Q&A, including the one page allowed to say plainly what the brand is |
 | `/parody-disclaimer/`, `/responsible-language/`, `/privacy/`, `/terms/` | Legal/meta cluster — see voice rules |
 | `/party/` + 3 single pages | The Party Kit: hub (`/party/`), Social Club cards (`/party/cards/`), coasters (`/party/coasters/`), and cast placards (`/party/cast/`) |
+| `/brand-kit/` | Internal brand style board and SVG downloads — `noindex`, not in the nav, footer, or sitemap; see `docs/brand-kit/` |
 | `/404/` | Desert-crossroads themed error page |
 
 Main nav (weighted, `hugo.yaml`): Our Story → The Lineup → Characters →
 Merch → The Cantina → Find Us. Footer nav (`data/navigation.yaml`) adds five
 columns: The Brand, The Lineup, Characters, Merch, Club/Info (including Party
-Kit), plus a social links block (Instagram/TikTok/YouTube).
+Kit). There is no social links block until real accounts exist.
 
 One character and one bottle cross-reference each other in content (Don
 Muerte ↔ RIP Añejo is the shipped example) so "meet the host, buy what he
@@ -197,22 +198,22 @@ layouts/
 ├── the-lineup/{list,single}.html
 ├── merch/{list,single}.html
 ├── party/{list,cards,cast,coasters}.html
+├── brand-kit/list.html                  # internal style board (noindex)
 ├── the-cantina/list.html
 ├── our-story/list.html
 ├── find-us/list.html
 └── partials/
     ├── head.html, header.html, footer.html
     ├── glyph.html                        # the SVG glyph engine
-    ├── page-hero.html                    # shared hero for simple content pages
     ├── party-hero.html, party-cast-data.html
-    ├── character-card.html, product-card.html
+    ├── character-card.html, image.html, numword.html
     ├── json-ld.html, social-meta.html
     ├── scripts.html
     └── sections/
         ├── hero.html, brand-intro.html
         ├── product-preview.html, merch-preview.html
         ├── character-strip.html, evidence-preview.html
-        ├── social-club.html, slogan-band.html
+        ├── social-club.html
         └── disclaimer.html               # must render on /merch/ — see §4 contract note below
 \`\`\`
 
@@ -239,16 +240,23 @@ sitewide footer disclaimer alone.
     `prefers-reduced-motion`.
   - `assets/ts/party.ts`: client-side Halloween party kit managing offline
     guest lists, randomized character role assignments across the cast, card
-    and placard data synchronization via `localStorage`, and print triggers.
-- Targeted tests: Node test runner (`node --test tests/party-storage.test.cjs`)
-  validating browser storage fallbacks and visible warning cues.
+    and placard data synchronization via `localStorage`, in-place editing role
+    preservation, reset actions, and print triggers.
+- Targeted tests: Node test runner executed via `npm test` (`scripts/test.sh` ->
+  `tests/party-storage.test.cjs`) validating browser storage fallbacks, corrupted
+  data recovery, reset wiping, card pagination, and placard assignment.
 - No JS framework, no CSS framework, no icon library, no CMS.
 
 \`\`\`json
 // package.json
 "scripts": {
   "dev": "hugo server --bind 127.0.0.1 --port 1313 --disableFastRender",
-  "build": "hugo --gc --minify"
+  "build": "hugo --gc --minify",
+  "check:claims": "! grep -rniE '...' content layouts data",
+  "check:tokens": "node scripts/check-tokens.cjs",
+  "check:brand": "...regenerate scripts/generate-brand-svgs.cjs into a temp dir, diff -r against static/brand",
+  "test": "sh scripts/test.sh",
+  "check": "npm run check:claims && npm run check:tokens && npm run check:brand && npm test"
 }
 \`\`\`
 
@@ -257,7 +265,8 @@ sitewide footer disclaimer alone.
 implemented `@use` — it silently passes it through as literal CSS, the build
 still exits 0, and you ship a ~285-byte stylesheet with no visible error.
 Upgrade path if you ever need `@use` (module privacy, less global
-namespace pollution): `npm install`, add `"transpiler": "dartsass"` to
+namespace pollution): install Dart Sass (`sass-embedded` was dropped from
+devDependencies as unused), add `"transpiler": "dartsass"` to
 `$sassOptions` in `head.html`, put `dart-sass` on `PATH` in CI, and add
 explicit `@use` of tokens/mixins to every partial (`@use` is not
 transitive). Until then, `@import` is correct, not legacy debt.
@@ -275,12 +284,19 @@ GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages, on push to
 `main` or manual dispatch:
 1. Checkout (full history).
 2. `actions/configure-pages` resolves the base URL.
-3. Hugo extended (latest) build: `hugo --gc --minify --baseURL
-   "<pages-base-url>/"`, with `HUGO_ENVIRONMENT=production`.
-4. Upload `./public` as the Pages artifact, deploy.
+3. Node 22 and `npm ci` (the only dependency is `opentype.js`, used by the
+   brand SVG generator).
+4. Hugo extended (version pinned in the workflow; keep it equal to the local
+   `hugo version`) build: `hugo --gc --minify --baseURL "<pages-base-url>/"`,
+   with `HUGO_ENVIRONMENT=production`.
+5. Gates, which stop the deploy on failure: `npm run check`, i.e. the
+   alcohol-claims grep (§9), brand color drift (`check:tokens`), generated
+   brand SVG drift (`check:brand`), and `npm test` (a fresh build that fails on
+   a missing image or glyph, then the party kit storage tests).
+6. Upload `./public` as the Pages artifact, deploy.
 
-No staging environment, no preview deploys, no build-time content
-validation beyond Hugo's own build failing on broken template syntax.
+No staging environment and no preview deploys. Beyond the gates above,
+validation is Hugo's own build failing on broken template syntax.
 
 ---
 
@@ -298,8 +314,9 @@ validation beyond Hugo's own build failing on broken template syntax.
   - Never: real regulatory identifiers (NOM numbers, TTB/COLA IDs), real
     distillery names, real appellations, real third-party awards or panels,
     health or effects claims.
-  - Standing check, must print nothing:
-    `grep -rnE '[0-9]+ ?% ?ABV|[0-9]+ Proof|100% [A-Za-z ]*[Aa]gave' content layouts data`
+  - Standing check, must print nothing: `npm run check:claims` (a
+    case-insensitive grep for ABV/alcohol percentages, numeric proof, "100%
+    agave", and "ALC. VOL." across `content`, `layouts`, and `data`; also run in CI).
 - No photography, no stock icons, no 3D/AI-rendered "photoreal" scenes —
   breaks the linocut aesthetic and the parody's premise in one move.
 - No copy that explains the joke outside the legal/meta cluster (§2).

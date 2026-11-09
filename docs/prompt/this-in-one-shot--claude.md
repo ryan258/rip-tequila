@@ -195,11 +195,11 @@ rip-tequila/
         └── main.ts
 \`\`\`
 
-Static assets go under `static/images/`: root-level page hero backdrops
-(`hero-poster-bg.webp`, `lineup-hero-bg.webp`, `characters-hero-bg.webp`,
-`merch-hero-bg.webp`, `cantina-archway-bg.webp`, `cantina-story-bg.webp`,
-`social-club-bg.webp`, `404-bg.webp`, `paper-grain-bg.webp`), plus
-subfolders `cast/` (8 character portraits), `cantina/` (7 room scenes +
+Artwork goes under `assets/images/` (read by `partials/image.html`): root-level
+page hero backdrops (`lineup-hero-bg.webp`, `characters-hero-bg.webp`,
+`cantina-archway-bg.webp`, `404-bg.webp`) and the homepage motion poster, with
+`paper-grain-bg.webp` alone in `static/images/` because CSS references it by
+URL, plus subfolders `cast/` (8 character portraits), `cantina/` (7 room scenes +
 portal hero + El Vigía desert scene), `bottles/` (5 transparent bottle PNGs
 for the-lineup), and `merch/` (per-product shots + a hero montage + evidence
 locker crate).

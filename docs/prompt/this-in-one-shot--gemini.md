@@ -1,5 +1,7 @@
 # Recreating RIP Tequila in One Shot
 
+> **Superseded.** This prompt rebuilds an earlier, smaller CSS/SVG-only version. Use `this-in-one-shot--claude.md` for the current site; keep this only as history.
+
 If you wanted to build the entire **RIP Tequila** site from scratch using a single prompt on a high-context, frontier AI model (such as Claude 3.5 Sonnet, Gemini 1.5 Pro, or GPT-4o), this document provides the exact prompt to use.
 
 ---

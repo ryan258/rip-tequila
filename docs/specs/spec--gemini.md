@@ -1,5 +1,7 @@
 # RIP Tequila — Site Spec (Gemini CSS/SVG Edition)
 
+> **Superseded.** This describes an earlier CSS/SVG-only build. The current site is specified in `spec--claude.md`; keep this only as history.
+
 This document is the reference specification for the lightweight, pure CSS/SVG edition of the RIP Tequila website (the target build for `docs/prompt/this-in-one-shot--gemini.md`). 
 
 Unlike the asset-heavy Claude edition which relies on external `.webp` and `.png` illustration/portrait assets, this specification defines a system where all bottle graphics are drawn using **pure CSS shapes and gradients**, and all iconography/illustrations are rendered via inline **SVG vector glyphs**.
