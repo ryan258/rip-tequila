@@ -16,7 +16,7 @@
           {{ $slug := .File.TranslationBaseName }}
           <article class="placard" data-slug="{{ $slug }}" data-accent="{{ .Params.accent | default "red" }}">
             <div class="placard__portrait">
-              {{ partial "image.html" (dict "src" (printf "images/cast/%s.webp" $slug) "alt" "" "loading" "eager") }}
+              {{ partial "image.html" (dict "src" (printf "images/cast/%s.webp" $slug) "alt" "" "loading" "eager" "sizes" "2.4in") }}
             </div>
             <div class="placard__body">
               <p class="placard__role">{{ .Params.role }}</p>

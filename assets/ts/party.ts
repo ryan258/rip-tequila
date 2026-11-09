@@ -53,9 +53,29 @@ function shuffle<T>(items: T[]): T[] {
   return out;
 }
 
+// Editing the list keeps roles: a name that is still on the list keeps its role,
+// and a line edited in place (a typo fix) inherits the role of the line it
+// replaced. Only genuinely new names start without one. Duplicate names are
+// matched first-come in list order, so which twin keeps a role is positional.
+function carryRoles(old: Guest[], names: string[]): Guest[] {
+  const used = new Set<number>();
+  const byName = names.map((name) => {
+    const i = old.findIndex((g, k) => !used.has(k) && g.name === name);
+    const match = old[i];
+    if (!match) return null;
+    used.add(i);
+    return match.slug;
+  });
+  return names.map((name, k) => {
+    const replaced = old[k];
+    return { name, slug: byName[k] ?? (replaced && !used.has(k) ? replaced.slug : '') };
+  });
+}
+
 function initHub(): void {
   const box = document.querySelector<HTMLTextAreaElement>('[data-party-guests]');
   const decide = document.querySelector<HTMLButtonElement>('[data-party-decide]');
+  const reset = document.querySelector<HTMLButtonElement>('[data-party-reset]');
   const roster = document.querySelector<HTMLElement>('[data-party-roster]');
   const status = document.querySelector<HTMLElement>('[data-party-status]');
 
@@ -97,12 +117,33 @@ function initHub(): void {
     status.textContent += storageNotice();
   };
 
-  // Editing the list throws the old roles away; the bell has to decide again.
   box.addEventListener('input', () => {
-    guests = names().map((name) => ({ name, slug: '' }));
+    guests = carryRoles(guests, names());
     saved = saveGuests(guests);
+    if (guests.some((g) => g.slug)) {
+      render();
+      return;
+    }
     roster.replaceChildren();
     status.textContent = (guests.length ? 'Names changed. Let the bell decide.' : 'Nobody is on the roster yet.') + storageNotice();
+  });
+
+  // The one explicit way to discard saved data, including data that could not
+  // be read (which is otherwise kept and never overwritten).
+  reset?.addEventListener('click', () => {
+    if (!window.confirm('Erase the guest list saved in this browser?')) {
+      return;
+    }
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Blocked storage: nothing readable to erase.
+    }
+    guestStorageProblem = null;
+    guests = [];
+    box.value = '';
+    saved = saveGuests(guests);
+    render();
   });
 
   // More guests than cast: the bell picks who gets a role, so the top of the
