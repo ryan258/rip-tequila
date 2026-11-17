@@ -15,7 +15,7 @@ provenance:
   origin: "The drawer beside the High-Back Chair"
   expression: "RIP Añejo"
   expression_href: "/the-lineup/rip-anejo/"
-  record: "A concept credential reserved for the founding roster when the manifest actually opens."
+  record: "Kept in the drawer beside the High-Back Chair, blank, until the ledger can record a name in ink."
 built_for:
   - icon: "card"
     text: "Wallets that need an undeniably intriguing conversation piece."
@@ -27,14 +27,15 @@ seo_title: "Don Muerte Social Club Card Concept | RIP Tequila"
 seo_description: "Preview the forthcoming Don Muerte Social Club membership-card concept in matte black with metallic-gold detailing."
 ---
 
-The proposed physical credential of the afterlife inner circle.
+The physical credential of the afterlife inner circle. It is not sold. It is issued, and so far it has been issued to nobody.
 
-The concept calls for a substantial matte-black card with metallic-gold detailing that catches the light like a struck match. The front reserves space for an individual roster identification and the single foundational charter rule: **MEMBERSHIP EXPIRES NEVER.** Final stock, finish, and issuance details remain unconfirmed while the roster is closed.
+A substantial matte-black card that catches the light like a struck match. The front holds a single roster number and the club's one foundational rule: **MEMBERSHIP EXPIRES NEVER.** The back is blank, because Don Muerte believes a credential should leave room for the story.
 
-This card will not be sold on a rack. It is intended to be issued when the **Don Muerte Social Club** opens and El Sepulturero’s manifest can record more than good intentions.
+**Don Muerte** keeps the first stack in the drawer beside the high-back chair. He takes one out some nights, turns it over in his fingers, and puts it back. The roster isn't open, the ledger won't take ink, and he will not hand out a card that can't be honored. When **El Sepulturero** finally finds a pen that writes on the Manifest, the drawer opens.
 
-## What the card is intended to unlock
+## What the card will unlock
 
-- **Direct Dispatches**: Planned first notice when a real poster or capsule run has been scheduled.
-- **Character Lore**: Proposed early access to unreleased character backstories and cantina notes.
-- **Desert Road Reports**: Occasional cryptic observations from El Vigía when the roster and the weather both cooperate.
+- **First Word from the Vault**: The roster hears before the road does when a real poster or capsule run is ready.
+- **Character Lore**: Early access to the dossiers the cast would rather you didn't read.
+- **Desert Road Reports**: Occasional observations from El Vigía, delivered without explanation, when the weather and the vulture both cooperate.
+- **Jack's Discretion**: Show it at the bar. Jack will nod. What the nod means has never been documented.

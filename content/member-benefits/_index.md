@@ -1,8 +1,8 @@
 ---
 title: "Member Benefits"
 eyebrow: "Club Charter"
-headline: "Questionable Benefits. Charter Forthcoming."
-description: "The proposed benefits awaiting the day El Sepulturero's manifest actually opens."
+headline: "Questionable Benefits. Unquestionable Membership."
+description: "The full charter of privileges awaiting the founding roster of the Don Muerte Social Club, the moment El Sepulturero finds a pen that writes on the ledger."
 seo_title: "Member Benefits — Don Muerte Social Club | RIP Tequila"
 seo_description: "Preview the proposed Don Muerte Social Club charter, including planned drop notices, artifact editions, and afterlife dispatches."
 cta_label: "Preview the Club"
@@ -12,38 +12,39 @@ icon: "card"
 benefit_groups:
   - heading: "Archival & Poster Drops"
     items:
-      - title: "Planned Early Dispatch Notice"
-        text: "The founding roster is intended to receive notice before a confirmed physical run opens to the public."
-      - title: "Run-Number Priority"
-        text: "A proposed priority window for low-numbered runs if signed silkscreen editions enter real production."
-      - title: "Instant Capsule Alerts"
-        text: "Planned notification when short-run apparel or barware has confirmed materials, inventory, and fulfillment."
+      - title: "First Word from the Vault"
+        text: "When something actually leaves the vault, the roster hears before the road does. El Vigía will be the second to know. He always is."
+      - title: "Low Numbers"
+        text: "First claim on the low-numbered prints of any signed edition, which Don Muerte considers more prestigious than any title he's been offered."
+      - title: "Capsule Alerts"
+        text: "Word the moment a tee, coaster, or sign has real inventory and a real way to reach you. Not a minute before. El Sepulturero will not be rushed."
 
   - heading: "Exclusive Artifacts & Editions"
     items:
-      - title: "Member-Only Variants"
-        text: "Proposed colorway variants of the Glyph Sticker Sheet and embroidered patches, subject to an actual production run."
+      - title: "Roster-Only Variants"
+        text: "Colorways of the sticker sheet and patches that nobody outside the roster is allowed to see. Campana Roja chose the colors. Do not ask her why."
       - title: "Numbered Artifacts"
-        text: "A concept for foil-stamped editions bearing Don Muerte Social Club insignia and unique archive serial numbers."
+        text: "Foil-stamped pieces bearing the Social Club seal and a serial number from the Manifest. Each number is entered in ink and in triplicate."
       - title: "The Physical Card"
-        text: "When enrollment and physical-card issuance are real, the final stock, finish, and delivery terms will be published here."
+        text: "A wallet card with your roster number and an expiration date of NEVER. Jack will honor it at the bar. He will not explain what honoring it involves."
 
   - heading: "Dispatches from the Floor"
     items:
       - title: "Full Character Dossiers"
-        text: "Planned additions to the biographical files, prop histories, and speaking rules for all eight cantina characters."
-      - title: "Cantina Cocktail Guides"
-        text: "A proposed series of full-strength and zero-proof mixology guides attributed to Cantina Jack."
+        text: "Expanded files on all eight residents: props, habits, grudges, and the things they'd rather you didn't know. Padre Proof has already redacted his."
+      - title: "Cantina Jack's Recipe Book"
+        text: "The full Last Rites Menu, plus the recipes Jack keeps on the other side of the towel. Zero-proof rituals included for the designated mourner."
       - title: "Desert Weather Reports"
-        text: "Cryptic observations El Vigía may dispatch once the manifest is open to receive them."
+        text: "Occasional observations from El Vigía, delivered without explanation. Past reports have read, in full: \"Wind.\" And once: \"Someone's coming.\""
 
 exclusions_title: "What Is Strictly NOT Included"
 exclusions:
-  - "**A Physical Bottle of Liquid Spirits:** We do not distill, bottle, or sell physical alcohol. (The spiritual kind is entirely up to you.)"
-  - "**Renewal Fees or Annual Dues:** The proposed membership has no annual subscription fee."
-  - "**Corporate Customer Satisfaction Surveys:** We will never ask you \"how likely you are to recommend us on a scale of 1 to 10.\""
+  - "**A Physical Bottle of Liquid Spirits:** We do not distill, bottle, or sell alcohol of any kind. The spiritual kind is entirely up to you."
+  - "**Renewal Fees or Annual Dues:** Membership costs nothing, now and forever. Forever is a term we take literally around here."
+  - "**Customer Satisfaction Surveys:** We will never ask how likely you are to recommend us on a scale of one to ten. El Vigía has been asked. He nodded. Nobody knows what it meant."
+  - "**Requests:** Membership does not entitle you to request a song. Nothing entitles you to request a song."
 ---
 
-The proposed charter of the **Don Muerte Social Club** is short, sharp, and designed for discerning individuals who appreciate a straight face and beautiful artifacts.
+The charter of the **Don Muerte Social Club** is short, sharp, and written for people who appreciate a straight face and a beautiful object.
 
-Here is the full accounting of its intended benefits. None are active while the manifest remains closed.
+Here is the full accounting of its privileges. The roster isn't open yet, so none of them are switched on, and nobody is collecting your email in the meantime. When the ledger opens, every privilege below switches on at once — Campana Roja will ring for it.

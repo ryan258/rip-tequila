@@ -51,8 +51,8 @@
       <div class="find-us-overview">
 
         <div class="find-us-details__intro">
-          <p>You won't find a street number, storefront, or Google Maps pin. La Cantina del Último Trago does not participate in commercial zoning.</p>
-          <p>If you are trying to reach the creative team behind <strong>RIP Tequila</strong> — for press features, brand collaborations, creative direction inquiries, or licensing — that direct pipeline is still being built. The <strong>Don Muerte Social Club</strong> records the intended route without pretending it is open.</p>
+          <p>You won't find a street number, storefront, or map pin. La Cantina del Último Trago does not participate in commercial zoning, and the last surveyor who tried to measure the lot is now a regular.</p>
+          <p>There is no front desk, no switchboard, and no inbox. Messages sent into the desert are received only by <strong>El Vigía's</strong> vulture, who has never once replied. Directions, hours, and parking are below, for whatever good they'll do you.</p>
         </div>
 
         <div class="find-us-channel">
@@ -77,9 +77,9 @@
       <div class="find-us-details">
         {{ range (slice
           (dict "title" "Press & Media"
-            "text" "Writing a feature on dark humor branding, afterlife design, or the strange business of a spirit that's never left the cantina? The club roster opens with the next drop, and press routing runs through it — embargoed assets, high-res poster mocks, and creator commentary all come out of the manifest.")
+            "text" "Writing a feature on the cantina, the cast, or the strange business of a spirit that's never left the building? There's no press office yet. When one exists, it will be posted here plainly, with a real address that a real person reads. Until then, the vulture handles media relations, and the vulture has no comment.")
           (dict "title" "Collaborations & Art"
-            "text" "Are you a designer, screen printer, musician, or illustrator interested in building within the cantina universe? Limited capsule drops and poster releases are where we collaborate. The ledger opens when the roster does.")
+            "text" "Designers, screen printers, musicians, and illustrators who want to build inside the cantina: we see you, and so does El Vigía. The collaboration ledger isn't open yet. When it is, this page will say so, with an actual way to reach an actual human being.")
           (dict "title" "Looking for Physical Bottles?"
             "text" "We repeat: the cantina pours exclusively on the astral plane. We do not manufacture, bottle, or ship actual tequila. If you encounter a physical bottle of RIP Tequila in a retail liquor store, congratulations on discovering a temporal anomaly, but please do not drink it.")
         ) }}
@@ -93,6 +93,14 @@
 
     </div>
   </section>
+
+  {{ with .Content }}
+  <section class="standard-doc-content-section">
+    <div class="standard-doc-container">
+      <div class="standard-doc-body">{{ . }}</div>
+    </div>
+  </section>
+  {{ end }}
 
 </article>
 {{ end }}

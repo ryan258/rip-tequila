@@ -29,7 +29,7 @@
 
         <div class="merch-hero__cta-row">
           <a class="button button--primary merch-hero__btn" href="#featured-artifacts">
-            {{ if $commerceOpen }}Shop the Drop{{ else }}Explore the Concepts{{ end }}
+            {{ if $commerceOpen }}Shop the Drop{{ else }}Open the Evidence Locker{{ end }}
           </a>
           <a class="button button--outline merch-hero__btn" href="{{ strings.TrimPrefix "/" (.Params.cta_href | default "/don-muerte-social-club/") | relURL }}">
             {{ .Params.cta_label | default "Preview the Club" }}
@@ -39,8 +39,8 @@
         {{/* Hero Feature Badges */}}
         <div class="merch-hero__badges" role="list" aria-label="Merch standards">
           {{ range (slice
-            (dict "icon" "box-open" "title" "PROPOSED RUNS" "sub" "Production not open.")
-            (dict "icon" "scale" "title" "MATERIAL TARGETS" "sub" "Final specs forthcoming.")
+            (dict "icon" "box-open" "title" "SMALL RUNS" "sub" "Still in the vault.")
+            (dict "icon" "scale" "title" "HEAVY BY DESIGN" "sub" "Specs filed in triplicate.")
             (dict "icon" "skull" "title" "SYMBOLIC DESIGN" "sub" "Every detail has meaning.")
           ) }}
           <div class="merch-badge" role="listitem">
@@ -79,10 +79,10 @@
     <h2 class="sr-only" id="merch-pillars-heading">Merchandise standards and benefits</h2>
     <div class="merch-container merch-pillars__grid">
       {{ range (slice
-        (dict "icon" "bell" "title" "CONCEPT RUNS" "desc" "Every run is meant to be small and final. None of them have been pressed yet.")
-        (dict "icon" "shirt" "title" "QUALITY TARGETS" "desc" "The cloth, the weight, the stitch — all specified. None of it cut yet.")
+        (dict "icon" "bell" "title" "VAULTED RUNS" "desc" "Every run is small and final. None has left the back office yet.")
+        (dict "icon" "shirt" "title" "OVERBUILT ON PURPOSE" "desc" "The cloth, the weight, the stitch — all specified, all filed. None of it cut yet.")
         (dict "icon" "sunburst" "title" "SYMBOLIC BY DESIGN" "desc" "Every glyph, every line—meant to protect, provoke, and remind.")
-        (dict "icon" "door" "title" "FORTHCOMING CLUB" "desc" "The charter is drawn. The roster behind it opens when the bell rings.")
+        (dict "icon" "door" "title" "THE CLUB" "desc" "The charter is drawn. The roster behind it opens when the bell rings.")
       ) }}
       <div class="merch-pillar">
         <div class="merch-pillar__icon">
@@ -141,7 +141,7 @@
                 <p class="merch-product-card__provenance">Filed by {{ .custodian }} · {{ .origin }}</p>
                 {{ end }}
                 <div class="merch-product-card__footer">
-                  <span class="merch-product-card__price">{{ with .Params.price }}{{ if not $commerceOpen }}CONCEPT · {{ end }}{{ . | upper }}{{ else }}ISSUED, NOT SOLD{{ end }}</span>
+                  <span class="merch-product-card__price">{{ with .Params.price }}{{ if not $commerceOpen }}EST. {{ end }}{{ . | upper }}{{ else }}ISSUED, NOT SOLD{{ end }}</span>
                   <span class="merch-product-card__action">VIEW DETAILS &rarr;</span>
                 </div>
               </div>
@@ -215,16 +215,16 @@
       {{/* Middle: Pitch and Perks */}}
       <div class="merch-club__copy">
         <p class="merch-club__eyebrow">RIP Social Club</p>
-        <h2 class="merch-club__title" id="club-heading">First Access. Forthcoming.</h2>
+        <h2 class="merch-club__title" id="club-heading">First Word from the Vault.</h2>
         <p class="merch-club__desc">
-          Preview the planned charter for drop notices, proposed member editions, and afterlife dispatches from La Cantina.
+          The roster hears first when anything leaves the vault: drop notices, member editions, and dispatches from the floor. It isn't open yet, and nobody's email is being collected.
         </p>
 
         <div class="merch-club__perks">
           {{ range (slice
-            (dict "icon" "door" "title" "PLANNED NOTICE" "sub" "A future heads-up when a real drop is ready.")
-            (dict "icon" "star-diamond" "title" "PROPOSED EDITIONS" "sub" "Member concepts awaiting actual production.")
-            (dict "icon" "book" "title" "FUTURE DISPATCHES" "sub" "Stories and invites once the ledger opens.")
+            (dict "icon" "door" "title" "FIRST WORD" "sub" "The moment something real is ready.")
+            (dict "icon" "star-diamond" "title" "MEMBER EDITIONS" "sub" "Colors Campana Roja chose. Still vaulted.")
+            (dict "icon" "book" "title" "DISPATCHES" "sub" "Notes from the floor once the ledger opens.")
           ) }}
           <div class="merch-club-perk">
             <span class="merch-club-perk__icon">
@@ -244,7 +244,7 @@
         <a class="button button--primary merch-club__btn" href="{{ "don-muerte-social-club/" | relURL }}">
           Preview the Club
         </a>
-        <p class="merch-club__subtext">THE ROSTER IS FORTHCOMING.</p>
+        <p class="merch-club__subtext">THE ROSTER IS STILL BLANK.</p>
       </div>
 
     </div>

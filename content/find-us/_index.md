@@ -2,7 +2,7 @@
 title: "Find Us"
 eyebrow: "Coordinates"
 headline: "No Storefront. Undeniable Signal."
-description: "Press inquiries, artistic collaborations, and afterlife dispatches — how to transmit a message into La Cantina del Último Trago."
+description: "Directions, hours, parking, and how to get a message into La Cantina del Último Trago — insofar as any of those things apply."
 seo_title: "Contact RIP Tequila — Press, Collaborations & Inquiries"
 seo_description: "Contact the creators behind RIP Tequila: press inquiries, design collaborations, brand partnerships, and Don Muerte Social Club dispatches."
 cta_label: "Preview the Club"
@@ -10,25 +10,33 @@ cta_href: "/don-muerte-social-club/"
 icon: "location"
 ---
 
-You won't find a street number, storefront, or Google Maps pin. La Cantina del Último Trago does not participate in commercial zoning. 
+## Directions
 
-If you are trying to reach the creative team behind **RIP Tequila** — for press features, brand collaborations, creative direction inquiries, or licensing — that direct pipeline is still forthcoming. The **Don Muerte Social Club** page records the intended route.
+1. Leave wherever you were supposed to go home from.
+2. Drive until the radio stations give up and the last one is playing a bolero you don't remember choosing.
+3. Pass the final gas station. Do not stop. The attendant has already waved.
+4. Continue past the last mile marker, then past the one after that, which shouldn't exist.
+5. When the asphalt turns to dirt and the dirt turns to agave, look for a man leaning on a fencepost in a wide-brimmed hat. Do not ask him for directions. You're already there.
+6. If the hat tips, follow the neon. If it doesn't, turn around and try again next year.
 
-## Press & Media
+The cantina sits exactly three miles past last call, right where the desert highway turns into a rumor. GPS will insist you've arrived somewhere else. GPS has never been inside.
 
-Writing a feature on dark humor branding, afterlife design, or the strange business of a spirit that's never left the cantina? The future press route will be published when the Social Club manifest opens. No inquiry is accepted or silently discarded here today.
+## Hours
 
-## Collaborations & Art
+| Day | Open | Close |
+| --- | --- | --- |
+| Monday – Thursday | Past midnight | When the bell decides |
+| Friday | Earlier than you'd think | Later than you'd like |
+| Saturday | Already open | Still open |
+| Sunday | After the hymns | Before the regret |
+| Día de Muertos | The doors are never closed | Not applicable |
 
-Are you a designer, screen printer, musician, or illustrator interested in building within the cantina universe? The collaboration and club pipelines are forthcoming; the Social Club page records what is planned without pretending the ledger is already open.
+## Parking
 
-## Looking for Physical Bottles?
+Unlimited. Leave your car by the fencepost. **El Vigía** will keep the keys until sunrise, which is not a valet service so much as a policy. Nobody drives away from the cantina in the dark. Nobody has ever needed to.
 
-We repeat: the cantina pours exclusively on the astral plane. We do not manufacture, bottle, or ship actual tequila. If you encounter a physical bottle of RIP Tequila in a retail liquor store, congratulations on discovering a temporal anomaly, but please do not drink it.
+## Before You Arrive
 
-## Physical Location
+Read the [House Rules](/house-rules/). Leave your watch at home. Bring a toast, just in case, and a good secret for Jack. If you're the one driving, the [Designated Mourner](/the-menu/) is on the house.
 
-**La Cantina del Último Trago**  
-Desert Highway 00, Mile Marker Infinity  
-Open: Past Midnight  
-Address: Deliberately Withheld by Tradition
+> *"You don't find the cantina. You stop looking for the way home."* — Cantina Jack
