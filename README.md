@@ -3,9 +3,10 @@
 A modular Hugo prototype for the fictional RIP Tequila parody brand.
 
 The checked-in configuration intentionally keeps commerce and Social Club
-enrollment disabled. Merchandise is presented as concept work, and the Social
-Club is forthcoming; see `params.features` in `hugo.yaml` and the release
-requirements in `docs/specs/spec--claude.md` before enabling either capability.
+enrollment disabled. Merchandise is presented as vaulted (not for sale), and
+the Social Club roster is blank; see `params.features` in `hugo.yaml` and the
+release requirements in `docs/specs/spec--claude.md` before enabling either
+capability.
 
 ## Run
 
@@ -50,7 +51,9 @@ The deploy workflow runs `npm run check` after the Hugo build, so a failure bloc
 - `content/the-lineup/` product family and product detail pages
 - `content/characters/` cast index and character detail pages
 - `content/merch/` merch index and merch detail pages
+- `content/house-rules/`, `content/the-menu/`, `content/jukebox/`, `content/toasts/`, `content/lost-and-found/`, `content/accolades/`, `content/careers/`, `content/our-commitments/` Cantina Life lore pages linked from the footer and character/lineup dossiers
 - `content/party/` + `layouts/party/` + `assets/ts/party.ts` the printable Halloween party kit (guest list, Social Club cards, bell coasters, cast placards); US Letter, drawn at real paper size
+- `layouts/_default/_markup/render-link.html` rebases root-relative markdown body links onto `baseURL` for subpath deploys
 - `layouts/partials/sections/` reusable homepage sections
 - `layouts/partials/image.html` the only way to emit an `<img>` — see below
 - `layouts/partials/glyph.html` the inline SVG glyph set; the single source for glyph geometry

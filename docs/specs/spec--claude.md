@@ -15,8 +15,8 @@ Cantina del Último Trago," an afterlife cantina staffed by eight deceased
 characters who pour five bottles with the total sincerity of a real luxury
 spirits company. It's a static marketing/brand prototype — no cart, no
 checkout, and no live product. The merch pages are designed to support a real
-external transaction later, but currently present clearly labeled artifact
-concepts only.
+external transaction later, but currently present vaulted artifacts that are
+not for sale.
 
 **What it's parodying:** ultra-premium spirits marketing conventions —
 master-blender legacy stories, small-batch mythology, three-generations-of-
@@ -63,10 +63,18 @@ out loud.
 | `/characters/` + 8 single pages | Don Muerte, La Rosa Negra, Padre Proof, El Sepulturero, Cantina Jack, Campana Roja, Los Maracas, El Vigía |
 | `/the-cantina/` | Room-by-room tour of the cantina, driven by `data/cantina.yaml` |
 | `/merch/` + 5 single pages | Rest In Proof Tee, RIP Tequila Hat, Bell Coaster Set, Glyph Sticker Sheet, Social Club Card |
-| `/find-us/` | Deadpan "no storefront" press/collab contact page |
+| `/find-us/` | Deadpan "no storefront" directions, hours, and parking page |
 | `/don-muerte-social-club/` | Free membership pitch |
 | `/member-benefits/` | Membership perks ledger |
 | `/drops/` | Limited-release listing |
+| `/house-rules/` | The thirteen standing rules of La Cantina del Último Trago |
+| `/the-menu/` | Cantina Jack's Last Rites cocktail and pour menu |
+| `/jukebox/` | La Rosa Negra & Los Maracas' reconstructed Crimson Stage setlist |
+| `/toasts/` | The Book of Last Words — house and occasion toasts |
+| `/lost-and-found/` | Partial extract from El Sepulturero's Manifest |
+| `/accolades/` | Awards, honors, and press notices |
+| `/careers/` | Afterlife cantina job openings |
+| `/our-commitments/` | Sustainability, heritage, community, and governance report |
 | `/faq/` | Deadpan Q&A, including the one page allowed to say plainly what the brand is |
 | `/parody-disclaimer/`, `/responsible-language/`, `/privacy/`, `/terms/` | Legal/meta cluster — see voice rules |
 | `/party/` + 3 single pages | The Party Kit: hub (`/party/`), Social Club cards (`/party/cards/`), coasters (`/party/coasters/`), and cast placards (`/party/cast/`) |
@@ -74,9 +82,11 @@ out loud.
 | `/404/` | Desert-crossroads themed error page |
 
 Main nav (weighted, `hugo.yaml`): Our Story → The Lineup → Characters →
-Merch → The Cantina → Find Us. Footer nav (`data/navigation.yaml`) adds five
-columns: The Brand, The Lineup, Characters, Merch, Club/Info (including Party
-Kit). There is no social links block until real accounts exist.
+Merch → The Cantina → Find Us. Footer nav (`data/navigation.yaml`) adds six
+columns: The Brand, The Lineup, Characters, Merch, Cantina Life, Club / Info
+(including Party Kit). There is no social links block until real accounts exist.
+Root-relative markdown body links are rebased onto `baseURL` via
+`layouts/_default/_markup/render-link.html` so cross-links survive subpath deploys.
 
 One character and one bottle cross-reference each other in content (Don
 Muerte ↔ RIP Añejo is the shipped example) so "meet the host, buy what he
@@ -117,7 +127,7 @@ fields.
 `built_for` (list of `{icon, text}`), `provenance` (`custodian`,
 `custodian_href`, `origin`, `expression`, `expression_href`, `record`), plus
 SEO fields. The provenance block is the structural bridge from a physical
-artifact concept to its character, cantina origin, and fictional bottle; the
+artifact to its character, cantina origin, and fictional bottle; the
 merch list and single templates must continue to render it. `price` is
 optional: a product with no price renders as "issued, not sold" in the list and
 omits the price row on the detail page (the Social Club card uses this).
@@ -328,11 +338,12 @@ validation is Hugo's own build failing on broken template syntax.
 
 `hugo.yaml` owns the current capability state under `params.features`:
 
-- `commerce: false` labels merchandise and drop records as concepts, changes
-  prices to concept prices, and prevents the UI from implying orders are open.
+- `commerce: false` labels merchandise and drop records as vaulted / not for
+  sale, changes prices to estimated prices (`EST. PRICE`), and prevents the UI
+  from implying orders are open.
 - `social_club_enrollment: false` removes email inputs from rendered pages and
-  presents the charter and credential as forthcoming. The dormant form and
-  TypeScript handler remain in source for a later real integration.
+  presents the roster as still blank with in-universe copy. The dormant form
+  and TypeScript handler remain in source for a later real integration.
 
 Changing either flag is not sufficient release evidence by itself. Commerce
 requires a confirmed external purchase path, inventory/fulfillment truth, and

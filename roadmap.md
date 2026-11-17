@@ -42,7 +42,11 @@ RIP Tequila is a fully static Hugo site presenting a parody spirits brand center
    - Complete documentation suite under `docs/brand-kit/` (8 modules).
    - Multi-stage verification gates (`npm run check`): regulatory claims grep, token drift check, SVG synchronization, and test-build verification.
 
-6. **Tooling & Code Intelligence**
+6. **Cantina Life & Expanded Lore**
+   - Eight footer-linked lore and ledger pages under the **Cantina Life** column (`data/navigation.yaml`): `/house-rules/`, `/the-menu/`, `/jukebox/`, `/toasts/`, `/lost-and-found/`, `/accolades/`, `/careers/`, and `/our-commitments/`.
+   - Cross-linked from character dossiers and lineup bottle pages, with markdown ledger table styling (`assets/scss/pages/_standard-doc.scss`) and subpath-safe body link rebasing (`layouts/_default/_markup/render-link.html`).
+
+7. **Tooling & Code Intelligence**
    - GitNexus code intelligence index and skills (`.claude/skills/gitnexus-*/`).
    - Pinned CI Hugo extended deployment workflow (`0.168.0`) with Node 22 verification step.
 
@@ -59,8 +63,8 @@ params:
     social_club_enrollment: false
 ```
 
-- **`commerce: false`**: Merch and drops are labeled as concept artifacts. Prices are marked as concept estimates, and ordering pathways remain dormant.
-- **`social_club_enrollment: false`**: Email collection forms are replaced with preview CTAs. No visitor email addresses are captured, stored, or transmitted.
+- **`commerce: false`**: Merch and drops are labeled as vaulted / not for sale. Prices are marked as estimated prices (`EST. PRICE`), and ordering pathways remain dormant.
+- **`social_club_enrollment: false`**: Email collection forms are replaced with preview CTAs and in-universe copy ("roster is still blank"). No visitor email addresses are captured, stored, or transmitted.
 
 ---
 
@@ -83,5 +87,5 @@ params:
 - [ ] Configure `dartsass` transpiler options in Hugo pipeline before libsass is deprecated in upstream Hugo releases.
 
 ### Milestone 4: Expanded Cantina Lore & Interactive Audio
-- [ ] Interactive Bolero jukebox preview featuring La Rosa Negra's afterlife tracks.
+- [ ] Interactive Bolero jukebox preview on `/jukebox/` featuring La Rosa Negra's afterlife tracks.
 - [ ] Secret room riddles unlocked via the bell coaster glyph combinations.
