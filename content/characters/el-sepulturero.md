@@ -69,6 +69,8 @@ He possesses a dry, unflinching wit and an encyclopedic record of every tab ever
 
 He doesn't judge you for your mistakes; he simply categorizes them. The Manifest is also the cantina's official limited-edition registry. Nothing may be called rare until El Sepulturero has failed to locate it twice.
 
+A partial extract of the Manifest has been released for public review as the [Lost & Found](/lost-and-found/). He considers this a grave concession. Claims are technically accepted. None has ever succeeded.
+
 > *"Leave the judgment. Take the story."*
 
 ## What he pours

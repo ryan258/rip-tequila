@@ -67,6 +67,8 @@ Her setlist has never been written down. **Don Muerte** gives her the room with 
 
 There are no recordings, no live streams, and no encore negotiations. The label describes this as disciplined scarcity. La Rosa Negra describes it as not repeating herself for people who arrived late.
 
+The closest thing to a record is the regulars' reconstruction on [The Jukebox](/jukebox/). She has read it. She says it is wrong in every particular that matters, and she has not corrected a word.
+
 
 ## What she pours
 

@@ -67,7 +67,7 @@ Their instruments include a vintage trumpet that hasn't cooled down since 1952, 
 
 They do not take song requests, they do not understand the concept of an intermission, and they communicate entirely through infectious syncopated tempo. Their downbeat once rattled three premium bottles from **Cantina Jack's** top shelf. The replacements now rest six inches above the floor under a proprietary storage method called *earth-rested maturation*.
 
-If you find yourself dancing on a bench at 1:30 AM with a stranger in a bolo tie, Los Maracas are 100% responsible.
+If you find yourself dancing on a bench at 1:30 AM with a stranger in a bolo tie, Los Maracas are entirely responsible. Their side of the nightly argument with Rosa fills the second half of [The Jukebox](/jukebox/), at a tempo regulars describe as medically inadvisable.
 
 > *"The dead have better music."*
 

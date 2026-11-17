@@ -69,6 +69,8 @@ Perched on a bleached deadwood branch beside him, a patient vulture keeps watch 
 
 He knows every detour, every traveler, and every excuse ever offered for being out on the road past 2:00 AM. When you finally spot the warm neon glow of the cantina in the distance, know this: El Vigía saw you coming an hour ago. If his hat tips, **Campana Roja** already has one hand on the cord.
 
+The house has published [directions](/find-us/). El Vigía has never read them. He has never needed to. Every traveler who followed them exactly arrived anyway, which he considers proof that directions are a formality.
+
 
 ## What he pours
 

@@ -60,3 +60,5 @@ This is the opening salvo of the evening. The spark that turns a reasonable sche
 > *"I pour. You explain tomorrow."* — Cantina Jack
 
 Jack will never try to upsell you on a Blanco. He doesn't need to. He simply slides the glass across the bar with the quiet confidence of a man who has watched five thousand consecutive people make the exact same choice.
+
+His build for the opening hour is **The Alibi** — tall, clean, and salted on half the rim so you have options. It's on [the menu](/the-menu/), along with everything that follows it.

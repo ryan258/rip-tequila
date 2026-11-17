@@ -69,6 +69,8 @@ The bottles most vulnerable to **Los Maracas** now live on the lowest shelf, a p
 
 He communicates primarily in gestures, eyebrow raises, and clean tequila pours.
 
+The only written record of his recipes was copied off the inside of his bar towel by a regular with excellent eyesight and poor survival instincts. It is posted as [The Last Rites Menu](/the-menu/), against his wishes. He has read it. He nodded once, which the regulars agree could mean anything.
+
 
 ## What he pours
 

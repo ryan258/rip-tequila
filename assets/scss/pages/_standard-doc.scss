@@ -76,6 +76,35 @@
     }
   }
 
+  // ponytail: block + overflow keeps wide ledgers scrolling inside the card, not the page.
+  table {
+    display: block;
+    overflow-x: auto;
+    margin: $space-md 0 $space-lg;
+    border-collapse: collapse;
+    font-family: $font-body;
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+
+  th {
+    font-family: $font-accent;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid $color-black;
+  }
+
+  th, td {
+    padding: $space-xs $space-sm;
+    vertical-align: top;
+  }
+
+  td {
+    border-bottom: 1px solid rgba($color-black, 0.12);
+  }
+
   blockquote {
     border-left: 4px solid $color-red;
     background: rgba($color-cream, 0.5);

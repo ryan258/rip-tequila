@@ -69,7 +69,9 @@ He has never once judged a soul who sat in his booth — mostly because he has h
 
 If you’re wondering whether ordering that extra round of Añejo is a sound life choice, consult Padre Proof. He’ll make the sign of the cross, bless the glass, and tell you it’s a sacrament.
 
-He also chairs the cantina's independent tasting panel. The other voting member is his candle. No expression has scored below 97 points.
+He also chairs the cantina's independent tasting panel. The other voting member is his candle. No expression has scored below 97 points. The full record hangs with the rest of the [Accolades](/accolades/).
+
+The best of the blessed napkins, meanwhile, are kept in a separate volume he calls [The Book of Last Words](/toasts/). He reads from it at dawn, to the candle, which has opinions.
 
 > *"Blessed are the almost responsible."*
 

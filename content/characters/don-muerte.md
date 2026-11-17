@@ -65,7 +65,7 @@ He wears a wide-brimmed black sombrero embroidered with silver thread. What lies
 
 He carries a single vintage shot glass from which he pours with surgical precision, though nobody has ever seen him take a sip. Behind his station sits a single century-old agave plant that has survived three revolutions, an indefinite number of poorly planned afterparties, and seven competing claims about who planted it. Every official origin story cites the plant. None cite the same century.
 
-He gives exactly one toast per night. When he taps his glass, listen carefully — it’s the only advice you’ll receive that doesn't cost anything.
+He gives exactly one toast per night. When he taps his glass, listen carefully — it’s the only advice you’ll receive that doesn't cost anything. It is Rule I of the [House Rules](/house-rules/), and the only rule nobody has ever tried to amend.
 
 The toast is rarely for the loudest person in the room. More often, it is for someone absent whose name still deserves a place at the table.
 

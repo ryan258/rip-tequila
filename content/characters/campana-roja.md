@@ -67,6 +67,8 @@ When she decides a night has officially reached its critical mass of joy, audaci
 
 The chime that rings out doesn't signal closing time. It signals transition: the moment you stop being an outsider visiting a bar and become part of the cantina's permanent folklore. The house attempted to trademark the precise emotional interval between visitor and legend. Campana Roja refused to ring for the paperwork.
 
+The bell is polished every day by someone who is not allowed to ring it. The position is, at present, [open](/careers/). Applicants are advised that the last polisher left after the bell hummed once in his hands, and he still won't say what it hummed.
+
 > *"I do not announce last call. I announce fate."*
 
 ## What she pours

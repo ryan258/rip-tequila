@@ -60,3 +60,5 @@ This is not a drink for casual banter. This is a pour for conversations you’ll
 > *"Here lies your judgment."* — El Sepulturero
 
 El Sepulturero pours your measure, places the bottle down with a muffled thud, and steps back into the shadows with his ledger. Don't invite him to sit down. He’s already recording your statement.
+
+The house cocktail is **The Shallow Grave**, finished with a dusting of cacao like fresh earth. It is on [the menu](/the-menu/). El Sepulturero insists the name is not a reference to anything specific.

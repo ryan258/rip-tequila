@@ -60,3 +60,5 @@ It does not enter a room timidly. It enters with a sombrero, commands total atte
 > *"Proof you lived."* — Don Muerte
 
 Don Muerte only pours this once per evening. If you want a second glass, you have to earn it — usually by confessing a truth so absurd that the entire room agrees it must have actually happened.
+
+The house cocktail is **The Toast**, stirred until the room goes quiet. The recipe is on [the menu](/the-menu/). The timing is up to Don Muerte.

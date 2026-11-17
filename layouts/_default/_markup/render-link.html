@@ -1,0 +1,8 @@
+{{- /* Rebase root-relative body links onto baseURL so they survive a subpath deploy.
+       Skips links already carrying the base path, so the FAQ's pre-rebased answers pass through. */ -}}
+{{- $u := .Destination -}}
+{{- if and (strings.HasPrefix $u "/") (not (strings.HasPrefix $u ("" | relURL))) -}}
+  {{- $u = strings.TrimPrefix "/" $u | relURL -}}
+{{- end -}}
+<a href="{{ $u }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
+{{- /* chomp trailing newline */ -}}

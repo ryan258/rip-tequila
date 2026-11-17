@@ -60,3 +60,5 @@ Distilled from rare wild desert agave, aged under an indifferent moon, and finis
 > *"Follow the agave after midnight."* — El Vigía
 
 El Vigía never enters the cantina; he stays posted on the desert perimeter with his boots in the dust and a watchful eye on the highway lights. If this bottle is on your table, consider it his personal stamp of entry.
+
+On [the menu](/the-menu/) it appears as **The Late Arrival**: two ounces, nothing else, already waiting. If you have to ask what's in it, it isn't yours.

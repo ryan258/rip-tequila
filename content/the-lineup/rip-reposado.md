@@ -60,3 +60,5 @@ When **Campana Roja** pulls the crimson cord on the brass bell above the door, t
 > *"I do not announce last call. I announce fate."* — Campana Roja
 
 She doesn't pour the drink. She strikes the chime. The Reposado is what fills the glasses before the reverberation even fades from the rafters.
+
+Jack's house build is **The Bell Ringer** — Reposado, lime, and a dash of hibiscus for the ribbon. It's on [the menu](/the-menu/). Do not drink it before the bell.
